@@ -1495,7 +1495,7 @@
 
     .line 287
     .local v5, "jObject":Lorg/json/JSONObject;
-    const v6, 0x7f11005b
+    const v6, 0x7f11005d
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/MainFragment;->getString(I)Ljava/lang/String;
 
@@ -1507,7 +1507,7 @@
 
     .line 288
     .local v8, "name":Ljava/lang/String;
-    const v6, 0x7f110139
+    const v6, 0x7f11013e
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/MainFragment;->getString(I)Ljava/lang/String;
 

@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 252
+    .line 251
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,14 +37,49 @@
 
 # virtual methods
 .method public processEvent(Lcom/brightcove/player/event/Event;)V
-    .locals 1
+    .locals 3
     .param p1, "event"    # Lcom/brightcove/player/event/Event;
+
+    .line 254
+    const-string v0, "TestIMA"
+
+    const-string v1, "Did Set Video"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 255
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$400(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)V
 
-    .line 256
+    .line 258
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 259
+    .local v0, "properties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    const/high16 v1, 0x42c80000    # 100.0f
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    const-string v2, "volume"
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 260
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$500(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Lcom/brightcove/player/event/EventEmitter;
+
+    move-result-object v1
+
+    const-string v2, "setVolume"
+
+    invoke-interface {v1, v2, v0}, Lcom/brightcove/player/event/EventEmitter;->emit(Ljava/lang/String;Ljava/util/Map;)V
+
+    .line 261
     return-void
 .end method

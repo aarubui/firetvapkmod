@@ -49,7 +49,7 @@
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->setContentView(I)V
 
     .line 32
-    const v0, 0x7f0a021f
+    const v0, 0x7f0a0225
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     .line 33
     .local v0, "title":Landroid/widget/TextView;
-    const v1, 0x7f0a0239
+    const v1, 0x7f0a023f
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
 

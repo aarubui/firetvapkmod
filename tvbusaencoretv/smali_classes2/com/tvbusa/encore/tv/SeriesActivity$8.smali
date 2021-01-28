@@ -120,7 +120,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f110029
+    const v6, 0x7f11002b
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -138,7 +138,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f110027
+    const v7, 0x7f110029
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -339,7 +339,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a00fa
+    const v4, 0x7f0a00fd
 
     const-string v5, "BrowseFragment"
 

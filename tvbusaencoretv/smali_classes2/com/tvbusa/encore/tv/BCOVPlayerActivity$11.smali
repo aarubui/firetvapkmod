@@ -3,12 +3,12 @@
 .source "BCOVPlayerActivity.java"
 
 # interfaces
-.implements Lokhttp3/Callback;
+.implements Lcom/google/ads/interactivemedia/v3/api/player/ContentProgressProvider;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordFirebaseAR()V
+    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->requestAds()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 563
+    .line 535
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$11;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,25 +36,37 @@
 
 
 # virtual methods
-.method public onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
-    .locals 0
-    .param p1, "call"    # Lokhttp3/Call;
-    .param p2, "e"    # Ljava/io/IOException;
+.method public getContentProgress()Lcom/google/ads/interactivemedia/v3/api/player/VideoProgressUpdate;
+    .locals 5
 
-    .line 565
-    return-void
-.end method
+    .line 538
+    new-instance v0, Lcom/google/ads/interactivemedia/v3/api/player/VideoProgressUpdate;
 
-.method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
-    .locals 0
-    .param p1, "call"    # Lokhttp3/Call;
-    .param p2, "response"    # Lokhttp3/Response;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$11;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 568
-    return-void
+    invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1200(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/brightcove/player/view/BaseVideoView;->getCurrentPosition()I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    iget-object v3, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$11;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    invoke-static {v3}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1300(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/brightcove/player/view/BaseVideoView;->getDuration()I
+
+    move-result v3
+
+    int-to-long v3, v3
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/ads/interactivemedia/v3/api/player/VideoProgressUpdate;-><init>(JJ)V
+
+    return-object v0
 .end method

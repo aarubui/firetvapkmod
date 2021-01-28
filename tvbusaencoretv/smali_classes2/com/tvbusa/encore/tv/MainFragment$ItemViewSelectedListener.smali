@@ -62,11 +62,11 @@
 
     const-string v3, "MainFragment"
 
-    const v4, 0x7f0a0224
+    const v4, 0x7f0a022a
 
-    const v5, 0x7f0a0222
+    const v5, 0x7f0a0228
 
-    const v6, 0x7f0a0223
+    const v6, 0x7f0a0229
 
     if-eqz v1, :cond_0
 

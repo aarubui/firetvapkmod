@@ -3,12 +3,12 @@
 .source "BCOVPlayerActivity.java"
 
 # interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
+.implements Lokhttp3/Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->requestAudioFocus()V
+    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->snPing(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 687
+    .line 680
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$15;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,86 +36,57 @@
 
 
 # virtual methods
-.method public onAudioFocusChange(I)V
+.method public onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
+    .locals 0
+    .param p1, "call"    # Lokhttp3/Call;
+    .param p2, "e"    # Ljava/io/IOException;
+
+    .line 683
+    invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
+
+    .line 684
+    return-void
+.end method
+
+.method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
     .locals 3
-    .param p1, "focusChange"    # I
+    .param p1, "call"    # Lokhttp3/Call;
+    .param p2, "response"    # Lokhttp3/Response;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 688
+    invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 691
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$15;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+    return-void
 
-    invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1100(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Ljava/lang/String;
-
-    move-result-object v0
+    .line 689
+    :cond_0
+    new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onAudioFocusChange() focusChange? "
+    const-string v2, "Unexpected code "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 692
-    const/4 v0, -0x3
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, -0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, -0x1
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    .line 694
-    :cond_0
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$15;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
-
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    .line 695
-    goto :goto_0
-
-    .line 698
-    :cond_1
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$15;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
-
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    .line 699
-    goto :goto_0
-
-    .line 701
-    :cond_2
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$15;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
-
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
-
-    .line 702
-    nop
-
-    .line 705
-    :goto_0
-    return-void
+    throw v0
 .end method

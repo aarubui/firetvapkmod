@@ -43,7 +43,7 @@
     .line 68
     iget-object v0, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
-    const v1, 0x7f0a00c0
+    const v1, 0x7f0a00c3
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -55,7 +55,7 @@
     .local v0, "email":Landroid/widget/EditText;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
-    const v2, 0x7f0a01a3
+    const v2, 0x7f0a01a7
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/LoginActivity;->findViewById(I)Landroid/view/View;
 
