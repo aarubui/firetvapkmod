@@ -28,19 +28,19 @@
 .method public a(Landroid/os/Bundle;)Landroid/support/v17/leanback/widget/t$a;
     .locals 4
 
-    const p1, 0x7f0f00cb
+    const p1, 0x7f0f00d5
 
     invoke-virtual {p0, p1}, Lcom/njpwworld/NJPWWORLD/view/b/d;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const v0, 0x7f0f00de
+    const v0, 0x7f0f00e8
 
     invoke-virtual {p0, v0}, Lcom/njpwworld/NJPWWORLD/view/b/d;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f0f00d0
+    const v1, 0x7f0f00da
 
     invoke-virtual {p0, v1}, Lcom/njpwworld/NJPWWORLD/view/b/d;->getString(I)Ljava/lang/String;
 
@@ -142,7 +142,7 @@
 
     check-cast v0, Landroid/support/v17/leanback/widget/u$a;
 
-    const v1, 0x7f0f00c8
+    const v1, 0x7f0f00d2
 
     invoke-virtual {v0, v1}, Landroid/support/v17/leanback/widget/u$a;->a(I)Landroid/support/v17/leanback/widget/u$b;
 
@@ -150,7 +150,7 @@
 
     check-cast v0, Landroid/support/v17/leanback/widget/u$a;
 
-    const v1, 0x7f0f00c7
+    const v1, 0x7f0f00d1
 
     invoke-virtual {v0, v1}, Landroid/support/v17/leanback/widget/u$a;->b(I)Landroid/support/v17/leanback/widget/u$b;
 
@@ -180,7 +180,7 @@
 
     check-cast v0, Landroid/support/v17/leanback/widget/u$a;
 
-    const v1, 0x7f0f00cf
+    const v1, 0x7f0f00d9
 
     invoke-virtual {v0, v1}, Landroid/support/v17/leanback/widget/u$a;->a(I)Landroid/support/v17/leanback/widget/u$b;
 
@@ -188,7 +188,7 @@
 
     check-cast v0, Landroid/support/v17/leanback/widget/u$a;
 
-    const v1, 0x7f0f00ce
+    const v1, 0x7f0f00d8
 
     invoke-virtual {v0, v1}, Landroid/support/v17/leanback/widget/u$a;->b(I)Landroid/support/v17/leanback/widget/u$b;
 

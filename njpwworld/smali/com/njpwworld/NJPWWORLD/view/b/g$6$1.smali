@@ -42,7 +42,7 @@
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/g$6$1;->a:Ljava/lang/Object;
 
-    check-cast v0, Lcom/njpwworld/NJPWWORLD/a/h;
+    check-cast v0, Lcom/njpwworld/NJPWWORLD/b/h;
 
     iget-object v1, p0, Lcom/njpwworld/NJPWWORLD/view/b/g$6$1;->b:Lcom/njpwworld/NJPWWORLD/view/b/g$6;
 
@@ -58,7 +58,7 @@
 
     iget-object v1, v1, Lcom/njpwworld/NJPWWORLD/view/b/g$6;->a:Lcom/njpwworld/NJPWWORLD/view/b/g;
 
-    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/view/b/g;->a(Lcom/njpwworld/NJPWWORLD/view/b/g;Lcom/njpwworld/NJPWWORLD/a/h;)V
+    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/view/b/g;->a(Lcom/njpwworld/NJPWWORLD/view/b/g;Lcom/njpwworld/NJPWWORLD/b/h;)V
 
     goto :goto_0
 
@@ -67,7 +67,7 @@
 
     iget-object v1, v1, Lcom/njpwworld/NJPWWORLD/view/b/g$6;->a:Lcom/njpwworld/NJPWWORLD/view/b/g;
 
-    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/view/b/g;->b(Lcom/njpwworld/NJPWWORLD/view/b/g;Lcom/njpwworld/NJPWWORLD/a/h;)V
+    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/view/b/g;->b(Lcom/njpwworld/NJPWWORLD/view/b/g;Lcom/njpwworld/NJPWWORLD/b/h;)V
 
     :goto_0
     return-void

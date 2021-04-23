@@ -48,7 +48,7 @@
 
     const v2, 0x7f0f001d
 
-    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;II)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0a00e6
+    const p3, 0x7f0a00e5
 
     invoke-virtual {p1, p3}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -97,7 +97,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0f0079
+    const p3, 0x7f0f007a
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 

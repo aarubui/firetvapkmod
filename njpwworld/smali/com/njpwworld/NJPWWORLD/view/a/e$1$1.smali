@@ -48,7 +48,7 @@
 
     const v2, 0x7f0f001d
 
-    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;II)V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/f;->b(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/f;->b(Landroid/content/Context;)Z
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/a/e$1$1;->a:Lcom/njpwworld/NJPWWORLD/view/a/e$1;
 
@@ -101,7 +101,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/c/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     return-void

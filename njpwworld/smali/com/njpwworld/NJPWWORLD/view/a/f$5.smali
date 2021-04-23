@@ -72,7 +72,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/njpwworld/NJPWWORLD/c/f;->b(Landroid/content/Context;Z)Z
+    invoke-static {p1, v0}, Lcom/njpwworld/NJPWWORLD/d/f;->b(Landroid/content/Context;Z)Z
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/a/f$5;->a:Lcom/njpwworld/NJPWWORLD/view/a/f;
 

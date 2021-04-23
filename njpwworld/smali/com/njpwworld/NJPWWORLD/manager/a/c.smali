@@ -56,7 +56,7 @@
     :pswitch_0
     const-string p1, "onProductDataResponse: failed, should retry request."
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/c;->c(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/c;->c(Ljava/lang/String;)I
 
     goto/16 :goto_2
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/c;->c(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/c;->c(Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -182,7 +182,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -251,7 +251,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     sget-object v1, Lcom/njpwworld/NJPWWORLD/manager/a/c$1;->c:[I
 
@@ -274,14 +274,14 @@
     const-string p1, "onPurchaseResponse : invalid SKU! onProductDataResponse should have disabled buy button already."
 
     :goto_0
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     goto :goto_1
 
     :pswitch_2
     const-string p1, "onPurchaseResponse : already purchased, you should verify the subscription purchase on your side and make sure the purchase was granted to customer."
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/c;->a(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/c;->a(Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -312,7 +312,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     iget-object v2, p0, Lcom/njpwworld/NJPWWORLD/manager/a/c;->a:Lcom/njpwworld/NJPWWORLD/manager/a/a;
 
@@ -386,7 +386,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     iget-boolean v0, p0, Lcom/njpwworld/NJPWWORLD/manager/a/c;->d:Z
 
@@ -418,7 +418,7 @@
     :pswitch_0
     const-string p1, "onPurchaseUpdatesResponse: failed, should retry request"
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     goto :goto_1
 

@@ -1,268 +1,963 @@
-.class public Lcom/njpwworld/NJPWWORLD/c/a;
+.class public interface abstract Lcom/njpwworld/NJPWWORLD/c/a;
 .super Ljava/lang/Object;
 
 
-# direct methods
-.method public static a(Landroid/content/Context;)V
-    .locals 3
+# virtual methods
+.method public abstract a(Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/lang/String;
+        .annotation runtime Lb/c/x;
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+    .end annotation
 
-    const/4 v0, -0x1
-
-    const v1, 0x7f0f00e1
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;II)V
-    .locals 1
+.method public abstract a(Ljava/util/Map;I)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/live0/"
+    .end annotation
 
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, p2, v0}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;I)",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)V
-    .locals 1
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_token"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    const/4 v0, -0x1
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v1/logout"
+    .end annotation
 
-    if-ne p1, v0, :cond_0
-
-    const-string p1, ""
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_0
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    const p1, 0x7f0f0029
-
-    invoke-virtual {p0, p1, p3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
-
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
-
-    const p1, 0x102000b
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/TextView;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/a;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;)V
-    .locals 1
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "video_code"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    const/4 v0, -0x1
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/playlist/"
+    .end annotation
 
-    invoke-static {p0, v0, p1, p2}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/g;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
-    .locals 2
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;I)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/p/original"
+    .end annotation
 
-    const/4 v0, -0x1
-
-    const v1, 0x7f0f00e1
-
-    invoke-static {p0, v0, v1, p1}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I)",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 3
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "api_key"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v2/p"
+    .end annotation
 
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    const v1, 0x7f0f002f
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    const/4 v1, 0x2
-
-    const/high16 v2, 0x41c80000    # 25.0f
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setCustomTitle(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    const p1, 0x7f0f0029
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
-
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
-
-    const p1, 0x1020006
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    const p1, 0x102000b
-
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/TextView;
-
-    const p1, 0x800003
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
-    .locals 3
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "category_code"
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "start_category_code"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/p/search"
+    .end annotation
 
-    new-instance v0, Landroid/widget/TextView;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v0, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "program_code"
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "start_program_code"
+        .end annotation
+    .end param
+    .param p7    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "program_group_code"
+        .end annotation
+    .end param
+    .param p8    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "start_program_group_code"
+        .end annotation
+    .end param
+    .param p9    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "category_code"
+        .end annotation
+    .end param
+    .param p10    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "start_category_code"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/p/search"
+    .end annotation
 
-    const v1, 0x7f0f002f
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_token"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "video_code"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    const/4 v1, 0x2
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/playlist/"
+    .end annotation
 
-    const/high16 v2, 0x41c80000    # 25.0f
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/g;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/s;
+            a = "tag_code"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p5    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/p/tag/{tag_code}"
+    .end annotation
 
-    new-instance v1, Landroid/app/AlertDialog$Builder;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I)",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/s;
+            a = "tag_code"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p5    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "api_key"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v2/p/tag/{tag_code}"
+    .end annotation
 
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setCustomTitle(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    move-result-object p0
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "login_id"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "pw"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "type"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "device_identifier"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v1/login"
+    .end annotation
 
-    move-result-object p0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/d;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    const p1, 0x7f0f0029
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/s;
+            a = "program_code"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "receipt_id"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "amazon_user_id"
+        .end annotation
+    .end param
+    .param p6    # I
+        .annotation runtime Lb/c/c;
+            a = "lang"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/p/detail/{program_code}"
+    .end annotation
 
-    move-result-object p0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I)",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/f;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    const/4 p1, 0x0
+.method public abstract a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "receipt_id"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "amazon_user_id"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "login_id"
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "pw"
+        .end annotation
+    .end param
+    .param p7    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "nickname"
+        .end annotation
+    .end param
+    .param p8    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "birthday"
+        .end annotation
+    .end param
+    .param p9    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "sex"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/receipt"
+    .end annotation
 
-    move-result-object p0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/a;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+.method public abstract b(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "w"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v1/p"
+    .end annotation
 
-    move-result-object p0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
+.method public abstract b(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "receipt_id"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "amazon_user_id"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/receipt/check"
+    .end annotation
 
-    const p1, 0x1020006
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/i;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+.method public abstract b(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/s;
+            a = "program_code"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_token"
+        .end annotation
+    .end param
+    .param p5    # I
+        .annotation runtime Lb/c/c;
+            a = "lang"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    move-result-object p1
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/p/detail/{program_code}"
+    .end annotation
 
-    check-cast p1, Landroid/widget/ImageView;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I)",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/f;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    const/16 p2, 0x8
+.method public abstract b(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "api_key"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "receipt_id"
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "amazon_user_id"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/c;
+            a = "video_code"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/e;
+    .end annotation
 
-    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setVisibility(I)V
+    .annotation runtime Lb/c/o;
+        a = "/ftv/v2/playlist/"
+    .end annotation
 
-    const p1, 0x102000b
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/g;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+.method public abstract c(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "api_key"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v2/c/series"
+    .end annotation
 
-    move-result-object p0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/c;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    check-cast p0, Landroid/widget/TextView;
+.method public abstract d(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lb/b;
+    .param p1    # Ljava/util/Map;
+        .annotation runtime Lb/c/j;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "limit"
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "offset"
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation runtime Lb/c/t;
+            a = "lang"
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation runtime Lb/c/t;
+            a = "api_key"
+        .end annotation
+    .end param
+    .annotation runtime Lb/c/f;
+        a = "/ftv/v2/p/free"
+    .end annotation
 
-    const p1, 0x800003
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            ")",
+            "Lb/b<",
+            "Lcom/njpwworld/NJPWWORLD/b/h;",
+            ">;"
+        }
+    .end annotation
 .end method

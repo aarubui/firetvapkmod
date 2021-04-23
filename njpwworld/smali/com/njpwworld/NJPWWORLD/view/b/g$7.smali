@@ -46,7 +46,7 @@
 
     invoke-direct {v1, p0}, Lcom/njpwworld/NJPWWORLD/view/b/g$7$3;-><init>(Lcom/njpwworld/NJPWWORLD/view/b/g$7;)V
 
-    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/c/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     invoke-direct {p3, p0}, Lcom/njpwworld/NJPWWORLD/view/b/g$7$2;-><init>(Lcom/njpwworld/NJPWWORLD/view/b/g$7;)V
 
-    invoke-static {p2, p1, p3}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-static {p2, p1, p3}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/njpwworld/NJPWWORLD/view/b/g$7$1;-><init>(Lcom/njpwworld/NJPWWORLD/view/b/g$7;Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/c/g;->a(Landroid/app/Activity;Lcom/njpwworld/NJPWWORLD/view/a/h$a;)V
+    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/d/g;->a(Landroid/app/Activity;Lcom/njpwworld/NJPWWORLD/view/a/h$a;)V
 
     return-void
 .end method

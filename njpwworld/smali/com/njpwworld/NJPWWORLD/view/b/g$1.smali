@@ -36,13 +36,13 @@
 .method public a(Landroid/support/v17/leanback/widget/be$a;Ljava/lang/Object;Landroid/support/v17/leanback/widget/bm$b;Landroid/support/v17/leanback/widget/bj;)V
     .locals 0
 
-    check-cast p2, Lcom/njpwworld/NJPWWORLD/a/e;
+    check-cast p2, Lcom/njpwworld/NJPWWORLD/b/e;
 
     if-eqz p2, :cond_0
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/b/g$1;->a:Lcom/njpwworld/NJPWWORLD/view/b/g;
 
-    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/a/e;->r()I
+    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/b/e;->r()I
 
     move-result p3
 
@@ -66,7 +66,7 @@
 
     move-result p1
 
-    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/a/e;->r()I
+    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/b/e;->r()I
 
     move-result p2
 

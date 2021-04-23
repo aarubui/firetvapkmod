@@ -46,7 +46,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
     :catch_0
+    move-exception v0
+
+    :goto_0
     :try_start_1
     sget-object v0, Lcom/njpwworld/NJPWWORLD/manager/a/b$3;->a:[I
 
@@ -62,7 +67,12 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
+    goto :goto_1
+
     :catch_1
+    move-exception v0
+
+    :goto_1
     :try_start_2
     sget-object v0, Lcom/njpwworld/NJPWWORLD/manager/a/b$3;->a:[I
 
@@ -78,6 +88,11 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    goto :goto_2
+
     :catch_2
+    move-exception v0
+
+    :goto_2
     return-void
 .end method
