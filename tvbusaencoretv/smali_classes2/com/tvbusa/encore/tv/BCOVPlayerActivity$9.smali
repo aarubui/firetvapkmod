@@ -96,11 +96,14 @@
     invoke-interface {v0, v1}, Lcom/google/ads/interactivemedia/v3/api/AdsRenderingSettings;->setFocusSkipButtonWhenAvailable(Z)V
 
     .line 381
+    invoke-interface {v0, v1}, Lcom/google/ads/interactivemedia/v3/api/AdsRenderingSettings;->setEnablePreloading(Z)V
+
+    .line 382
     const/16 v1, 0x7d0
 
     invoke-interface {v0, v1}, Lcom/google/ads/interactivemedia/v3/api/AdsRenderingSettings;->setBitrateKbps(I)V
 
-    .line 382
+    .line 383
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$9;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$900(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Lcom/google/ads/interactivemedia/v3/api/AdsManager;
@@ -109,6 +112,6 @@
 
     invoke-interface {v1, v0}, Lcom/google/ads/interactivemedia/v3/api/AdsManager;->init(Lcom/google/ads/interactivemedia/v3/api/AdsRenderingSettings;)V
 
-    .line 383
+    .line 384
     return-void
 .end method

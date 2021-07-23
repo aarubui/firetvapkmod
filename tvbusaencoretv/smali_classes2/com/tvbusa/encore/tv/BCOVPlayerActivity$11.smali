@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 535
+    .line 536
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$11;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +39,7 @@
 .method public getContentProgress()Lcom/google/ads/interactivemedia/v3/api/player/VideoProgressUpdate;
     .locals 5
 
-    .line 538
+    .line 539
     new-instance v0, Lcom/google/ads/interactivemedia/v3/api/player/VideoProgressUpdate;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$11;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;

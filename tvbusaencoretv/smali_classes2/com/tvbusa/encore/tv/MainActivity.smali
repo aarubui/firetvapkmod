@@ -94,7 +94,12 @@
     :catch_0
     move-exception v2
 
+    .line 68
+    .local v2, "ignored":Ljava/lang/Exception;
+    const-string v0, "123213123123123123123132"
+
     .line 71
+    .end local v2    # "ignored":Ljava/lang/Exception;
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -107,25 +112,8 @@
 
     move-result-object v2
 
-    .line 74
-    .local v2, "cr":Landroid/content/ContentResolver;
-    const-string v3, "advertising_id"
-
-    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 75
-    const-string v3, "SN# From Advertising ID"
-
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 76
-    iget-object v3, p0, Lcom/tvbusa/encore/tv/MainActivity;->mApp:Lcom/tvbusa/encore/tv/MainApplication;
-
-    invoke-virtual {v3, v0}, Lcom/tvbusa/encore/tv/MainApplication;->setNumber(Ljava/lang/String;)V
-
     .line 78
+    .local v2, "cr":Landroid/content/ContentResolver;
     invoke-virtual {p0, v0, v1}, Lcom/tvbusa/encore/tv/MainActivity;->snPing(Ljava/lang/String;I)V
 
     .line 79
@@ -190,7 +178,7 @@
     .param p1, "sn"    # Ljava/lang/String;
     .param p2, "type"    # I
 
-    .line 131
+    .line 129
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -201,7 +189,7 @@
 
     return-void
 
-    .line 132
+    .line 130
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -221,17 +209,17 @@
 
     move-result-object v0
 
-    .line 133
+    .line 131
     .local v0, "params":Ljava/lang/String;
     const-string v1, "https://us-central1-encoretvb-firetv-chinese.cloudfunctions.net/fireTvPing"
 
-    .line 134
+    .line 132
     .local v1, "url":Ljava/lang/String;
     new-instance v2, Lokhttp3/OkHttpClient;
 
     invoke-direct {v2}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 135
+    .line 133
     .local v2, "client":Lokhttp3/OkHttpClient;
     const-string v3, "application/json; charset=utf-8"
 
@@ -239,13 +227,13 @@
 
     move-result-object v3
 
-    .line 136
+    .line 134
     .local v3, "JSON":Lokhttp3/MediaType;
     invoke-static {v3, v0}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v4
 
-    .line 137
+    .line 135
     .local v4, "body":Lokhttp3/RequestBody;
     new-instance v5, Lokhttp3/Request$Builder;
 
@@ -263,7 +251,7 @@
 
     move-result-object v5
 
-    .line 138
+    .line 136
     .local v5, "request":Lokhttp3/Request;
     invoke-virtual {v2, v5}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -275,6 +263,6 @@
 
     invoke-interface {v6, v7}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 151
+    .line 149
     return-void
 .end method

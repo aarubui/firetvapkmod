@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 622
+    .line 623
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .param p1, "call"    # Lokhttp3/Call;
     .param p2, "e"    # Ljava/io/IOException;
 
-    .line 624
+    .line 625
     return-void
 .end method
 
@@ -55,6 +55,6 @@
         }
     .end annotation
 
-    .line 627
+    .line 628
     return-void
 .end method

@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u8acb\u5230encoreTVB\u7db2\u7ad9\u6216\u624b\u6a5f\u61c9\u7528\u7a0b\u5f0f\u767b\u8a18\u5e33\u6236"
+    const-string v1, "\u8acb\u5230TVBAnywhere North America\u7db2\u7ad9\u6216\u624b\u6a5f\u61c9\u7528\u7a0b\u5f0f\u767b\u8a18\u5e33\u6236"
 
     const/4 v2, 0x1
 
