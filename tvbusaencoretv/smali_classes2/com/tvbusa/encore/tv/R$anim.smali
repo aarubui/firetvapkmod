@@ -1,6 +1,5 @@
 .class public final Lcom/tvbusa/encore/tv/R$anim;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -71,22 +70,23 @@
 
 .field public static final design_snackbar_out:I = 0x7f01001b
 
-.field public static final lb_decelerator_2:I = 0x7f01001c
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f01001c
 
-.field public static final lb_decelerator_4:I = 0x7f01001d
+.field public static final lb_decelerator_2:I = 0x7f01001d
 
-.field public static final mtrl_bottom_sheet_slide_in:I = 0x7f01001e
+.field public static final lb_decelerator_4:I = 0x7f01001e
 
-.field public static final mtrl_bottom_sheet_slide_out:I = 0x7f01001f
+.field public static final mtrl_bottom_sheet_slide_in:I = 0x7f01001f
 
-.field public static final mtrl_card_lowers_interpolator:I = 0x7f010020
+.field public static final mtrl_bottom_sheet_slide_out:I = 0x7f010020
+
+.field public static final mtrl_card_lowers_interpolator:I = 0x7f010021
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
