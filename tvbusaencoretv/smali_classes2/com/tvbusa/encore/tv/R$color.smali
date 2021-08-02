@@ -1,6 +1,5 @@
 .class public final Lcom/tvbusa/encore/tv/R$color;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -417,240 +416,253 @@
 
 .field public static final material_blue_grey_950:I = 0x7f0600c8
 
-.field public static final material_deep_teal_200:I = 0x7f0600c9
+.field public static final material_cursor_color:I = 0x7f0600c9
 
-.field public static final material_deep_teal_500:I = 0x7f0600ca
+.field public static final material_deep_teal_200:I = 0x7f0600ca
 
-.field public static final material_grey_100:I = 0x7f0600cb
+.field public static final material_deep_teal_500:I = 0x7f0600cb
 
-.field public static final material_grey_300:I = 0x7f0600cc
+.field public static final material_grey_100:I = 0x7f0600cc
 
-.field public static final material_grey_50:I = 0x7f0600cd
+.field public static final material_grey_300:I = 0x7f0600cd
 
-.field public static final material_grey_600:I = 0x7f0600ce
+.field public static final material_grey_50:I = 0x7f0600ce
 
-.field public static final material_grey_800:I = 0x7f0600cf
+.field public static final material_grey_600:I = 0x7f0600cf
 
-.field public static final material_grey_850:I = 0x7f0600d0
+.field public static final material_grey_800:I = 0x7f0600d0
 
-.field public static final material_grey_900:I = 0x7f0600d1
+.field public static final material_grey_850:I = 0x7f0600d1
 
-.field public static final material_on_background_disabled:I = 0x7f0600d2
+.field public static final material_grey_900:I = 0x7f0600d2
 
-.field public static final material_on_background_emphasis_high_type:I = 0x7f0600d3
+.field public static final material_on_background_disabled:I = 0x7f0600d3
 
-.field public static final material_on_background_emphasis_medium:I = 0x7f0600d4
+.field public static final material_on_background_emphasis_high_type:I = 0x7f0600d4
 
-.field public static final material_on_primary_disabled:I = 0x7f0600d5
+.field public static final material_on_background_emphasis_medium:I = 0x7f0600d5
 
-.field public static final material_on_primary_emphasis_high_type:I = 0x7f0600d6
+.field public static final material_on_primary_disabled:I = 0x7f0600d6
 
-.field public static final material_on_primary_emphasis_medium:I = 0x7f0600d7
+.field public static final material_on_primary_emphasis_high_type:I = 0x7f0600d7
 
-.field public static final material_on_surface_disabled:I = 0x7f0600d8
+.field public static final material_on_primary_emphasis_medium:I = 0x7f0600d8
 
-.field public static final material_on_surface_emphasis_high_type:I = 0x7f0600d9
+.field public static final material_on_surface_disabled:I = 0x7f0600d9
 
-.field public static final material_on_surface_emphasis_medium:I = 0x7f0600da
+.field public static final material_on_surface_emphasis_high_type:I = 0x7f0600da
 
-.field public static final material_on_surface_stroke:I = 0x7f0600db
+.field public static final material_on_surface_emphasis_medium:I = 0x7f0600db
 
-.field public static final material_slider_active_tick_marks_color:I = 0x7f0600dc
+.field public static final material_on_surface_stroke:I = 0x7f0600dc
 
-.field public static final material_slider_active_track_color:I = 0x7f0600dd
+.field public static final material_slider_active_tick_marks_color:I = 0x7f0600dd
 
-.field public static final material_slider_halo_color:I = 0x7f0600de
+.field public static final material_slider_active_track_color:I = 0x7f0600de
 
-.field public static final material_slider_inactive_tick_marks_color:I = 0x7f0600df
+.field public static final material_slider_halo_color:I = 0x7f0600df
 
-.field public static final material_slider_inactive_track_color:I = 0x7f0600e0
+.field public static final material_slider_inactive_tick_marks_color:I = 0x7f0600e0
 
-.field public static final material_slider_thumb_color:I = 0x7f0600e1
+.field public static final material_slider_inactive_track_color:I = 0x7f0600e1
 
-.field public static final mtrl_bottom_nav_colored_item_tint:I = 0x7f0600e2
+.field public static final material_slider_thumb_color:I = 0x7f0600e2
 
-.field public static final mtrl_bottom_nav_colored_ripple_color:I = 0x7f0600e3
+.field public static final material_timepicker_button_background:I = 0x7f0600e3
 
-.field public static final mtrl_bottom_nav_item_tint:I = 0x7f0600e4
+.field public static final material_timepicker_button_stroke:I = 0x7f0600e4
 
-.field public static final mtrl_bottom_nav_ripple_color:I = 0x7f0600e5
+.field public static final material_timepicker_clock_text_color:I = 0x7f0600e5
 
-.field public static final mtrl_btn_bg_color_selector:I = 0x7f0600e6
+.field public static final material_timepicker_clockface:I = 0x7f0600e6
 
-.field public static final mtrl_btn_ripple_color:I = 0x7f0600e7
+.field public static final material_timepicker_modebutton_tint:I = 0x7f0600e7
 
-.field public static final mtrl_btn_stroke_color_selector:I = 0x7f0600e8
+.field public static final mtrl_btn_bg_color_selector:I = 0x7f0600e8
 
-.field public static final mtrl_btn_text_btn_bg_color_selector:I = 0x7f0600e9
+.field public static final mtrl_btn_ripple_color:I = 0x7f0600e9
 
-.field public static final mtrl_btn_text_btn_ripple_color:I = 0x7f0600ea
+.field public static final mtrl_btn_stroke_color_selector:I = 0x7f0600ea
 
-.field public static final mtrl_btn_text_color_disabled:I = 0x7f0600eb
+.field public static final mtrl_btn_text_btn_bg_color_selector:I = 0x7f0600eb
 
-.field public static final mtrl_btn_text_color_selector:I = 0x7f0600ec
+.field public static final mtrl_btn_text_btn_ripple_color:I = 0x7f0600ec
 
-.field public static final mtrl_btn_transparent_bg_color:I = 0x7f0600ed
+.field public static final mtrl_btn_text_color_disabled:I = 0x7f0600ed
 
-.field public static final mtrl_calendar_item_stroke_color:I = 0x7f0600ee
+.field public static final mtrl_btn_text_color_selector:I = 0x7f0600ee
 
-.field public static final mtrl_calendar_selected_range:I = 0x7f0600ef
+.field public static final mtrl_btn_transparent_bg_color:I = 0x7f0600ef
 
-.field public static final mtrl_card_view_foreground:I = 0x7f0600f0
+.field public static final mtrl_calendar_item_stroke_color:I = 0x7f0600f0
 
-.field public static final mtrl_card_view_ripple:I = 0x7f0600f1
+.field public static final mtrl_calendar_selected_range:I = 0x7f0600f1
 
-.field public static final mtrl_chip_background_color:I = 0x7f0600f2
+.field public static final mtrl_card_view_foreground:I = 0x7f0600f2
 
-.field public static final mtrl_chip_close_icon_tint:I = 0x7f0600f3
+.field public static final mtrl_card_view_ripple:I = 0x7f0600f3
 
-.field public static final mtrl_chip_ripple_color:I = 0x7f0600f4
+.field public static final mtrl_chip_background_color:I = 0x7f0600f4
 
-.field public static final mtrl_chip_surface_color:I = 0x7f0600f5
+.field public static final mtrl_chip_close_icon_tint:I = 0x7f0600f5
 
-.field public static final mtrl_chip_text_color:I = 0x7f0600f6
+.field public static final mtrl_chip_surface_color:I = 0x7f0600f6
 
-.field public static final mtrl_choice_chip_background_color:I = 0x7f0600f7
+.field public static final mtrl_chip_text_color:I = 0x7f0600f7
 
-.field public static final mtrl_choice_chip_ripple_color:I = 0x7f0600f8
+.field public static final mtrl_choice_chip_background_color:I = 0x7f0600f8
 
-.field public static final mtrl_choice_chip_text_color:I = 0x7f0600f9
+.field public static final mtrl_choice_chip_ripple_color:I = 0x7f0600f9
 
-.field public static final mtrl_error:I = 0x7f0600fa
+.field public static final mtrl_choice_chip_text_color:I = 0x7f0600fa
 
-.field public static final mtrl_fab_bg_color_selector:I = 0x7f0600fb
+.field public static final mtrl_error:I = 0x7f0600fb
 
-.field public static final mtrl_fab_icon_text_color_selector:I = 0x7f0600fc
+.field public static final mtrl_fab_bg_color_selector:I = 0x7f0600fc
 
-.field public static final mtrl_fab_ripple_color:I = 0x7f0600fd
+.field public static final mtrl_fab_icon_text_color_selector:I = 0x7f0600fd
 
-.field public static final mtrl_filled_background_color:I = 0x7f0600fe
+.field public static final mtrl_fab_ripple_color:I = 0x7f0600fe
 
-.field public static final mtrl_filled_icon_tint:I = 0x7f0600ff
+.field public static final mtrl_filled_background_color:I = 0x7f0600ff
 
-.field public static final mtrl_filled_stroke_color:I = 0x7f060100
+.field public static final mtrl_filled_icon_tint:I = 0x7f060100
 
-.field public static final mtrl_indicator_text_color:I = 0x7f060101
+.field public static final mtrl_filled_stroke_color:I = 0x7f060101
 
-.field public static final mtrl_navigation_item_background_color:I = 0x7f060102
+.field public static final mtrl_indicator_text_color:I = 0x7f060102
 
-.field public static final mtrl_navigation_item_icon_tint:I = 0x7f060103
+.field public static final mtrl_navigation_bar_colored_item_tint:I = 0x7f060103
 
-.field public static final mtrl_navigation_item_text_color:I = 0x7f060104
+.field public static final mtrl_navigation_bar_colored_ripple_color:I = 0x7f060104
 
-.field public static final mtrl_on_primary_text_btn_text_color_selector:I = 0x7f060105
+.field public static final mtrl_navigation_bar_item_tint:I = 0x7f060105
 
-.field public static final mtrl_outlined_icon_tint:I = 0x7f060106
+.field public static final mtrl_navigation_bar_ripple_color:I = 0x7f060106
 
-.field public static final mtrl_outlined_stroke_color:I = 0x7f060107
+.field public static final mtrl_navigation_item_background_color:I = 0x7f060107
 
-.field public static final mtrl_popupmenu_overlay_color:I = 0x7f060108
+.field public static final mtrl_navigation_item_icon_tint:I = 0x7f060108
 
-.field public static final mtrl_scrim_color:I = 0x7f060109
+.field public static final mtrl_navigation_item_text_color:I = 0x7f060109
 
-.field public static final mtrl_tabs_colored_ripple_color:I = 0x7f06010a
+.field public static final mtrl_on_primary_text_btn_text_color_selector:I = 0x7f06010a
 
-.field public static final mtrl_tabs_icon_color_selector:I = 0x7f06010b
+.field public static final mtrl_on_surface_ripple_color:I = 0x7f06010b
 
-.field public static final mtrl_tabs_icon_color_selector_colored:I = 0x7f06010c
+.field public static final mtrl_outlined_icon_tint:I = 0x7f06010c
 
-.field public static final mtrl_tabs_legacy_text_color_selector:I = 0x7f06010d
+.field public static final mtrl_outlined_stroke_color:I = 0x7f06010d
 
-.field public static final mtrl_tabs_ripple_color:I = 0x7f06010e
+.field public static final mtrl_popupmenu_overlay_color:I = 0x7f06010e
 
-.field public static final mtrl_text_btn_text_color_selector:I = 0x7f06010f
+.field public static final mtrl_scrim_color:I = 0x7f06010f
 
-.field public static final mtrl_textinput_default_box_stroke_color:I = 0x7f060110
+.field public static final mtrl_tabs_colored_ripple_color:I = 0x7f060110
 
-.field public static final mtrl_textinput_disabled_color:I = 0x7f060111
+.field public static final mtrl_tabs_icon_color_selector:I = 0x7f060111
 
-.field public static final mtrl_textinput_filled_box_default_background_color:I = 0x7f060112
+.field public static final mtrl_tabs_icon_color_selector_colored:I = 0x7f060112
 
-.field public static final mtrl_textinput_focused_box_stroke_color:I = 0x7f060113
+.field public static final mtrl_tabs_legacy_text_color_selector:I = 0x7f060113
 
-.field public static final mtrl_textinput_hovered_box_stroke_color:I = 0x7f060114
+.field public static final mtrl_tabs_ripple_color:I = 0x7f060114
 
-.field public static final notification_action_color_filter:I = 0x7f060115
+.field public static final mtrl_text_btn_text_color_selector:I = 0x7f060115
 
-.field public static final notification_icon_bg_color:I = 0x7f060116
+.field public static final mtrl_textinput_default_box_stroke_color:I = 0x7f060116
 
-.field public static final notification_material_background_media_default_color:I = 0x7f060117
+.field public static final mtrl_textinput_disabled_color:I = 0x7f060117
 
-.field public static final primary_dark_material_dark:I = 0x7f060118
+.field public static final mtrl_textinput_filled_box_default_background_color:I = 0x7f060118
 
-.field public static final primary_dark_material_light:I = 0x7f060119
+.field public static final mtrl_textinput_focused_box_stroke_color:I = 0x7f060119
 
-.field public static final primary_material_dark:I = 0x7f06011a
+.field public static final mtrl_textinput_hovered_box_stroke_color:I = 0x7f06011a
 
-.field public static final primary_material_light:I = 0x7f06011b
+.field public static final notification_action_color_filter:I = 0x7f06011b
 
-.field public static final primary_text_default_material_dark:I = 0x7f06011c
+.field public static final notification_icon_bg_color:I = 0x7f06011c
 
-.field public static final primary_text_default_material_light:I = 0x7f06011d
+.field public static final notification_material_background_media_default_color:I = 0x7f06011d
 
-.field public static final primary_text_disabled_material_dark:I = 0x7f06011e
+.field public static final preference_fallback_accent_color:I = 0x7f06011e
 
-.field public static final primary_text_disabled_material_light:I = 0x7f06011f
+.field public static final primary_dark_material_dark:I = 0x7f06011f
 
-.field public static final radiobutton_themeable_attribute_color:I = 0x7f060120
+.field public static final primary_dark_material_light:I = 0x7f060120
 
-.field public static final ripple_material_dark:I = 0x7f060121
+.field public static final primary_material_dark:I = 0x7f060121
 
-.field public static final ripple_material_light:I = 0x7f060122
+.field public static final primary_material_light:I = 0x7f060122
 
-.field public static final search_opaque:I = 0x7f060123
+.field public static final primary_text_default_material_dark:I = 0x7f060123
 
-.field public static final secondary_text_color:I = 0x7f060124
+.field public static final primary_text_default_material_light:I = 0x7f060124
 
-.field public static final secondary_text_default_material_dark:I = 0x7f060125
+.field public static final primary_text_disabled_material_dark:I = 0x7f060125
 
-.field public static final secondary_text_default_material_light:I = 0x7f060126
+.field public static final primary_text_disabled_material_light:I = 0x7f060126
 
-.field public static final secondary_text_disabled_material_dark:I = 0x7f060127
+.field public static final radiobutton_themeable_attribute_color:I = 0x7f060127
 
-.field public static final secondary_text_disabled_material_light:I = 0x7f060128
+.field public static final ripple_material_dark:I = 0x7f060128
 
-.field public static final selected_background:I = 0x7f060129
+.field public static final ripple_material_light:I = 0x7f060129
 
-.field public static final selected_text_color:I = 0x7f06012a
+.field public static final search_opaque:I = 0x7f06012a
 
-.field public static final smoke:I = 0x7f06012b
+.field public static final secondary_text_color:I = 0x7f06012b
 
-.field public static final switch_thumb_disabled_material_dark:I = 0x7f06012c
+.field public static final secondary_text_default_material_dark:I = 0x7f06012c
 
-.field public static final switch_thumb_disabled_material_light:I = 0x7f06012d
+.field public static final secondary_text_default_material_light:I = 0x7f06012d
 
-.field public static final switch_thumb_material_dark:I = 0x7f06012e
+.field public static final secondary_text_disabled_material_dark:I = 0x7f06012e
 
-.field public static final switch_thumb_material_light:I = 0x7f06012f
+.field public static final secondary_text_disabled_material_light:I = 0x7f06012f
 
-.field public static final switch_thumb_normal_material_dark:I = 0x7f060130
+.field public static final selected_background:I = 0x7f060130
 
-.field public static final switch_thumb_normal_material_light:I = 0x7f060131
+.field public static final selected_text_color:I = 0x7f060131
 
-.field public static final test_mtrl_calendar_day:I = 0x7f060132
+.field public static final smoke:I = 0x7f060132
 
-.field public static final test_mtrl_calendar_day_selected:I = 0x7f060133
+.field public static final switch_thumb_disabled_material_dark:I = 0x7f060133
 
-.field public static final text_color:I = 0x7f060134
+.field public static final switch_thumb_disabled_material_light:I = 0x7f060134
 
-.field public static final tooltip_background_dark:I = 0x7f060135
+.field public static final switch_thumb_material_dark:I = 0x7f060135
 
-.field public static final tooltip_background_light:I = 0x7f060136
+.field public static final switch_thumb_material_light:I = 0x7f060136
 
-.field public static final white:I = 0x7f060137
+.field public static final switch_thumb_normal_material_dark:I = 0x7f060137
 
-.field public static final white_almost_opaque:I = 0x7f060138
+.field public static final switch_thumb_normal_material_light:I = 0x7f060138
 
-.field public static final white_semi_trans:I = 0x7f060139
+.field public static final test_mtrl_calendar_day:I = 0x7f060139
 
-.field public static final yellow:I = 0x7f06013a
+.field public static final test_mtrl_calendar_day_selected:I = 0x7f06013a
+
+.field public static final text_color:I = 0x7f06013b
+
+.field public static final tooltip_background_dark:I = 0x7f06013c
+
+.field public static final tooltip_background_light:I = 0x7f06013d
+
+.field public static final white:I = 0x7f06013e
+
+.field public static final white_almost_opaque:I = 0x7f06013f
+
+.field public static final white_semi_trans:I = 0x7f060140
+
+.field public static final yellow:I = 0x7f060141
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    .line 7921
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
