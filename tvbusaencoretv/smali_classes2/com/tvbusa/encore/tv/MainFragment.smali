@@ -324,7 +324,7 @@
 
     .line 240
     .local v1, "cr":Landroid/content/ContentResolver;
-    const-string v2, "advertising_id"
+    const-string v2, "android_id"
 
     invoke-static {v1, v2}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 

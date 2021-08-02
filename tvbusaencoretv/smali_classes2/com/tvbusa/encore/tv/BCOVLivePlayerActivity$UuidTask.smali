@@ -103,7 +103,7 @@
     :cond_1
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    const-string v3, "advertising_id"
+    const-string v3, "android_id"
 
     invoke-static {v0, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 

@@ -331,9 +331,6 @@
     .locals 0
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 80
-    invoke-direct {p0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->requestAds()V
-
     return-void
 .end method
 

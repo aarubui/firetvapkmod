@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.tvbusa.encore.tv" platformBuildVersionCode="29" platformBuildVersionName="10">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.tvbusa.encore.tv.noads" platformBuildVersionCode="29" platformBuildVersionName="10">
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <uses-feature android:name="android.software.leanback" android:required="true"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner" android:debuggable="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.tvbusa.encore.tv.MainApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
-        <activity android:banner="@drawable/app_icon_your_company" android:icon="@drawable/app_icon_your_company" android:label="@string/app_name" android:logo="@drawable/app_icon_your_company" android:name="com.tvbusa.encore.tv.MainActivity" android:screenOrientation="landscape">
+        <activity android:label="@string/app_name" android:logo="@drawable/app_icon_your_company" android:name="com.tvbusa.encore.tv.MainActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>

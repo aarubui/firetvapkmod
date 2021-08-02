@@ -109,7 +109,7 @@
 
     .line 74
     .local v2, "cr":Landroid/content/ContentResolver;
-    const-string v3, "advertising_id"
+    const-string v3, "android_id"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
