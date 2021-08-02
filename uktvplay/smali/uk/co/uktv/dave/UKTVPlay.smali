@@ -69,21 +69,6 @@
     return-void
 .end method
 
-.method private broadcastCapabilities()V
-    .locals 1
-
-    .prologue
-    .line 181
-    new-instance v0, Luk/co/uktv/dave/launcher/CapabilityBroadcaster;
-
-    invoke-direct {v0}, Luk/co/uktv/dave/launcher/CapabilityBroadcaster;-><init>()V
-
-    invoke-virtual {v0, p0}, Luk/co/uktv/dave/launcher/CapabilityBroadcaster;->broadcast(Landroid/content/Context;)V
-
-    .line 182
-    return-void
-.end method
-
 .method private onCreateUKTVPlay(Landroid/os/Bundle;)V
     .locals 4
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
@@ -142,9 +127,6 @@
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    .line 61
-    invoke-direct {p0}, Luk/co/uktv/dave/UKTVPlay;->broadcastCapabilities()V
 
     .line 62
     invoke-virtual {p0}, Luk/co/uktv/dave/UKTVPlay;->getAppLaunchUrl()Ljava/lang/String;
@@ -668,94 +650,23 @@
 
     move-result-object v5
 
+    const-string v1, "http://cdn.http.anno.channel4.com/"
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :goto_1
+
+    const-wide/32 p5, 0x1d4c0
+
     goto :goto_1
 .end method
 
-.method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 1
-    .param p1, "requestCode"    # I
-    .param p2, "resultCode"    # I
-    .param p3, "data"    # Landroid/content/Intent;
-
-    invoke-static {p0, p1, p2, p3}, Lcom/amazon/android/Kiwi;->onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Luk/co/uktv/dave/core/AppHostActivity;->onActivityResult(IILandroid/content/Intent;)V
-
-    goto :goto_0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
-
-    invoke-direct {p0, p1}, Luk/co/uktv/dave/UKTVPlay;->onCreateUKTVPlay(Landroid/os/Bundle;)V
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lcom/amazon/android/Kiwi;->onCreate(Landroid/app/Activity;Z)V
-
-    return-void
-.end method
-
-.method public onCreateDialog(I)Landroid/app/Dialog;
-    .locals 2
-
-    invoke-static {p0, p1}, Lcom/amazon/android/Kiwi;->onCreateDialog(Landroid/app/Activity;I)Landroid/app/Dialog;
-
-    move-result-object v0
-
-    .local v0, "dialog":Landroid/app/Dialog;
-    if-eqz v0, :cond_0
-
-    move-object v1, v0
-
-    :goto_0
-    return-object v1
-
-    :cond_0
-    invoke-super {p0, p1}, Luk/co/uktv/dave/core/AppHostActivity;->onCreateDialog(I)Landroid/app/Dialog;
-
-    move-result-object v1
-
-    goto :goto_0
-.end method
-
-.method public onCreateDialog(ILandroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/amazon/android/Kiwi;->onCreateDialog(Landroid/app/Activity;I)Landroid/app/Dialog;
-
-    move-result-object v0
-
-    .local v0, "dialog":Landroid/app/Dialog;
-    if-eqz v0, :cond_0
-
-    move-object p0, v0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Luk/co/uktv/dave/core/AppHostActivity;->onCreateDialog(ILandroid/os/Bundle;)Landroid/app/Dialog;
-
-    move-result-object p0
-
-    goto :goto_0
-.end method
-
-.method public onDestroy()V
     .locals 0
 
-    invoke-super {p0}, Luk/co/uktv/dave/core/AppHostActivity;->onDestroy()V
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onDestroy(Landroid/app/Activity;)V
+    invoke-direct {p0, p1}, Luk/co/uktv/dave/UKTVPlay;->onCreateUKTVPlay(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -841,8 +752,6 @@
     .locals 0
 
     invoke-direct {p0}, Luk/co/uktv/dave/UKTVPlay;->onPauseUKTVPlay()V
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onPause(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -1012,35 +921,5 @@
     invoke-virtual {v0, p0}, Luk/co/uktv/dave/core/MessageBuilder;->send(Luk/co/uktv/dave/core/AppHostActivity;)V
 
     .line 83
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 0
-
-    invoke-super {p0}, Luk/co/uktv/dave/core/AppHostActivity;->onResume()V
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onResume(Landroid/app/Activity;)V
-
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 0
-
-    invoke-super {p0}, Luk/co/uktv/dave/core/AppHostActivity;->onStart()V
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onStart(Landroid/app/Activity;)V
-
-    return-void
-.end method
-
-.method public onStop()V
-    .locals 0
-
-    invoke-super {p0}, Luk/co/uktv/dave/core/AppHostActivity;->onStop()V
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onStop(Landroid/app/Activity;)V
-
     return-void
 .end method
