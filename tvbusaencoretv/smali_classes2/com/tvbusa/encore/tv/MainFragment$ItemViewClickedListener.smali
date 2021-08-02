@@ -274,7 +274,7 @@
     :cond_3
     instance-of v2, v1, Lcom/tvbusa/encore/tv/Setting;
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
     .line 543
     move-object v2, v1
@@ -629,7 +629,7 @@
 
     .line 587
     .end local v3    # "intent":Landroid/content/Intent;
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 588
     :cond_b
@@ -709,8 +709,16 @@
     .end local v6    # "intent":Landroid/content/Intent;
     goto :goto_0
 
-    .line 598
     :cond_d
+    invoke-virtual {v2}, Lcom/tvbusa/encore/tv/Setting;->getKey()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "about"
+
+    if-ne v6, v7, :cond_e
+
+    .line 598
     new-instance v6, Landroid/content/Intent;
 
     iget-object v7, v0, Lcom/tvbusa/encore/tv/MainFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
@@ -719,7 +727,7 @@
 
     move-result-object v7
 
-    const-class v8, Lcom/tvbusa/encore/tv/InfoActivity;
+    const-class v8, Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
     invoke-direct {v6, v7, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -743,13 +751,51 @@
 
     invoke-virtual {v3, v6}, Lcom/tvbusa/encore/tv/MainFragment;->startActivity(Landroid/content/Intent;)V
 
+    .line 602
+    .end local v6    # "intent":Landroid/content/Intent;
+    goto :goto_0
+
+    .line 603
+    :cond_e
+    new-instance v6, Landroid/content/Intent;
+
+    iget-object v7, v0, Lcom/tvbusa/encore/tv/MainFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
+
+    invoke-virtual {v7}, Lcom/tvbusa/encore/tv/MainFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v7
+
+    const-class v8, Lcom/tvbusa/encore/tv/InfoActivity;
+
+    invoke-direct {v6, v7, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 604
+    .restart local v6    # "intent":Landroid/content/Intent;
+    invoke-virtual {v2}, Lcom/tvbusa/encore/tv/Setting;->getName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v4, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 605
+    invoke-virtual {v2}, Lcom/tvbusa/encore/tv/Setting;->getKey()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
     .line 606
+    iget-object v3, v0, Lcom/tvbusa/encore/tv/MainFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
+
+    invoke-virtual {v3, v6}, Lcom/tvbusa/encore/tv/MainFragment;->startActivity(Landroid/content/Intent;)V
+
+    .line 611
     .end local v2    # "setting":Lcom/tvbusa/encore/tv/Setting;
     .end local v5    # "preferences":Landroid/content/SharedPreferences;
     .end local v6    # "intent":Landroid/content/Intent;
     .end local v9    # "uid":Ljava/lang/String;
     .end local v11    # "token":Ljava/lang/String;
-    :cond_e
+    :cond_f
     :goto_0
     return-void
 .end method

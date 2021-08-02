@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 219
+    .line 217
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 7
     .param p1, "event"    # Lcom/brightcove/player/event/Event;
 
-    .line 222
+    .line 220
     iget-object v0, p1, Lcom/brightcove/player/event/Event;->properties:Ljava/util/Map;
 
     const-string v1, "playheadPosition"
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 223
+    .line 221
     .local v0, "currentTime":I
     iget-object v1, p1, Lcom/brightcove/player/event/Event;->properties:Ljava/util/Map;
 
@@ -75,15 +75,15 @@
 
     move-result v1
 
-    .line 224
+    .line 222
     .local v1, "d":I
     const v2, 0x2bf20
 
-    .line 227
+    .line 225
     .local v2, "historyInterval":I
     div-int/lit16 v3, v0, 0x3e8
 
-    .line 229
+    .line 227
     .local v3, "currentMilliTime":I
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
@@ -101,17 +101,17 @@
 
     if-le v4, v5, :cond_0
 
-    .line 230
+    .line 228
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-virtual {v4}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordMinutes()V
 
-    .line 232
+    .line 230
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     iput v3, v4, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->prevousTime:I
 
-    .line 235
+    .line 233
     :cond_0
     if-lez v3, :cond_1
 
@@ -125,12 +125,12 @@
 
     if-le v4, v5, :cond_1
 
-    .line 236
+    .line 234
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     iput v3, v4, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->prTime:I
 
-    .line 237
+    .line 235
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,12 +159,17 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 236
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-virtual {v4}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordEventMinute()V
 
-    .line 242
+    .line 237
+    iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    invoke-virtual {v4}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordRebateMin()V
+
+    .line 241
     :cond_1
     const v4, 0xea60
 
@@ -192,7 +197,7 @@
 
     if-le v4, v5, :cond_2
 
-    .line 243
+    .line 242
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,14 +218,14 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
+    .line 243
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     div-int/lit16 v5, v0, 0x3e8
 
     invoke-virtual {v4, v5}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordHistory(I)V
 
-    .line 245
+    .line 244
     iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     div-int/lit16 v5, v0, 0x3e8
@@ -229,7 +234,7 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordMemberHistory(II)V
 
-    .line 249
+    .line 248
     :cond_2
     return-void
 .end method

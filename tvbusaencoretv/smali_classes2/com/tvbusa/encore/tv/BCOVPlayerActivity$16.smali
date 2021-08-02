@@ -1,247 +1,121 @@
-.class synthetic Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;
+.class Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;
 .super Ljava/lang/Object;
 .source "BCOVPlayerActivity.java"
 
+# interfaces
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->requestAudioFocus()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
+# instance fields
+.field final synthetic this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)V
+    .locals 0
+    .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 445
-    invoke-static {}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->values()[Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
+    .line 713
+    iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAudioFocusChange(I)V
+    .locals 3
+    .param p1, "focusChange"    # I
+
+    .line 717
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1100(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-array v0, v0, [I
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sput-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
+    const-string v2, "onAudioFocusChange() focusChange? "
 
-    :try_start_0
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->LOADED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 718
+    const/4 v0, -0x3
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, -0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    .line 720
+    :cond_0
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
+    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    .line 721
+    goto :goto_0
+
+    .line 724
+    :cond_1
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    .line 725
+    goto :goto_0
+
+    .line 727
+    :cond_2
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
+
+    sget-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$1402(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
+
+    .line 728
+    nop
+
+    .line 731
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->FIRST_QUARTILE:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->AD_PROGRESS:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->AD_BREAK_READY:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    goto :goto_3
-
-    :catch_3
-    move-exception v0
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->CONTENT_PAUSE_REQUESTED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    goto :goto_4
-
-    :catch_4
-    move-exception v0
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->CONTENT_RESUME_REQUESTED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    goto :goto_5
-
-    :catch_5
-    move-exception v0
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ALL_ADS_COMPLETED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    goto :goto_6
-
-    :catch_6
-    move-exception v0
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->SKIPPABLE_STATE_CHANGED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    goto :goto_7
-
-    :catch_7
-    move-exception v0
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->SKIPPED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x9
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    goto :goto_8
-
-    :catch_8
-    move-exception v0
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$16;->$SwitchMap$com$google$ads$interactivemedia$v3$api$AdEvent$AdEventType:[I
-
-    sget-object v1, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->STARTED:Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;
-
-    invoke-virtual {v1}, Lcom/google/ads/interactivemedia/v3/api/AdEvent$AdEventType;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    goto :goto_9
-
-    :catch_9
-    move-exception v0
-
-    :goto_9
     return-void
 .end method

@@ -154,7 +154,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 54
-    const v0, 0x7f0d0027
+    const v0, 0x7f0d0028
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/MainActivity;->setContentView(I)V
 

@@ -84,7 +84,7 @@
 
     .line 32
     :cond_0
-    const v2, 0x7f0a0223
+    const v2, 0x7f0a0229
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/CategoryActivity;->findViewById(I)Landroid/view/View;
 

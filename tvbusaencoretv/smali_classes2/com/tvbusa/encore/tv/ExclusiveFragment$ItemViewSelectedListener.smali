@@ -87,7 +87,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a0222
+    const v3, 0x7f0a0228
 
     invoke-virtual {v2, v3}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a0224
+    const v4, 0x7f0a022a
 
     invoke-virtual {v3, v4}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 

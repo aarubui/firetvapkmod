@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordMemberHistory(II)V
+    value = Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->recordFirebaseAR()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
-    .line 596
+    .line 589
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .param p1, "call"    # Lokhttp3/Call;
     .param p2, "e"    # Ljava/io/IOException;
 
-    .line 598
+    .line 591
     return-void
 .end method
 
@@ -55,6 +55,6 @@
         }
     .end annotation
 
-    .line 601
+    .line 594
     return-void
 .end method

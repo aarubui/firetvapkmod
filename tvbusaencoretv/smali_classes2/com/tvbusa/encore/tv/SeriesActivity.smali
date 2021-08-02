@@ -216,7 +216,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f11005e
+    const v4, 0x7f110060
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -371,7 +371,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f11005e
+    const v4, 0x7f110060
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -646,7 +646,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f11005e
+    const v4, 0x7f110060
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -998,7 +998,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 81
-    const v0, 0x7f0d0025
+    const v0, 0x7f0d0026
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SeriesActivity;->setContentView(I)V
 
@@ -1079,7 +1079,7 @@
     iput-object v6, p0, Lcom/tvbusa/encore/tv/SeriesActivity;->sss:Ljava/lang/String;
 
     .line 96
-    const v6, 0x7f0a00ec
+    const v6, 0x7f0a00ef
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1099,7 +1099,7 @@
     invoke-virtual {v6, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 104
-    const v6, 0x7f0a01ab
+    const v6, 0x7f0a01af
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1119,7 +1119,7 @@
     invoke-virtual {v6, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 121
-    const v6, 0x7f0a011d
+    const v6, 0x7f0a0120
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1168,7 +1168,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110026
+    const v3, 0x7f110028
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1178,7 +1178,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f110028
+    const v4, 0x7f11002a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1372,7 +1372,7 @@
 
     .line 377
     :goto_2
-    const v2, 0x7f0a00bc
+    const v2, 0x7f0a00be
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1382,7 +1382,7 @@
 
     .line 378
     .local v2, "dramaTitle":Landroid/widget/TextView;
-    const v3, 0x7f0a00bb
+    const v3, 0x7f0a00bd
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1392,7 +1392,7 @@
 
     .line 379
     .local v3, "dramaSecondaryTitle":Landroid/widget/TextView;
-    const v7, 0x7f0a00ba
+    const v7, 0x7f0a00bc
 
     invoke-virtual {p0, v7}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 
@@ -1402,7 +1402,7 @@
 
     .line 380
     .local v7, "dramaInfo":Landroid/widget/TextView;
-    const v8, 0x7f0a00b9
+    const v8, 0x7f0a00bb
 
     invoke-virtual {p0, v8}, Lcom/tvbusa/encore/tv/SeriesActivity;->findViewById(I)Landroid/view/View;
 

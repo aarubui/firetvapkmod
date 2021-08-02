@@ -898,13 +898,13 @@
 
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
 
-    const v3, 0x7f110026
+    const v3, 0x7f110028
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f110028
+    const v4, 0x7f11002a
 
     invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getString(I)Ljava/lang/String;
 
