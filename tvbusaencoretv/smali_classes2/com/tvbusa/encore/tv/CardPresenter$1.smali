@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/tvbusa/encore/tv/CardPresenter;Landroid/content/Context;)V
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/CardPresenter;
-    .param p2, "x0"    # Landroid/content/Context;
+    .param p2, "arg0"    # Landroid/content/Context;
 
     .line 64
     iput-object p1, p0, Lcom/tvbusa/encore/tv/CardPresenter$1;->this$0:Lcom/tvbusa/encore/tv/CardPresenter;

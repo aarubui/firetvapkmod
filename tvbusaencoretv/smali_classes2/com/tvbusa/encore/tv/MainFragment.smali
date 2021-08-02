@@ -29,16 +29,6 @@
     .end annotation
 .end field
 
-.field private categoryList:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/tvbusa/encore/tv/Category;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private categoryName:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,6 +66,16 @@
             "Ljava/util/List<",
             "Lcom/tvbusa/encore/tv/Series;",
             ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private genreCategoryList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/tvbusa/encore/tv/Category;",
+            ">;"
         }
     .end annotation
 .end field
@@ -159,47 +159,47 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryKeyword:Ljava/util/ArrayList;
 
-    .line 75
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
-
-    .line 76
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
-
     .line 77
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
+    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     .line 78
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
+    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
+
+    .line 79
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     .line 80
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->historyList:Ljava/util/List;
+    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     .line 82
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->historyList:Ljava/util/List;
+
+    .line 84
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->isCreateDone:Z
 
-    .line 84
+    .line 86
     iput-object v0, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     return-void
@@ -229,7 +229,7 @@
     .locals 7
     .param p1, "json"    # Ljava/lang/String;
 
-    .line 227
+    .line 229
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -240,7 +240,7 @@
 
     check-cast v0, Lcom/tvbusa/encore/tv/MainApplication;
 
-    .line 229
+    .line 231
     .local v0, "mApp":Lcom/tvbusa/encore/tv/MainApplication;
     :try_start_0
     const-string v1, "android.os.SystemProperties"
@@ -249,7 +249,7 @@
 
     move-result-object v1
 
-    .line 230
+    .line 232
     .local v1, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v2, "get"
 
@@ -267,7 +267,7 @@
 
     move-result-object v2
 
-    .line 231
+    .line 233
     .local v2, "get":Ljava/lang/reflect/Method;
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -283,7 +283,7 @@
 
     iput-object v3, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
-    .line 232
+    .line 234
     const-string v3, "SN# From Serial Number"
 
     iget-object v4, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
@@ -292,18 +292,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
+    .line 237
     nop
 
     .end local v1    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v2    # "get":Ljava/lang/reflect/Method;
     goto :goto_0
 
-    .line 233
+    .line 235
     :catch_0
     move-exception v1
 
-    .line 237
+    .line 239
     :goto_0
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
@@ -313,7 +313,7 @@
 
     if-nez v1, :cond_0
 
-    .line 238
+    .line 240
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
@@ -322,7 +322,7 @@
 
     move-result-object v1
 
-    .line 240
+    .line 242
     .local v1, "cr":Landroid/content/ContentResolver;
     const-string v2, "android_id"
 
@@ -332,35 +332,35 @@
 
     iput-object v2, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
-    .line 241
+    .line 243
     iget-object v2, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     const-string v3, "SN# From Advertising ID"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
+    .line 244
     iget-object v2, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/tvbusa/encore/tv/MainApplication;->setNumber(Ljava/lang/String;)V
 
-    .line 243
+    .line 245
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseLayout(Ljava/lang/String;)V
 
-    .line 244
+    .line 246
     .end local v1    # "cr":Landroid/content/ContentResolver;
     goto :goto_1
 
-    .line 245
+    .line 247
     :cond_0
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/MainApplication;->setNumber(Ljava/lang/String;)V
 
-    .line 246
+    .line 248
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseLayout(Ljava/lang/String;)V
 
-    .line 248
+    .line 250
     :goto_1
     return-void
 .end method
@@ -368,7 +368,7 @@
 .method private loadRows()V
     .locals 16
 
-    .line 409
+    .line 411
     move-object/from16 v0, p0
 
     new-instance v1, Landroidx/leanback/widget/ArrayObjectAdapter;
@@ -379,61 +379,61 @@
 
     invoke-direct {v1, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 410
+    .line 412
     .local v1, "rowsAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     new-instance v2, Lcom/tvbusa/encore/tv/SeriesPresenter;
 
     invoke-direct {v2}, Lcom/tvbusa/encore/tv/SeriesPresenter;-><init>()V
 
-    .line 411
+    .line 413
     .local v2, "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     new-instance v3, Lcom/tvbusa/encore/tv/CategoryPresenter;
 
     invoke-direct {v3}, Lcom/tvbusa/encore/tv/CategoryPresenter;-><init>()V
 
-    .line 412
+    .line 414
     .local v3, "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
     new-instance v4, Lcom/tvbusa/encore/tv/HistoryPresenter;
 
     invoke-direct {v4}, Lcom/tvbusa/encore/tv/HistoryPresenter;-><init>()V
 
-    .line 413
+    .line 415
     .local v4, "historyPresenter":Lcom/tvbusa/encore/tv/HistoryPresenter;
     new-instance v5, Lcom/tvbusa/encore/tv/SettingPresenter;
 
     invoke-direct {v5}, Lcom/tvbusa/encore/tv/SettingPresenter;-><init>()V
 
-    .line 414
+    .line 416
     .local v5, "settingPresenter":Lcom/tvbusa/encore/tv/SettingPresenter;
     new-instance v6, Lcom/tvbusa/encore/tv/LivePresenter;
 
     invoke-direct {v6}, Lcom/tvbusa/encore/tv/LivePresenter;-><init>()V
 
-    .line 418
+    .line 420
     .local v6, "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     const/4 v7, 0x0
 
     .local v7, "i":I
     :goto_0
-    iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryName:Ljava/util/ArrayList;
 
-    invoke-interface {v8}, Ljava/util/List;->size()I
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v8
 
     if-ge v7, v8, :cond_b
 
-    .line 420
+    .line 422
     const-wide/16 v8, 0x0
 
     if-nez v7, :cond_1
 
-    .line 421
+    .line 423
     new-instance v10, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v10, v6}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 422
+    .line 424
     .local v10, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v11, 0x0
 
@@ -447,7 +447,7 @@
 
     if-ge v11, v12, :cond_0
 
-    .line 423
+    .line 425
     iget-object v12, v0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
 
     invoke-interface {v12, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -456,12 +456,12 @@
 
     invoke-virtual {v10, v12}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 422
+    .line 424
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 425
+    .line 427
     .end local v11    # "k":I
     :cond_0
     new-instance v11, Landroidx/leanback/widget/HeaderItem;
@@ -470,7 +470,7 @@
 
     invoke-direct {v11, v8, v9, v12}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 426
+    .line 428
     .local v11, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v12, Landroidx/leanback/widget/ListRow;
 
@@ -478,7 +478,7 @@
 
     invoke-virtual {v1, v12}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 429
+    .line 431
     .end local v10    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v11    # "header":Landroidx/leanback/widget/HeaderItem;
     :cond_1
@@ -498,12 +498,12 @@
 
     if-lez v13, :cond_3
 
-    .line 430
+    .line 432
     new-instance v13, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v13, v4}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 431
+    .line 433
     .local v13, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v14, 0x0
 
@@ -517,7 +517,7 @@
 
     if-ge v14, v15, :cond_2
 
-    .line 432
+    .line 434
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -544,7 +544,7 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
+    .line 435
     iget-object v12, v0, Lcom/tvbusa/encore/tv/MainFragment;->historyList:Ljava/util/List;
 
     invoke-interface {v12, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -553,14 +553,14 @@
 
     invoke-virtual {v13, v12}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 431
+    .line 433
     add-int/lit8 v14, v14, 0x1
 
     const/4 v12, 0x1
 
     goto :goto_2
 
-    .line 435
+    .line 437
     .end local v14    # "k":I
     :cond_2
     new-instance v12, Landroidx/leanback/widget/HeaderItem;
@@ -569,7 +569,7 @@
 
     invoke-direct {v12, v8, v9, v14}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 436
+    .line 438
     .local v12, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v14, Landroidx/leanback/widget/ListRow;
 
@@ -577,7 +577,7 @@
 
     invoke-virtual {v1, v14}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 439
+    .line 441
     .end local v12    # "header":Landroidx/leanback/widget/HeaderItem;
     .end local v13    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     :cond_3
@@ -585,18 +585,18 @@
 
     if-ne v7, v12, :cond_5
 
-    .line 440
+    .line 442
     new-instance v12, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v12, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 441
+    .line 443
     .local v12, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v13, 0x0
 
     .local v13, "k":I
     :goto_3
-    iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->size()I
 
@@ -604,14 +604,14 @@
 
     if-ge v13, v14, :cond_4
 
-    .line 442
+    .line 444
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v14, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v15, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    iget-object v15, v0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     invoke-interface {v15, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -631,8 +631,8 @@
 
     invoke-static {v11, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
-    iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    .line 445
+    iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     invoke-interface {v14, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -640,12 +640,12 @@
 
     invoke-virtual {v12, v14}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 441
+    .line 443
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_3
 
-    .line 445
+    .line 447
     .end local v13    # "k":I
     :cond_4
     new-instance v10, Landroidx/leanback/widget/HeaderItem;
@@ -654,7 +654,7 @@
 
     invoke-direct {v10, v8, v9, v11}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 446
+    .line 448
     .local v10, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v11, Landroidx/leanback/widget/ListRow;
 
@@ -703,6 +703,29 @@
 
     move-result-object v12
 
+    check-cast v12, Lcom/tvbusa/encore/tv/Series;
+
+    invoke-virtual {v12}, Lcom/tvbusa/encore/tv/Series;->getName()Ljava/lang/String;
+
+    move-result-object v12
+
+    const-string v13, "MMM"
+
+    invoke-static {v13, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 454
+    iget-object v12, v0, Lcom/tvbusa/encore/tv/MainFragment;->entireList:Ljava/util/List;
+
+    invoke-interface {v12, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Ljava/util/List;
+
+    invoke-interface {v12, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v12
+
     invoke-virtual {v10, v12}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
     .line 452
@@ -710,7 +733,7 @@
 
     goto :goto_4
 
-    .line 455
+    .line 456
     .end local v11    # "j":I
     :cond_6
     new-instance v11, Landroidx/leanback/widget/HeaderItem;
@@ -727,7 +750,7 @@
 
     invoke-direct {v11, v12, v13, v14}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 456
+    .line 457
     .local v11, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v12, Landroidx/leanback/widget/ListRow;
 
@@ -735,7 +758,7 @@
 
     invoke-virtual {v1, v12}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 458
+    .line 459
     const-string v12, "Setting - "
 
     const-string v13, "Setting"
@@ -744,7 +767,7 @@
 
     if-ne v7, v14, :cond_8
 
-    .line 460
+    .line 461
     iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v15, Lcom/tvbusa/encore/tv/Setting;
@@ -757,7 +780,7 @@
 
     invoke-interface {v14, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 461
+    .line 462
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -770,7 +793,7 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 462
+    .line 463
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -783,7 +806,7 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 463
+    .line 464
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -796,14 +819,14 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 465
+    .line 466
     new-instance v8, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v8, v5}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
     move-object v10, v8
 
-    .line 466
+    .line 467
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,7 +849,7 @@
 
     invoke-static {v13, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
+    .line 468
     const/4 v8, 0x0
 
     .local v8, "k":I
@@ -839,7 +862,7 @@
 
     if-ge v8, v9, :cond_7
 
-    .line 468
+    .line 469
     iget-object v9, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     invoke-interface {v9, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -848,7 +871,7 @@
 
     invoke-virtual {v10, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 469
+    .line 470
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -875,12 +898,12 @@
 
     invoke-static {v13, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
+    .line 468
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_5
 
-    .line 471
+    .line 472
     .end local v8    # "k":I
     :cond_7
     new-instance v8, Landroidx/leanback/widget/HeaderItem;
@@ -893,18 +916,18 @@
 
     move-object v11, v8
 
-    .line 472
+    .line 473
     new-instance v8, Landroidx/leanback/widget/ListRow;
 
     invoke-direct {v8, v11, v10}, Landroidx/leanback/widget/ListRow;-><init>(Landroidx/leanback/widget/HeaderItem;Landroidx/leanback/widget/ObjectAdapter;)V
 
     invoke-virtual {v1, v8}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 475
+    .line 476
     :cond_8
-    iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->categoryName:Ljava/util/ArrayList;
 
-    invoke-interface {v8}, Ljava/util/List;->size()I
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v8
 
@@ -914,7 +937,7 @@
 
     if-ne v7, v8, :cond_a
 
-    .line 478
+    .line 479
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -927,7 +950,7 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 479
+    .line 480
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -940,7 +963,7 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 480
+    .line 481
     iget-object v8, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v9, Lcom/tvbusa/encore/tv/Setting;
@@ -953,12 +976,12 @@
 
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 481
+    .line 482
     new-instance v8, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v8, v5}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 482
+    .line 483
     .end local v10    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .local v8, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     new-instance v9, Ljava/lang/StringBuilder;
@@ -983,7 +1006,7 @@
 
     invoke-static {v13, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
+    .line 484
     const/4 v9, 0x0
 
     .local v9, "k":I
@@ -996,7 +1019,7 @@
 
     if-ge v9, v10, :cond_9
 
-    .line 484
+    .line 485
     iget-object v10, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     invoke-interface {v10, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1005,7 +1028,7 @@
 
     invoke-virtual {v8, v10}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 485
+    .line 486
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1032,12 +1055,12 @@
 
     invoke-static {v13, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
+    .line 484
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_6
 
-    .line 487
+    .line 488
     .end local v9    # "k":I
     :cond_9
     new-instance v9, Landroidx/leanback/widget/HeaderItem;
@@ -1048,7 +1071,7 @@
 
     invoke-direct {v9, v12, v13, v10}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 488
+    .line 489
     .end local v11    # "header":Landroidx/leanback/widget/HeaderItem;
     .local v9, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v10, Landroidx/leanback/widget/ListRow;
@@ -1057,7 +1080,7 @@
 
     invoke-virtual {v1, v10}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 418
+    .line 420
     .end local v8    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v9    # "header":Landroidx/leanback/widget/HeaderItem;
     :cond_a
@@ -1065,21 +1088,21 @@
 
     goto/16 :goto_0
 
-    .line 492
+    .line 493
     :cond_b
     nop
 
-    .line 496
+    .line 497
     const-string v8, "Adapter-"
 
     const-string v9, "Is Not Null"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 500
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/MainFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 501
+    .line 502
     return-void
 .end method
 
@@ -1087,27 +1110,27 @@
     .locals 8
     .param p1, "result"    # Ljava/lang/String;
 
-    .line 252
+    .line 254
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryKeyword:Ljava/util/ArrayList;
 
-    .line 253
+    .line 255
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryName:Ljava/util/ArrayList;
 
-    .line 255
+    .line 257
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 256
+    .line 258
     .local v0, "layoutObject":Lorg/json/JSONObject;
     const-string v1, "HomeFragment"
 
@@ -1115,11 +1138,11 @@
 
     move-result-object v1
 
-    .line 257
+    .line 259
     .local v1, "homeLayout":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 258
+    .line 260
     .local v2, "count":I
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1127,7 +1150,7 @@
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 259
+    .line 261
     .local v3, "lastItem":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
@@ -1136,12 +1159,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 260
+    .line 262
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 261
+    .line 263
     .local v4, "cObject":Lorg/json/JSONObject;
     const-string v5, "title"
 
@@ -1149,7 +1172,7 @@
 
     move-result-object v5
 
-    .line 262
+    .line 264
     .local v5, "cName":Ljava/lang/String;
     const-string v6, "key"
 
@@ -1157,26 +1180,26 @@
 
     move-result-object v6
 
-    .line 263
+    .line 265
     .local v6, "cKeyword":Ljava/lang/String;
     iget-object v7, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryKeyword:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 266
     iget-object v7, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryName:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 265
+    .line 267
     if-ne v2, v3, :cond_0
 
-    .line 266
+    .line 268
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseCategoryItems(Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 268
+    .line 270
     :cond_0
     nop
 
@@ -1185,10 +1208,10 @@
     .end local v6    # "cKeyword":Ljava/lang/String;
     add-int/lit8 v2, v2, 0x1
 
-    .line 269
+    .line 271
     goto :goto_0
 
-    .line 272
+    .line 274
     .end local v0    # "layoutObject":Lorg/json/JSONObject;
     .end local v1    # "homeLayout":Lorg/json/JSONArray;
     .end local v2    # "count":I
@@ -1196,15 +1219,15 @@
     :cond_1
     goto :goto_1
 
-    .line 270
+    .line 272
     :catch_0
     move-exception v0
 
-    .line 271
+    .line 273
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 273
+    .line 275
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_1
     return-void
@@ -1216,10 +1239,10 @@
     .locals 0
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
-    .line 114
+    .line 116
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 115
+    .line 117
     return-void
 .end method
 
@@ -1227,16 +1250,16 @@
     .locals 2
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
-    .line 88
+    .line 90
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 89
+    .line 91
     if-eqz p1, :cond_0
 
-    .line 91
+    .line 93
     return-void
 
-    .line 93
+    .line 95
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1258,32 +1281,32 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
+    .line 96
     iget-boolean v0, p0, Lcom/tvbusa/encore/tv/MainFragment;->isCreateDone:Z
 
     if-eqz v0, :cond_1
 
     return-void
 
-    .line 95
+    .line 97
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tvbusa/encore/tv/MainFragment;->isCreateDone:Z
 
-    .line 96
+    .line 98
     const-string v0, "MainFragment"
 
     const-string v1, "On Create"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
+    .line 99
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/MainFragment;->setHeadersState(I)V
 
-    .line 98
+    .line 100
     new-instance v0, Lcom/tvbusa/encore/tv/MainFragment$ItemViewSelectedListener;
 
     const/4 v1, 0x0
@@ -1292,23 +1315,23 @@
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/MainFragment;->setOnItemViewSelectedListener(Landroidx/leanback/widget/OnItemViewSelectedListener;)V
 
-    .line 99
+    .line 101
     new-instance v0, Lcom/tvbusa/encore/tv/MainFragment$ItemViewClickedListener;
 
     invoke-direct {v0, p0, v1}, Lcom/tvbusa/encore/tv/MainFragment$ItemViewClickedListener;-><init>(Lcom/tvbusa/encore/tv/MainFragment;Lcom/tvbusa/encore/tv/MainFragment$1;)V
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/MainFragment;->setOnItemViewClickedListener(Landroidx/leanback/widget/OnItemViewClickedListener;)V
 
-    .line 103
+    .line 105
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 104
+    .line 106
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_2
 
-    .line 105
+    .line 107
     const-string v1, "json"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1317,12 +1340,12 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->json:Ljava/lang/String;
 
-    .line 107
+    .line 109
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->json:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lcom/tvbusa/encore/tv/MainFragment;->getUniqueId(Ljava/lang/String;)V
 
-    .line 110
+    .line 112
     :cond_2
     return-void
 .end method
@@ -1333,12 +1356,12 @@
     .param p2, "container"    # Landroid/view/ViewGroup;
     .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
-    .line 119
+    .line 121
     invoke-super {p0, p1, p2, p3}, Landroidx/leanback/app/BrowseSupportFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 120
+    .line 122
     .local v0, "view":Landroid/view/View;
     const v1, 0x7f0a0064
 
@@ -1348,7 +1371,7 @@
 
     check-cast v1, Landroid/widget/FrameLayout;
 
-    .line 121
+    .line 123
     .local v1, "containerDock":Landroid/widget/FrameLayout;
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1356,7 +1379,7 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 122
+    .line 124
     .local v2, "params":Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
@@ -1366,7 +1389,7 @@
 
     move-result-object v3
 
-    .line 123
+    .line 125
     .local v3, "resources":Landroid/content/res/Resources;
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -1382,7 +1405,7 @@
 
     float-to-int v4, v4
 
-    .line 124
+    .line 126
     .local v4, "newHeaderMargin":I
     const v6, 0x7f0700c7
 
@@ -1392,7 +1415,7 @@
 
     neg-int v6, v6
 
-    .line 125
+    .line 127
     .local v6, "offsetToZero":I
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -1406,19 +1429,19 @@
 
     float-to-int v5, v5
 
-    .line 126
+    .line 128
     .local v5, "newLeftMargin":I
     add-int v7, v6, v4
 
     iput v7, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 127
+    .line 129
     iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 129
+    .line 131
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 130
+    .line 132
     return-object v0
 .end method
 
@@ -1426,13 +1449,13 @@
     .locals 14
     .param p1, "result"    # Ljava/lang/String;
 
-    .line 278
+    .line 280
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 279
+    .line 281
     .local v0, "categoryItemObject":Lorg/json/JSONObject;
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1440,7 +1463,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->entireList:Ljava/util/List;
 
-    .line 280
+    .line 282
     const/4 v1, 0x0
 
     move v2, v1
@@ -1455,14 +1478,14 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 281
+    .line 283
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/tvbusa/encore/tv/MainFragment;->dramaList:Ljava/util/List;
 
-    .line 282
+    .line 284
     iget-object v3, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryKeyword:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1475,11 +1498,11 @@
 
     move-result-object v3
 
-    .line 283
+    .line 285
     .local v3, "jsonArray":Lorg/json/JSONArray;
     move v4, v1
 
-    .line 285
+    .line 287
     .local v4, "itemCount":I
     :goto_1
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
@@ -1488,12 +1511,12 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 286
+    .line 288
     invoke-virtual {v3, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v5
 
-    .line 287
+    .line 289
     .local v5, "jObject":Lorg/json/JSONObject;
     const v6, 0x7f11005d
 
@@ -1505,7 +1528,7 @@
 
     move-result-object v8
 
-    .line 288
+    .line 290
     .local v8, "name":Ljava/lang/String;
     const v6, 0x7f11013e
 
@@ -1517,7 +1540,7 @@
 
     move-result-object v9
 
-    .line 289
+    .line 291
     .local v9, "viet":Ljava/lang/String;
     const-string v6, "pid"
 
@@ -1525,7 +1548,7 @@
 
     move-result-object v10
 
-    .line 290
+    .line 292
     .local v10, "id":Ljava/lang/String;
     const-string v6, "thumb"
 
@@ -1533,7 +1556,7 @@
 
     move-result-object v11
 
-    .line 291
+    .line 293
     .local v11, "thumb":Ljava/lang/String;
     const-string v6, "banner"
 
@@ -1541,7 +1564,7 @@
 
     move-result-object v12
 
-    .line 292
+    .line 294
     .local v12, "banner":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1571,7 +1594,7 @@
 
     move-result-object v13
 
-    .line 293
+    .line 295
     .local v13, "info":Ljava/lang/String;
     new-instance v6, Lcom/tvbusa/encore/tv/Series;
 
@@ -1579,13 +1602,13 @@
 
     invoke-direct/range {v7 .. v13}, Lcom/tvbusa/encore/tv/Series;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 294
+    .line 296
     .local v6, "drama":Lcom/tvbusa/encore/tv/Series;
     iget-object v7, p0, Lcom/tvbusa/encore/tv/MainFragment;->dramaList:Ljava/util/List;
 
     invoke-interface {v7, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 295
+    .line 297
     nop
 
     .end local v5    # "jObject":Lorg/json/JSONObject;
@@ -1598,10 +1621,10 @@
     .end local v13    # "info":Ljava/lang/String;
     add-int/lit8 v4, v4, 0x1
 
-    .line 296
+    .line 298
     goto :goto_1
 
-    .line 297
+    .line 299
     :cond_0
     iget-object v5, p0, Lcom/tvbusa/encore/tv/MainFragment;->entireList:Ljava/util/List;
 
@@ -1609,12 +1632,12 @@
 
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 298
+    .line 300
     const/4 v5, 0x0
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/MainFragment;->dramaList:Ljava/util/List;
 
-    .line 299
+    .line 301
     iget-object v5, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryKeyword:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -1625,12 +1648,12 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 300
+    .line 302
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseGenreCategory(Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 280
+    .line 282
     .end local v3    # "jsonArray":Lorg/json/JSONArray;
     .end local v4    # "itemCount":I
     :cond_1
@@ -1638,21 +1661,21 @@
 
     goto/16 :goto_0
 
-    .line 305
+    .line 307
     .end local v0    # "categoryItemObject":Lorg/json/JSONObject;
     .end local v2    # "i":I
     :cond_2
     goto :goto_2
 
-    .line 303
+    .line 305
     :catch_0
     move-exception v0
 
-    .line 304
+    .line 306
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 306
+    .line 308
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_2
     return-void
@@ -1662,13 +1685,13 @@
     .locals 11
     .param p1, "result"    # Ljava/lang/String;
 
-    .line 333
+    .line 335
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 334
+    .line 336
     .local v0, "layoutObject":Lorg/json/JSONObject;
     const-string v1, "LiveChannel"
 
@@ -1676,11 +1699,11 @@
 
     move-result-object v1
 
-    .line 335
+    .line 337
     .local v1, "liveLayout":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 336
+    .line 338
     .local v2, "count":I
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1688,7 +1711,7 @@
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 337
+    .line 339
     .local v3, "lastItem":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
@@ -1697,12 +1720,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 338
+    .line 340
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 339
+    .line 341
     .local v4, "liveObject":Lorg/json/JSONObject;
     const-string v5, "name"
 
@@ -1710,7 +1733,7 @@
 
     move-result-object v5
 
-    .line 340
+    .line 342
     .local v5, "name":Ljava/lang/String;
     const-string v6, "img"
 
@@ -1718,7 +1741,7 @@
 
     move-result-object v6
 
-    .line 341
+    .line 343
     .local v6, "img":Ljava/lang/String;
     const-string v7, "feed"
 
@@ -1726,7 +1749,7 @@
 
     move-result-object v7
 
-    .line 342
+    .line 344
     .local v7, "url":Ljava/lang/String;
     const-string v8, "banner"
 
@@ -1734,37 +1757,37 @@
 
     move-result-object v8
 
-    .line 343
+    .line 345
     .local v8, "banner":Ljava/lang/String;
     const-string v9, "LiveChannel - Banner"
 
     invoke-static {v9, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
+    .line 346
     const-string v9, "LiveChannel - Img"
 
     invoke-static {v9, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
+    .line 347
     new-instance v9, Lcom/tvbusa/encore/tv/LiveChannel;
 
     invoke-direct {v9, v5, v6, v7, v8}, Lcom/tvbusa/encore/tv/LiveChannel;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
+    .line 348
     .local v9, "channel":Lcom/tvbusa/encore/tv/LiveChannel;
     iget-object v10, p0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
 
     invoke-interface {v10, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 347
+    .line 349
     if-ne v2, v3, :cond_0
 
-    .line 348
+    .line 350
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->parseWatchHistory()V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 350
+    .line 352
     :cond_0
     nop
 
@@ -1776,10 +1799,10 @@
     .end local v9    # "channel":Lcom/tvbusa/encore/tv/LiveChannel;
     add-int/lit8 v2, v2, 0x1
 
-    .line 351
+    .line 353
     goto :goto_0
 
-    .line 355
+    .line 357
     .end local v0    # "layoutObject":Lorg/json/JSONObject;
     .end local v1    # "liveLayout":Lorg/json/JSONArray;
     .end local v2    # "count":I
@@ -1787,15 +1810,15 @@
     :cond_1
     goto :goto_1
 
-    .line 353
+    .line 355
     :catch_0
     move-exception v0
 
-    .line 354
+    .line 356
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 356
+    .line 358
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_1
     return-void
@@ -1805,13 +1828,13 @@
     .locals 9
     .param p1, "result"    # Ljava/lang/String;
 
-    .line 310
+    .line 312
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 311
+    .line 313
     .local v0, "layoutObject":Lorg/json/JSONObject;
     const-string v1, "CategoryFragment"
 
@@ -1819,11 +1842,11 @@
 
     move-result-object v1
 
-    .line 312
+    .line 314
     .local v1, "categoryLayout":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 313
+    .line 315
     .local v2, "count":I
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1831,7 +1854,7 @@
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 314
+    .line 316
     .local v3, "lastItem":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
@@ -1840,12 +1863,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 315
+    .line 317
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 316
+    .line 318
     .local v4, "cObject":Lorg/json/JSONObject;
     const-string v5, "title"
 
@@ -1853,7 +1876,7 @@
 
     move-result-object v5
 
-    .line 317
+    .line 319
     .local v5, "cName":Ljava/lang/String;
     const-string v6, "key"
 
@@ -1861,34 +1884,34 @@
 
     move-result-object v6
 
-    .line 318
+    .line 320
     .local v6, "cKeyword":Ljava/lang/String;
     const-string v7, "MainFragment"
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
+    .line 321
     new-instance v7, Lcom/tvbusa/encore/tv/Category;
 
     const-string v8, ""
 
     invoke-direct {v7, v5, v8, v6}, Lcom/tvbusa/encore/tv/Category;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 322
     .local v7, "category":Lcom/tvbusa/encore/tv/Category;
-    iget-object v8, p0, Lcom/tvbusa/encore/tv/MainFragment;->categoryList:Ljava/util/List;
+    iget-object v8, p0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     invoke-interface {v8, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 321
+    .line 323
     if-ne v2, v3, :cond_0
 
-    .line 322
+    .line 324
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseChannelList(Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 324
+    .line 326
     :cond_0
     nop
 
@@ -1898,10 +1921,10 @@
     .end local v7    # "category":Lcom/tvbusa/encore/tv/Category;
     add-int/lit8 v2, v2, 0x1
 
-    .line 325
+    .line 327
     goto :goto_0
 
-    .line 328
+    .line 330
     .end local v0    # "layoutObject":Lorg/json/JSONObject;
     .end local v1    # "categoryLayout":Lorg/json/JSONArray;
     .end local v2    # "count":I
@@ -1909,15 +1932,15 @@
     :cond_1
     goto :goto_1
 
-    .line 326
+    .line 328
     :catch_0
     move-exception v0
 
-    .line 327
+    .line 329
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 329
+    .line 331
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_1
     return-void
@@ -1926,12 +1949,12 @@
 .method public parseWatchHistory()V
     .locals 4
 
-    .line 359
+    .line 361
     invoke-static {}, Lcom/google/firebase/firestore/FirebaseFirestore;->getInstance()Lcom/google/firebase/firestore/FirebaseFirestore;
 
     move-result-object v0
 
-    .line 360
+    .line 362
     .local v0, "firestore":Lcom/google/firebase/firestore/FirebaseFirestore;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1953,18 +1976,18 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
+    .line 364
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 363
+    .line 365
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/MainFragment;->loadRows()V
 
-    .line 364
+    .line 366
     return-void
 
-    .line 367
+    .line 369
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -1974,13 +1997,13 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 368
+    .line 370
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/MainFragment;->loadRows()V
 
-    .line 369
+    .line 371
     return-void
 
-    .line 372
+    .line 374
     :cond_1
     const-string v1, "user"
 
@@ -2014,7 +2037,7 @@
 
     move-result-object v1
 
-    .line 373
+    .line 375
     invoke-virtual {v1}, Lcom/google/firebase/firestore/Query;->get()Lcom/google/android/gms/tasks/Task;
 
     move-result-object v1
@@ -2025,6 +2048,6 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
-    .line 405
+    .line 407
     return-void
 .end method
