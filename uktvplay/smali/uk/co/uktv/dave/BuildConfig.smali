@@ -10,18 +10,17 @@
 
 .field public static final DEBUG:Z = false
 
-.field public static final FLAVOR:Ljava/lang/String; = ""
+.field public static final FLAVOR:Ljava/lang/String; = "browserDefault"
 
-.field public static final VERSION_CODE:I = 0x1dc2ca
+.field public static final VERSION_CODE:I = 0x1576308
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "4.1.0 "
+.field public static final VERSION_NAME:Ljava/lang/String; = "4.2.0.0"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
     .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

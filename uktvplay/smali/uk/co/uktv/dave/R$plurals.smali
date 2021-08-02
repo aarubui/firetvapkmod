@@ -1,6 +1,5 @@
 .class public final Luk/co/uktv/dave/R$plurals;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -15,15 +14,13 @@
 
 
 # static fields
-.field public static final adslot_countdown:I = 0x7f080000
+.field public static final mtrl_badge_content_description:I = 0x7f0c0000
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
