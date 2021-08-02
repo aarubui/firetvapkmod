@@ -44,11 +44,11 @@
 
     iget-object p2, p2, Lcom/njpwworld/NJPWWORLD/view/b/e$g;->b:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-static {p2}, Lcom/njpwworld/NJPWWORLD/view/b/e;->i(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p2}, Lcom/njpwworld/NJPWWORLD/view/b/e;->i(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/njpwworld/NJPWWORLD/view/b/e;->b(Lcom/njpwworld/NJPWWORLD/view/b/e;Lcom/njpwworld/NJPWWORLD/a/f;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p1, p2}, Lcom/njpwworld/NJPWWORLD/view/b/e;->b(Lcom/njpwworld/NJPWWORLD/view/b/e;Lcom/njpwworld/NJPWWORLD/b/f;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     return-void
 .end method

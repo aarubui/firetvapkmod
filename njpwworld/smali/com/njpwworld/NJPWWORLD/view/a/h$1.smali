@@ -42,7 +42,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/d;->a(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/d;->a(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void

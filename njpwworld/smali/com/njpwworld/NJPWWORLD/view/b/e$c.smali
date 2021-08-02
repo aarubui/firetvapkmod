@@ -73,7 +73,7 @@
 
     invoke-static {p1, p3, p4}, Lcom/njpwworld/NJPWWORLD/view/b/e;->b(Lcom/njpwworld/NJPWWORLD/view/b/e;J)J
 
-    instance-of p1, p2, Lcom/njpwworld/NJPWWORLD/a/e;
+    instance-of p1, p2, Lcom/njpwworld/NJPWWORLD/b/e;
 
     if-eqz p1, :cond_1
 
@@ -81,17 +81,17 @@
 
     iget-object p3, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$c;->a:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-static {p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object p3
 
-    invoke-static {p1, p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->a(Lcom/njpwworld/NJPWWORLD/view/b/e;Lcom/njpwworld/NJPWWORLD/a/f;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p1, p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->a(Lcom/njpwworld/NJPWWORLD/view/b/e;Lcom/njpwworld/NJPWWORLD/b/f;)Lcom/njpwworld/NJPWWORLD/b/f;
 
-    check-cast p2, Lcom/njpwworld/NJPWWORLD/a/e;
+    check-cast p2, Lcom/njpwworld/NJPWWORLD/b/e;
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$c;->a:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/a/e;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/njpwworld/NJPWWORLD/b/e;->d()Ljava/lang/String;
 
     move-result-object p2
 

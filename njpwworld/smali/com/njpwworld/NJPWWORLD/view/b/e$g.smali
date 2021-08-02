@@ -78,7 +78,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/c/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, p2}, Lcom/njpwworld/NJPWWORLD/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -92,7 +92,7 @@
 
     invoke-direct {p3, p0}, Lcom/njpwworld/NJPWWORLD/view/b/e$g$4;-><init>(Lcom/njpwworld/NJPWWORLD/view/b/e$g;)V
 
-    invoke-static {p2, p1, p3}, Lcom/njpwworld/NJPWWORLD/c/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-static {p2, p1, p3}, Lcom/njpwworld/NJPWWORLD/d/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_0
 
@@ -149,7 +149,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/c/f;->b(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/d/f;->b(Landroid/content/Context;)Z
 
     new-instance p1, Landroid/content/Intent;
 
@@ -173,15 +173,15 @@
 
     iget-object p3, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$g;->b:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-static {p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p3}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lcom/njpwworld/NJPWWORLD/a/f;->f()Lcom/njpwworld/NJPWWORLD/a/f$a;
+    invoke-virtual {p3}, Lcom/njpwworld/NJPWWORLD/b/f;->f()Lcom/njpwworld/NJPWWORLD/b/f$a;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lcom/njpwworld/NJPWWORLD/a/f$a;->d()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/njpwworld/NJPWWORLD/b/f$a;->d()Ljava/lang/String;
 
     move-result-object p3
 
@@ -225,23 +225,23 @@
 .method public a(Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lcom/njpwworld/NJPWWORLD/a/g;
+    check-cast p1, Lcom/njpwworld/NJPWWORLD/b/g;
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$g;->b:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/njpwworld/NJPWWORLD/a/f;->f()Lcom/njpwworld/NJPWWORLD/a/f$a;
+    invoke-virtual {v0}, Lcom/njpwworld/NJPWWORLD/b/f;->f()Lcom/njpwworld/NJPWWORLD/b/f$a;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/njpwworld/NJPWWORLD/a/g;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/njpwworld/NJPWWORLD/b/g;->f()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/njpwworld/NJPWWORLD/a/f$a;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/njpwworld/NJPWWORLD/b/f$a;->f(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$g;->b:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
@@ -249,17 +249,17 @@
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/b/e$g;->b:Lcom/njpwworld/NJPWWORLD/view/b/e;
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/b/e;->h(Lcom/njpwworld/NJPWWORLD/view/b/e;)Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->a(Lcom/njpwworld/NJPWWORLD/a/f;)V
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->a(Lcom/njpwworld/NJPWWORLD/b/f;)V
 
     new-instance p1, Lcom/njpwworld/NJPWWORLD/view/b/e$g$1;
 
     invoke-direct {p1, p0}, Lcom/njpwworld/NJPWWORLD/view/b/e$g$1;-><init>(Lcom/njpwworld/NJPWWORLD/view/b/e$g;)V
 
-    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->a(Lcom/njpwworld/NJPWWORLD/c/e$b;)V
+    invoke-static {p1}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->a(Lcom/njpwworld/NJPWWORLD/d/e$b;)V
 
     return-void
 .end method

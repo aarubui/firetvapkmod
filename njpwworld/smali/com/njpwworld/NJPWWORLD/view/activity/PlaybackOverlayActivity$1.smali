@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/njpwworld/NJPWWORLD/c/e$b;
+.implements Lcom/njpwworld/NJPWWORLD/d/e$b;
 
 
 # annotations
@@ -36,11 +36,11 @@
 .method public a(Landroid/media/MediaPlayer;)V
     .locals 2
 
-    invoke-static {}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->c()Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->c()Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/njpwworld/NJPWWORLD/a/f;->f()Lcom/njpwworld/NJPWWORLD/a/f$a;
+    invoke-virtual {v0}, Lcom/njpwworld/NJPWWORLD/b/f;->f()Lcom/njpwworld/NJPWWORLD/b/f$a;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/njpwworld/NJPWWORLD/a/f$a;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/njpwworld/NJPWWORLD/b/f$a;->e(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity$1;->a:Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->c()Lcom/njpwworld/NJPWWORLD/a/f;
+    invoke-static {}, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;->c()Lcom/njpwworld/NJPWWORLD/b/f;
 
     move-result-object v1
 

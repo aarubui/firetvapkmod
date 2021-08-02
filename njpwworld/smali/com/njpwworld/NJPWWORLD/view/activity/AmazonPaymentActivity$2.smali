@@ -74,16 +74,6 @@
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity$2;->c:Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;->b(Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;)Lcom/njpwworld/NJPWWORLD/manager/a/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity$2;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/njpwworld/NJPWWORLD/manager/a/a;->b(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity$2;->c:Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;
-
     invoke-virtual {v0}, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
@@ -92,7 +82,7 @@
 
     iget-object v2, p0, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity$2;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/c/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/njpwworld/NJPWWORLD/d/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity$2;->c:Lcom/njpwworld/NJPWWORLD/view/activity/AmazonPaymentActivity;
 
@@ -102,11 +92,11 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/c/f;->c(Landroid/content/Context;Z)V
+    invoke-static {v0, v1}, Lcom/njpwworld/NJPWWORLD/d/f;->c(Landroid/content/Context;Z)V
 
-    check-cast p1, Lcom/njpwworld/NJPWWORLD/a/i;
+    check-cast p1, Lcom/njpwworld/NJPWWORLD/b/i;
 
-    invoke-virtual {p1}, Lcom/njpwworld/NJPWWORLD/a/i;->g()Z
+    invoke-virtual {p1}, Lcom/njpwworld/NJPWWORLD/b/i;->g()Z
 
     move-result p1
 

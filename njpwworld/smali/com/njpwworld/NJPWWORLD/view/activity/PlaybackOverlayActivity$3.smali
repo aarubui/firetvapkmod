@@ -58,7 +58,7 @@
 
     iget-object v1, p0, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity$3;->a:Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/f;->q(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/f;->q(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -68,7 +68,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/b;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/b;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/f;->r(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->r(Landroid/content/Context;)Z
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity$3;->a:Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;
 
@@ -120,12 +120,12 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/c/b;->a(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v1, v0}, Lcom/njpwworld/NJPWWORLD/d/b;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/b;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/b;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -163,7 +163,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/f;->r(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->r(Landroid/content/Context;)Z
 
     new-instance v0, Landroid/content/Intent;
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/f;->r(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->r(Landroid/content/Context;)Z
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity$3;->a:Lcom/njpwworld/NJPWWORLD/view/activity/PlaybackOverlayActivity;
 

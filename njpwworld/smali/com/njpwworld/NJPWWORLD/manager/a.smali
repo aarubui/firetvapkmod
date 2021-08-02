@@ -58,9 +58,18 @@
     return v0
 
     :catch_0
+    move-exception v1
+
+    sget-boolean v2, Lcom/njpwworld/NJPWWORLD/a;->a:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    :cond_0
     const-string v1, "ON"
 
-    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     const/4 v1, 0x1
 
@@ -96,15 +105,24 @@
     return v0
 
     :catch_1
+    move-exception v2
+
+    sget-boolean v3, Lcom/njpwworld/NJPWWORLD/a;->a:Z
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_1
     invoke-static {}, Lcom/njpwworld/NJPWWORLD/manager/a;->f()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
     return v0
 
-    :cond_0
+    :cond_2
     return v1
 .end method
 
@@ -136,8 +154,21 @@
 
     const/4 v0, 0x1
 
-    :catch_0
     return v0
+
+    :catch_0
+    move-exception v1
+
+    sget-boolean v2, Lcom/njpwworld/NJPWWORLD/a;->a:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return v0
+
+    nop
 
     :array_0
     .array-data 2
@@ -189,7 +220,18 @@
 
     const/4 v0, 0x1
 
+    return v0
+
     :catch_0
+    move-exception v1
+
+    sget-boolean v2, Lcom/njpwworld/NJPWWORLD/a;->a:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
     return v0
 .end method
 
@@ -218,9 +260,18 @@
     return v0
 
     :catch_0
+    move-exception v0
+
+    sget-boolean v1, Lcom/njpwworld/NJPWWORLD/a;->a:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    :cond_0
     const-string v0, "NO"
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/c;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/c;->b(Ljava/lang/String;)I
 
     const/4 v0, 0x0
 

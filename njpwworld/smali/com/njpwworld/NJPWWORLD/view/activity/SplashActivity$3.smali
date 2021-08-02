@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/c/f;->r(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->r(Landroid/content/Context;)Z
 
     new-instance v0, Landroid/content/Intent;
 
