@@ -910,6 +910,14 @@
 
     move-result-object v0
 
+    const-string v1, "X-Forwarded-For"
+
+    const-string v2, "6.47.44.67"
+
+    invoke-virtual {v0, v1, v2}, Lcom/brightcove/player/network/HttpRequestConfig$Builder;->addRequestHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/brightcove/player/network/HttpRequestConfig$Builder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/brightcove/player/network/HttpRequestConfig$Builder;->build()Lcom/brightcove/player/network/HttpRequestConfig;
 
     move-result-object v0
