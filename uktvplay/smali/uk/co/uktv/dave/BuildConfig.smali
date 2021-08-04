@@ -12,9 +12,9 @@
 
 .field public static final FLAVOR:Ljava/lang/String; = "browserDefault"
 
-.field public static final VERSION_CODE:I = 0x1576308
+.field public static final VERSION_CODE:I = 0x1577b55
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "4.2.0.0"
+.field public static final VERSION_NAME:Ljava/lang/String; = "4.2.1"
 
 
 # direct methods
