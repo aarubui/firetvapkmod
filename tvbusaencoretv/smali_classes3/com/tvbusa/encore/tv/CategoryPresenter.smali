@@ -72,7 +72,7 @@
     invoke-virtual {p0, v0}, Landroidx/leanback/widget/ImageCardView;->setBackgroundColor(I)V
 
     .line 31
-    const v2, 0x7f0a0165
+    const v2, 0x7f0a0171
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
 
@@ -81,7 +81,7 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 32
-    const v2, 0x7f0a02a9
+    const v2, 0x7f0a02bd
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
 

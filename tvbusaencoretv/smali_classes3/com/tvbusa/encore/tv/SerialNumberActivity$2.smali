@@ -47,7 +47,7 @@
         }
     .end annotation
 
-    .line 75
+    .line 77
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
     iput-object p2, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;->val$dsn:Ljava/lang/String;
@@ -79,7 +79,7 @@
         }
     .end annotation
 
-    .line 78
+    .line 80
     .local p1, "task":Lcom/google/android/gms/tasks/Task;, "Lcom/google/android/gms/tasks/Task<Lcom/google/firebase/firestore/DocumentSnapshot;>;"
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
@@ -89,14 +89,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 79
+    .line 81
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/firebase/firestore/DocumentSnapshot;
 
-    .line 80
+    .line 82
     .local v0, "document":Lcom/google/firebase/firestore/DocumentSnapshot;
     invoke-virtual {v0}, Lcom/google/firebase/firestore/DocumentSnapshot;->exists()Z
 
@@ -104,7 +104,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 81
+    .line 83
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +125,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 84
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,13 +142,13 @@
 
     move-result-object v1
 
-    .line 83
+    .line 85
     .local v1, "landingPageUrl":Ljava/lang/String;
     const-string v2, "LandingPageURL"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
+    .line 87
     invoke-static {v1}, Lnet/glxn/qrgen/android/QRCode;->from(Ljava/lang/String;)Lnet/glxn/qrgen/android/QRCode;
 
     move-result-object v2
@@ -157,11 +157,11 @@
 
     move-result-object v2
 
-    .line 86
+    .line 88
     .local v2, "myBitmap":Landroid/graphics/Bitmap;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
-    const v4, 0x7f0a0160
+    const v4, 0x7f0a016c
 
     invoke-virtual {v3, v4}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -169,11 +169,11 @@
 
     check-cast v3, Landroid/widget/ImageView;
 
-    .line 87
+    .line 89
     .local v3, "myImage":Landroid/widget/ImageView;
     iget-object v4, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
-    const v5, 0x7f0a0217
+    const v5, 0x7f0a0226
 
     invoke-virtual {v4, v5}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -181,30 +181,30 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    .line 88
+    .line 90
     .local v4, "pointSection":Landroid/widget/LinearLayout;
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 89
+    .line 91
     invoke-virtual {v4}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
     check-cast v5, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 90
+    .line 92
     .local v5, "params":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v6, 0x1ea
 
     iput v6, v5, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 92
+    .line 94
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 93
+    .line 95
     iget-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
-    const v7, 0x7f0a00e6
+    const v7, 0x7f0a00ed
 
     invoke-virtual {v6, v7}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
 
     check-cast v6, Landroid/widget/LinearLayout;
 
-    .line 94
+    .line 96
     .local v6, "dsnSection":Landroid/widget/LinearLayout;
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -220,16 +220,16 @@
 
     check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 95
+    .line 97
     .local v7, "dsnSectionParam":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v8, 0x46
 
     iput v8, v7, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 96
+    .line 98
     invoke-virtual {v6, v7}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 97
+    .line 99
     .end local v1    # "landingPageUrl":Ljava/lang/String;
     .end local v2    # "myBitmap":Landroid/graphics/Bitmap;
     .end local v3    # "myImage":Landroid/widget/ImageView;
@@ -239,18 +239,18 @@
     .end local v7    # "dsnSectionParam":Landroid/widget/LinearLayout$LayoutParams;
     goto :goto_0
 
-    .line 98
+    .line 100
     :cond_0
     const-string v2, "No such document"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 102
     .end local v0    # "document":Lcom/google/firebase/firestore/DocumentSnapshot;
     :goto_0
     goto :goto_1
 
-    .line 101
+    .line 103
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
@@ -260,7 +260,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 103
+    .line 105
     :goto_1
     return-void
 .end method

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 159
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$4;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 161
     return-void
 .end method
 
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 162
+    .line 167
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -94,18 +94,18 @@
 
     move-result-object v0
 
-    .line 163
+    .line 168
     .local v0, "json":Ljava/lang/String;
     const-string v1, "Check Fav JSON"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
+    .line 169
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 165
+    .line 170
     .local v1, "obj":Lorg/json/JSONObject;
     const-string v2, "isFav"
 
@@ -138,7 +138,7 @@
 
     invoke-static {v2, v3}, Lcom/tvbusa/encore/tv/SeriesActivity;->access$002(Lcom/tvbusa/encore/tv/SeriesActivity;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 166
+    .line 171
     :goto_0
     iget-object v2, p0, Lcom/tvbusa/encore/tv/SeriesActivity$4;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
@@ -150,7 +150,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 175
+    .line 180
     .end local v0    # "json":Ljava/lang/String;
     .end local v1    # "obj":Lorg/json/JSONObject;
     goto :goto_1
@@ -177,7 +177,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
+    .line 181
     .end local v0    # "t":Lorg/json/JSONException;
     :goto_1
     return-void

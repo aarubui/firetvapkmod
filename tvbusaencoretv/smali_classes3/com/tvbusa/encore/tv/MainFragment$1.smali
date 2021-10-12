@@ -43,7 +43,7 @@
         }
     .end annotation
 
-    .line 372
+    .line 308
     iput-object p1, p0, Lcom/tvbusa/encore/tv/MainFragment$1;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -73,7 +73,7 @@
         }
     .end annotation
 
-    .line 375
+    .line 311
     .local p1, "task":Lcom/google/android/gms/tasks/Task;, "Lcom/google/android/gms/tasks/Task<Lcom/google/firebase/firestore/QuerySnapshot;>;"
     move-object/from16 v0, p0
 
@@ -85,7 +85,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 376
+    .line 312
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v1
@@ -98,19 +98,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 377
+    .line 313
     const-string v1, "Result is Empty"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
+    .line 314
     iget-object v1, v0, Lcom/tvbusa/encore/tv/MainFragment$1;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/MainFragment;->access$200(Lcom/tvbusa/encore/tv/MainFragment;)V
 
     goto/16 :goto_1
 
-    .line 380
+    .line 316
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
@@ -118,17 +118,17 @@
 
     check-cast v1, Lcom/google/firebase/firestore/QuerySnapshot;
 
-    .line 381
+    .line 317
     .local v1, "docs":Lcom/google/firebase/firestore/QuerySnapshot;
     const/4 v3, 0x0
 
-    .line 382
+    .line 318
     .local v3, "count":I
     invoke-virtual {v1}, Lcom/google/firebase/firestore/QuerySnapshot;->size()I
 
     move-result v4
 
-    .line 383
+    .line 319
     .local v4, "lastItem":I
     :goto_0
     invoke-virtual {v1}, Lcom/google/firebase/firestore/QuerySnapshot;->size()I
@@ -137,7 +137,7 @@
 
     if-ge v3, v5, :cond_4
 
-    .line 384
+    .line 320
     invoke-virtual {v1}, Lcom/google/firebase/firestore/QuerySnapshot;->getDocuments()Ljava/util/List;
 
     move-result-object v5
@@ -148,11 +148,11 @@
 
     check-cast v5, Lcom/google/firebase/firestore/DocumentSnapshot;
 
-    .line 385
+    .line 321
     .local v5, "doc":Lcom/google/firebase/firestore/DocumentSnapshot;
     add-int/lit8 v3, v3, 0x1
 
-    .line 386
+    .line 322
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +189,7 @@
 
     invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
+    .line 323
     const-string v6, "b"
 
     invoke-virtual {v5, v6}, Lcom/google/firebase/firestore/DocumentSnapshot;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -214,7 +214,7 @@
 
     if-eqz v7, :cond_2
 
-    .line 388
+    .line 324
     :cond_1
     new-instance v7, Lcom/tvbusa/encore/tv/HistoryItem;
 
@@ -248,7 +248,7 @@
 
     move-object v6, v7
 
-    .line 389
+    .line 325
     .local v6, "item":Lcom/tvbusa/encore/tv/HistoryItem;
     iget-object v7, v0, Lcom/tvbusa/encore/tv/MainFragment$1;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
 
@@ -258,12 +258,12 @@
 
     invoke-interface {v7, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 391
+    .line 327
     .end local v6    # "item":Lcom/tvbusa/encore/tv/HistoryItem;
     :cond_2
     if-ne v3, v4, :cond_3
 
-    .line 392
+    .line 328
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,24 +290,24 @@
 
     invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
+    .line 329
     iget-object v6, v0, Lcom/tvbusa/encore/tv/MainFragment$1;->this$0:Lcom/tvbusa/encore/tv/MainFragment;
 
     invoke-static {v6}, Lcom/tvbusa/encore/tv/MainFragment;->access$200(Lcom/tvbusa/encore/tv/MainFragment;)V
 
-    .line 395
+    .line 331
     .end local v5    # "doc":Lcom/google/firebase/firestore/DocumentSnapshot;
     :cond_3
     goto/16 :goto_0
 
-    .line 397
+    .line 333
     .end local v1    # "docs":Lcom/google/firebase/firestore/QuerySnapshot;
     .end local v3    # "count":I
     .end local v4    # "lastItem":I
     :cond_4
     goto :goto_1
 
-    .line 400
+    .line 336
     :cond_5
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
@@ -317,7 +317,7 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 402
+    .line 338
     :goto_1
     return-void
 .end method

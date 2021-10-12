@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 127
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 125
+    .line 130
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -69,7 +69,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 127
+    .line 132
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 128
+    .line 133
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->episodeList:Ljava/util/List;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 129
+    .line 134
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->historyIndex:I
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 130
+    .line 135
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->title:Ljava/lang/String;
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 131
+    .line 136
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->pid:Ljava/lang/String;
@@ -129,14 +129,14 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 132
+    .line 137
     const-string v1, "hasHistory"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 133
+    .line 138
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->historyTime:I
@@ -145,7 +145,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 134
+    .line 139
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v1, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->banner:Ljava/lang/String;
@@ -154,11 +154,11 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 135
+    .line 140
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$3;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-virtual {v1, v0}, Lcom/tvbusa/encore/tv/SeriesActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 136
+    .line 141
     return-void
 .end method

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 211
+    .line 216
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 3
 
-    .line 214
+    .line 219
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 215
+    .line 220
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 216
+    .line 221
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -86,7 +86,7 @@
 
     invoke-static {v0, v2}, Lcom/tvbusa/encore/tv/SeriesActivity;->access$002(Lcom/tvbusa/encore/tv/SeriesActivity;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 217
+    .line 222
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -97,7 +97,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 218
+    .line 223
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -116,7 +116,7 @@
 
     goto :goto_0
 
-    .line 220
+    .line 225
     :cond_0
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
@@ -134,7 +134,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 221
+    .line 226
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -145,7 +145,7 @@
 
     invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/SeriesActivity;->access$002(Lcom/tvbusa/encore/tv/SeriesActivity;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 222
+    .line 227
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$5;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -156,7 +156,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 224
+    .line 229
     :goto_0
     return-void
 .end method

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 248
+    .line 247
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 253
+    .line 252
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$700(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -67,13 +67,13 @@
 
     move-result-object v0
 
-    .line 254
+    .line 253
     .local v0, "videoDisplayComponent":Lcom/brightcove/player/display/VideoDisplayComponent;
     instance-of v1, v0, Lcom/brightcove/player/display/ExoPlayerVideoDisplayComponent;
 
     if-eqz v1, :cond_0
 
-    .line 256
+    .line 255
     move-object v1, v0
 
     check-cast v1, Lcom/brightcove/player/display/ExoPlayerVideoDisplayComponent;
@@ -82,18 +82,18 @@
 
     move-result-object v1
 
-    .line 257
+    .line 256
     .local v1, "exoPlayer":Lcom/google/android/exoplayer2/ExoPlayer;
     instance-of v2, v1, Lcom/google/android/exoplayer2/SimpleExoPlayer;
 
     if-eqz v2, :cond_0
 
-    .line 259
+    .line 258
     move-object v2, v1
 
     check-cast v2, Lcom/google/android/exoplayer2/SimpleExoPlayer;
 
-    .line 260
+    .line 259
     .local v2, "simpleExoPlayer":Lcom/google/android/exoplayer2/SimpleExoPlayer;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -105,20 +105,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
+    .line 260
     const-string v3, "http.agent"
 
     invoke-static {v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 262
+    .line 261
     .local v3, "ua":Ljava/lang/String;
     const-string v4, "SSAI-UA"
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
+    .line 262
     new-instance v4, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;
 
     new-instance v5, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSourceFactory;
@@ -139,16 +139,16 @@
 
     move-result-object v4
 
-    .line 264
+    .line 263
     .local v4, "source":Lcom/google/android/exoplayer2/source/MediaSource;
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/SimpleExoPlayer;->prepare(Lcom/google/android/exoplayer2/source/MediaSource;)V
 
-    .line 265
+    .line 264
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/SimpleExoPlayer;->setPlayWhenReady(Z)V
 
-    .line 266
+    .line 265
     iget-object v5, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v5}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$900(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -157,7 +157,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 267
+    .line 266
     iget-object v5, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v5}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$1000(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -166,7 +166,7 @@
 
     invoke-virtual {v5}, Lcom/brightcove/player/view/BaseVideoView;->start()V
 
-    .line 268
+    .line 267
     iget-object v5, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v5}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$1100(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -181,7 +181,7 @@
 
     invoke-interface {v5, v6}, Lcom/brightcove/player/event/EventEmitter;->emit(Ljava/lang/String;)V
 
-    .line 272
+    .line 271
     .end local v1    # "exoPlayer":Lcom/google/android/exoplayer2/ExoPlayer;
     .end local v2    # "simpleExoPlayer":Lcom/google/android/exoplayer2/SimpleExoPlayer;
     .end local v3    # "ua":Ljava/lang/String;

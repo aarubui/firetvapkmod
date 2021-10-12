@@ -6,30 +6,33 @@
 # instance fields
 .field key:Ljava/lang/String;
 
-.field mApp:Lcom/tvbusa/encore/tv/MainApplication;
-
 .field name:Ljava/lang/String;
 
 .field sss:Ljava/lang/String;
+
+.field userRegion:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 36
+    .line 38
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 38
+    .line 40
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->name:Ljava/lang/String;
 
-    .line 39
+    .line 41
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->key:Ljava/lang/String;
 
-    .line 41
+    .line 42
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+
+    .line 43
+    iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->userRegion:Ljava/lang/String;
 
     return-void
 .end method
@@ -48,12 +51,12 @@
         }
     .end annotation
 
-    .line 73
+    .line 75
     invoke-static {}, Lcom/google/firebase/firestore/FirebaseFirestore;->getInstance()Lcom/google/firebase/firestore/FirebaseFirestore;
 
     move-result-object v0
 
-    .line 74
+    .line 76
     .local v0, "db":Lcom/google/firebase/firestore/FirebaseFirestore;
     const-string v1, "rebate-event-2021-Q1"
 
@@ -65,7 +68,7 @@
 
     move-result-object v1
 
-    .line 75
+    .line 77
     .local v1, "docRef":Lcom/google/firebase/firestore/DocumentReference;
     invoke-virtual {v1}, Lcom/google/firebase/firestore/DocumentReference;->get()Lcom/google/android/gms/tasks/Task;
 
@@ -77,12 +80,12 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
-    .line 105
+    .line 107
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 7
+    .locals 8
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -93,16 +96,16 @@
         }
     .end annotation
 
-    .line 45
+    .line 47
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 46
-    const v0, 0x7f0d0025
+    .line 48
+    const v0, 0x7f0d0027
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->setContentView(I)V
 
-    .line 47
-    const v0, 0x7f0a02a1
+    .line 49
+    const v0, 0x7f0a02b5
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -110,9 +113,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 48
+    .line 50
     .local v0, "title":Landroid/widget/TextView;
-    const v1, 0x7f0a02bf
+    const v1, 0x7f0a02d3
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +123,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 49
+    .line 51
     .local v1, "value":Landroid/widget/TextView;
     const v2, 0x7f0a0062
 
@@ -130,7 +133,7 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    .line 50
+    .line 52
     .local v2, "backBtn":Landroid/widget/Button;
     new-instance v3, Lcom/tvbusa/encore/tv/SerialNumberActivity$1;
 
@@ -138,22 +141,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 57
+    .line 59
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 58
+    .line 60
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 59
+    .line 61
     .local v4, "bundle":Landroid/os/Bundle;
     if-eqz v4, :cond_0
 
-    .line 60
+    .line 62
     const-string v5, "key"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -162,52 +165,57 @@
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->key:Ljava/lang/String;
 
-    .line 63
+    .line 65
     :cond_0
     const-string v5, "\u7528\u6236\u7de8\u865f"
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 64
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/tvbusa/encore/tv/MainApplication;
-
-    iput-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->mApp:Lcom/tvbusa/encore/tv/MainApplication;
-
-    .line 65
-    invoke-virtual {v5}, Lcom/tvbusa/encore/tv/MainApplication;->getNumber()Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
-
     .line 66
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    const/4 v5, 0x0
 
-    move-result v5
+    const-string v6, "generalInfo"
 
-    const/4 v6, 0x3
+    invoke-virtual {p0, v6, v5}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    if-ge v5, v6, :cond_1
+    move-result-object v5
 
-    const-string v5, "Not Available"
+    .line 67
+    .local v5, "generalInfo":Landroid/content/SharedPreferences;
+    const-string v6, "deviceNumber"
 
-    iput-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+    const-string v7, ""
+
+    invoke-interface {v5, v6, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    iput-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
     .line 68
-    :cond_1
-    iget-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result v6
 
-    .line 69
-    iget-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+    const/4 v7, 0x3
 
-    invoke-virtual {p0, v5}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->fetchData(Ljava/lang/String;)V
+    if-ge v6, v7, :cond_1
+
+    const-string v6, "Not Available"
+
+    iput-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
     .line 70
+    :cond_1
+    iget-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 71
+    iget-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
+
+    invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->fetchData(Ljava/lang/String;)V
+
+    .line 72
     return-void
 .end method

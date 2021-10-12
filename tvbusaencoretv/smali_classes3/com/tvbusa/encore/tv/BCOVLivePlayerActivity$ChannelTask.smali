@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 138
+    .line 137
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 138
+    .line 137
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 143
+    .line 142
     const-string v0, ""
 
     const-string v1, "stringValue"
@@ -94,7 +94,7 @@
 
     invoke-direct {v2}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 144
+    .line 143
     .local v2, "client":Lokhttp3/OkHttpClient;
     new-instance v3, Lokhttp3/Request$Builder;
 
@@ -112,7 +112,7 @@
 
     move-result-object v3
 
-    .line 145
+    .line 144
     .local v3, "request":Lokhttp3/Request;
     invoke-virtual {v2, v3}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -122,7 +122,7 @@
 
     move-result-object v4
 
-    .line 146
+    .line 145
     .local v4, "response":Lokhttp3/Response;
     invoke-virtual {v4}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -132,13 +132,13 @@
 
     move-result-object v5
 
-    .line 148
+    .line 147
     .local v5, "res":Ljava/lang/String;
     new-instance v6, Lorg/json/JSONObject;
 
     invoke-direct {v6, v5}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 149
+    .line 148
     .local v6, "object":Lorg/json/JSONObject;
     const-string v7, "fields"
 
@@ -146,7 +146,7 @@
 
     move-result-object v7
 
-    .line 150
+    .line 149
     .local v7, "fields":Lorg/json/JSONObject;
     iget-object v8, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -162,7 +162,7 @@
 
     iput-object v9, v8, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->thumb:Ljava/lang/String;
 
-    .line 151
+    .line 150
     iget-object v8, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     const-string v9, "firetv"
@@ -177,7 +177,7 @@
 
     iput-object v9, v8, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->ad_config_value:Ljava/lang/String;
 
-    .line 152
+    .line 151
     iget-object v8, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     const-string v9, "videoId"
@@ -192,7 +192,7 @@
 
     iput-object v0, v8, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->videoId:Ljava/lang/String;
 
-    .line 153
+    .line 152
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->videoId:Ljava/lang/String;
@@ -201,7 +201,7 @@
 
     return-object v0
 
-    .line 154
+    .line 153
     .end local v2    # "client":Lokhttp3/OkHttpClient;
     .end local v3    # "request":Lokhttp3/Request;
     .end local v4    # "response":Lokhttp3/Response;
@@ -211,7 +211,7 @@
     :catch_0
     move-exception v0
 
-    .line 155
+    .line 154
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -229,7 +229,7 @@
         }
     .end annotation
 
-    .line 138
+    .line 137
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->onPostExecute(Ljava/lang/String;)V
@@ -249,17 +249,17 @@
         }
     .end annotation
 
-    .line 160
+    .line 159
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 163
+    .line 162
     const-string v0, "ChannelDebug"
 
     const-string v1, "Done Channel Task"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
+    .line 163
     new-instance v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
@@ -272,6 +272,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 165
+    .line 164
     return-void
 .end method

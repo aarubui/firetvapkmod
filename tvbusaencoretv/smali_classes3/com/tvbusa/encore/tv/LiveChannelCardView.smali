@@ -59,12 +59,12 @@
 
     .line 29
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    const v1, 0x7f0d005c
+    const v1, 0x7f0d005f
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 30
-    const v1, 0x7f0a008f
+    const v1, 0x7f0a0092
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/LiveChannelCardView;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
     iput-object v1, p0, Lcom/tvbusa/encore/tv/LiveChannelCardView;->_titleView:Landroid/widget/TextView;
 
     .line 31
-    const v1, 0x7f0a008e
+    const v1, 0x7f0a0091
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/LiveChannelCardView;->findViewById(I)Landroid/view/View;
 
