@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 166
+    .line 171
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$4$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 2
 
-    .line 169
+    .line 174
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$4$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$4;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$4;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -58,7 +58,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 170
+    .line 175
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$4$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$4;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$4;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -95,6 +95,6 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 171
+    .line 176
     return-void
 .end method

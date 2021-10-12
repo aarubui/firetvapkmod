@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 52
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$1;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,11 +56,11 @@
         }
     .end annotation
 
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity$1;->this$0:Lcom/tvbusa/encore/tv/SerialNumberActivity;
 
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->finish()V
 
-    .line 54
+    .line 56
     return-void
 .end method

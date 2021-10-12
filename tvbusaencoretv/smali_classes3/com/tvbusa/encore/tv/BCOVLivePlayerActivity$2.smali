@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 230
+    .line 229
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 233
+    .line 232
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +79,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
+    .line 233
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +106,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 234
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$300(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -115,7 +115,7 @@
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->pause()V
 
-    .line 236
+    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +142,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 236
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -155,7 +155,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 244
+    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -182,6 +182,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
+    .line 244
     return-void
 .end method

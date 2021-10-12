@@ -33,8 +33,6 @@
 
 .field id:Ljava/lang/String;
 
-.field mApp:Lcom/tvbusa/encore/tv/MainApplication;
-
 .field private mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
 .field private mAudioManager:Landroid/media/AudioManager;
@@ -60,10 +58,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 62
+    .line 63
     invoke-direct {p0}, Lcom/brightcove/player/view/BrightcovePlayer;-><init>()V
 
-    .line 64
+    .line 65
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -74,53 +72,53 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
-    .line 68
+    .line 69
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->id:Ljava/lang/String;
 
-    .line 69
+    .line 70
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->url:Ljava/lang/String;
 
-    .line 70
+    .line 71
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
-    .line 72
+    .line 73
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->videoId:Ljava/lang/String;
 
-    .line 73
+    .line 74
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->ad_config_value:Ljava/lang/String;
 
-    .line 75
+    .line 76
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->uuid:Ljava/lang/String;
 
-    .line 76
+    .line 77
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->thumb:Ljava/lang/String;
 
-    .line 77
+    .line 78
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->channelUrl:Ljava/lang/String;
 
-    .line 78
+    .line 79
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->advertisingID:Ljava/lang/String;
 
-    .line 79
+    .line 80
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->prevousTime:I
 
-    .line 80
+    .line 81
     new-instance v1, Lokhttp3/OkHttpClient;
 
     invoke-direct {v1}, Lokhttp3/OkHttpClient;-><init>()V
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->client:Lokhttp3/OkHttpClient;
 
-    .line 85
+    .line 84
     sget-object v1, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 89
+    .line 88
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->adRulesURL:Ljava/lang/String;
 
     return-void
@@ -129,24 +127,24 @@
 .method private abandonAudioFocus()Z
     .locals 3
 
-    .line 467
+    .line 466
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 468
+    .line 467
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
     const-string v2, "mAudionManager is null in abandonAudioFocus"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
+    .line 468
     return v1
 
-    .line 471
+    .line 470
     :cond_0
     invoke-virtual {v0, p0}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
@@ -161,16 +159,16 @@
     :cond_1
     move v0, v1
 
-    .line 472
+    .line 471
     .local v0, "focus":Z
     if-eqz v0, :cond_2
 
-    .line 473
+    .line 472
     sget-object v1, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 475
+    .line 474
     :cond_2
     return v0
 .end method
@@ -179,7 +177,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -189,7 +187,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -199,7 +197,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -209,7 +207,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -220,7 +218,7 @@
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
     .param p1, "x1"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 62
+    .line 63
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     return-object p1
@@ -230,7 +228,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -240,7 +238,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -250,7 +248,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -260,7 +258,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -270,7 +268,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -280,7 +278,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -290,7 +288,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -300,7 +298,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     return-object v0
@@ -309,14 +307,14 @@
 .method private registerErrorEventHandler()V
     .locals 3
 
-    .line 322
+    .line 321
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->getEventEmitter()Lcom/brightcove/player/event/EventEmitter;
 
     move-result-object v0
 
-    .line 323
+    .line 322
     .local v0, "eventEmitter":Lcom/brightcove/player/event/EventEmitter;
     new-instance v1, Lcom/tvbusa/encore/tv/-$$Lambda$BCOVLivePlayerActivity$wgbIluLALrMPqOUX0XJwnN94JgU;
 
@@ -326,42 +324,42 @@
 
     invoke-interface {v0, v2, v1}, Lcom/brightcove/player/event/EventEmitter;->on(Ljava/lang/String;Lcom/brightcove/player/event/EventListener;)I
 
-    .line 324
+    .line 323
     return-void
 .end method
 
 .method private requestAudioFocus()V
     .locals 5
 
-    .line 421
+    .line 420
     const-string v0, "CheckAudio"
 
     const-string v1, "Run Audio Focus "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
+    .line 421
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v1, :cond_0
 
-    .line 423
+    .line 422
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "mAudionManager is null in requestAudioFocus"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
+    .line 423
     return-void
 
-    .line 426
+    .line 425
     :cond_0
     const-string v1, "Running Audio Focus "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
+    .line 427
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
@@ -372,7 +370,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 430
+    .line 429
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioManager:Landroid/media/AudioManager;
 
     new-instance v1, Landroid/media/AudioFocusRequest$Builder;
@@ -383,27 +381,27 @@
 
     invoke-direct {v4}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    .line 433
+    .line 432
     invoke-virtual {v4, v3}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object v4
 
-    .line 434
+    .line 433
     invoke-virtual {v4, v2}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object v2
 
-    .line 435
+    .line 434
     invoke-virtual {v2}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
     move-result-object v2
 
-    .line 431
+    .line 430
     invoke-virtual {v1, v2}, Landroid/media/AudioFocusRequest$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/AudioFocusRequest$Builder;
 
     move-result-object v1
 
-    .line 437
+    .line 436
     invoke-virtual {v1, v3}, Landroid/media/AudioFocusRequest$Builder;->setAcceptsDelayedFocusGain(Z)Landroid/media/AudioFocusRequest$Builder;
 
     move-result-object v1
@@ -412,28 +410,28 @@
 
     invoke-direct {v2, p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$7;-><init>(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)V
 
-    .line 438
+    .line 437
     invoke-virtual {v1, v2}, Landroid/media/AudioFocusRequest$Builder;->setOnAudioFocusChangeListener(Landroid/media/AudioManager$OnAudioFocusChangeListener;)Landroid/media/AudioFocusRequest$Builder;
 
     move-result-object v1
 
-    .line 457
+    .line 456
     invoke-virtual {v1}, Landroid/media/AudioFocusRequest$Builder;->build()Landroid/media/AudioFocusRequest;
 
     move-result-object v1
 
-    .line 430
+    .line 429
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
 
     goto :goto_0
 
-    .line 461
+    .line 460
     :cond_1
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    .line 463
+    .line 462
     :goto_0
     return-void
 .end method
@@ -444,7 +442,7 @@
     .locals 3
     .param p1, "event"    # Lcom/brightcove/player/event/Event;
 
-    .line 323
+    .line 322
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -488,7 +486,7 @@
         }
     .end annotation
 
-    .line 482
+    .line 481
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -507,40 +505,40 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
+    .line 482
     packed-switch p1, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 485
+    .line 484
     :pswitch_1
     sget-object v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 486
+    .line 485
     goto :goto_0
 
-    .line 489
+    .line 488
     :pswitch_2
     sget-object v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 490
+    .line 489
     goto :goto_0
 
-    .line 492
+    .line 491
     :pswitch_3
     sget-object v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioFocusState:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$AudioFocusState;
 
-    .line 493
+    .line 492
     nop
 
-    .line 496
+    .line 495
     :goto_0
     return-void
 
@@ -555,7 +553,7 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 6
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -566,22 +564,22 @@
         }
     .end annotation
 
-    .line 109
+    .line 108
     const v0, 0x7f0d001d
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->setContentView(I)V
 
-    .line 110
+    .line 109
     invoke-super {p0, p1}, Lcom/brightcove/player/view/BrightcovePlayer;->onCreate(Landroid/os/Bundle;)V
 
-    .line 111
+    .line 110
     invoke-static {p0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mFirebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    .line 112
+    .line 111
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -592,14 +590,14 @@
 
     if-le v0, v1, :cond_0
 
-    .line 113
+    .line 112
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mFirebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/analytics/FirebaseAnalytics;->setUserId(Ljava/lang/String;)V
 
-    .line 116
+    .line 115
     :cond_0
     const-string v0, "audio"
 
@@ -611,101 +609,104 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mAudioManager:Landroid/media/AudioManager;
 
+    .line 117
+    const-string v0, "generalInfo"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
     .line 118
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getApplicationContext()Landroid/content/Context;
+    .local v0, "generalInfo":Landroid/content/SharedPreferences;
+    const-string v2, "deviceNumber"
 
-    move-result-object v0
+    const-string v3, ""
 
-    check-cast v0, Lcom/tvbusa/encore/tv/MainApplication;
-
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->mApp:Lcom/tvbusa/encore/tv/MainApplication;
-
-    .line 119
-    invoke-virtual {v0}, Lcom/tvbusa/encore/tv/MainApplication;->getNumber()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
-
-    .line 121
-    const v0, 0x7f0a0074
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/brightcove/player/view/BrightcoveExoPlayerVideoView;
-
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
-
-    .line 122
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
-
-    invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->getEventEmitter()Lcom/brightcove/player/event/EventEmitter;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
-
-    .line 124
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 125
-    .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v1
-
-    .line 126
-    .local v1, "bundle":Landroid/os/Bundle;
-    if-eqz v1, :cond_1
-
-    .line 127
-    const-string v2, "url"
-
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->url:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
-    .line 128
-    iget-object v3, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
+    .line 120
+    const v2, 0x7f0a0076
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/brightcove/player/view/BrightcoveExoPlayerVideoView;
+
+    iput-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
+
+    .line 121
+    iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
+
+    invoke-virtual {v2}, Lcom/brightcove/player/view/BaseVideoView;->getEventEmitter()Lcom/brightcove/player/event/EventEmitter;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
+
+    .line 123
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v2
+
+    .line 124
+    .local v2, "intent":Landroid/content/Intent;
+    invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v3
+
+    .line 125
+    .local v3, "bundle":Landroid/os/Bundle;
+    if-eqz v3, :cond_1
+
+    .line 126
+    const-string v4, "url"
+
+    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->url:Ljava/lang/String;
+
+    .line 127
+    iget-object v5, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->TAG:Ljava/lang/String;
+
+    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 133
+    :cond_1
+    iget-object v4, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->url:Ljava/lang/String;
+
+    const-string v5, "Live"
+
+    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 134
-    :cond_1
-    iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->url:Ljava/lang/String;
+    new-instance v4, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;
 
-    const-string v3, "Live"
+    invoke-direct {v4, p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;-><init>(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)V
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-virtual {v4, v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 135
-    new-instance v2, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;
-
-    invoke-direct {v2, p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;-><init>(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)V
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$ChannelTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    .line 136
     return-void
 .end method
 
 .method public onDestroy()V
     .locals 1
 
-    .line 95
+    .line 94
     invoke-super {p0}, Lcom/brightcove/player/view/BrightcovePlayer;->onDestroy()V
 
-    .line 96
+    .line 95
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->isPlaying()Z
@@ -714,12 +715,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
+    .line 96
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->stopPlayback()V
 
-    .line 99
+    .line 98
     :cond_0
     return-void
 .end method
@@ -739,12 +740,12 @@
         }
     .end annotation
 
-    .line 328
+    .line 327
     const/4 v0, 0x1
 
     sparse-switch p1, :sswitch_data_0
 
-    .line 343
+    .line 342
     invoke-virtual {p2}, Landroid/view/KeyEvent;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -753,22 +754,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
+    .line 343
     invoke-super {p0, p1, p2}, Lcom/brightcove/player/view/BrightcovePlayer;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
     return v0
 
-    .line 338
+    .line 337
     :sswitch_0
     return v0
 
-    .line 341
+    .line 340
     :sswitch_1
     return v0
 
-    .line 333
+    .line 332
     :sswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -794,14 +795,14 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
+    .line 334
     return v0
 
-    .line 330
+    .line 329
     :sswitch_3
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->finish()V
 
-    .line 331
+    .line 330
     return v0
 
     nop
@@ -818,26 +819,26 @@
 .method protected onStart()V
     .locals 0
 
-    .line 350
+    .line 349
     invoke-super {p0}, Lcom/brightcove/player/view/BrightcovePlayer;->onStart()V
 
-    .line 351
+    .line 350
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->requestAudioFocus()V
 
-    .line 352
+    .line 351
     return-void
 .end method
 
 .method protected onStop()V
     .locals 0
 
-    .line 356
+    .line 355
     invoke-super {p0}, Lcom/brightcove/player/view/BrightcovePlayer;->onStop()V
 
-    .line 357
+    .line 356
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->abandonAudioFocus()Z
 
-    .line 358
+    .line 357
     return-void
 .end method
 
@@ -853,10 +854,10 @@
         }
     .end annotation
 
-    .line 202
+    .line 201
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->uuid:Ljava/lang/String;
 
-    .line 206
+    .line 205
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -877,8 +878,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
-    const v0, 0x7f0a0074
+    .line 207
+    const v0, 0x7f0a0076
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -888,7 +889,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
-    .line 209
+    .line 208
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->brightcoveVideoView:Lcom/brightcove/player/view/BaseVideoView;
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->getEventEmitter()Lcom/brightcove/player/event/EventEmitter;
@@ -897,7 +898,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
 
-    .line 211
+    .line 210
     new-instance v0, Lcom/brightcove/player/network/HttpRequestConfig$Builder;
 
     invoke-direct {v0}, Lcom/brightcove/player/network/HttpRequestConfig$Builder;-><init>()V
@@ -914,7 +915,7 @@
 
     move-result-object v0
 
-    .line 213
+    .line 212
     .local v0, "httpRequestConfig":Lcom/brightcove/player/network/HttpRequestConfig;
     new-instance v1, Lcom/brightcove/player/edge/Catalog;
 
@@ -934,7 +935,7 @@
 
     invoke-direct {v1, v2, v3, v4}, Lcom/brightcove/player/edge/Catalog;-><init>(Lcom/brightcove/player/event/EventEmitter;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
+    .line 213
     .local v1, "catalog":Lcom/brightcove/player/edge/Catalog;
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->videoId:Ljava/lang/String;
 
@@ -944,7 +945,7 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/brightcove/player/edge/Catalog;->findVideoByID(Ljava/lang/String;Lcom/brightcove/player/network/HttpRequestConfig;Lcom/brightcove/player/edge/VideoListener;)V
 
-    .line 230
+    .line 229
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
 
     new-instance v3, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;
@@ -955,7 +956,7 @@
 
     invoke-interface {v2, v4, v3}, Lcom/brightcove/player/event/EventEmitter;->on(Ljava/lang/String;Lcom/brightcove/player/event/EventListener;)I
 
-    .line 248
+    .line 247
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
 
     new-instance v3, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$3;
@@ -966,7 +967,7 @@
 
     invoke-interface {v2, v4, v3}, Lcom/brightcove/player/event/EventEmitter;->on(Ljava/lang/String;Lcom/brightcove/player/event/EventListener;)I
 
-    .line 275
+    .line 274
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->eventEmitter:Lcom/brightcove/player/event/EventEmitter;
 
     new-instance v3, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$4;
@@ -977,17 +978,17 @@
 
     invoke-interface {v2, v4, v3}, Lcom/brightcove/player/event/EventEmitter;->on(Ljava/lang/String;Lcom/brightcove/player/event/EventListener;)I
 
-    .line 293
+    .line 292
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->registerErrorEventHandler()V
 
-    .line 313
+    .line 312
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->channelUrl:Ljava/lang/String;
 
     const-string v3, "SSAI-Channel"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
+    .line 317
     return-void
 .end method
 
@@ -1003,21 +1004,21 @@
         }
     .end annotation
 
-    .line 361
+    .line 360
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
     const-string v1, "views"
 
     invoke-virtual {p0, v0, v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->snPing(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 362
+    .line 361
     const-string v0, "TestIMA"
 
     const-string v1, "Play This Video"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
+    .line 362
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1036,14 +1037,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
+    .line 365
     return-void
 .end method
 
 .method public recordLiveMinutes()V
     .locals 7
 
-    .line 370
+    .line 369
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1056,7 +1057,7 @@
 
     return-void
 
-    .line 371
+    .line 370
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1078,11 +1079,11 @@
 
     move-result-object v0
 
-    .line 372
+    .line 371
     .local v0, "params":Ljava/lang/String;
     const-string v1, "https://us-central1-encoretvb-firetv-chinese.cloudfunctions.net/fireTvLiveTimePing"
 
-    .line 373
+    .line 372
     .local v1, "url":Ljava/lang/String;
     const-string v2, "application/json; charset=utf-8"
 
@@ -1090,13 +1091,13 @@
 
     move-result-object v2
 
-    .line 374
+    .line 373
     .local v2, "JSON":Lokhttp3/MediaType;
     invoke-static {v2, v0}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v3
 
-    .line 375
+    .line 374
     .local v3, "body":Lokhttp3/RequestBody;
     new-instance v4, Lokhttp3/Request$Builder;
 
@@ -1114,7 +1115,7 @@
 
     move-result-object v4
 
-    .line 376
+    .line 375
     .local v4, "request":Lokhttp3/Request;
     iget-object v5, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->client:Lokhttp3/OkHttpClient;
 
@@ -1128,7 +1129,7 @@
 
     invoke-interface {v5, v6}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 389
+    .line 388
     return-void
 .end method
 
@@ -1147,7 +1148,7 @@
         }
     .end annotation
 
-    .line 392
+    .line 391
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1158,7 +1159,7 @@
 
     return-void
 
-    .line 393
+    .line 392
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1184,17 +1185,17 @@
 
     move-result-object v0
 
-    .line 394
+    .line 393
     .local v0, "params":Ljava/lang/String;
     const-string v1, "https://us-central1-encoretvb-firetv-chinese.cloudfunctions.net/fireTvPing"
 
-    .line 395
+    .line 394
     .local v1, "url":Ljava/lang/String;
     new-instance v2, Lokhttp3/OkHttpClient;
 
     invoke-direct {v2}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 396
+    .line 395
     .local v2, "client":Lokhttp3/OkHttpClient;
     const-string v3, "application/json; charset=utf-8"
 
@@ -1202,13 +1203,13 @@
 
     move-result-object v3
 
-    .line 397
+    .line 396
     .local v3, "JSON":Lokhttp3/MediaType;
     invoke-static {v3, v0}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v4
 
-    .line 398
+    .line 397
     .local v4, "body":Lokhttp3/RequestBody;
     new-instance v5, Lokhttp3/Request$Builder;
 
@@ -1226,7 +1227,7 @@
 
     move-result-object v5
 
-    .line 399
+    .line 398
     .local v5, "request":Lokhttp3/Request;
     invoke-virtual {v2, v5}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -1238,6 +1239,6 @@
 
     invoke-interface {v6, v7}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 412
+    .line 411
     return-void
 .end method

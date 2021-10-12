@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 609
+    .line 634
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,10 +59,10 @@
         }
     .end annotation
 
-    .line 612
+    .line 637
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 613
+    .line 638
     return-void
 .end method
 
@@ -87,17 +87,17 @@
         }
     .end annotation
 
-    .line 617
+    .line 642
     invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 620
+    .line 645
     return-void
 
-    .line 618
+    .line 643
     :cond_0
     new-instance v0, Ljava/io/IOException;
 

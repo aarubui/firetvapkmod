@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 218
+    .line 243
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,24 +56,24 @@
         }
     .end annotation
 
-    .line 221
+    .line 246
     const-string v0, "TestIMA"
 
     const-string v1, "Did Set Video"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
+    .line 247
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$300(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)V
 
-    .line 225
+    .line 250
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 226
+    .line 251
     .local v0, "properties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const/high16 v1, 0x42c80000    # 100.0f
 
@@ -85,7 +85,7 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
+    .line 252
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$400(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Lcom/brightcove/player/event/EventEmitter;
@@ -96,6 +96,6 @@
 
     invoke-interface {v1, v2, v0}, Lcom/brightcove/player/event/EventEmitter;->emit(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 228
+    .line 253
     return-void
 .end method

@@ -122,7 +122,7 @@
 .end method
 
 .method private loadRows()V
-    .locals 6
+    .locals 5
 
     .line 104
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
@@ -191,50 +191,40 @@
 
     goto :goto_0
 
-    .line 113
+    .line 114
     .end local v2    # "j":I
     :cond_0
-    new-instance v2, Landroidx/leanback/widget/HeaderItem;
+    iget-object v2, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    const-wide/16 v3, 0x0
+    new-instance v3, Landroidx/leanback/widget/ListRow;
 
-    const-string v5, "\u96c6\u6578"
+    invoke-direct {v3, v1}, Landroidx/leanback/widget/ListRow;-><init>(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    invoke-direct {v2, v3, v4, v5}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
-
-    .line 114
-    .local v2, "header":Landroidx/leanback/widget/HeaderItem;
-    iget-object v3, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
-
-    new-instance v4, Landroidx/leanback/widget/ListRow;
-
-    invoke-direct {v4, v2, v1}, Landroidx/leanback/widget/ListRow;-><init>(Landroidx/leanback/widget/HeaderItem;Landroidx/leanback/widget/ObjectAdapter;)V
-
-    invoke-virtual {v3, v4}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
     .line 116
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
-    move-result-object v3
+    move-result-object v2
 
-    const v4, 0x7f0a0199
+    const v3, 0x7f0a0132
 
-    invoke-virtual {v3, v4}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v3}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Landroid/widget/FrameLayout;
+    check-cast v2, Landroid/widget/FrameLayout;
 
     .line 117
-    .local v3, "loadingFrame":Landroid/widget/FrameLayout;
-    const/16 v4, 0x8
+    .local v2, "loadingFrame":Landroid/widget/FrameLayout;
+    const/16 v3, 0x8
 
-    invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     .line 119
-    iget-object v4, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
+    iget-object v3, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
+    invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
     .line 120
     return-void
@@ -373,7 +363,7 @@
 
     .line 88
     .local v0, "view":Landroid/view/View;
-    const v1, 0x7f0a0075
+    const v1, 0x7f0a0077
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -579,7 +569,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0077
+    const v1, 0x7f0a0079
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

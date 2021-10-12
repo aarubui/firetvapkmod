@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 168
+    .line 167
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 168
+    .line 167
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 173
+    .line 172
     :try_start_0
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    .line 176
+    .line 175
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "limit_ad_tracking"
 
@@ -109,12 +109,12 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 179
+    .line 178
     .local v1, "limitAdTracking":Z
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 180
+    .line 179
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     const-string v3, ""
@@ -123,7 +123,7 @@
 
     goto :goto_1
 
-    .line 182
+    .line 181
     :cond_1
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -135,7 +135,7 @@
 
     iput-object v3, v2, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->advertisingID:Ljava/lang/String;
 
-    .line 185
+    .line 184
     :goto_1
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -145,13 +145,13 @@
 
     return-object v2
 
-    .line 186
+    .line 185
     .end local v0    # "cr":Landroid/content/ContentResolver;
     .end local v1    # "limitAdTracking":Z
     :catch_0
     move-exception v0
 
-    .line 191
+    .line 190
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->advertisingID:Ljava/lang/String;
@@ -170,7 +170,7 @@
         }
     .end annotation
 
-    .line 168
+    .line 167
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->onPostExecute(Ljava/lang/String;)V
@@ -190,21 +190,21 @@
         }
     .end annotation
 
-    .line 195
+    .line 194
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 196
+    .line 195
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$UuidTask;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-virtual {v0, p1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->playThisChannel(Ljava/lang/String;)V
 
-    .line 197
+    .line 196
     const-string v0, "ChannelDebug"
 
     const-string v1, "Done UUID Task"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
+    .line 197
     return-void
 .end method

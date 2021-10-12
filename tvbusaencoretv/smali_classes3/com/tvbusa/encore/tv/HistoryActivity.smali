@@ -93,7 +93,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0a0129
+    const v6, 0x7f0a0130
 
     const-string v7, "HistoryFragment"
 
@@ -109,7 +109,7 @@
     invoke-virtual {v4, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
-    const v2, 0x7f0a02a5
+    const v2, 0x7f0a02b9
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/HistoryActivity;->findViewById(I)Landroid/view/View;
 
