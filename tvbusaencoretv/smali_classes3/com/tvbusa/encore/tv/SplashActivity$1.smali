@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 164
+    .line 177
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SplashActivity$1;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,10 +59,10 @@
         }
     .end annotation
 
-    .line 167
+    .line 180
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 168
+    .line 181
     return-void
 .end method
 
@@ -87,17 +87,17 @@
         }
     .end annotation
 
-    .line 172
+    .line 185
     invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 188
     return-void
 
-    .line 173
+    .line 186
     :cond_0
     new-instance v0, Ljava/io/IOException;
 

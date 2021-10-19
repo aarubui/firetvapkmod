@@ -40,7 +40,7 @@
 
 # virtual methods
 .method public fetchData(Ljava/lang/String;)V
-    .locals 4
+    .locals 10
     .param p1, "dsn"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -52,35 +52,120 @@
     .end annotation
 
     .line 75
-    invoke-static {}, Lcom/google/firebase/firestore/FirebaseFirestore;->getInstance()Lcom/google/firebase/firestore/FirebaseFirestore;
+    const-string v0, "generalInfo"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     .line 76
-    .local v0, "db":Lcom/google/firebase/firestore/FirebaseFirestore;
-    const-string v1, "rebate-event-2021-Q1"
+    .local v0, "generalInfo":Landroid/content/SharedPreferences;
+    const-string v1, "eventURL"
 
-    invoke-virtual {v0, v1}, Lcom/google/firebase/firestore/FirebaseFirestore;->collection(Ljava/lang/String;)Lcom/google/firebase/firestore/CollectionReference;
+    const-string v2, ""
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lcom/google/firebase/firestore/CollectionReference;->document(Ljava/lang/String;)Lcom/google/firebase/firestore/DocumentReference;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 77
-    .local v1, "docRef":Lcom/google/firebase/firestore/DocumentReference;
-    invoke-virtual {v1}, Lcom/google/firebase/firestore/DocumentReference;->get()Lcom/google/android/gms/tasks/Task;
+    .local v1, "eventUrl":Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;
+    .line 78
+    .local v2, "landingPageUrl":Ljava/lang/String;
+    const-string v3, "LandingPageURL"
 
-    invoke-direct {v3, p0, p1}, Lcom/tvbusa/encore/tv/SerialNumberActivity$2;-><init>(Lcom/tvbusa/encore/tv/SerialNumberActivity;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
+    .line 80
+    invoke-static {v2}, Lnet/glxn/qrgen/android/QRCode;->from(Ljava/lang/String;)Lnet/glxn/qrgen/android/QRCode;
 
-    .line 107
+    move-result-object v3
+
+    invoke-virtual {v3}, Lnet/glxn/qrgen/android/QRCode;->bitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    .line 81
+    .local v3, "myBitmap":Landroid/graphics/Bitmap;
+    const v4, 0x7f0a016c
+
+    invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/widget/ImageView;
+
+    .line 82
+    .local v4, "myImage":Landroid/widget/ImageView;
+    const v5, 0x7f0a0226
+
+    invoke-virtual {p0, v5}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/LinearLayout;
+
+    .line 83
+    .local v5, "pointSection":Landroid/widget/LinearLayout;
+    invoke-virtual {v4, v3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 84
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 85
+    .local v6, "params":Landroid/widget/LinearLayout$LayoutParams;
+    const/16 v7, 0x1ea
+
+    iput v7, v6, Landroid/widget/LinearLayout$LayoutParams;->height:I
+
+    .line 87
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 88
+    const v7, 0x7f0a00ed
+
+    invoke-virtual {p0, v7}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/widget/LinearLayout;
+
+    .line 89
+    .local v7, "dsnSection":Landroid/widget/LinearLayout;
+    invoke-virtual {v7}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 90
+    .local v8, "dsnSectionParam":Landroid/widget/LinearLayout$LayoutParams;
+    const/16 v9, 0x46
+
+    iput v9, v8, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    .line 91
+    invoke-virtual {v7, v8}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 125
     return-void
 .end method
 
