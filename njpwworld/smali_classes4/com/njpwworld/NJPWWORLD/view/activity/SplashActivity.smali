@@ -179,7 +179,7 @@
 
     const v1, 0x7f0a0145
 
-    const v2, 0x7f080077
+    const v2, 0x7f08007a
 
     if-eqz v0, :cond_0
 

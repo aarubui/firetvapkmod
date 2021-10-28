@@ -34,7 +34,7 @@
 
 # virtual methods
 .method public onError(Landroid/media/MediaPlayer;II)Z
-    .locals 0
+    .locals 3
 
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/d/e$1;->a:Lcom/njpwworld/NJPWWORLD/d/e;
 
@@ -44,11 +44,39 @@
 
     invoke-virtual {p1}, Landroid/widget/VideoView;->stopPlayback()V
 
+    const-string p1, "error"
+
+    const-string v0, "what: %d, extra: %d"
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    const/4 v2, 0x0
+
+    aput-object p2, v1, v2
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    const/4 p3, 0x1
+
+    aput-object p2, v1, p3
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object p1, p0, Lcom/njpwworld/NJPWWORLD/d/e$1;->a:Lcom/njpwworld/NJPWWORLD/d/e;
 
-    const/4 p2, 0x0
+    invoke-static {p1, v2}, Lcom/njpwworld/NJPWWORLD/d/e;->a(Lcom/njpwworld/NJPWWORLD/d/e;I)I
 
-    invoke-static {p1, p2}, Lcom/njpwworld/NJPWWORLD/d/e;->a(Lcom/njpwworld/NJPWWORLD/d/e;I)I
-
-    return p2
+    return v2
 .end method
