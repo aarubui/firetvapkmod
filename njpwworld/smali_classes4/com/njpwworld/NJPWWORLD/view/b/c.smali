@@ -193,7 +193,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080067
+    const v3, 0x7f080068
 
     invoke-direct {v0, v1, v2, v3}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -222,7 +222,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080068
+    const v3, 0x7f080069
 
     invoke-direct {v0, v1, v2, v3}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -245,7 +245,7 @@
 
     iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/c;->ad:Landroid/app/Activity;
 
-    const v1, 0x7f08007a
+    const v1, 0x7f08007d
 
     invoke-static {v0, v1}, Landroid/support/v4/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -873,7 +873,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080064
+    const v3, 0x7f080065
 
     invoke-direct {v0, v1, v2, v3}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1272,7 +1272,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f080067
+    const v5, 0x7f080068
 
     invoke-direct {v1, v3, v4, v5}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1301,7 +1301,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080068
+    const v4, 0x7f080069
 
     invoke-direct {v1, v2, v3, v4}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1346,7 +1346,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08007b
+    const v4, 0x7f08007e
 
     invoke-direct {v1, v2, v3, v4}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1366,7 +1366,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080073
+    const v4, 0x7f080076
 
     invoke-direct {v1, v2, v3, v4}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1426,7 +1426,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080072
+    const v4, 0x7f080075
 
     invoke-direct {v1, v2, v3, v4}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1446,7 +1446,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080079
+    const v4, 0x7f08007c
 
     invoke-direct {v1, v2, v3, v4}, Lcom/njpwworld/NJPWWORLD/b/j;-><init>(Lcom/njpwworld/NJPWWORLD/b/j$a;Ljava/lang/String;I)V
 
@@ -1815,22 +1815,6 @@
     return-void
 .end method
 
-.method public onDestroy()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/support/v17/leanback/app/h;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/support/v17/leanback/app/h;->onPause()V
-
-    return-void
-.end method
-
 .method public onResume()V
     .locals 6
 
@@ -1933,9 +1917,30 @@
 .end method
 
 .method public onStart()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/support/v17/leanback/app/h;->onStart()V
 
+    iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/c;->ad:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->e(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/b;->b(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/c;->ad:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->p(Landroid/content/Context;)Z
+
+    iget-object v0, p0, Lcom/njpwworld/NJPWWORLD/view/b/c;->ad:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/f;->f(Landroid/content/Context;)Z
+
+    :cond_0
     return-void
 .end method

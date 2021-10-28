@@ -249,13 +249,3 @@
 
     return p1
 .end method
-
-.method protected onResume()V
-    .locals 0
-
-    invoke-static {p0}, Lcom/amazon/android/Kiwi;->onResume(Landroid/app/Activity;)V
-
-    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onResume()V
-
-    return-void
-.end method

@@ -114,7 +114,7 @@
 .method private static a()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "1.4"
+    const-string v0, "1.5"
 
     invoke-static {v0}, Lcom/njpwworld/NJPWWORLD/d/g;->a(Ljava/lang/String;)Ljava/lang/String;
 

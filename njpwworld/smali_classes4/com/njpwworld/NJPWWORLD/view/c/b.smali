@@ -141,7 +141,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f080062
+    const v4, 0x7f080073
 
     goto :goto_0
 
@@ -152,7 +152,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f080063
+    const v4, 0x7f080064
 
     goto :goto_0
 
@@ -163,7 +163,40 @@
 
     move-result-object v2
 
-    const v4, 0x7f080066
+    const v4, 0x7f080074
+
+    goto :goto_0
+
+    :pswitch_3
+    iget-object v2, p0, Lcom/njpwworld/NJPWWORLD/view/c/b;->q:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f080062
+
+    goto :goto_0
+
+    :pswitch_4
+    iget-object v2, p0, Lcom/njpwworld/NJPWWORLD/view/c/b;->q:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f080063
+
+    goto :goto_0
+
+    :pswitch_5
+    iget-object v2, p0, Lcom/njpwworld/NJPWWORLD/view/c/b;->q:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f080067
 
     :goto_0
     invoke-virtual {v2, v4, v3}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -359,6 +392,9 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
