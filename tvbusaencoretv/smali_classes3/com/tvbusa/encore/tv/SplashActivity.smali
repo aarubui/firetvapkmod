@@ -118,39 +118,6 @@
 
 
 # virtual methods
-.method public checkPermission()V
-    .locals 2
-
-    .line 219
-    const-string v0, "Splash"
-
-    const-string v1, "Checking Permission"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 220
-    const-string v0, "android.permission.READ_PHONE_STATE"
-
-    invoke-static {p0, v0}, Landroidx/core/app/ActivityCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 221
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->requestPhoneStatePermission()V
-
-    goto :goto_0
-
-    .line 223
-    :cond_0
-    invoke-virtual {p0, p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getDSN(Landroid/content/Context;)V
-
-    .line 225
-    :goto_0
-    return-void
-.end method
-
 .method public clearCache()V
     .locals 3
 
@@ -492,69 +459,12 @@
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SplashActivity;->setContentView(I)V
 
     .line 84
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->checkPermission()V
+    invoke-virtual {p0, p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getDSN(Landroid/content/Context;)V
 
     .line 86
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->clearCache()V
 
     .line 87
-    return-void
-.end method
-
-.method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 2
-    .param p1, "requestCode"    # I
-    .param p2, "permissions"    # [Ljava/lang/String;
-    .param p3, "grantResults"    # [I
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "requestCode",
-            "permissions",
-            "grantResults"
-        }
-    .end annotation
-
-    .line 233
-    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-
-    .line 234
-    if-nez p1, :cond_0
-
-    .line 236
-    const-string v0, "Splash"
-
-    const-string v1, "Received response for phone state permission request."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 237
-    invoke-virtual {p0, p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getDSN(Landroid/content/Context;)V
-
-    .line 239
-    :cond_0
-    return-void
-.end method
-
-.method public requestPhoneStatePermission()V
-    .locals 2
-
-    .line 228
-    const-string v0, "android.permission.READ_PHONE_STATE"
-
-    filled-new-array {v0}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroidx/core/app/ActivityCompat;->requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)V
-
-    .line 229
     return-void
 .end method
 
