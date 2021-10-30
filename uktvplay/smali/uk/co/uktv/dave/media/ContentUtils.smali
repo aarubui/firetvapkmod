@@ -130,6 +130,23 @@
     move-result-object p0
 
     .line 41
+    const-string v0, "http://cdn.http.anno.channel4.com/"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :goto_1
+
+    const-wide/16 v0, 0x0
+
+    new-instance p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;-><init>(J)V
+
+    return-object p0
+
+    :goto_1
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1

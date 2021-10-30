@@ -59,17 +59,6 @@
     iput-object p4, p0, Luk/co/uktv/dave/messaging/from/InitializeMediaPlayerMessage;->laUrl:Ljava/lang/String;
 
     .line 39
-    const-string v0, "http://cdn.http.anno.channel4.com/"
-
-    invoke-virtual {p3, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :goto_0
-
-    const-wide/32 p5, 0x1d4c0
-
-    :goto_0
     iput-wide p5, p0, Luk/co/uktv/dave/messaging/from/InitializeMediaPlayerMessage;->position:J
 
     return-void
