@@ -337,7 +337,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a0130
+    const v4, 0x7f0b014e
 
     const-string v5, "BrowseFragment"
 

@@ -85,7 +85,7 @@
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BrowseErrorActivity;->mSpinnerFragment:Lcom/tvbusa/encore/tv/BrowseErrorActivity$SpinnerFragment;
 
     .line 60
-    const v2, 0x7f0a01ad
+    const v2, 0x7f0b01cb
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -131,7 +131,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
-    const v0, 0x7f0d0024
+    const v0, 0x7f0e0024
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/BrowseErrorActivity;->setContentView(I)V
 

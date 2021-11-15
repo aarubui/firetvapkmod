@@ -196,7 +196,7 @@
 
     .line 134
     .local v1, "cObject":Lorg/json/JSONObject;
-    const v3, 0x7f11005f
+    const v3, 0x7f12005f
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/SearchActivity;->getString(I)Ljava/lang/String;
 
@@ -208,7 +208,7 @@
 
     .line 135
     .local v3, "title":Ljava/lang/String;
-    const v4, 0x7f11015c
+    const v4, 0x7f12016d
 
     invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/SearchActivity;->getString(I)Ljava/lang/String;
 
@@ -469,7 +469,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a0130
+    const v4, 0x7f0b014e
 
     const-string v5, "BrowseFragment"
 
@@ -501,7 +501,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 49
-    const v0, 0x7f0d0025
+    const v0, 0x7f0e0025
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->setContentView(I)V
 
@@ -517,7 +517,7 @@
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SearchActivity$ContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 52
-    const v0, 0x7f0a024c
+    const v0, 0x7f0b026b
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->findViewById(I)Landroid/view/View;
 
@@ -537,7 +537,7 @@
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->mApp:Lcom/tvbusa/encore/tv/MainApplication;
 
     .line 56
-    const v0, 0x7f0a024b
+    const v0, 0x7f0b026a
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->findViewById(I)Landroid/view/View;
 

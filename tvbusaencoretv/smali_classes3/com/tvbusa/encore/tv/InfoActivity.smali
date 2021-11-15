@@ -52,12 +52,12 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 33
-    const v0, 0x7f0d0022
+    const v0, 0x7f0e0022
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->setContentView(I)V
 
     .line 34
-    const v0, 0x7f0a02b5
+    const v0, 0x7f0b02d6
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -67,7 +67,7 @@
 
     .line 35
     .local v0, "title":Landroid/widget/TextView;
-    const v1, 0x7f0a02d3
+    const v1, 0x7f0b02f4
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -77,7 +77,7 @@
 
     .line 36
     .local v1, "value":Landroid/widget/TextView;
-    const v2, 0x7f0a0062
+    const v2, 0x7f0b0062
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
 

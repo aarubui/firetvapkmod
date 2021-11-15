@@ -42,12 +42,12 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 48
-    const v0, 0x7f0d0023
+    const v0, 0x7f0e0023
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/LoginActivity;->setContentView(I)V
 
     .line 50
-    const v0, 0x7f0a0122
+    const v0, 0x7f0b0140
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +79,7 @@
     invoke-virtual {v1, v0}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     .line 56
-    const v1, 0x7f0a0233
+    const v1, 0x7f0b0252
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 64
-    const v2, 0x7f0a01a8
+    const v2, 0x7f0b01c6
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/LoginActivity;->findViewById(I)Landroid/view/View;
 

@@ -37,7 +37,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 33
-    const v0, 0x7f0d001f
+    const v0, 0x7f0e001f
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/DetailsActivity;->setContentView(I)V
 

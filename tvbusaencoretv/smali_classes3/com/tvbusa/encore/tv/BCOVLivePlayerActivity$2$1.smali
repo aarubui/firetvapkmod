@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 236
+    .line 235
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 1
 
-    .line 239
+    .line 238
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$2;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
@@ -58,6 +58,6 @@
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->start()V
 
-    .line 240
+    .line 239
     return-void
 .end method

@@ -232,7 +232,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a0130
+    const v3, 0x7f0b014e
 
     const-string v4, "CategoryFragment"
 

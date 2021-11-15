@@ -31,7 +31,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 212
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Lcom/brightcove/player/edge/VideoListener;-><init>()V
@@ -53,7 +53,7 @@
         }
     .end annotation
 
-    .line 225
+    .line 224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +72,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
+    .line 225
     return-void
 .end method
 
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 218
+    .line 217
     sget-object v0, Lcom/brightcove/player/model/DeliveryType;->HLS:Lcom/brightcove/player/model/DeliveryType;
 
     invoke-virtual {p1, v0}, Lcom/brightcove/player/model/Video;->getSourceCollectionByDeliveryType(Lcom/brightcove/player/model/DeliveryType;)Lcom/brightcove/player/model/SourceCollection;
@@ -109,7 +109,7 @@
 
     check-cast v0, Lcom/brightcove/player/model/Source;
 
-    .line 219
+    .line 218
     .local v0, "source":Lcom/brightcove/player/model/Source;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -139,7 +139,7 @@
 
     iput-object v2, v1, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->channelUrl:Ljava/lang/String;
 
-    .line 220
+    .line 219
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$000(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -148,7 +148,7 @@
 
     invoke-virtual {v1, p1}, Lcom/brightcove/player/view/BaseVideoView;->add(Lcom/brightcove/player/model/Video;)V
 
-    .line 221
+    .line 220
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->access$100(Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -157,6 +157,6 @@
 
     invoke-virtual {v1}, Lcom/brightcove/player/view/BaseVideoView;->start()V
 
-    .line 223
+    .line 222
     return-void
 .end method

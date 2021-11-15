@@ -377,7 +377,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a0130
+    const v3, 0x7f0b014e
 
     const-string v4, "SearchResultFragment"
 
@@ -409,7 +409,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 51
-    const v0, 0x7f0d0026
+    const v0, 0x7f0e0026
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchResultActivity;->setContentView(I)V
 
@@ -487,7 +487,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1100c6
+    const v6, 0x7f1200d7
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -505,7 +505,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f11005b
+    const v6, 0x7f12005b
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -523,7 +523,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f110168
+    const v6, 0x7f12017c
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -533,7 +533,7 @@
 
     .line 68
     :goto_0
-    const v5, 0x7f0a024d
+    const v5, 0x7f0b026c
 
     invoke-virtual {p0, v5}, Lcom/tvbusa/encore/tv/SearchResultActivity;->findViewById(I)Landroid/view/View;
 

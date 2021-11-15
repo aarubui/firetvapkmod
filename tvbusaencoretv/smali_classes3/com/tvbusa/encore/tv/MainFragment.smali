@@ -1685,7 +1685,7 @@
 
     .line 118
     .local v0, "view":Landroid/view/View;
-    const v1, 0x7f0a0077
+    const v1, 0x7f0b0077
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1729,7 +1729,7 @@
 
     .line 122
     .local v4, "newHeaderMargin":I
-    const v6, 0x7f0700cc
+    const v6, 0x7f0700ef
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

@@ -13,6 +13,7 @@
         Lcom/tvbusa/encore/tv/R$color;,
         Lcom/tvbusa/encore/tv/R$dimen;,
         Lcom/tvbusa/encore/tv/R$drawable;,
+        Lcom/tvbusa/encore/tv/R$font;,
         Lcom/tvbusa/encore/tv/R$fraction;,
         Lcom/tvbusa/encore/tv/R$id;,
         Lcom/tvbusa/encore/tv/R$integer;,

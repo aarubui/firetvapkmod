@@ -70,7 +70,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 28
-    const v0, 0x7f0d001e
+    const v0, 0x7f0e001e
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryActivity;->setContentView(I)V
 
@@ -118,7 +118,7 @@
 
     .line 38
     :cond_0
-    const v2, 0x7f0a02b9
+    const v2, 0x7f0b02da
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/CategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -166,7 +166,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f110081
+    const v6, 0x7f120081
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -182,7 +182,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1100d1
+    const v6, 0x7f1200e2
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

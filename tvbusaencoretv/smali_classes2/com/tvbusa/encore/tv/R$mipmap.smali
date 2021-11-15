@@ -14,11 +14,11 @@
 
 
 # static fields
-.field public static final ic_launcher:I = 0x7f0e0000
+.field public static final ic_launcher:I = 0x7f0f0000
 
-.field public static final ic_launcher_foreground:I = 0x7f0e0001
+.field public static final ic_launcher_foreground:I = 0x7f0f0001
 
-.field public static final ic_launcher_round:I = 0x7f0e0002
+.field public static final ic_launcher_round:I = 0x7f0f0002
 
 
 # direct methods

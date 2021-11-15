@@ -101,7 +101,7 @@
 
     .line 81
     .local v3, "myBitmap":Landroid/graphics/Bitmap;
-    const v4, 0x7f0a016c
+    const v4, 0x7f0b018a
 
     invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     .line 82
     .local v4, "myImage":Landroid/widget/ImageView;
-    const v5, 0x7f0a0226
+    const v5, 0x7f0b0245
 
     invoke-virtual {p0, v5}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 88
-    const v7, 0x7f0a00ed
+    const v7, 0x7f0b00f2
 
     invoke-virtual {p0, v7}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -185,12 +185,12 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 48
-    const v0, 0x7f0d0027
+    const v0, 0x7f0e0027
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->setContentView(I)V
 
     .line 49
-    const v0, 0x7f0a02b5
+    const v0, 0x7f0b02d6
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     .line 50
     .local v0, "title":Landroid/widget/TextView;
-    const v1, 0x7f0a02d3
+    const v1, 0x7f0b02f4
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
@@ -210,7 +210,7 @@
 
     .line 51
     .local v1, "value":Landroid/widget/TextView;
-    const v2, 0x7f0a0062
+    const v2, 0x7f0b0062
 
     invoke-virtual {p0, v2}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
 
