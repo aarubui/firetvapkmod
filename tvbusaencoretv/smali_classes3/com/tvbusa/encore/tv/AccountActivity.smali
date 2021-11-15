@@ -46,7 +46,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 41
-    const v0, 0x7f0d001c
+    const v0, 0x7f0e001c
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->setContentView(I)V
 
@@ -54,7 +54,7 @@
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/AccountActivity;->parseAccount()V
 
     .line 45
-    const v0, 0x7f0a0134
+    const v0, 0x7f0b0152
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -65,7 +65,7 @@
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->genderValue:Landroid/widget/TextView;
 
     .line 46
-    const v0, 0x7f0a00f5
+    const v0, 0x7f0b00fa
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->emailValue:Landroid/widget/TextView;
 
     .line 47
-    const v0, 0x7f0a01fa
+    const v0, 0x7f0b0219
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -87,7 +87,7 @@
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->nicknameValue:Landroid/widget/TextView;
 
     .line 49
-    const v0, 0x7f0a01aa
+    const v0, 0x7f0b01c8
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f110062
+    const v4, 0x7f120062
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

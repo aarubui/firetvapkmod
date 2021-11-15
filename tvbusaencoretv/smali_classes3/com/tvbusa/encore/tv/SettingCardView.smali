@@ -57,12 +57,12 @@
 
     .line 28
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    const v1, 0x7f0d005d
+    const v1, 0x7f0e0064
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 29
-    const v1, 0x7f0a008b
+    const v1, 0x7f0b0090
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/SettingCardView;->findViewById(I)Landroid/view/View;
 

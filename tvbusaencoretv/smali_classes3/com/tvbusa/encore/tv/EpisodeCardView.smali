@@ -61,12 +61,12 @@
 
     .line 30
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    const v1, 0x7f0d0060
+    const v1, 0x7f0e0067
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 31
-    const v1, 0x7f0a00fd
+    const v1, 0x7f0b0102
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/EpisodeCardView;->findViewById(I)Landroid/view/View;
 
@@ -77,7 +77,7 @@
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeCardView;->_imageView:Landroid/widget/ImageView;
 
     .line 32
-    const v1, 0x7f0a00ff
+    const v1, 0x7f0b0104
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/EpisodeCardView;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeCardView;->_titleView:Landroid/widget/TextView;
 
     .line 33
-    const v1, 0x7f0a00fe
+    const v1, 0x7f0b0103
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/EpisodeCardView;->findViewById(I)Landroid/view/View;
 

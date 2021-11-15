@@ -14,17 +14,21 @@
 
 
 # static fields
-.field public static final accessibility_hours:I = 0x7f0f0000
+.field public static final accessibility_hours:I = 0x7f100000
 
-.field public static final accessibility_minutes:I = 0x7f0f0001
+.field public static final accessibility_minutes:I = 0x7f100001
 
-.field public static final accessibility_seconds:I = 0x7f0f0002
+.field public static final accessibility_seconds:I = 0x7f100002
 
-.field public static final mtrl_badge_content_description:I = 0x7f0f0003
+.field public static final exo_controls_fastforward_by_amount_description:I = 0x7f100003
 
-.field public static final ssai_message_ad_countdown:I = 0x7f0f0004
+.field public static final exo_controls_rewind_by_amount_description:I = 0x7f100004
 
-.field public static final you_can_skip_text:I = 0x7f0f0005
+.field public static final mtrl_badge_content_description:I = 0x7f100005
+
+.field public static final ssai_message_ad_break_duration_countdown:I = 0x7f100006
+
+.field public static final you_can_skip_text:I = 0x7f100007
 
 
 # direct methods

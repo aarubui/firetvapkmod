@@ -38,6 +38,10 @@
 
 .field public static final captioning_typeface_selector_values:I = 0x7f03000b
 
+.field public static final exo_playback_speeds:I = 0x7f03000c
+
+.field public static final exo_speed_multiplied_by_100:I = 0x7f03000d
+
 
 # direct methods
 .method private constructor <init>()V

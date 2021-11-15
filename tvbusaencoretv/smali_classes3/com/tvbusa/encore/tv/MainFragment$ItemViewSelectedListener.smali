@@ -78,9 +78,9 @@
     .line 134
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
-    const v1, 0x7f0a0160
+    const v1, 0x7f0b017e
 
-    const v2, 0x7f0a015f
+    const v2, 0x7f0b017d
 
     const-string v3, "Is Not Null"
 

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 543
+    .line 545
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$9;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 545
+    .line 547
     return-void
 .end method
 
@@ -84,6 +84,6 @@
         }
     .end annotation
 
-    .line 548
+    .line 550
     return-void
 .end method
