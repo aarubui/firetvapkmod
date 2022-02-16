@@ -43,7 +43,7 @@
         }
     .end annotation
 
-    .line 298
+    .line 301
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$7;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -73,7 +73,7 @@
         }
     .end annotation
 
-    .line 301
+    .line 304
     .local p1, "task":Lcom/google/android/gms/tasks/Task;, "Lcom/google/android/gms/tasks/Task<Lcom/google/firebase/firestore/DocumentSnapshot;>;"
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
@@ -81,14 +81,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 302
+    .line 305
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/firebase/firestore/DocumentSnapshot;
 
-    .line 303
+    .line 306
     .local v0, "doc":Lcom/google/firebase/firestore/DocumentSnapshot;
     invoke-virtual {v0}, Lcom/google/firebase/firestore/DocumentSnapshot;->exists()Z
 
@@ -98,12 +98,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 304
+    .line 307
     const-string v1, "History Exists"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
+    .line 308
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$7;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     const-string v2, "time"
@@ -118,7 +118,7 @@
 
     iput v2, v1, Lcom/tvbusa/encore/tv/SeriesActivity;->historyTime:I
 
-    .line 306
+    .line 309
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$7;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     const-string v2, "id"
@@ -131,13 +131,13 @@
 
     goto :goto_0
 
-    .line 309
+    .line 312
     :cond_0
     const-string v1, "History Not Exists"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
+    .line 315
     .end local v0    # "doc":Lcom/google/firebase/firestore/DocumentSnapshot;
     :cond_1
     :goto_0

@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 334
+    .line 337
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$ProgramTask;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 334
+    .line 337
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/SeriesActivity$ProgramTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
@@ -84,13 +84,13 @@
         }
     .end annotation
 
-    .line 339
+    .line 342
     :try_start_0
     new-instance v0, Lokhttp3/OkHttpClient;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 341
+    .line 344
     .local v0, "client":Lokhttp3/OkHttpClient;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    .line 342
+    .line 345
     .local v1, "url":Ljava/lang/String;
     new-instance v2, Lokhttp3/Request$Builder;
 
@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    .line 343
+    .line 346
     .local v2, "request":Lokhttp3/Request;
     invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -134,7 +134,7 @@
 
     move-result-object v3
 
-    .line 344
+    .line 347
     .local v3, "response":Lokhttp3/Response;
     invoke-virtual {v3}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -146,11 +146,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 345
+    .line 348
     .local v4, "res":Ljava/lang/String;
     return-object v4
 
-    .line 346
+    .line 349
     .end local v0    # "client":Lokhttp3/OkHttpClient;
     .end local v1    # "url":Ljava/lang/String;
     .end local v2    # "request":Lokhttp3/Request;
@@ -159,7 +159,7 @@
     :catch_0
     move-exception v0
 
-    .line 347
+    .line 350
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -177,7 +177,7 @@
         }
     .end annotation
 
-    .line 334
+    .line 337
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/SeriesActivity$ProgramTask;->onPostExecute(Ljava/lang/String;)V
@@ -197,14 +197,14 @@
         }
     .end annotation
 
-    .line 352
+    .line 355
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 353
+    .line 356
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$ProgramTask;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-virtual {v0, p1}, Lcom/tvbusa/encore/tv/SeriesActivity;->requestContent(Ljava/lang/String;)V
 
-    .line 354
+    .line 357
     return-void
 .end method

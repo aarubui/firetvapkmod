@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 513
+    .line 518
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,14 +47,14 @@
 .method public run()V
     .locals 2
 
-    .line 517
+    .line 522
     const-string v0, "VVV"
 
     const-string v1, "Request Error - Run Again"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 518
+    .line 523
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$11;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -67,6 +67,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesActivity;->requestBCOV(Ljava/lang/String;)V
 
-    .line 519
+    .line 524
     return-void
 .end method

@@ -180,7 +180,7 @@
 .end method
 
 .method protected onPostExecute(Ljava/lang/String;)V
-    .locals 12
+    .locals 16
     .param p1, "s"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -192,157 +192,200 @@
     .end annotation
 
     .line 136
-    const-string v0, "memberEnabled"
+    move-object/from16 v1, p0
 
-    const-string v1, "MidRoll"
+    const-string v0, "longForm"
 
-    const-string v2, "eventURL"
+    const-string v2, "shortForm"
 
-    const-string v3, "VideoAdRule"
+    const-string v3, "clips"
 
-    const-string v4, "userRegion"
+    const-string v4, "memberEnabled"
 
-    invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
+    const-string v5, "MidRoll"
+
+    const-string v6, "eventURL"
+
+    const-string v7, "VideoAdRule"
+
+    const-string v8, "userRegion"
+
+    invoke-super/range {p0 .. p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     .line 137
-    iget-object v5, p0, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
+    iget-object v9, v1, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
 
-    const-string v6, "generalInfo"
+    const-string v10, "generalInfo"
 
-    const/4 v7, 0x0
+    const/4 v11, 0x0
 
-    invoke-virtual {v5, v6, v7}, Lcom/tvbusa/encore/tv/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v5
-
-    .line 138
-    .local v5, "generalInfo":Landroid/content/SharedPreferences;
-    invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v6
-
-    .line 140
-    .local v6, "editor":Landroid/content/SharedPreferences$Editor;
-    :try_start_0
-    new-instance v8, Lorg/json/JSONObject;
-
-    invoke-direct {v8, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 141
-    .local v8, "json_result":Lorg/json/JSONObject;
-    const-string v9, "UUU"
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "Splash - "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 142
-    const-string v9, "AmazonFireTV"
-
-    invoke-virtual {v8, v9}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v9, v10, v11}, Lcom/tvbusa/encore/tv/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v9
 
-    .line 143
-    .local v9, "adArray":Lorg/json/JSONArray;
-    invoke-virtual {v9, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v7
-
-    .line 144
-    .local v7, "adObject":Lorg/json/JSONObject;
-    invoke-virtual {v7, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    .line 138
+    .local v9, "generalInfo":Landroid/content/SharedPreferences;
+    invoke-interface {v9}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v10
 
-    invoke-interface {v6, v3, v10}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 140
+    .local v10, "editor":Landroid/content/SharedPreferences$Editor;
+    :try_start_0
+    new-instance v12, Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-object/from16 v13, p1
+
+    :try_start_1
+    invoke-direct {v12, v13}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    .line 141
+    .local v12, "json_result":Lorg/json/JSONObject;
+    const-string v14, "UUU"
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Splash - "
+
+    invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v14, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 142
+    const-string v11, "AmazonFireTV"
+
+    invoke-virtual {v12, v11}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v11
+
+    .line 143
+    .local v11, "adArray":Lorg/json/JSONArray;
+    const/4 v14, 0x0
+
+    invoke-virtual {v11, v14}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v14
+
+    .line 144
+    .local v14, "adObject":Lorg/json/JSONObject;
+    invoke-virtual {v14, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-interface {v10, v7, v15}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 145
-    invoke-virtual {v7, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v14, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v10, v6, v7}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 146
+    invoke-virtual {v14, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    invoke-interface {v10, v5, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 147
+    invoke-virtual {v14, v4}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v5
+
+    invoke-interface {v10, v4, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 148
+    const-string v4, ""
+
+    invoke-virtual {v12, v8, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v10, v8, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 150
+    invoke-virtual {v14, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v10, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 151
+    invoke-virtual {v14, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v6, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 146
-    invoke-virtual {v7, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    .line 152
+    invoke-virtual {v14, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    invoke-interface {v6, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 147
-    invoke-virtual {v7, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+    .line 154
+    invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result v1
-
-    invoke-interface {v6, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    .line 148
-    const-string v0, ""
-
-    invoke-virtual {v8, v4, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v6, v4, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 149
-    invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->apply()V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 153
-    .end local v7    # "adObject":Lorg/json/JSONObject;
-    .end local v8    # "json_result":Lorg/json/JSONObject;
-    .end local v9    # "adArray":Lorg/json/JSONArray;
+    .line 158
+    .end local v11    # "adArray":Lorg/json/JSONArray;
+    .end local v12    # "json_result":Lorg/json/JSONObject;
+    .end local v14    # "adObject":Lorg/json/JSONObject;
     goto :goto_0
 
-    .line 151
+    .line 156
     :catch_0
     move-exception v0
 
-    .line 154
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    move-object/from16 v13, p1
+
+    .line 159
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
+    iget-object v2, v1, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
 
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/SplashActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/tvbusa/encore/tv/SplashActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-class v2, Lcom/tvbusa/encore/tv/MainActivity;
+    const-class v3, Lcom/tvbusa/encore/tv/MainActivity;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 156
+    .line 161
     .local v0, "intent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
+    iget-object v2, v1, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
 
-    invoke-virtual {v1, v0}, Lcom/tvbusa/encore/tv/SplashActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v0}, Lcom/tvbusa/encore/tv/SplashActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 157
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
+    .line 162
+    iget-object v2, v1, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->this$0:Lcom/tvbusa/encore/tv/SplashActivity;
 
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/SplashActivity;->finish()V
+    invoke-virtual {v2}, Lcom/tvbusa/encore/tv/SplashActivity;->finish()V
 
-    .line 158
+    .line 163
     return-void
 .end method
