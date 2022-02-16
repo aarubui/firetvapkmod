@@ -38,7 +38,7 @@
         }
     .end annotation
 
-    .line 269
+    .line 272
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$6$1;->this$1:Lcom/tvbusa/encore/tv/SeriesActivity$6;
 
     iput-object p2, p0, Lcom/tvbusa/encore/tv/SeriesActivity$6$1;->val$s:Ljava/lang/Boolean;
@@ -53,7 +53,7 @@
 .method public run()V
     .locals 2
 
-    .line 271
+    .line 274
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$6$1;->val$s:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/SeriesActivity;->checkHistory()V
 
-    .line 272
+    .line 275
     :goto_0
     return-void
 .end method

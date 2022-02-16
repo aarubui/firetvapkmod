@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 202
+    .line 207
     const/4 v0, 0x0
 
     if-eqz p0, :cond_2
@@ -44,12 +44,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 203
+    .line 208
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 204
+    .line 209
     .local v1, "children":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -59,7 +59,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 205
+    .line 210
     new-instance v3, Ljava/io/File;
 
     aget-object v4, v1, v2
@@ -70,21 +70,21 @@
 
     move-result v3
 
-    .line 206
+    .line 211
     .local v3, "success":Z
     if-nez v3, :cond_0
 
-    .line 207
+    .line 212
     return v0
 
-    .line 204
+    .line 209
     .end local v3    # "success":Z
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 210
+    .line 215
     .end local v2    # "i":I
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
@@ -93,7 +93,7 @@
 
     return v0
 
-    .line 211
+    .line 216
     .end local v1    # "children":[Ljava/lang/String;
     :cond_2
     if-eqz p0, :cond_3
@@ -104,14 +104,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 212
+    .line 217
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     return v0
 
-    .line 214
+    .line 219
     :cond_3
     return v0
 .end method
@@ -121,7 +121,7 @@
 .method public clearCache()V
     .locals 3
 
-    .line 194
+    .line 199
     :try_start_0
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -131,23 +131,23 @@
 
     move-result-object v0
 
-    .line 195
+    .line 200
     .local v0, "dir":Ljava/io/File;
     invoke-static {v0}, Lcom/tvbusa/encore/tv/SplashActivity;->deleteDir(Ljava/io/File;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 198
+    .line 203
     nop
 
     .end local v0    # "dir":Ljava/io/File;
     goto :goto_0
 
-    .line 196
+    .line 201
     :catch_0
     move-exception v0
 
-    .line 197
+    .line 202
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "TestIMA"
 
@@ -155,7 +155,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
+    .line 204
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_0
     return-void
@@ -173,10 +173,10 @@
         }
     .end annotation
 
-    .line 242
+    .line 247
     const-string v0, ""
 
-    .line 243
+    .line 248
     .local v0, "dsn":Ljava/lang/String;
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -196,12 +196,12 @@
 
     if-nez v1, :cond_0
 
-    .line 244
+    .line 249
     invoke-static {}, Landroid/os/Build;->getSerial()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 245
+    .line 250
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,14 +218,14 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
+    .line 251
     const-string v1, "generalInfo"
 
     invoke-virtual {p0, v1, v3}, Lcom/tvbusa/encore/tv/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 247
+    .line 252
     .local v1, "generalInfo":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -236,22 +236,22 @@
 
     invoke-interface {v4, v5, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 248
+    .line 253
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 249
+    .line 254
     invoke-virtual {p0, v0, v3}, Lcom/tvbusa/encore/tv/SplashActivity;->snPing(Ljava/lang/String;I)V
 
-    .line 250
+    .line 255
     .end local v1    # "generalInfo":Landroid/content/SharedPreferences;
     .end local v4    # "editor":Landroid/content/SharedPreferences$Editor;
     goto :goto_0
 
-    .line 251
+    .line 256
     :cond_0
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getUniqueId()V
 
-    .line 253
+    .line 258
     :goto_0
     new-instance v1, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;
 
@@ -261,7 +261,7 @@
 
     invoke-virtual {v1, v3}, Lcom/tvbusa/encore/tv/SplashActivity$MiscTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 254
+    .line 259
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -278,7 +278,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
+    .line 260
     return-void
 .end method
 
@@ -483,7 +483,7 @@
         }
     .end annotation
 
-    .line 165
+    .line 170
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -494,13 +494,13 @@
 
     return-void
 
-    .line 166
+    .line 171
     :cond_0
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 168
+    .line 173
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "advertising_id"
 
@@ -508,7 +508,7 @@
 
     move-result-object v1
 
-    .line 169
+    .line 174
     .local v1, "adid":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -528,7 +528,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
+    .line 175
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -553,7 +553,7 @@
 
     move-result-object v2
 
-    .line 171
+    .line 176
     .local v2, "params":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -571,16 +571,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
+    .line 177
     const-string v3, "https://us-central1-encoretvb-firetv-chinese.cloudfunctions.net/fireTvPingV2"
 
-    .line 173
+    .line 178
     .local v3, "url":Ljava/lang/String;
     new-instance v4, Lokhttp3/OkHttpClient;
 
     invoke-direct {v4}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 174
+    .line 179
     .local v4, "client":Lokhttp3/OkHttpClient;
     const-string v5, "application/json; charset=utf-8"
 
@@ -588,13 +588,13 @@
 
     move-result-object v5
 
-    .line 175
+    .line 180
     .local v5, "JSON":Lokhttp3/MediaType;
     invoke-static {v5, v2}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v6
 
-    .line 176
+    .line 181
     .local v6, "body":Lokhttp3/RequestBody;
     new-instance v7, Lokhttp3/Request$Builder;
 
@@ -612,7 +612,7 @@
 
     move-result-object v7
 
-    .line 177
+    .line 182
     .local v7, "request":Lokhttp3/Request;
     invoke-virtual {v4, v7}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -624,6 +624,6 @@
 
     invoke-interface {v8, v9}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 190
+    .line 195
     return-void
 .end method
