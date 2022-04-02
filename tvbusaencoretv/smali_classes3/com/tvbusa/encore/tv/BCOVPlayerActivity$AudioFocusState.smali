@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 103
+    .line 105
     new-instance v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
     const-string v1, "Focused"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 104
+    .line 106
     new-instance v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
     const-string v3, "NoFocusNoDuck"
@@ -58,7 +58,7 @@
 
     sput-object v1, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 105
+    .line 107
     new-instance v3, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
     const-string v5, "NoFocusCanDuck"
@@ -69,7 +69,7 @@
 
     sput-object v3, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 102
+    .line 104
     const/4 v5, 0x3
 
     new-array v5, v5, [Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
@@ -104,7 +104,7 @@
         }
     .end annotation
 
-    .line 102
+    .line 104
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -122,7 +122,7 @@
         }
     .end annotation
 
-    .line 102
+    .line 104
     const-class v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -137,7 +137,7 @@
 .method public static values()[Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
     .locals 1
 
-    .line 102
+    .line 104
     sget-object v0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->$VALUES:[Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
     invoke-virtual {v0}, [Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;->clone()Ljava/lang/Object;

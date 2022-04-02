@@ -21,7 +21,6 @@
         <activity android:name="com.tvbusa.encore.tv.BCOVPlayerActivity"/>
         <activity android:name="com.tvbusa.encore.tv.DetailsActivity"/>
         <activity android:name="com.tvbusa.encore.tv.BCOVSSAIPlayerActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.BrowseErrorActivity"/>
         <activity android:name="com.tvbusa.encore.tv.CategoryActivity"/>
         <activity android:name="com.tvbusa.encore.tv.BCOVLivePlayerActivity"/>
         <activity android:name="com.tvbusa.encore.tv.SearchActivity"/>

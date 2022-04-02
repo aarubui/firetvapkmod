@@ -35,7 +35,7 @@
         }
     .end annotation
 
-    .line 203
+    .line 206
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     iput-object p2, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->val$plugin:Lcom/brightcove/ssai/SSAIComponent;
@@ -59,12 +59,21 @@
         }
     .end annotation
 
-    .line 206
+    .line 209
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VIDEO DURATION"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 210
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->val$plugin:Lcom/brightcove/ssai/SSAIComponent;
 
     invoke-virtual {v0, p1}, Lcom/brightcove/ssai/SSAIComponent;->processVideo(Lcom/brightcove/player/model/Video;)V
 
-    .line 207
+    .line 211
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$000(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -73,14 +82,14 @@
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->start()V
 
-    .line 208
+    .line 212
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     iget v0, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->historyTime:I
 
     if-lez v0, :cond_0
 
-    .line 209
+    .line 213
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$100(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -91,13 +100,13 @@
 
     move-result-object v0
 
-    .line 210
+    .line 214
     .local v0, "playbackController":Lcom/brightcove/player/controller/VideoPlaybackController;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/brightcove/player/controller/VideoPlaybackController;->setAdsDisabled(Z)V
 
-    .line 211
+    .line 215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +129,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
+    .line 216
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$200(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
@@ -135,12 +144,12 @@
 
     invoke-virtual {v1, v2}, Lcom/brightcove/player/view/BaseVideoView;->seekTo(I)V
 
-    .line 213
+    .line 217
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/brightcove/player/controller/VideoPlaybackController;->setAdsDisabled(Z)V
 
-    .line 215
+    .line 219
     .end local v0    # "playbackController":Lcom/brightcove/player/controller/VideoPlaybackController;
     :cond_0
     return-void

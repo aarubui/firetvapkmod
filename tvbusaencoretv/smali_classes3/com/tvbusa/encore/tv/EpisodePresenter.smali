@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 17
     invoke-direct {p0}, Landroidx/leanback/widget/Presenter;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 26
+    .line 28
     if-eqz p1, :cond_0
 
     sget v0, Lcom/tvbusa/encore/tv/EpisodePresenter;->sSelectedBackgroundColor:I
@@ -54,7 +54,7 @@
     :cond_0
     sget v0, Lcom/tvbusa/encore/tv/EpisodePresenter;->sDefaultBackgroundColor:I
 
-    .line 27
+    .line 29
     .local v0, "color":I
     :goto_0
     if-eqz p1, :cond_1
@@ -66,12 +66,12 @@
     :cond_1
     sget v1, Lcom/tvbusa/encore/tv/EpisodePresenter;->sDefaultTextColor:I
 
-    .line 30
+    .line 32
     .local v1, "textColor":I
     :goto_1
     invoke-virtual {p0, v0}, Landroidx/leanback/widget/ImageCardView;->setBackgroundColor(I)V
 
-    .line 31
+    .line 33
     const v2, 0x7f0b018f
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
@@ -80,7 +80,7 @@
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 32
+    .line 34
     const v2, 0x7f0b02de
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 33
+    .line 35
     const v2, 0x7f0b00b5
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 34
+    .line 36
     return-void
 .end method
 
@@ -123,18 +123,18 @@
         }
     .end annotation
 
-    .line 67
+    .line 69
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Episode;
 
-    .line 69
+    .line 71
     .local v0, "episode":Lcom/tvbusa/encore/tv/Episode;
     iget-object v1, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v1, Lcom/tvbusa/encore/tv/EpisodeCardView;
 
-    .line 71
+    .line 73
     .local v1, "cardView":Lcom/tvbusa/encore/tv/EpisodeCardView;
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Episode;->getId()Ljava/lang/String;
 
@@ -142,14 +142,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 81
+    .line 83
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Episode;->getImage()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/EpisodeCardView;->setImage(Ljava/lang/String;)V
 
-    .line 82
+    .line 84
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Episode;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -160,7 +160,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/tvbusa/encore/tv/EpisodeCardView;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
+    .line 86
     :cond_0
     return-void
 .end method
@@ -177,14 +177,14 @@
         }
     .end annotation
 
-    .line 61
+    .line 63
     const-string v0, "CardPresenter"
 
     const-string v1, "onCreateViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
+    .line 64
     new-instance v0, Landroidx/leanback/widget/Presenter$ViewHolder;
 
     new-instance v1, Lcom/tvbusa/encore/tv/EpisodeCardView;
@@ -212,27 +212,27 @@
         }
     .end annotation
 
-    .line 88
+    .line 90
     const-string v0, "CardPresenter"
 
     const-string v1, "onUnbindViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
+    .line 95
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v0, Lcom/tvbusa/encore/tv/EpisodeCardView;
 
-    .line 94
+    .line 96
     .local v0, "cardView":Lcom/tvbusa/encore/tv/EpisodeCardView;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/EpisodeCardView;->setImage(Ljava/lang/String;)V
 
-    .line 95
+    .line 97
     invoke-virtual {v0, v1, v1}, Lcom/tvbusa/encore/tv/EpisodeCardView;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 96
+    .line 98
     return-void
 .end method

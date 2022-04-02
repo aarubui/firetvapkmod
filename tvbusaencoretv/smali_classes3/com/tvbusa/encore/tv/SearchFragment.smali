@@ -41,17 +41,17 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 28
+    .line 30
     invoke-direct {p0}, Landroidx/leanback/app/BrowseSupportFragment;-><init>()V
 
-    .line 30
+    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment;->searchList:Ljava/util/List;
 
-    .line 31
+    .line 33
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Landroidx/leanback/widget/ListRowPresenter;
@@ -62,14 +62,14 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    .line 32
+    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment;->idList:Ljava/util/List;
 
-    .line 34
+    .line 36
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment;->title:Ljava/lang/String;
@@ -80,7 +80,7 @@
 .method private loadRows()V
     .locals 6
 
-    .line 92
+    .line 94
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Landroidx/leanback/widget/ListRowPresenter;
@@ -91,18 +91,18 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    .line 93
+    .line 95
     new-instance v0, Lcom/tvbusa/encore/tv/SearchSeriesPresenter;
 
     invoke-direct {v0}, Lcom/tvbusa/encore/tv/SearchSeriesPresenter;-><init>()V
 
-    .line 96
+    .line 98
     .local v0, "seriesPresenter":Lcom/tvbusa/encore/tv/SearchSeriesPresenter;
     new-instance v1, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v1, v0}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 97
+    .line 99
     .local v1, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v2, 0x0
 
@@ -116,7 +116,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 98
+    .line 100
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchFragment;->idList:Ljava/util/List;
 
     iget-object v4, p0, Lcom/tvbusa/encore/tv/SearchFragment;->searchList:Ljava/util/List;
@@ -133,7 +133,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
+    .line 101
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchFragment;->searchList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -142,12 +142,12 @@
 
     invoke-virtual {v1, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 97
+    .line 99
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 101
+    .line 103
     .end local v2    # "j":I
     :cond_0
     new-instance v2, Landroidx/leanback/widget/HeaderItem;
@@ -158,7 +158,7 @@
 
     invoke-direct {v2, v3, v4, v5}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 102
+    .line 104
     .local v2, "header":Landroidx/leanback/widget/HeaderItem;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
@@ -168,12 +168,12 @@
 
     invoke-virtual {v3, v4}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 107
+    .line 109
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/SearchFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 108
+    .line 110
     return-void
 .end method
 
@@ -191,16 +191,16 @@
         }
     .end annotation
 
-    .line 49
+    .line 51
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchFragment;->workaroundFocus()V
 
-    .line 50
+    .line 52
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 51
+    .line 53
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/SearchFragment;->loadRows()V
 
-    .line 52
+    .line 54
     return-void
 .end method
 
@@ -216,15 +216,15 @@
         }
     .end annotation
 
-    .line 38
+    .line 40
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 39
+    .line 41
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchFragment;->setHeadersState(I)V
 
-    .line 40
+    .line 42
     new-instance v0, Lcom/tvbusa/encore/tv/SearchFragment$ItemViewClickedListener;
 
     const/4 v1, 0x0
@@ -233,16 +233,16 @@
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchFragment;->setOnItemViewClickedListener(Landroidx/leanback/widget/OnItemViewClickedListener;)V
 
-    .line 41
+    .line 43
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 42
+    .line 44
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 43
+    .line 45
     const-string v1, "result"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -253,7 +253,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/SearchFragment;->searchList:Ljava/util/List;
 
-    .line 45
+    .line 47
     :cond_0
     return-void
 .end method
@@ -276,12 +276,12 @@
         }
     .end annotation
 
-    .line 75
+    .line 77
     invoke-super {p0, p1, p2, p3}, Landroidx/leanback/app/BrowseSupportFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 76
+    .line 78
     .local v0, "view":Landroid/view/View;
     const v1, 0x7f0b0077
 
@@ -291,7 +291,7 @@
 
     check-cast v1, Landroid/widget/FrameLayout;
 
-    .line 77
+    .line 79
     .local v1, "containerDock":Landroid/widget/FrameLayout;
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -299,7 +299,7 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 78
+    .line 80
     .local v2, "params":Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
@@ -309,7 +309,7 @@
 
     move-result-object v3
 
-    .line 79
+    .line 81
     .local v3, "resources":Landroid/content/res/Resources;
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -325,7 +325,7 @@
 
     float-to-int v4, v4
 
-    .line 80
+    .line 82
     .local v4, "newHeaderMargin":I
     const v6, 0x7f0700ef
 
@@ -335,7 +335,7 @@
 
     neg-int v6, v6
 
-    .line 81
+    .line 83
     .local v6, "offsetToZero":I
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -349,33 +349,33 @@
 
     float-to-int v5, v5
 
-    .line 82
+    .line 84
     .local v5, "newLeftMargin":I
     add-int v7, v6, v4
 
     iput v7, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 83
+    .line 85
     iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 85
+    .line 87
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 86
+    .line 88
     return-object v0
 .end method
 
 .method public workaroundFocus()V
     .locals 2
 
-    .line 55
+    .line 57
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 56
+    .line 58
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -388,7 +388,7 @@
 
     check-cast v0, Landroidx/leanback/widget/BrowseFrameLayout;
 
-    .line 58
+    .line 60
     .local v0, "browseFrameLayout":Landroidx/leanback/widget/BrowseFrameLayout;
     new-instance v1, Lcom/tvbusa/encore/tv/SearchFragment$1;
 
@@ -396,7 +396,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/leanback/widget/BrowseFrameLayout;->setOnFocusSearchListener(Landroidx/leanback/widget/BrowseFrameLayout$OnFocusSearchListener;)V
 
-    .line 70
+    .line 72
     .end local v0    # "browseFrameLayout":Landroidx/leanback/widget/BrowseFrameLayout;
     :cond_0
     return-void

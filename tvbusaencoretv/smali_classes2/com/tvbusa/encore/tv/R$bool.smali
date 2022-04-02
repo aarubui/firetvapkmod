@@ -20,7 +20,15 @@
 
 .field public static final config_materialPreferenceIconSpaceReserved:I = 0x7f050002
 
-.field public static final mtrl_btn_textappearance_all_caps:I = 0x7f050003
+.field public static final isCaptionEnabled:I = 0x7f050003
+
+.field public static final liveChannelEnabled:I = 0x7f050004
+
+.field public static final memberEnabled:I = 0x7f050005
+
+.field public static final mtrl_btn_textappearance_all_caps:I = 0x7f050006
+
+.field public static final otherLanguage:I = 0x7f050007
 
 
 # direct methods

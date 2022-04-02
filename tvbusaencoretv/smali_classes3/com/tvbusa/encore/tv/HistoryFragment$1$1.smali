@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 118
+    .line 120
     iput-object p1, p0, Lcom/tvbusa/encore/tv/HistoryFragment$1$1;->this$1:Lcom/tvbusa/encore/tv/HistoryFragment$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,13 +47,13 @@
 .method public run()V
     .locals 1
 
-    .line 121
+    .line 123
     iget-object v0, p0, Lcom/tvbusa/encore/tv/HistoryFragment$1$1;->this$1:Lcom/tvbusa/encore/tv/HistoryFragment$1;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/HistoryFragment$1;->this$0:Lcom/tvbusa/encore/tv/HistoryFragment;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/HistoryFragment;->access$200(Lcom/tvbusa/encore/tv/HistoryFragment;)V
 
-    .line 122
+    .line 124
     return-void
 .end method

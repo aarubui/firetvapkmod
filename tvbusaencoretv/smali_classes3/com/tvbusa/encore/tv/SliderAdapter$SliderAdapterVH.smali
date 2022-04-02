@@ -42,13 +42,13 @@
         }
     .end annotation
 
-    .line 84
+    .line 86
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->this$0:Lcom/tvbusa/encore/tv/SliderAdapter;
 
-    .line 85
+    .line 87
     invoke-direct {p0, p2}, Lcom/smarteist/autoimageslider/SliderViewAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 86
+    .line 88
     const v0, 0x7f0b0195
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -59,7 +59,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->imageViewBackground:Landroid/widget/ImageView;
 
-    .line 87
+    .line 89
     const v0, 0x7f0b0196
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -70,9 +70,9 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->imageGifContainer:Landroid/widget/ImageView;
 
-    .line 89
+    .line 91
     iput-object p2, p0, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->itemView:Landroid/view/View;
 
-    .line 90
+    .line 92
     return-void
 .end method

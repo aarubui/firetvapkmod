@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 75
+    .line 77
     iput-object p1, p0, Lcom/tvbusa/encore/tv/AccountActivity$2;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 77
+    .line 79
     return-void
 .end method
 
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 82
+    .line 84
     const-string v0, ""
 
     :try_start_0
@@ -96,18 +96,18 @@
 
     move-result-object v1
 
-    .line 83
+    .line 85
     .local v1, "json":Ljava/lang/String;
     const-string v2, "Login JSON"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
+    .line 86
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 85
+    .line 87
     .local v2, "obj":Lorg/json/JSONObject;
     const-string v3, "g"
 
@@ -115,7 +115,7 @@
 
     move-result-object v3
 
-    .line 86
+    .line 88
     .local v3, "gender":Ljava/lang/String;
     const-string v4, "e"
 
@@ -123,7 +123,7 @@
 
     move-result-object v4
 
-    .line 87
+    .line 89
     .local v4, "email":Ljava/lang/String;
     const-string v5, "n"
 
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    .line 91
+    .line 93
     .local v0, "nickname":Ljava/lang/String;
     iget-object v5, p0, Lcom/tvbusa/encore/tv/AccountActivity$2;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
@@ -143,7 +143,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
+    .line 101
     .end local v0    # "nickname":Ljava/lang/String;
     .end local v1    # "json":Ljava/lang/String;
     .end local v2    # "obj":Lorg/json/JSONObject;
@@ -173,7 +173,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 102
     .end local v0    # "t":Lorg/json/JSONException;
     :goto_0
     return-void

@@ -3,12 +3,12 @@
 .source "BCOVSSAIPlayerActivity.java"
 
 # interfaces
-.implements Lokhttp3/Callback;
+.implements Lcom/brightcove/player/event/EventListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->recordFirebaseAR()V
+    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 470
+    .line 359
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,46 +44,77 @@
 
 
 # virtual methods
-.method public onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
-    .locals 0
-    .param p1, "call"    # Lokhttp3/Call;
-    .param p2, "e"    # Ljava/io/IOException;
+.method public processEvent(Lcom/brightcove/player/event/Event;)V
+    .locals 4
+    .param p1, "event"    # Lcom/brightcove/player/event/Event;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "call",
-            "e"
+            "event"
         }
     .end annotation
 
-    .line 472
-    return-void
-.end method
+    .line 362
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-.method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
-    .locals 0
-    .param p1, "call"    # Lokhttp3/Call;
-    .param p2, "response"    # Lokhttp3/Response;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "call",
-            "response"
-        }
-    .end annotation
+    const/4 v1, 0x0
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+    iput v1, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->prevousTime:I
 
-    .line 475
+    .line 363
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    iput v1, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->prTime:I
+
+    .line 365
+    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    iget v0, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 366
+    .local v0, "newPosition":I
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    iput v0, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
+
+    .line 367
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->clearCache()V
+
+    .line 368
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->finish()V
+
+    .line 369
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    iget v2, v2, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
+
+    const-string v3, "selectedIndex"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 370
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$12;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 371
     return-void
 .end method

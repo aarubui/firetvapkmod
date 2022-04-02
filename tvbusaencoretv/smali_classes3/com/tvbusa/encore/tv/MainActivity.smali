@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
     return-void
@@ -35,15 +35,15 @@
         }
     .end annotation
 
-    .line 73
+    .line 74
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 74
+    .line 75
     const v0, 0x7f0e0021
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/MainActivity;->setContentView(I)V
 
-    .line 75
+    .line 76
     new-instance v0, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;
 
     invoke-direct {v0, p0}, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;-><init>(Lcom/tvbusa/encore/tv/MainActivity;)V
@@ -54,14 +54,14 @@
 
     invoke-virtual {v0, v2}, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 77
+    .line 78
     const-string v0, "generalInfo"
 
     invoke-virtual {p0, v0, v1}, Lcom/tvbusa/encore/tv/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 78
+    .line 79
     .local v0, "generalInfo":Landroid/content/SharedPreferences;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -89,7 +89,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
+    .line 80
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +114,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 81
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +137,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
+    .line 82
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,6 +160,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 83
     return-void
 .end method

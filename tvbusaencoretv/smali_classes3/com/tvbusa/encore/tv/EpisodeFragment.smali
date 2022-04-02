@@ -63,17 +63,17 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 28
+    .line 30
     invoke-direct {p0}, Landroidx/leanback/app/BrowseSupportFragment;-><init>()V
 
-    .line 33
+    .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->episodeList:Ljava/util/List;
 
-    .line 34
+    .line 36
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Landroidx/leanback/widget/ListRowPresenter;
@@ -84,31 +84,31 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    .line 35
+    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->idList:Ljava/util/List;
 
-    .line 37
+    .line 39
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->title:Ljava/lang/String;
 
-    .line 38
+    .line 40
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->pid:Ljava/lang/String;
 
-    .line 39
+    .line 41
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->secondary_title:Ljava/lang/String;
 
-    .line 40
+    .line 42
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->legacy_id:Ljava/lang/String;
 
-    .line 41
+    .line 43
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->playlist_id:Ljava/lang/String;
 
-    .line 42
+    .line 44
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -117,10 +117,10 @@
 
     iput-object v2, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->isUpdating:Ljava/lang/Boolean;
 
-    .line 43
+    .line 45
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->banner:Ljava/lang/String;
 
-    .line 45
+    .line 47
     iput v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->adConfigType:I
 
     return-void
@@ -129,7 +129,7 @@
 .method private loadRows()V
     .locals 5
 
-    .line 107
+    .line 109
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Landroidx/leanback/widget/ListRowPresenter;
@@ -140,18 +140,18 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    .line 108
+    .line 110
     new-instance v0, Lcom/tvbusa/encore/tv/EpisodePresenter;
 
     invoke-direct {v0}, Lcom/tvbusa/encore/tv/EpisodePresenter;-><init>()V
 
-    .line 111
+    .line 113
     .local v0, "episodePresenter":Lcom/tvbusa/encore/tv/EpisodePresenter;
     new-instance v1, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v1, v0}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 112
+    .line 114
     .local v1, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v2, 0x0
 
@@ -165,7 +165,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 113
+    .line 115
     iget-object v3, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->idList:Ljava/util/List;
 
     iget-object v4, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->episodeList:Ljava/util/List;
@@ -182,7 +182,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 116
     iget-object v3, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->episodeList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -191,12 +191,12 @@
 
     invoke-virtual {v1, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 112
+    .line 114
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 117
+    .line 119
     .end local v2    # "j":I
     :cond_0
     iget-object v2, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
@@ -207,7 +207,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 119
+    .line 121
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -220,18 +220,18 @@
 
     check-cast v2, Landroid/widget/FrameLayout;
 
-    .line 120
+    .line 122
     .local v2, "loadingFrame":Landroid/widget/FrameLayout;
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 122
+    .line 124
     iget-object v3, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->rowsAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 123
+    .line 125
     return-void
 .end method
 
@@ -249,16 +249,16 @@
         }
     .end annotation
 
-    .line 64
+    .line 66
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->workaroundFocus()V
 
-    .line 65
+    .line 67
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 66
+    .line 68
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->loadRows()V
 
-    .line 67
+    .line 69
     return-void
 .end method
 
@@ -274,15 +274,15 @@
         }
     .end annotation
 
-    .line 49
+    .line 51
     invoke-super {p0, p1}, Landroidx/leanback/app/BrowseSupportFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 50
+    .line 52
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setHeadersState(I)V
 
-    .line 51
+    .line 53
     new-instance v0, Lcom/tvbusa/encore/tv/EpisodeFragment$ItemViewClickedListener;
 
     const/4 v1, 0x0
@@ -291,16 +291,16 @@
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setOnItemViewClickedListener(Landroidx/leanback/widget/OnItemViewClickedListener;)V
 
-    .line 52
+    .line 54
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 53
+    .line 55
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 54
+    .line 56
     const-string v1, "episodes"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -311,7 +311,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->episodeList:Ljava/util/List;
 
-    .line 55
+    .line 57
     const-string v1, "pid"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -320,7 +320,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->pid:Ljava/lang/String;
 
-    .line 56
+    .line 58
     const-string v1, "title"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -329,7 +329,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->title:Ljava/lang/String;
 
-    .line 57
+    .line 59
     const-string v1, "banner"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -338,7 +338,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->banner:Ljava/lang/String;
 
-    .line 58
+    .line 60
     const-string v1, "adconfig"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -347,7 +347,7 @@
 
     iput v1, p0, Lcom/tvbusa/encore/tv/EpisodeFragment;->adConfigType:I
 
-    .line 60
+    .line 62
     :cond_0
     return-void
 .end method
@@ -370,12 +370,12 @@
         }
     .end annotation
 
-    .line 90
+    .line 92
     invoke-super {p0, p1, p2, p3}, Landroidx/leanback/app/BrowseSupportFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 91
+    .line 93
     .local v0, "view":Landroid/view/View;
     const v1, 0x7f0b0077
 
@@ -385,7 +385,7 @@
 
     check-cast v1, Landroid/widget/FrameLayout;
 
-    .line 92
+    .line 94
     .local v1, "containerDock":Landroid/widget/FrameLayout;
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -393,7 +393,7 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 93
+    .line 95
     .local v2, "params":Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
@@ -403,7 +403,7 @@
 
     move-result-object v3
 
-    .line 94
+    .line 96
     .local v3, "resources":Landroid/content/res/Resources;
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -419,7 +419,7 @@
 
     float-to-int v4, v4
 
-    .line 95
+    .line 97
     .local v4, "newHeaderMargin":I
     const v6, 0x7f0700ef
 
@@ -429,7 +429,7 @@
 
     neg-int v6, v6
 
-    .line 96
+    .line 98
     .local v6, "offsetToZero":I
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -443,33 +443,33 @@
 
     float-to-int v5, v5
 
-    .line 97
+    .line 99
     .local v5, "newLeftMargin":I
     add-int v7, v6, v4
 
     iput v7, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 98
+    .line 100
     iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 100
+    .line 102
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 101
+    .line 103
     return-object v0
 .end method
 
 .method public workaroundFocus()V
     .locals 2
 
-    .line 70
+    .line 72
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 73
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/EpisodeFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -482,7 +482,7 @@
 
     check-cast v0, Landroidx/leanback/widget/BrowseFrameLayout;
 
-    .line 73
+    .line 75
     .local v0, "browseFrameLayout":Landroidx/leanback/widget/BrowseFrameLayout;
     new-instance v1, Lcom/tvbusa/encore/tv/EpisodeFragment$1;
 
@@ -490,7 +490,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/leanback/widget/BrowseFrameLayout;->setOnFocusSearchListener(Landroidx/leanback/widget/BrowseFrameLayout$OnFocusSearchListener;)V
 
-    .line 85
+    .line 87
     .end local v0    # "browseFrameLayout":Landroidx/leanback/widget/BrowseFrameLayout;
     :cond_0
     return-void

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 60
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SearchFragment$1;->this$0:Lcom/tvbusa/encore/tv/SearchFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,12 +59,12 @@
         }
     .end annotation
 
-    .line 61
+    .line 63
     const/16 v0, 0x21
 
     if-ne p2, v0, :cond_0
 
-    .line 62
+    .line 64
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SearchFragment$1;->this$0:Lcom/tvbusa/encore/tv/SearchFragment;
 
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/SearchFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -77,11 +77,11 @@
 
     move-result-object v0
 
-    .line 63
+    .line 65
     .local v0, "viewToFocus":Landroid/view/View;
     return-object v0
 
-    .line 65
+    .line 67
     .end local v0    # "viewToFocus":Landroid/view/View;
     :cond_0
     const/4 v0, 0x0

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 103
+    .line 107
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$1;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 106
+    .line 110
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SeriesActivity$1;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/SeriesActivity;->access$000(Lcom/tvbusa/encore/tv/SeriesActivity;)Ljava/lang/Boolean;
@@ -65,6 +65,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesActivity;->favThis(Ljava/lang/Boolean;)V
 
-    .line 107
+    .line 111
     return-void
 .end method

@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 91
+    .line 93
     iput-object p1, p0, Lcom/tvbusa/encore/tv/AccountActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/AccountActivity$2;
 
     iput-object p2, p0, Lcom/tvbusa/encore/tv/AccountActivity$2$1;->val$gender:Ljava/lang/String;
@@ -65,7 +65,7 @@
 .method public run()V
     .locals 2
 
-    .line 94
+    .line 96
     iget-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/AccountActivity$2;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/AccountActivity$2;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 95
+    .line 97
     iget-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/AccountActivity$2;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/AccountActivity$2;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 96
+    .line 98
     iget-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity$2$1;->this$1:Lcom/tvbusa/encore/tv/AccountActivity$2;
 
     iget-object v0, v0, Lcom/tvbusa/encore/tv/AccountActivity$2;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
@@ -98,6 +98,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 97
+    .line 99
     return-void
 .end method

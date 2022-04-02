@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 57
+    .line 59
     iput-object p1, p0, Lcom/tvbusa/encore/tv/LoginActivity$1;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 60
+    .line 62
     iget-object v0, p0, Lcom/tvbusa/encore/tv/LoginActivity$1;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/LoginActivity;->getApplicationContext()Landroid/content/Context;
@@ -73,6 +73,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 61
+    .line 63
     return-void
 .end method

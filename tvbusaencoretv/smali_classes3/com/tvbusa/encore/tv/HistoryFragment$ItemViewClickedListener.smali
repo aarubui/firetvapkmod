@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 155
+    .line 157
     iput-object p1, p0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/HistoryFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p1, "x0"    # Lcom/tvbusa/encore/tv/HistoryFragment;
     .param p2, "x1"    # Lcom/tvbusa/encore/tv/HistoryFragment$1;
 
-    .line 155
+    .line 157
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;-><init>(Lcom/tvbusa/encore/tv/HistoryFragment;)V
 
     return-void
@@ -75,12 +75,12 @@
         }
     .end annotation
 
-    .line 158
+    .line 160
     instance-of v0, p2, Lcom/tvbusa/encore/tv/HistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 159
+    .line 161
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/HistoryFragment;
@@ -93,7 +93,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 161
+    .line 163
     .local v0, "intent":Landroid/content/Intent;
     move-object v1, p2
 
@@ -107,7 +107,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 162
+    .line 164
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
@@ -118,7 +118,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
+    .line 165
     iget-object v1, p0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/HistoryFragment;
 
     invoke-virtual {v1}, Lcom/tvbusa/encore/tv/HistoryFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -127,12 +127,12 @@
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentActivity;->finish()V
 
-    .line 164
+    .line 166
     iget-object v1, p0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/HistoryFragment;
 
     invoke-virtual {v1, v0}, Lcom/tvbusa/encore/tv/HistoryFragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 166
+    .line 168
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -155,7 +155,7 @@
         }
     .end annotation
 
-    .line 155
+    .line 157
     check-cast p4, Landroidx/leanback/widget/Row;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;->onItemClicked(Landroidx/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroidx/leanback/widget/RowPresenter$ViewHolder;Landroidx/leanback/widget/Row;)V

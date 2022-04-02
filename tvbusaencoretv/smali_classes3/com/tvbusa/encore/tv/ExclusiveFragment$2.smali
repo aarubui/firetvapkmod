@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 142
+    .line 144
     iput-object p1, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$2;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 144
+    .line 146
     return-void
 .end method
 
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 150
+    .line 152
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -94,22 +94,22 @@
 
     move-result-object v0
 
-    .line 151
+    .line 153
     .local v0, "json":Ljava/lang/String;
     const-string v1, "Login JSON"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
+    .line 154
     new-instance v1, Lorg/json/JSONArray;
 
     invoke-direct {v1, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
-    .line 153
+    .line 155
     .local v1, "array":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 154
+    .line 156
     .local v2, "count":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
@@ -118,20 +118,20 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 155
+    .line 157
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 156
+    .line 158
     .local v3, "lastItem":I
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 157
+    .line 159
     .local v4, "obj":Lorg/json/JSONObject;
     const-string v5, "n"
 
@@ -139,7 +139,7 @@
 
     move-result-object v7
 
-    .line 158
+    .line 160
     .local v7, "title":Ljava/lang/String;
     const-string v5, "i"
 
@@ -147,7 +147,7 @@
 
     move-result-object v10
 
-    .line 159
+    .line 161
     .local v10, "thumb":Ljava/lang/String;
     const-string v5, "pid"
 
@@ -155,7 +155,7 @@
 
     move-result-object v9
 
-    .line 160
+    .line 162
     .local v9, "id":Ljava/lang/String;
     const-string v5, "d"
 
@@ -163,7 +163,7 @@
 
     move-result-object v8
 
-    .line 161
+    .line 163
     .local v8, "status":Ljava/lang/String;
     new-instance v5, Lcom/tvbusa/encore/tv/Series;
 
@@ -175,7 +175,7 @@
 
     invoke-direct/range {v6 .. v12}, Lcom/tvbusa/encore/tv/Series;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
+    .line 164
     .local v5, "drama":Lcom/tvbusa/encore/tv/Series;
     iget-object v6, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$2;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
@@ -183,7 +183,7 @@
 
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 163
+    .line 165
     const-string v6, "Fav"
 
     invoke-virtual {v5}, Lcom/tvbusa/encore/tv/Series;->getName()Ljava/lang/String;
@@ -192,10 +192,10 @@
 
     invoke-static {v6, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
+    .line 166
     if-ne v2, v3, :cond_0
 
-    .line 165
+    .line 167
     iget-object v6, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$2;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
     invoke-virtual {v6}, Lcom/tvbusa/encore/tv/ExclusiveFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -210,7 +210,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
+    .line 174
     :cond_0
     nop
 
@@ -223,21 +223,21 @@
     .end local v10    # "thumb":Ljava/lang/String;
     add-int/lit8 v2, v2, 0x1
 
-    .line 173
+    .line 175
     goto :goto_0
 
-    .line 176
+    .line 178
     .end local v0    # "json":Ljava/lang/String;
     .end local v1    # "array":Lorg/json/JSONArray;
     .end local v2    # "count":I
     :cond_1
     goto :goto_1
 
-    .line 174
+    .line 176
     :catch_0
     move-exception v0
 
-    .line 175
+    .line 177
     .local v0, "t":Lorg/json/JSONException;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -257,7 +257,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
+    .line 179
     .end local v0    # "t":Lorg/json/JSONException;
     :goto_1
     return-void

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 37
+    .line 38
     iput-object p1, p0, Lcom/tvbusa/encore/tv/InfoActivity$1;->this$0:Lcom/tvbusa/encore/tv/InfoActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,11 +56,11 @@
         }
     .end annotation
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/tvbusa/encore/tv/InfoActivity$1;->this$0:Lcom/tvbusa/encore/tv/InfoActivity;
 
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/InfoActivity;->finish()V
 
-    .line 41
+    .line 42
     return-void
 .end method

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 57
+    .line 58
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SearchActivity$1;->this$0:Lcom/tvbusa/encore/tv/SearchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,11 +56,11 @@
         }
     .end annotation
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity$1;->this$0:Lcom/tvbusa/encore/tv/SearchActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/SearchActivity;->access$000(Lcom/tvbusa/encore/tv/SearchActivity;)V
 
-    .line 61
+    .line 62
     return-void
 .end method

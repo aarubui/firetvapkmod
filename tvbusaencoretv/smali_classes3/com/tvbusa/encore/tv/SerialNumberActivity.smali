@@ -17,21 +17,21 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 40
+    .line 41
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->name:Ljava/lang/String;
 
-    .line 41
+    .line 42
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->key:Ljava/lang/String;
 
-    .line 42
+    .line 43
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
-    .line 43
+    .line 44
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->userRegion:Ljava/lang/String;
 
     return-void
@@ -51,7 +51,7 @@
         }
     .end annotation
 
-    .line 75
+    .line 76
     const-string v0, "generalInfo"
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    .line 76
+    .line 77
     .local v0, "generalInfo":Landroid/content/SharedPreferences;
     const-string v1, "eventURL"
 
@@ -70,7 +70,7 @@
 
     move-result-object v1
 
-    .line 77
+    .line 78
     .local v1, "eventUrl":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -84,13 +84,13 @@
 
     move-result-object v2
 
-    .line 78
+    .line 79
     .local v2, "landingPageUrl":Ljava/lang/String;
     const-string v3, "LandingPageURL"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 81
     invoke-static {v2}, Lnet/glxn/qrgen/android/QRCode;->from(Ljava/lang/String;)Lnet/glxn/qrgen/android/QRCode;
 
     move-result-object v3
@@ -99,7 +99,7 @@
 
     move-result-object v3
 
-    .line 81
+    .line 82
     .local v3, "myBitmap":Landroid/graphics/Bitmap;
     const v4, 0x7f0b018a
 
@@ -109,7 +109,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    .line 82
+    .line 83
     .local v4, "myImage":Landroid/widget/ImageView;
     const v5, 0x7f0b0245
 
@@ -119,27 +119,27 @@
 
     check-cast v5, Landroid/widget/LinearLayout;
 
-    .line 83
+    .line 84
     .local v5, "pointSection":Landroid/widget/LinearLayout;
     invoke-virtual {v4, v3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 84
+    .line 85
     invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 85
+    .line 86
     .local v6, "params":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v7, 0x1ea
 
     iput v7, v6, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 87
+    .line 88
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 88
+    .line 89
     const v7, 0x7f0b00f2
 
     invoke-virtual {p0, v7}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
@@ -148,7 +148,7 @@
 
     check-cast v7, Landroid/widget/LinearLayout;
 
-    .line 89
+    .line 90
     .local v7, "dsnSection":Landroid/widget/LinearLayout;
     invoke-virtual {v7}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -156,16 +156,16 @@
 
     check-cast v8, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 90
+    .line 91
     .local v8, "dsnSectionParam":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v9, 0x46
 
     iput v9, v8, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 91
+    .line 92
     invoke-virtual {v7, v8}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 125
+    .line 126
     return-void
 .end method
 
@@ -181,15 +181,15 @@
         }
     .end annotation
 
-    .line 47
+    .line 48
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 48
+    .line 49
     const v0, 0x7f0e0027
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->setContentView(I)V
 
-    .line 49
+    .line 50
     const v0, 0x7f0b02d6
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->findViewById(I)Landroid/view/View;
@@ -198,7 +198,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 50
+    .line 51
     .local v0, "title":Landroid/widget/TextView;
     const v1, 0x7f0b02f4
 
@@ -208,7 +208,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 51
+    .line 52
     .local v1, "value":Landroid/widget/TextView;
     const v2, 0x7f0b0062
 
@@ -218,7 +218,7 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    .line 52
+    .line 53
     .local v2, "backBtn":Landroid/widget/Button;
     new-instance v3, Lcom/tvbusa/encore/tv/SerialNumberActivity$1;
 
@@ -226,22 +226,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 59
+    .line 60
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 60
+    .line 61
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 61
+    .line 62
     .local v4, "bundle":Landroid/os/Bundle;
     if-eqz v4, :cond_0
 
-    .line 62
+    .line 63
     const-string v5, "key"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -250,13 +250,13 @@
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->key:Ljava/lang/String;
 
-    .line 65
+    .line 66
     :cond_0
     const-string v5, "\u7528\u6236\u7de8\u865f"
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 66
+    .line 67
     const/4 v5, 0x0
 
     const-string v6, "generalInfo"
@@ -265,7 +265,7 @@
 
     move-result-object v5
 
-    .line 67
+    .line 68
     .local v5, "generalInfo":Landroid/content/SharedPreferences;
     const-string v6, "deviceNumber"
 
@@ -277,7 +277,7 @@
 
     iput-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
-    .line 68
+    .line 69
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -290,17 +290,17 @@
 
     iput-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
-    .line 70
+    .line 71
     :cond_1
     iget-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 71
+    .line 72
     iget-object v6, p0, Lcom/tvbusa/encore/tv/SerialNumberActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {p0, v6}, Lcom/tvbusa/encore/tv/SerialNumberActivity;->fetchData(Ljava/lang/String;)V
 
-    .line 72
+    .line 73
     return-void
 .end method

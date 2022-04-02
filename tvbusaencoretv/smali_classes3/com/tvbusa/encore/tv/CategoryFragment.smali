@@ -74,7 +74,7 @@
 .method private setupFragment()V
     .locals 3
 
-    .line 115
+    .line 120
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Lcom/tvbusa/encore/tv/CategorySeriesPresenter;
@@ -83,7 +83,7 @@
 
     invoke-direct {v0, v1}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 116
+    .line 121
     .local v0, "mAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v1, 0x0
 
@@ -97,7 +97,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 117
+    .line 122
     iget-object v2, p0, Lcom/tvbusa/encore/tv/CategoryFragment;->dramaList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -106,17 +106,17 @@
 
     invoke-virtual {v0, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 116
+    .line 121
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 119
+    .line 124
     .end local v1    # "i":I
     :cond_0
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 120
+    .line 125
     return-void
 .end method
 
@@ -264,7 +264,7 @@
 .end method
 
 .method public parseLayout(Ljava/lang/String;)V
-    .locals 20
+    .locals 25
     .param p1, "result"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -275,264 +275,317 @@
         }
     .end annotation
 
-    .line 83
     move-object/from16 v1, p0
 
-    const-string v0, "n"
-
+    .line 83
     :try_start_0
-    new-instance v2, Lorg/json/JSONObject;
+    new-instance v0, Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move-object/from16 v3, p1
+    move-object/from16 v2, p1
 
     :try_start_1
-    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 84
-    .local v2, "contentObject":Lorg/json/JSONObject;
-    iget-object v4, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->key:Ljava/lang/String;
+    .local v0, "contentObject":Lorg/json/JSONObject;
+    iget-object v3, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->key:Ljava/lang/String;
 
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v4
+    move-result-object v3
 
     .line 85
-    .local v4, "categoryLayout":Lorg/json/JSONArray;
-    const/4 v5, 0x0
+    .local v3, "categoryLayout":Lorg/json/JSONArray;
+    const/4 v4, 0x0
 
     .line 86
-    .local v5, "count":I
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
+    .local v4, "count":I
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
-    move-result v6
+    move-result v5
 
-    const/4 v7, 0x1
+    const/4 v6, 0x1
 
-    sub-int/2addr v6, v7
+    sub-int/2addr v5, v6
 
     .line 87
-    .local v6, "lastItem":I
+    .local v5, "lastItem":I
     :goto_0
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
-    move-result v8
+    move-result v7
 
-    if-ge v5, v8, :cond_4
+    if-ge v4, v7, :cond_5
 
     .line 88
-    invoke-virtual {v4, v5}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v3, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v7
+
+    .line 89
+    .local v7, "jObject":Lorg/json/JSONObject;
+    const-string v8, "n"
+
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 89
-    .local v8, "jObject":Lorg/json/JSONObject;
-    invoke-virtual {v8, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
     .line 90
-    .local v9, "name":Ljava/lang/String;
-    invoke-virtual {v8, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    .local v8, "name":Ljava/lang/String;
+    const-string v9, "e"
+
+    invoke-virtual {v7, v9}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 91
+    .local v10, "subtitle":Ljava/lang/String;
+    const-string v9, "pid"
+
+    invoke-virtual {v7, v9}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 91
-    .local v12, "viet":Ljava/lang/String;
-    const-string v10, "pid"
-
-    invoke-virtual {v8, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v13
-
     .line 92
-    .local v13, "id":Ljava/lang/String;
-    const-string v10, "p"
+    .local v12, "id":Ljava/lang/String;
+    const-string v9, "p"
 
-    invoke-virtual {v8, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v7, v9}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
-    move-object v15, v10
+    move-object v14, v9
 
     .line 93
-    .local v15, "thumb":Ljava/lang/String;
-    new-instance v10, Ljava/lang/StringBuilder;
+    .local v14, "thumb":Ljava/lang/String;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v11, "{\"bucket\":\"tvbaw-na\",\"key\":\""
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v11, "\",\"edits\":{\"resize\": {\"width\":315,\"height\":450,\"fit\":\"cover\"} }}"
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
-    move-object/from16 v17, v10
+    move-object/from16 v23, v9
 
     .line 94
-    .local v17, "posterBody":Ljava/lang/String;
-    new-instance v10, Ljava/lang/StringBuilder;
+    .local v23, "posterBody":Ljava/lang/String;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v11, "https://img.tvbaw.com/"
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v11
-
-    const/4 v14, 0x2
-
-    invoke-static {v11, v14}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    invoke-virtual/range {v23 .. v23}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v11
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v13, 0x2
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v11, v13}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v11
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
 
     .line 96
-    .local v14, "encodedPoster":Ljava/lang/String;
-    const-string v16, ""
+    .local v13, "encodedPoster":Ljava/lang/String;
+    const-string v15, ""
 
     .line 97
-    .local v16, "info":Ljava/lang/String;
-    iget-object v10, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->userRegion:Ljava/lang/String;
+    .local v15, "info":Ljava/lang/String;
+    iget-object v9, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->userRegion:Ljava/lang/String;
 
     const-string v11, "CA"
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v9
 
-    if-eqz v10, :cond_0
+    if-eqz v9, :cond_0
 
-    const-string v10, "bc"
+    const-string v9, "bc"
 
-    invoke-virtual {v8, v10}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v7, v9}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v10
+    move-result v9
 
-    if-eq v10, v7, :cond_1
+    if-eq v9, v6, :cond_1
 
     :cond_0
-    iget-object v10, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->userRegion:Ljava/lang/String;
+    iget-object v9, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->userRegion:Ljava/lang/String;
 
     const-string v11, "US"
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v9
 
-    if-eqz v10, :cond_2
+    if-eqz v9, :cond_2
 
-    const-string v10, "bu"
+    const-string v9, "bu"
 
-    invoke-virtual {v8, v10}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v7, v9}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v10
+    move-result v9
 
-    if-ne v10, v7, :cond_2
+    if-ne v9, v6, :cond_2
 
     .line 98
     :cond_1
-    const-string v10, "Category"
+    const-string v9, "Category"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "Block - "
+    const-string v6, "Block - "
 
-    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-static {v10, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-object/from16 v19, v15
+    move-object/from16 v24, v14
 
     goto :goto_1
 
     .line 100
     :cond_2
-    new-instance v7, Lcom/tvbusa/encore/tv/Series;
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/CategoryFragment;->getResources()Landroid/content/res/Resources;
 
-    const-string v18, ""
+    move-result-object v6
 
-    move-object v10, v7
+    const v9, 0x7f050007
 
-    move-object v11, v9
+    invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    move-object/from16 v19, v15
+    move-result v6
 
-    .end local v15    # "thumb":Ljava/lang/String;
-    .local v19, "thumb":Ljava/lang/String;
-    move-object/from16 v15, v18
-
-    invoke-direct/range {v10 .. v16}, Lcom/tvbusa/encore/tv/Series;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v6, :cond_3
 
     .line 101
-    .local v7, "drama":Lcom/tvbusa/encore/tv/Series;
-    iget-object v10, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->dramaList:Ljava/util/List;
+    new-instance v6, Lcom/tvbusa/encore/tv/Series;
 
-    invoke-interface {v10, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const-string v16, ""
+
+    move-object v9, v6
+
+    move-object v11, v8
+
+    move-object/from16 v24, v14
+
+    .end local v14    # "thumb":Ljava/lang/String;
+    .local v24, "thumb":Ljava/lang/String;
+    move-object/from16 v14, v16
+
+    invoke-direct/range {v9 .. v15}, Lcom/tvbusa/encore/tv/Series;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 102
+    .local v6, "drama":Lcom/tvbusa/encore/tv/Series;
+    iget-object v9, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->dramaList:Ljava/util/List;
+
+    invoke-interface {v9, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 103
+    nop
+
+    .end local v6    # "drama":Lcom/tvbusa/encore/tv/Series;
+    goto :goto_1
 
     .line 104
-    .end local v7    # "drama":Lcom/tvbusa/encore/tv/Series;
-    :goto_1
-    if-ne v5, v6, :cond_3
+    .end local v24    # "thumb":Ljava/lang/String;
+    .restart local v14    # "thumb":Ljava/lang/String;
+    :cond_3
+    move-object/from16 v24, v14
+
+    .end local v14    # "thumb":Ljava/lang/String;
+    .restart local v24    # "thumb":Ljava/lang/String;
+    new-instance v6, Lcom/tvbusa/encore/tv/Series;
+
+    const-string v21, ""
+
+    move-object/from16 v16, v6
+
+    move-object/from16 v17, v8
+
+    move-object/from16 v18, v10
+
+    move-object/from16 v19, v12
+
+    move-object/from16 v20, v13
+
+    move-object/from16 v22, v15
+
+    invoke-direct/range {v16 .. v22}, Lcom/tvbusa/encore/tv/Series;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 105
+    .restart local v6    # "drama":Lcom/tvbusa/encore/tv/Series;
+    iget-object v9, v1, Lcom/tvbusa/encore/tv/CategoryFragment;->dramaList:Ljava/util/List;
+
+    invoke-interface {v9, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 109
+    .end local v6    # "drama":Lcom/tvbusa/encore/tv/Series;
+    :goto_1
+    if-ne v4, v5, :cond_4
+
+    .line 110
     invoke-direct/range {p0 .. p0}, Lcom/tvbusa/encore/tv/CategoryFragment;->setupFragment()V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 107
-    :cond_3
+    .line 112
+    :cond_4
     nop
 
-    .end local v8    # "jObject":Lorg/json/JSONObject;
-    .end local v9    # "name":Ljava/lang/String;
-    .end local v12    # "viet":Ljava/lang/String;
-    .end local v13    # "id":Ljava/lang/String;
-    .end local v14    # "encodedPoster":Ljava/lang/String;
-    .end local v16    # "info":Ljava/lang/String;
-    .end local v17    # "posterBody":Ljava/lang/String;
-    .end local v19    # "thumb":Ljava/lang/String;
-    add-int/lit8 v5, v5, 0x1
+    .end local v7    # "jObject":Lorg/json/JSONObject;
+    .end local v8    # "name":Ljava/lang/String;
+    .end local v10    # "subtitle":Ljava/lang/String;
+    .end local v12    # "id":Ljava/lang/String;
+    .end local v13    # "encodedPoster":Ljava/lang/String;
+    .end local v15    # "info":Ljava/lang/String;
+    .end local v23    # "posterBody":Ljava/lang/String;
+    .end local v24    # "thumb":Ljava/lang/String;
+    add-int/lit8 v4, v4, 0x1
 
-    .line 108
-    const/4 v7, 0x1
+    .line 113
+    const/4 v6, 0x1
 
     goto/16 :goto_0
 
-    .line 111
-    .end local v2    # "contentObject":Lorg/json/JSONObject;
-    .end local v4    # "categoryLayout":Lorg/json/JSONArray;
-    .end local v5    # "count":I
-    .end local v6    # "lastItem":I
-    :cond_4
+    .line 116
+    .end local v0    # "contentObject":Lorg/json/JSONObject;
+    .end local v3    # "categoryLayout":Lorg/json/JSONArray;
+    .end local v4    # "count":I
+    .end local v5    # "lastItem":I
+    :cond_5
     goto :goto_3
 
-    .line 109
+    .line 114
     :catch_0
     move-exception v0
 
@@ -541,14 +594,14 @@
     :catch_1
     move-exception v0
 
-    move-object/from16 v3, p1
+    move-object/from16 v2, p1
 
-    .line 110
+    .line 115
     .local v0, "e":Lorg/json/JSONException;
     :goto_2
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 112
+    .line 117
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_3
     return-void

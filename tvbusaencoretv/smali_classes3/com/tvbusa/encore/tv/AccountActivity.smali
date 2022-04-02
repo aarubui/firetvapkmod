@@ -17,10 +17,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
+    .line 31
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 33
+    .line 35
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->name:Ljava/lang/String;
@@ -42,18 +42,18 @@
         }
     .end annotation
 
-    .line 40
+    .line 42
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 41
+    .line 43
     const v0, 0x7f0e001c
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->setContentView(I)V
 
-    .line 43
+    .line 45
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/AccountActivity;->parseAccount()V
 
-    .line 45
+    .line 47
     const v0, 0x7f0b0152
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
@@ -64,7 +64,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->genderValue:Landroid/widget/TextView;
 
-    .line 46
+    .line 48
     const v0, 0x7f0b00fa
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
@@ -75,7 +75,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->emailValue:Landroid/widget/TextView;
 
-    .line 47
+    .line 49
     const v0, 0x7f0b0219
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity;->nicknameValue:Landroid/widget/TextView;
 
-    .line 49
+    .line 51
     const v0, 0x7f0b01c8
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/AccountActivity;->findViewById(I)Landroid/view/View;
@@ -95,7 +95,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 50
+    .line 52
     .local v0, "logoutBtn":Landroid/widget/Button;
     new-instance v1, Lcom/tvbusa/encore/tv/AccountActivity$1;
 
@@ -103,24 +103,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 62
+    .line 64
     return-void
 .end method
 
 .method public onPause()V
     .locals 0
 
-    .line 106
+    .line 108
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    .line 107
+    .line 109
     return-void
 .end method
 
 .method public parseAccount()V
     .locals 10
 
-    .line 65
+    .line 67
     const-string v0, "UserProfile"
 
     const/4 v1, 0x0
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    .line 66
+    .line 68
     .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string v1, "token"
 
@@ -139,7 +139,7 @@
 
     move-result-object v1
 
-    .line 68
+    .line 70
     .local v1, "token":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120062
+    const v4, 0x7f12005d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -165,7 +165,7 @@
 
     move-result-object v2
 
-    .line 69
+    .line 71
     .local v2, "url":Ljava/lang/String;
     const-string v3, "application/json"
 
@@ -173,7 +173,7 @@
 
     move-result-object v4
 
-    .line 70
+    .line 72
     .local v4, "JSON":Lokhttp3/MediaType;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -193,13 +193,13 @@
 
     move-result-object v5
 
-    .line 71
+    .line 73
     .local v5, "params":Ljava/lang/String;
     invoke-static {v4, v5}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v6
 
-    .line 72
+    .line 74
     .local v6, "body":Lokhttp3/RequestBody;
     new-instance v7, Lokhttp3/Request$Builder;
 
@@ -225,13 +225,13 @@
 
     move-result-object v3
 
-    .line 74
+    .line 76
     .local v3, "request":Lokhttp3/Request;
     new-instance v7, Lokhttp3/OkHttpClient;
 
     invoke-direct {v7}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 75
+    .line 77
     .local v7, "client":Lokhttp3/OkHttpClient;
     invoke-virtual {v7, v3}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -243,6 +243,6 @@
 
     invoke-interface {v8, v9}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 102
+    .line 104
     return-void
 .end method

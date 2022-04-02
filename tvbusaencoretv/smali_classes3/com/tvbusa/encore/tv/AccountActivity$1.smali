@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 52
     iput-object p1, p0, Lcom/tvbusa/encore/tv/AccountActivity$1;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/tvbusa/encore/tv/AccountActivity$1;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
     const-string v1, "UserProfile"
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 54
+    .line 56
     .local v0, "preferences":Landroid/content/SharedPreferences;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/AccountActivity$1;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
@@ -83,12 +83,12 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 55
+    .line 57
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 56
+    .line 58
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "uid"
 
@@ -96,19 +96,19 @@
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 57
+    .line 59
     const-string v2, "token"
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 58
+    .line 60
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 59
+    .line 61
     iget-object v2, p0, Lcom/tvbusa/encore/tv/AccountActivity$1;->this$0:Lcom/tvbusa/encore/tv/AccountActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/AccountActivity;->finish()V
 
-    .line 60
+    .line 62
     return-void
 .end method

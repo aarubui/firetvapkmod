@@ -38,7 +38,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 65
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SliderAdapter$1;->this$0:Lcom/tvbusa/encore/tv/SliderAdapter;
 
     iput p2, p0, Lcom/tvbusa/encore/tv/SliderAdapter$1;->val$position:I
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 68
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter$1;->this$0:Lcom/tvbusa/encore/tv/SliderAdapter;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/SliderAdapter;->access$000(Lcom/tvbusa/encore/tv/SliderAdapter;)Landroid/content/Context;
@@ -93,6 +93,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 67
+    .line 69
     return-void
 .end method
