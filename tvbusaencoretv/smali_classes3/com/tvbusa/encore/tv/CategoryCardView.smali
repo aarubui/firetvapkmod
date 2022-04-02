@@ -20,13 +20,13 @@
         }
     .end annotation
 
-    .line 19
+    .line 18
     invoke-direct {p0, p1}, Landroidx/leanback/widget/BaseCardView;-><init>(Landroid/content/Context;)V
 
-    .line 20
+    .line 19
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/CategoryCardView;->buildCardView()V
 
-    .line 21
+    .line 20
     return-void
 .end method
 
@@ -35,18 +35,18 @@
 .method protected buildCardView()V
     .locals 2
 
-    .line 24
+    .line 23
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryCardView;->setClickable(Z)V
 
-    .line 25
+    .line 24
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryCardView;->setFocusable(Z)V
 
-    .line 26
+    .line 25
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryCardView;->setFocusableInTouchMode(Z)V
 
-    .line 27
+    .line 26
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/CategoryCardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -55,13 +55,13 @@
 
     move-result-object v0
 
-    .line 28
+    .line 27
     .local v0, "inflater":Landroid/view/LayoutInflater;
     const v1, 0x7f0e0064
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 29
+    .line 28
     const v1, 0x7f0b0090
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/CategoryCardView;->findViewById(I)Landroid/view/View;
@@ -72,7 +72,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/CategoryCardView;->_titleView:Landroid/widget/TextView;
 
-    .line 30
+    .line 29
     return-void
 .end method
 
@@ -88,11 +88,11 @@
         }
     .end annotation
 
-    .line 33
+    .line 32
     iget-object v0, p0, Lcom/tvbusa/encore/tv/CategoryCardView;->_titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 34
+    .line 33
     return-void
 .end method

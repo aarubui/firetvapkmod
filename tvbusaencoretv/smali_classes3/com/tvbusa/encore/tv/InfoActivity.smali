@@ -17,18 +17,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 23
+    .line 24
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 25
+    .line 26
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/InfoActivity;->name:Ljava/lang/String;
 
-    .line 26
+    .line 27
     iput-object v0, p0, Lcom/tvbusa/encore/tv/InfoActivity;->key:Ljava/lang/String;
 
-    .line 28
+    .line 29
     iput-object v0, p0, Lcom/tvbusa/encore/tv/InfoActivity;->sss:Ljava/lang/String;
 
     return-void
@@ -48,15 +48,15 @@
         }
     .end annotation
 
-    .line 32
+    .line 33
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 33
+    .line 34
     const v0, 0x7f0e0022
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->setContentView(I)V
 
-    .line 34
+    .line 35
     const v0, 0x7f0b02d6
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/InfoActivity;->findViewById(I)Landroid/view/View;
@@ -65,7 +65,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 35
+    .line 36
     .local v0, "title":Landroid/widget/TextView;
     const v1, 0x7f0b02f4
 
@@ -75,7 +75,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 36
+    .line 37
     .local v1, "value":Landroid/widget/TextView;
     const v2, 0x7f0b0062
 
@@ -85,7 +85,7 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    .line 37
+    .line 38
     .local v2, "backBtn":Landroid/widget/Button;
     new-instance v3, Lcom/tvbusa/encore/tv/InfoActivity$1;
 
@@ -93,22 +93,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 44
+    .line 45
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 45
+    .line 46
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 46
+    .line 47
     .local v4, "bundle":Landroid/os/Bundle;
     if-eqz v4, :cond_0
 
-    .line 47
+    .line 48
     const-string v5, "key"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -117,7 +117,7 @@
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/InfoActivity;->key:Ljava/lang/String;
 
-    .line 50
+    .line 51
     :cond_0
     iget-object v5, p0, Lcom/tvbusa/encore/tv/InfoActivity;->key:Ljava/lang/String;
 
@@ -172,51 +172,117 @@
     const/4 v6, 0x2
 
     :goto_0
+    const v5, 0x7f120172
+
     packed-switch v6, :pswitch_data_0
 
-    goto :goto_1
-
-    .line 67
-    :pswitch_0
-    const-string v5, "\u79c1\u96b1\u8072\u660e"
-
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    goto/16 :goto_1
 
     .line 68
-    const-string v5, "\u8acb\u5230 http://www.tvbusa.com/privacy-policy"
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f120163
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 69
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " http://www.tvbusa.com/privacy-policy"
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
-
-    .line 62
-    :pswitch_1
-    const-string v5, "\u670d\u52d9\u689d\u6b3e\u53ca\u7d30\u5247"
-
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 63
-    const-string v5, "\u8acb\u5230 http://www.tvbusa.com/terms-conditions/ "
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f120164
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 64
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " http://www.tvbusa.com/terms-conditions/ "
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 64
+    .line 65
     goto :goto_1
 
-    .line 52
+    .line 53
     :pswitch_2
-    const-string v5, "\u7528\u6236\u7de8\u865f"
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/InfoActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f120162
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 53
+    .line 54
     const-string v5, "generalInfo"
 
     invoke-virtual {p0, v5, v8}, Lcom/tvbusa/encore/tv/InfoActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
-    .line 54
+    .line 55
     .local v5, "generalInfo":Landroid/content/SharedPreferences;
     const-string v6, "deviceNumber"
 
@@ -228,7 +294,7 @@
 
     iput-object v6, p0, Lcom/tvbusa/encore/tv/InfoActivity;->sss:Ljava/lang/String;
 
-    .line 55
+    .line 56
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -237,24 +303,26 @@
 
     if-ge v6, v7, :cond_2
 
-    .line 56
+    .line 57
     const-string v6, "Not Available"
 
     iput-object v6, p0, Lcom/tvbusa/encore/tv/InfoActivity;->sss:Ljava/lang/String;
 
-    .line 59
+    .line 60
     :cond_2
     iget-object v6, p0, Lcom/tvbusa/encore/tv/InfoActivity;->sss:Ljava/lang/String;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 60
+    .line 61
     nop
 
-    .line 73
+    .line 74
     .end local v5    # "generalInfo":Landroid/content/SharedPreferences;
     :goto_1
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

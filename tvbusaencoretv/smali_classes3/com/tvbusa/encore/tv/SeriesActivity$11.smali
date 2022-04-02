@@ -31,7 +31,7 @@
         }
     .end annotation
 
-    .line 470
+    .line 491
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Lcom/brightcove/player/edge/PlaylistListener;-><init>()V
@@ -53,12 +53,12 @@
         }
     .end annotation
 
-    .line 517
+    .line 542
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 518
+    .line 543
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/tvbusa/encore/tv/SeriesActivity$11$1;
 
@@ -68,12 +68,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 526
+    .line 551
     return-void
 .end method
 
 .method public onPlaylist(Lcom/brightcove/player/model/Playlist;)V
-    .locals 12
+    .locals 13
     .param p1, "playlist"    # Lcom/brightcove/player/model/Playlist;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -84,198 +84,215 @@
         }
     .end annotation
 
-    .line 474
-    const/4 v0, 0x0
+    .line 495
+    const-string v0, ""
 
-    .line 475
-    .local v0, "count":I
+    const/4 v1, 0x0
+
+    .line 496
+    .local v1, "count":I
     :goto_0
     invoke-virtual {p1}, Lcom/brightcove/player/model/Playlist;->getCount()Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v0, v1, :cond_1
+    if-ge v1, v2, :cond_1
 
-    .line 477
+    .line 498
     :try_start_0
     invoke-virtual {p1}, Lcom/brightcove/player/model/Playlist;->getVideos()Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/brightcove/player/model/Video;
+    check-cast v2, Lcom/brightcove/player/model/Video;
 
-    .line 478
-    .local v1, "video":Lcom/brightcove/player/model/Video;
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-virtual {v1}, Lcom/brightcove/player/model/Video;->getProperties()Ljava/util/Map;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
-
-    .line 479
-    .local v2, "json":Lorg/json/JSONObject;
+    .line 499
+    .local v2, "video":Lcom/brightcove/player/model/Video;
     new-instance v3, Lorg/json/JSONObject;
 
-    const-string v4, "customFields"
-
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/brightcove/player/model/Video;->getProperties()Ljava/util/Map;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 480
-    .local v3, "fields":Lorg/json/JSONObject;
-    invoke-virtual {v1}, Lcom/brightcove/player/model/Video;->getName()Ljava/lang/String;
+    .line 500
+    .local v3, "json":Lorg/json/JSONObject;
+    new-instance v4, Lorg/json/JSONObject;
 
-    move-result-object v4
+    const-string v5, "customFields"
 
-    .line 481
-    .local v4, "name":Ljava/lang/String;
-    invoke-virtual {v1}, Lcom/brightcove/player/model/Video;->getDescription()Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 482
-    .local v5, "description":Ljava/lang/String;
-    invoke-virtual {v1}, Lcom/brightcove/player/model/Video;->getPosterImage()Ljava/net/URI;
+    invoke-direct {v4, v5}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    move-result-object v6
+    .line 501
+    .local v4, "fields":Lorg/json/JSONObject;
+    move-object v5, v0
 
-    invoke-virtual {v6}, Ljava/net/URI;->toString()Ljava/lang/String;
+    .line 502
+    .local v5, "name":Ljava/lang/String;
+    move-object v6, v0
 
-    move-result-object v6
+    .line 503
+    .local v6, "description":Ljava/lang/String;
+    iget-object v7, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
-    .line 483
-    .local v6, "thumbnail":Ljava/lang/String;
-    invoke-virtual {v1}, Lcom/brightcove/player/model/Video;->getId()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/tvbusa/encore/tv/SeriesActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    .line 484
-    .local v7, "id":Ljava/lang/String;
-    new-instance v8, Lcom/tvbusa/encore/tv/Episode;
+    const v8, 0x7f120029
 
-    invoke-direct {v8, v4, v5, v6, v7}, Lcom/tvbusa/encore/tv/Episode;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 485
-    .local v8, "episode":Lcom/tvbusa/encore/tv/Episode;
-    iget-object v9, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
+    move-result-object v7
 
-    iget-object v9, v9, Lcom/tvbusa/encore/tv/SeriesActivity;->episodeList:Ljava/util/List;
+    invoke-virtual {v4, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v7
 
-    .line 487
+    move-object v5, v7
+
+    .line 507
+    invoke-virtual {v2}, Lcom/brightcove/player/model/Video;->getPosterImage()Ljava/net/URI;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/net/URI;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 508
+    .local v7, "thumbnail":Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/brightcove/player/model/Video;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 509
+    .local v8, "id":Ljava/lang/String;
+    new-instance v9, Lcom/tvbusa/encore/tv/Episode;
+
+    invoke-direct {v9, v5, v6, v7, v8}, Lcom/tvbusa/encore/tv/Episode;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 510
+    .local v9, "episode":Lcom/tvbusa/encore/tv/Episode;
+    iget-object v10, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
+
+    iget-object v10, v10, Lcom/tvbusa/encore/tv/SeriesActivity;->episodeList:Ljava/util/List;
+
+    invoke-interface {v10, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 512
     invoke-virtual {p1}, Lcom/brightcove/player/model/Playlist;->getCount()Ljava/lang/Integer;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
-
-    move-result v9
-
-    add-int/lit8 v9, v9, -0x1
-
-    if-ne v0, v9, :cond_0
-
-    .line 488
-    iget-object v9, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
-
-    iget-object v9, v9, Lcom/tvbusa/encore/tv/SeriesActivity;->playButton:Landroid/widget/Button;
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v9, v10}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 490
-    iget-object v9, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
-
-    invoke-virtual {v9}, Lcom/tvbusa/encore/tv/SeriesActivity;->checkAllHistory()V
-
-    .line 492
-    :cond_0
-    const-string v9, "Series"
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "count - "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v11, "; size - "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/brightcove/player/model/Playlist;->getCount()Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    add-int/lit8 v10, v10, -0x1
+
+    if-ne v1, v10, :cond_0
+
+    .line 513
+    iget-object v10, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
+
+    iget-object v10, v10, Lcom/tvbusa/encore/tv/SeriesActivity;->playButton:Landroid/widget/Button;
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v10, v11}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 515
+    iget-object v10, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
+
+    invoke-virtual {v10}, Lcom/tvbusa/encore/tv/SeriesActivity;->checkAllHistory()V
+
+    .line 517
+    :cond_0
+    const-string v10, "Series"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "count - "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v12, "; size - "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/brightcove/player/model/Playlist;->getCount()Ljava/lang/Integer;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 494
+    .line 519
     nop
 
-    .end local v1    # "video":Lcom/brightcove/player/model/Video;
-    .end local v2    # "json":Lorg/json/JSONObject;
-    .end local v3    # "fields":Lorg/json/JSONObject;
-    .end local v8    # "episode":Lcom/tvbusa/encore/tv/Episode;
-    add-int/lit8 v0, v0, 0x1
+    .end local v2    # "video":Lcom/brightcove/player/model/Video;
+    .end local v3    # "json":Lorg/json/JSONObject;
+    .end local v4    # "fields":Lorg/json/JSONObject;
+    .end local v9    # "episode":Lcom/tvbusa/encore/tv/Episode;
+    add-int/lit8 v1, v1, 0x1
 
-    .line 497
+    .line 522
     goto/16 :goto_0
 
-    .line 495
-    .end local v4    # "name":Ljava/lang/String;
-    .end local v5    # "description":Ljava/lang/String;
-    .end local v6    # "thumbnail":Ljava/lang/String;
-    .end local v7    # "id":Ljava/lang/String;
+    .line 520
+    .end local v5    # "name":Ljava/lang/String;
+    .end local v6    # "description":Ljava/lang/String;
+    .end local v7    # "thumbnail":Ljava/lang/String;
+    .end local v8    # "id":Ljava/lang/String;
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    .line 496
-    .local v1, "e":Lorg/json/JSONException;
-    invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
+    .line 521
+    .local v2, "e":Lorg/json/JSONException;
+    invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 497
-    .end local v1    # "e":Lorg/json/JSONException;
+    .line 522
+    .end local v2    # "e":Lorg/json/JSONException;
     goto/16 :goto_0
 
-    .line 502
+    .line 527
     :cond_1
-    new-instance v1, Lcom/tvbusa/encore/tv/EpisodeFragment;
+    new-instance v0, Lcom/tvbusa/encore/tv/EpisodeFragment;
 
-    invoke-direct {v1}, Lcom/tvbusa/encore/tv/EpisodeFragment;-><init>()V
+    invoke-direct {v0}, Lcom/tvbusa/encore/tv/EpisodeFragment;-><init>()V
 
-    .line 503
-    .local v1, "episodeFragment":Lcom/tvbusa/encore/tv/EpisodeFragment;
+    .line 528
+    .local v0, "episodeFragment":Lcom/tvbusa/encore/tv/EpisodeFragment;
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 504
+    .line 529
     .local v2, "arguments":Landroid/os/Bundle;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
@@ -285,7 +302,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 505
+    .line 530
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v3, v3, Lcom/tvbusa/encore/tv/SeriesActivity;->episodeList:Ljava/util/List;
@@ -296,7 +313,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 506
+    .line 531
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v3, v3, Lcom/tvbusa/encore/tv/SeriesActivity;->title:Ljava/lang/String;
@@ -305,7 +322,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 507
+    .line 532
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v3, v3, Lcom/tvbusa/encore/tv/SeriesActivity;->secondary_title:Ljava/lang/String;
@@ -314,7 +331,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
+    .line 533
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget-object v3, v3, Lcom/tvbusa/encore/tv/SeriesActivity;->banner:Ljava/lang/String;
@@ -323,7 +340,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 509
+    .line 534
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iget v3, v3, Lcom/tvbusa/encore/tv/SeriesActivity;->adConfigType:I
@@ -332,10 +349,10 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 510
-    invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setArguments(Landroid/os/Bundle;)V
+    .line 535
+    invoke-virtual {v0, v2}, Lcom/tvbusa/encore/tv/EpisodeFragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 511
+    .line 536
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$11;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-virtual {v3}, Lcom/tvbusa/encore/tv/SeriesActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -350,12 +367,12 @@
 
     const-string v5, "BrowseFragment"
 
-    invoke-virtual {v3, v4, v1, v5}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
+    invoke-virtual {v3, v4, v0, v5}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v3
 
     invoke-virtual {v3}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    .line 513
+    .line 538
     return-void
 .end method

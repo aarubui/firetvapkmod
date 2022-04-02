@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 85
     iput-object p1, p0, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/MainActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 85
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
@@ -84,13 +84,13 @@
         }
     .end annotation
 
-    .line 89
+    .line 90
     :try_start_0
     new-instance v0, Lokhttp3/OkHttpClient;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 90
+    .line 91
     .local v0, "client":Lokhttp3/OkHttpClient;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/MainActivity;
 
@@ -98,13 +98,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f1200e2
+    const v2, 0x7f1200da
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 91
+    .line 92
     .local v1, "url":Ljava/lang/String;
     new-instance v2, Lokhttp3/Request$Builder;
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    .line 92
+    .line 93
     .local v2, "request":Lokhttp3/Request;
     invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -128,7 +128,7 @@
 
     move-result-object v3
 
-    .line 93
+    .line 94
     .local v3, "response":Lokhttp3/Response;
     invoke-virtual {v3}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -140,11 +140,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 94
+    .line 95
     .local v4, "res":Ljava/lang/String;
     return-object v4
 
-    .line 95
+    .line 96
     .end local v0    # "client":Lokhttp3/OkHttpClient;
     .end local v1    # "url":Ljava/lang/String;
     .end local v2    # "request":Lokhttp3/Request;
@@ -153,7 +153,7 @@
     :catch_0
     move-exception v0
 
-    .line 96
+    .line 97
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -171,7 +171,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 85
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->onPostExecute(Ljava/lang/String;)V
@@ -191,30 +191,30 @@
         }
     .end annotation
 
-    .line 101
+    .line 102
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 104
+    .line 105
     new-instance v0, Lcom/tvbusa/encore/tv/MainFragment;
 
     invoke-direct {v0}, Lcom/tvbusa/encore/tv/MainFragment;-><init>()V
 
-    .line 105
+    .line 106
     .local v0, "mainFragment":Lcom/tvbusa/encore/tv/MainFragment;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 106
+    .line 107
     .local v1, "arguments":Landroid/os/Bundle;
     const-string v2, "json"
 
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
+    .line 108
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/MainFragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 108
+    .line 109
     iget-object v2, p0, Lcom/tvbusa/encore/tv/MainActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/MainActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/MainActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -235,6 +235,6 @@
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    .line 109
+    .line 110
     return-void
 .end method

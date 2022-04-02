@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120026
+    const v1, 0x7f120025
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -61,58 +61,7 @@
 .end method
 
 .method setErrorContent()V
-    .locals 2
-
-    .line 38
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/ErrorFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    const v1, 0x7f0800fb
-
-    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/ErrorFragment;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 39
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/ErrorFragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f120098
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/ErrorFragment;->setMessage(Ljava/lang/CharSequence;)V
-
-    .line 40
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/ErrorFragment;->setDefaultBackground(Z)V
-
-    .line 42
-    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/ErrorFragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f120095
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/ErrorFragment;->setButtonText(Ljava/lang/String;)V
-
-    .line 43
-    new-instance v0, Lcom/tvbusa/encore/tv/ErrorFragment$1;
-
-    invoke-direct {v0, p0}, Lcom/tvbusa/encore/tv/ErrorFragment$1;-><init>(Lcom/tvbusa/encore/tv/ErrorFragment;)V
-
-    invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/ErrorFragment;->setButtonClickListener(Landroid/view/View$OnClickListener;)V
+    .locals 0
 
     .line 50
     return-void

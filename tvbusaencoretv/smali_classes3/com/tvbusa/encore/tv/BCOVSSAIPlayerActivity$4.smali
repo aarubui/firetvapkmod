@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 240
+    .line 252
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,37 +56,41 @@
         }
     .end annotation
 
-    .line 243
+    .line 255
     const-string v0, "SSAAI"
 
-    const-string v1, "Ad Impression"
+    const-string v1, "End Ad Break"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
-    new-instance v0, Landroid/os/Bundle;
+    .line 256
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 246
-    .local v0, "AiParams":Landroid/os/Bundle;
+    .line 257
+    .local v0, "properties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    const/high16 v1, 0x42c80000    # 100.0f
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    const-string v2, "volume"
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 258
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->parent:Ljava/lang/String;
+    invoke-static {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$800(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/event/EventEmitter;
 
-    const-string v2, "name"
+    move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "setVolume"
 
-    .line 247
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    invoke-interface {v1, v2, v0}, Lcom/brightcove/player/event/EventEmitter;->emit(Ljava/lang/String;Ljava/util/Map;)V
 
-    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->mFirebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-    const-string v2, "AdImpression"
-
-    invoke-virtual {v1, v2, v0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    .line 248
+    .line 259
     return-void
 .end method

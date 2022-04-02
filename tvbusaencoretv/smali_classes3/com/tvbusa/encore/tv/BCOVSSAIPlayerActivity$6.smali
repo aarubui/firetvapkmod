@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 282
+    .line 271
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$6;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,29 +49,35 @@
     .param p1, "event"    # Lcom/brightcove/player/event/Event;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0
+            0x10
         }
         names = {
             "event"
         }
     .end annotation
 
-    .line 285
-    const-string v0, "TestIMA"
+    .line 274
+    const-string v0, "SSAAI"
 
-    const-string v1, "Did Set Video"
+    const-string v1, "DID SEEK TO"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
+    .line 275
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$6;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$500(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
+    invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$1000(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->start()V
+    invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->getPlaybackController()Lcom/brightcove/player/controller/VideoPlaybackController;
 
-    .line 287
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/brightcove/player/controller/VideoPlaybackController;->setAdsDisabled(Z)V
+
+    .line 276
     return-void
 .end method

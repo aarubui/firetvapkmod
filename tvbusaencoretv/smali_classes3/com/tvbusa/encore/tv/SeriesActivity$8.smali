@@ -38,7 +38,7 @@
         }
     .end annotation
 
-    .line 385
+    .line 395
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$8;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     iput-object p2, p0, Lcom/tvbusa/encore/tv/SeriesActivity$8;->val$year:Ljava/lang/String;
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 388
+    .line 398
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$8;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
@@ -75,26 +75,26 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 389
+    .line 399
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "type"
 
-    const-string v2, "\u5e74\u4efd"
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 390
+    .line 400
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$8;->val$year:Ljava/lang/String;
 
     const-string v2, "value"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 391
+    .line 401
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$8;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-virtual {v1, v0}, Lcom/tvbusa/encore/tv/SeriesActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 392
+    .line 402
     return-void
 .end method

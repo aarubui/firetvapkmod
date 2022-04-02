@@ -3,12 +3,12 @@
 .source "BCOVSSAIPlayerActivity.java"
 
 # interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->requestAudioFocus()V
+    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->recordAR(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,22 +20,28 @@
 # instance fields
 .field final synthetic this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
+.field final synthetic val$time:I
+
 
 # direct methods
-.method constructor <init>(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)V
+.method constructor <init>(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;I)V
     .locals 0
     .param p1, "this$0"    # Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010
+            0x8010,
+            0x1010
         }
         names = {
-            "this$0"
+            "this$0",
+            "val$time"
         }
     .end annotation
 
-    .line 594
+    .line 538
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    iput p2, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->val$time:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,92 +50,70 @@
 
 
 # virtual methods
-.method public onAudioFocusChange(I)V
+.method public run()V
     .locals 3
-    .param p1, "focusChange"    # I
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "focusChange"
-        }
-    .end annotation
 
-    .line 598
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    .line 541
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$700(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Midroll - "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->val$time:I
+
+    div-int/lit16 v1, v1, 0x3e8
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "TestIMA"
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v2, "onAudioFocusChange() focusChange? "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 599
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    goto :goto_0
-
-    .line 601
-    :pswitch_1
+    .line 542
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    iget-object v1, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->sss:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$802(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    const-string v2, "AR"
 
-    .line 602
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->snPing(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 605
-    :pswitch_2
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    .line 543
+    new-instance v0, Landroid/os/Bundle;
 
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$802(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    .line 544
+    .local v0, "adParams":Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    .line 606
-    goto :goto_0
+    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->parent:Ljava/lang/String;
 
-    .line 608
-    :pswitch_3
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    const-string v2, "name"
 
-    sget-object v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$802(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
+    .line 545
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    .line 609
-    nop
+    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->mFirebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    .line 612
-    :goto_0
+    const-string v2, "AdRequest"
+
+    invoke-virtual {v1, v2, v0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 546
+    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$16;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+
+    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->recordFirebaseAR()V
+
+    .line 547
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch -0x3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

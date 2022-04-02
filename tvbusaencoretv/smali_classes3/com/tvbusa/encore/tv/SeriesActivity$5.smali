@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 206
+    .line 211
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 208
+    .line 213
     return-void
 .end method
 
@@ -84,7 +84,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 218
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -94,18 +94,18 @@
 
     move-result-object v0
 
-    .line 214
+    .line 219
     .local v0, "json":Ljava/lang/String;
     const-string v1, "Login JSON"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
+    .line 220
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 216
+    .line 221
     .local v1, "obj":Lorg/json/JSONObject;
     const-string v2, "success"
 
@@ -117,7 +117,7 @@
 
     move-result-object v2
 
-    .line 217
+    .line 222
     .local v2, "s":Ljava/lang/Boolean;
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -125,7 +125,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 219
+    .line 224
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SeriesActivity$5;->this$0:Lcom/tvbusa/encore/tv/SeriesActivity;
 
     new-instance v4, Lcom/tvbusa/encore/tv/SeriesActivity$5$1;
@@ -136,7 +136,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 236
+    .line 241
     .end local v0    # "json":Ljava/lang/String;
     .end local v1    # "obj":Lorg/json/JSONObject;
     .end local v2    # "s":Ljava/lang/Boolean;
@@ -165,7 +165,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 242
     .end local v0    # "t":Lorg/json/JSONException;
     :goto_0
     return-void

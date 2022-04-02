@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 273
+    .line 274
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 276
+    .line 277
     iget-object v0, p1, Lcom/brightcove/player/event/Event;->properties:Ljava/util/Map;
 
     const-string v1, "playheadPosition"
@@ -73,11 +73,11 @@
 
     move-result v0
 
-    .line 279
+    .line 280
     .local v0, "currentTime":I
     div-int/lit16 v1, v0, 0x3e8
 
-    .line 281
+    .line 282
     .local v1, "currentMilliTime":I
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
@@ -95,12 +95,12 @@
 
     if-le v2, v3, :cond_0
 
-    .line 282
+    .line 283
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->recordLiveMinutes()V
 
-    .line 283
+    .line 284
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,12 +119,12 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
+    .line 285
     iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;
 
     iput v1, v2, Lcom/tvbusa/encore/tv/BCOVLivePlayerActivity;->prevousTime:I
 
-    .line 286
+    .line 287
     :cond_0
     return-void
 .end method

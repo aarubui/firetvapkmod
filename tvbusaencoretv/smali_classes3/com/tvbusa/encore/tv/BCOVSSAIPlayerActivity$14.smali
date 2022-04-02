@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->recordMinutes()V
+    value = Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->recordEventMinute()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 538
+    .line 440
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$14;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,10 +59,9 @@
         }
     .end annotation
 
-    .line 541
+    .line 442
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 542
     return-void
 .end method
 
@@ -87,17 +86,17 @@
         }
     .end annotation
 
-    .line 546
+    .line 446
     invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 549
+    .line 449
     return-void
 
-    .line 547
+    .line 447
     :cond_0
     new-instance v0, Ljava/io/IOException;
 

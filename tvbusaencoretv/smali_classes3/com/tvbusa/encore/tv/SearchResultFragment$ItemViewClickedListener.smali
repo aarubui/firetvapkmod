@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 86
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p1, "x0"    # Lcom/tvbusa/encore/tv/SearchResultFragment;
     .param p2, "x1"    # Lcom/tvbusa/encore/tv/SearchResultFragment$1;
 
-    .line 84
+    .line 86
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;-><init>(Lcom/tvbusa/encore/tv/SearchResultFragment;)V
 
     return-void
@@ -75,12 +75,12 @@
         }
     .end annotation
 
-    .line 87
+    .line 89
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
     if-eqz v0, :cond_0
 
-    .line 88
+    .line 90
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
@@ -93,13 +93,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 90
+    .line 92
     .local v0, "intent":Landroid/content/Intent;
     move-object v1, p2
 
     check-cast v1, Lcom/tvbusa/encore/tv/Series;
 
-    .line 91
+    .line 93
     .local v1, "series":Lcom/tvbusa/encore/tv/Series;
     invoke-virtual {v1}, Lcom/tvbusa/encore/tv/Series;->getId()Ljava/lang/String;
 
@@ -109,7 +109,7 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 92
+    .line 94
     iget-object v2, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/SearchResultFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -118,12 +118,12 @@
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentActivity;->finish()V
 
-    .line 93
+    .line 95
     iget-object v2, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
 
     invoke-virtual {v2, v0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 95
+    .line 97
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "series":Lcom/tvbusa/encore/tv/Series;
     :cond_0
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 86
     check-cast p4, Landroidx/leanback/widget/Row;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;->onItemClicked(Landroidx/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroidx/leanback/widget/RowPresenter$ViewHolder;Landroidx/leanback/widget/Row;)V

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 312
+    .line 286
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
 
 # virtual methods
 .method public processEvent(Lcom/brightcove/player/event/Event;)V
-    .locals 4
+    .locals 3
     .param p1, "event"    # Lcom/brightcove/player/event/Event;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -56,65 +56,37 @@
         }
     .end annotation
 
-    .line 315
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    .line 290
+    const-string v0, "SSAAI"
 
-    const/4 v1, 0x0
+    const-string v1, "Ad Impression"
 
-    iput v1, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->prevousTime:I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    .line 292
+    new-instance v0, Landroid/os/Bundle;
 
-    iput v1, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->prTime:I
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 318
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
-
-    iget v0, v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    .line 319
-    .local v0, "newPosition":I
+    .line 293
+    .local v0, "AiParams":Landroid/os/Bundle;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    iput v0, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
+    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->parent:Ljava/lang/String;
 
-    .line 320
+    const-string v2, "name"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 294
     iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->clearCache()V
+    iget-object v1, v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->mFirebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    .line 321
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    const-string v2, "AdImpression"
 
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->finish()V
+    invoke-virtual {v1, v2, v0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 322
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
-
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
-
-    iget v2, v2, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->selectedIndex:I
-
-    const-string v3, "selectedIndex"
-
-    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 323
-    iget-object v1, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$8;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
-
-    invoke-virtual {v1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 324
+    .line 295
     return-void
 .end method

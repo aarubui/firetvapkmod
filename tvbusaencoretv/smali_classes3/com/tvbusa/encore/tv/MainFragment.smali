@@ -254,7 +254,7 @@
 .method private loadRows()V
     .locals 18
 
-    .line 344
+    .line 349
     move-object/from16 v0, p0
 
     new-instance v1, Landroidx/leanback/widget/ArrayObjectAdapter;
@@ -265,43 +265,43 @@
 
     invoke-direct {v1, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 345
+    .line 350
     .local v1, "rowsAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     new-instance v2, Lcom/tvbusa/encore/tv/SeriesPresenter;
 
     invoke-direct {v2}, Lcom/tvbusa/encore/tv/SeriesPresenter;-><init>()V
 
-    .line 346
+    .line 351
     .local v2, "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     new-instance v3, Lcom/tvbusa/encore/tv/CategoryPresenter;
 
     invoke-direct {v3}, Lcom/tvbusa/encore/tv/CategoryPresenter;-><init>()V
 
-    .line 347
+    .line 352
     .local v3, "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
     new-instance v4, Lcom/tvbusa/encore/tv/HistoryPresenter;
 
     invoke-direct {v4}, Lcom/tvbusa/encore/tv/HistoryPresenter;-><init>()V
 
-    .line 348
+    .line 353
     .local v4, "historyPresenter":Lcom/tvbusa/encore/tv/HistoryPresenter;
     new-instance v5, Lcom/tvbusa/encore/tv/SettingPresenter;
 
     invoke-direct {v5}, Lcom/tvbusa/encore/tv/SettingPresenter;-><init>()V
 
-    .line 349
+    .line 354
     .local v5, "settingPresenter":Lcom/tvbusa/encore/tv/SettingPresenter;
     new-instance v6, Lcom/tvbusa/encore/tv/LivePresenter;
 
     invoke-direct {v6}, Lcom/tvbusa/encore/tv/LivePresenter;-><init>()V
 
-    .line 350
+    .line 355
     .local v6, "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     new-instance v7, Lcom/tvbusa/encore/tv/TopBannerPresenter;
 
     invoke-direct {v7}, Lcom/tvbusa/encore/tv/TopBannerPresenter;-><init>()V
 
-    .line 354
+    .line 359
     .local v7, "topBannerPresenter":Lcom/tvbusa/encore/tv/TopBannerPresenter;
     const/4 v8, 0x0
 
@@ -313,19 +313,19 @@
 
     move-result v9
 
-    if-ge v8, v9, :cond_d
+    if-ge v8, v9, :cond_e
 
-    .line 356
+    .line 361
     const-wide/16 v9, 0x0
 
     if-nez v8, :cond_1
 
-    .line 357
+    .line 362
     new-instance v11, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v11, v7}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 358
+    .line 363
     .local v11, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v12, 0x0
 
@@ -339,7 +339,7 @@
 
     if-ge v12, v13, :cond_0
 
-    .line 359
+    .line 364
     iget-object v13, v0, Lcom/tvbusa/encore/tv/MainFragment;->topBannerList:Ljava/util/List;
 
     invoke-interface {v13, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -348,12 +348,12 @@
 
     invoke-virtual {v11, v13}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 358
+    .line 363
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 361
+    .line 366
     .end local v12    # "k":I
     :cond_0
     new-instance v12, Landroidx/leanback/widget/HeaderItem;
@@ -362,7 +362,7 @@
 
     invoke-direct {v12, v9, v10, v13}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 362
+    .line 367
     .local v12, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v13, Landroidx/leanback/widget/ListRow;
 
@@ -370,7 +370,7 @@
 
     invoke-virtual {v1, v13}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 365
+    .line 370
     .end local v11    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v12    # "header":Landroidx/leanback/widget/HeaderItem;
     :cond_1
@@ -378,12 +378,24 @@
 
     if-ne v8, v11, :cond_3
 
-    .line 366
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v12
+
+    const v13, 0x7f050004
+
+    invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_3
+
+    .line 371
     new-instance v12, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v12, v6}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 367
+    .line 372
     .local v12, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v13, 0x0
 
@@ -397,7 +409,7 @@
 
     if-ge v13, v14, :cond_2
 
-    .line 368
+    .line 373
     iget-object v14, v0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
 
     invoke-interface {v14, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -406,12 +418,12 @@
 
     invoke-virtual {v12, v14}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 367
+    .line 372
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_2
 
-    .line 370
+    .line 375
     .end local v13    # "k":I
     :cond_2
     new-instance v13, Landroidx/leanback/widget/HeaderItem;
@@ -420,7 +432,7 @@
 
     invoke-direct {v13, v9, v10, v14}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 371
+    .line 376
     .local v13, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v14, Landroidx/leanback/widget/ListRow;
 
@@ -428,7 +440,7 @@
 
     invoke-virtual {v1, v14}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 374
+    .line 379
     .end local v12    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v13    # "header":Landroidx/leanback/widget/HeaderItem;
     :cond_3
@@ -448,12 +460,12 @@
 
     if-lez v12, :cond_5
 
-    .line 375
+    .line 380
     new-instance v12, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v12, v4}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 376
+    .line 381
     .restart local v12    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v15, 0x0
 
@@ -467,7 +479,7 @@
 
     if-ge v15, v11, :cond_4
 
-    .line 377
+    .line 382
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,7 +506,7 @@
 
     invoke-static {v14, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
+    .line 383
     iget-object v9, v0, Lcom/tvbusa/encore/tv/MainFragment;->historyList:Ljava/util/List;
 
     invoke-interface {v9, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -503,7 +515,7 @@
 
     invoke-virtual {v12, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 376
+    .line 381
     add-int/lit8 v15, v15, 0x1
 
     const-wide/16 v9, 0x0
@@ -512,12 +524,20 @@
 
     goto :goto_3
 
-    .line 380
+    .line 385
     .end local v15    # "k":I
     :cond_4
     new-instance v9, Landroidx/leanback/widget/HeaderItem;
 
-    const-string v10, "\u7e7c\u7e8c\u89c0\u770b"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v10
+
+    const v11, 0x7f12007c
+
+    invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v10
 
     move-object v11, v6
 
@@ -533,7 +553,7 @@
 
     move-object v6, v9
 
-    .line 381
+    .line 386
     .local v6, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v7, Landroidx/leanback/widget/ListRow;
 
@@ -543,7 +563,7 @@
 
     goto :goto_4
 
-    .line 374
+    .line 379
     .end local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     .end local v12    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v15    # "topBannerPresenter":Lcom/tvbusa/encore/tv/TopBannerPresenter;
@@ -554,7 +574,7 @@
 
     move-object v15, v7
 
-    .line 384
+    .line 389
     .end local v6    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     .end local v7    # "topBannerPresenter":Lcom/tvbusa/encore/tv/TopBannerPresenter;
     .restart local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
@@ -564,12 +584,12 @@
 
     if-ne v8, v6, :cond_7
 
-    .line 385
+    .line 390
     new-instance v6, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v6, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 386
+    .line 391
     .local v6, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v7, 0x0
 
@@ -583,7 +603,7 @@
 
     if-ge v7, v9, :cond_6
 
-    .line 387
+    .line 392
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,7 +630,7 @@
 
     invoke-static {v14, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
+    .line 393
     iget-object v9, v0, Lcom/tvbusa/encore/tv/MainFragment;->genreCategoryList:Ljava/util/List;
 
     invoke-interface {v9, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -619,23 +639,31 @@
 
     invoke-virtual {v6, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 386
+    .line 391
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_5
 
-    .line 390
+    .line 395
     .end local v7    # "k":I
     :cond_6
     new-instance v7, Landroidx/leanback/widget/HeaderItem;
 
-    const-string v9, "\u7bc0\u76ee\u5206\u985e"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    const v10, 0x7f120056
+
+    invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
 
     const-wide/16 v12, 0x0
 
     invoke-direct {v7, v12, v13, v9}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 391
+    .line 396
     .local v7, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v9, Landroidx/leanback/widget/ListRow;
 
@@ -643,7 +671,7 @@
 
     invoke-virtual {v1, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 394
+    .line 399
     .end local v6    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v7    # "header":Landroidx/leanback/widget/HeaderItem;
     :cond_7
@@ -651,7 +679,7 @@
 
     invoke-direct {v6, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 395
+    .line 400
     .restart local v6    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v7, 0x0
 
@@ -671,7 +699,7 @@
 
     if-ge v7, v9, :cond_8
 
-    .line 396
+    .line 401
     iget-object v9, v0, Lcom/tvbusa/encore/tv/MainFragment;->entireList:Ljava/util/List;
 
     invoke-interface {v9, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -686,12 +714,12 @@
 
     invoke-virtual {v6, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 395
+    .line 400
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_6
 
-    .line 398
+    .line 403
     .end local v7    # "j":I
     :cond_8
     new-instance v7, Landroidx/leanback/widget/HeaderItem;
@@ -708,7 +736,7 @@
 
     invoke-direct {v7, v9, v10, v12}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
-    .line 399
+    .line 404
     .local v7, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v9, Landroidx/leanback/widget/ListRow;
 
@@ -716,39 +744,43 @@
 
     invoke-virtual {v1, v9}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 401
+    .line 406
     invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v9
 
-    const-string v10, "generalInfo"
+    const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const-string v12, "generalInfo"
 
-    invoke-virtual {v9, v10, v12}, Landroidx/fragment/app/FragmentActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v9, v12, v10}, Landroidx/fragment/app/FragmentActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v9
 
-    .line 402
+    .line 407
     .local v9, "generalInfo":Landroid/content/SharedPreferences;
     const-string v10, "Setting - "
 
-    const-string v13, "Setting"
+    const-string v12, "Setting"
 
-    const/4 v14, 0x1
+    const/4 v13, 0x1
 
-    if-ne v8, v14, :cond_a
+    if-ne v8, v13, :cond_a
 
-    const-string v14, "memberEnabled"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
 
-    invoke-interface {v9, v14, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    move-result-object v13
 
-    move-result v12
+    const v14, 0x7f050005
 
-    if-eqz v12, :cond_a
+    invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    .line 404
-    iget-object v12, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
+    move-result v13
+
+    if-eqz v13, :cond_a
+
+    .line 409
+    iget-object v13, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v14, Lcom/tvbusa/encore/tv/Setting;
 
@@ -766,55 +798,55 @@
 
     invoke-direct {v14, v2, v3}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v12, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v13, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 405
+    .line 410
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v12, "\u7368\u5bb6\u7bc0\u76ee"
+    const-string v13, "\u7368\u5bb6\u7bc0\u76ee"
 
     const-string v14, "exclusive"
 
-    invoke-direct {v3, v12, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 406
+    .line 411
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v12, "\u8de8\u5e73\u53f0\u89c0\u770b\u7d00\u9304"
+    const-string v13, "\u8de8\u5e73\u53f0\u89c0\u770b\u7d00\u9304"
 
     const-string v14, "history"
 
-    invoke-direct {v3, v12, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 407
+    .line 412
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v12, "\u6211\u7684\u6536\u85cf"
+    const-string v13, "\u6211\u7684\u6536\u85cf"
 
     const-string v14, "fav"
 
-    invoke-direct {v3, v12, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 409
+    .line 414
     new-instance v2, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v2, v5}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
     move-object v6, v2
 
-    .line 410
+    .line 415
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -835,9 +867,9 @@
 
     move-result-object v2
 
-    invoke-static {v13, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 411
+    .line 416
     const/4 v2, 0x0
 
     .local v2, "k":I
@@ -850,7 +882,7 @@
 
     if-ge v2, v3, :cond_9
 
-    .line 412
+    .line 417
     iget-object v3, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -859,56 +891,52 @@
 
     invoke-virtual {v6, v3}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 413
+    .line 418
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v12, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
+    iget-object v13, v0, Lcom/tvbusa/encore/tv/MainFragment;->memberList:Ljava/util/List;
 
-    invoke-interface {v12, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v13, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v12
+    move-result-object v13
 
-    check-cast v12, Lcom/tvbusa/encore/tv/Setting;
+    check-cast v13, Lcom/tvbusa/encore/tv/Setting;
 
-    invoke-virtual {v12}, Lcom/tvbusa/encore/tv/Setting;->getName()Ljava/lang/String;
+    invoke-virtual {v13}, Lcom/tvbusa/encore/tv/Setting;->getName()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v13
 
-    invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v13, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 411
+    .line 416
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_7
 
-    .line 415
+    .line 420
     .end local v2    # "k":I
     :cond_9
     new-instance v2, Landroidx/leanback/widget/HeaderItem;
 
     const-string v3, "\u6703\u54e1\u5c08\u5340"
 
-    move-object v14, v11
+    const-wide/16 v13, 0x0
 
-    const-wide/16 v11, 0x0
-
-    .end local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
-    .local v14, "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
-    invoke-direct {v2, v11, v12, v3}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
+    invoke-direct {v2, v13, v14, v3}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
 
     move-object v7, v2
 
-    .line 416
+    .line 421
     new-instance v2, Landroidx/leanback/widget/ListRow;
 
     invoke-direct {v2, v7, v6}, Landroidx/leanback/widget/ListRow;-><init>(Landroidx/leanback/widget/HeaderItem;Landroidx/leanback/widget/ObjectAdapter;)V
@@ -917,25 +945,19 @@
 
     goto :goto_8
 
-    .line 402
-    .end local v14    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
+    .line 407
     .end local v16    # "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     .end local v17    # "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
     .local v2, "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     .restart local v3    # "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
-    .restart local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     :cond_a
     move-object/from16 v16, v2
 
     move-object/from16 v17, v3
 
-    move-object v14, v11
-
-    .line 419
+    .line 424
     .end local v2    # "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     .end local v3    # "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
-    .end local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
-    .restart local v14    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     .restart local v16    # "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     .restart local v17    # "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
     :goto_8
@@ -949,53 +971,91 @@
 
     sub-int/2addr v2, v3
 
-    if-ne v8, v2, :cond_c
+    if-ne v8, v2, :cond_d
 
-    .line 420
+    .line 425
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f050007
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    .line 426
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v11, "\u7528\u6236\u7de8\u865f"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
 
-    const-string v12, "about"
+    move-result-object v13
 
-    invoke-direct {v3, v11, v12}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const v14, 0x7f120162
+
+    invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "about"
+
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 421
+    .line 428
+    :cond_b
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v11, "\u689d\u6b3e\u53ca\u7d30\u5247"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
 
-    const-string v12, "t&c"
+    move-result-object v13
 
-    invoke-direct {v3, v11, v12}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const v14, 0x7f120164
+
+    invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "t&c"
+
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 422
+    .line 429
     iget-object v2, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     new-instance v3, Lcom/tvbusa/encore/tv/Setting;
 
-    const-string v11, "\u79c1\u96b1\u8072\u660e"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
 
-    const-string v12, "privacy"
+    move-result-object v13
 
-    invoke-direct {v3, v11, v12}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const v14, 0x7f120163
+
+    invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "privacy"
+
+    invoke-direct {v3, v13, v14}, Lcom/tvbusa/encore/tv/Setting;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 423
+    .line 430
     new-instance v2, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     invoke-direct {v2, v5}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 424
+    .line 431
     .end local v6    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .local v2, "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1018,9 +1078,9 @@
 
     move-result-object v3
 
-    invoke-static {v13, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
+    .line 432
     const/4 v3, 0x0
 
     .local v3, "k":I
@@ -1031,9 +1091,9 @@
 
     move-result v6
 
-    if-ge v3, v6, :cond_b
+    if-ge v3, v6, :cond_c
 
-    .line 426
+    .line 433
     iget-object v6, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1042,50 +1102,58 @@
 
     invoke-virtual {v2, v6}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 427
+    .line 434
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v11, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
+    iget-object v13, v0, Lcom/tvbusa/encore/tv/MainFragment;->settingList:Ljava/util/List;
 
-    invoke-interface {v11, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v13, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v13
 
-    check-cast v11, Lcom/tvbusa/encore/tv/Setting;
+    check-cast v13, Lcom/tvbusa/encore/tv/Setting;
 
-    invoke-virtual {v11}, Lcom/tvbusa/encore/tv/Setting;->getName()Ljava/lang/String;
+    invoke-virtual {v13}, Lcom/tvbusa/encore/tv/Setting;->getName()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v13
 
-    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v13, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
+    .line 432
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_9
 
-    .line 429
+    .line 436
     .end local v3    # "k":I
-    :cond_b
+    :cond_c
     new-instance v3, Landroidx/leanback/widget/HeaderItem;
 
-    const-string v6, "\u66f4\u591a\u9078\u9805"
+    invoke-virtual/range {p0 .. p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
 
-    const-wide/16 v10, 0x0
+    move-result-object v6
 
-    invoke-direct {v3, v10, v11, v6}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
+    const v10, 0x7f120117
 
-    .line 430
+    invoke-virtual {v6, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-wide/16 v12, 0x0
+
+    invoke-direct {v3, v12, v13, v6}, Landroidx/leanback/widget/HeaderItem;-><init>(JLjava/lang/String;)V
+
+    .line 437
     .end local v7    # "header":Landroidx/leanback/widget/HeaderItem;
     .local v3, "header":Landroidx/leanback/widget/HeaderItem;
     new-instance v6, Landroidx/leanback/widget/ListRow;
@@ -1094,14 +1162,14 @@
 
     invoke-virtual {v1, v6}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 354
+    .line 359
     .end local v2    # "listRowAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     .end local v3    # "header":Landroidx/leanback/widget/HeaderItem;
     .end local v9    # "generalInfo":Landroid/content/SharedPreferences;
-    :cond_c
+    :cond_d
     add-int/lit8 v8, v8, 0x1
 
-    move-object v6, v14
+    move-object v6, v11
 
     move-object v7, v15
 
@@ -1111,8 +1179,8 @@
 
     goto/16 :goto_0
 
-    .line 434
-    .end local v14    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
+    .line 441
+    .end local v11    # "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     .end local v15    # "topBannerPresenter":Lcom/tvbusa/encore/tv/TopBannerPresenter;
     .end local v16    # "seriesPresenter":Lcom/tvbusa/encore/tv/SeriesPresenter;
     .end local v17    # "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
@@ -1120,10 +1188,10 @@
     .local v3, "categoryPresenter":Lcom/tvbusa/encore/tv/CategoryPresenter;
     .local v6, "livePresenter":Lcom/tvbusa/encore/tv/LivePresenter;
     .local v7, "topBannerPresenter":Lcom/tvbusa/encore/tv/TopBannerPresenter;
-    :cond_d
+    :cond_e
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/MainFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 436
+    .line 443
     return-void
 .end method
 
@@ -2062,13 +2130,13 @@
         }
     .end annotation
 
-    .line 274
+    .line 279
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 275
+    .line 280
     .local v0, "layoutObject":Lorg/json/JSONObject;
     const-string v1, "LiveChannel"
 
@@ -2076,11 +2144,11 @@
 
     move-result-object v1
 
-    .line 276
+    .line 281
     .local v1, "liveLayout":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 277
+    .line 282
     .local v2, "count":I
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -2088,7 +2156,7 @@
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 278
+    .line 283
     .local v3, "lastItem":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
@@ -2097,12 +2165,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 279
+    .line 284
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 280
+    .line 285
     .local v4, "liveObject":Lorg/json/JSONObject;
     const-string v5, "name"
 
@@ -2110,7 +2178,7 @@
 
     move-result-object v5
 
-    .line 281
+    .line 286
     .local v5, "name":Ljava/lang/String;
     const-string v6, "img"
 
@@ -2118,7 +2186,7 @@
 
     move-result-object v6
 
-    .line 282
+    .line 287
     .local v6, "img":Ljava/lang/String;
     const-string v7, "feed"
 
@@ -2126,7 +2194,7 @@
 
     move-result-object v7
 
-    .line 283
+    .line 288
     .local v7, "url":Ljava/lang/String;
     const-string v8, "banner"
 
@@ -2134,37 +2202,37 @@
 
     move-result-object v8
 
-    .line 284
+    .line 289
     .local v8, "banner":Ljava/lang/String;
     const-string v9, "LiveChannel - Banner"
 
     invoke-static {v9, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
+    .line 290
     const-string v9, "LiveChannel - Img"
 
     invoke-static {v9, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
+    .line 291
     new-instance v9, Lcom/tvbusa/encore/tv/LiveChannel;
 
     invoke-direct {v9, v5, v6, v7, v8}, Lcom/tvbusa/encore/tv/LiveChannel;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
+    .line 292
     .local v9, "channel":Lcom/tvbusa/encore/tv/LiveChannel;
     iget-object v10, p0, Lcom/tvbusa/encore/tv/MainFragment;->channelList:Ljava/util/List;
 
     invoke-interface {v10, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 288
+    .line 293
     if-ne v2, v3, :cond_0
 
-    .line 289
+    .line 294
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->parseWatchHistory()V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 291
+    .line 296
     :cond_0
     nop
 
@@ -2176,10 +2244,10 @@
     .end local v9    # "channel":Lcom/tvbusa/encore/tv/LiveChannel;
     add-int/lit8 v2, v2, 0x1
 
-    .line 292
+    .line 297
     goto :goto_0
 
-    .line 296
+    .line 301
     .end local v0    # "layoutObject":Lorg/json/JSONObject;
     .end local v1    # "liveLayout":Lorg/json/JSONArray;
     .end local v2    # "count":I
@@ -2187,22 +2255,22 @@
     :cond_1
     goto :goto_1
 
-    .line 294
+    .line 299
     :catch_0
     move-exception v0
 
-    .line 295
+    .line 300
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 297
+    .line 302
     .end local v0    # "e":Lorg/json/JSONException;
     :goto_1
     return-void
 .end method
 
 .method public parseGenreCategory(Ljava/lang/String;)V
-    .locals 9
+    .locals 10
     .param p1, "result"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -2246,7 +2314,7 @@
 
     move-result v4
 
-    if-ge v2, v4, :cond_1
+    if-ge v2, v4, :cond_2
 
     .line 256
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
@@ -2288,16 +2356,36 @@
 
     invoke-interface {v8, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 262
-    if-ne v2, v3, :cond_0
-
     .line 263
+    if-ne v2, v3, :cond_1
+
+    .line 264
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    const v9, 0x7f050004
+
+    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    .line 265
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/MainFragment;->parseChannelList(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 267
+    :cond_0
+    invoke-virtual {p0}, Lcom/tvbusa/encore/tv/MainFragment;->parseWatchHistory()V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 265
-    :cond_0
+    .line 270
+    :cond_1
+    :goto_1
     nop
 
     .end local v4    # "cObject":Lorg/json/JSONObject;
@@ -2306,40 +2394,40 @@
     .end local v7    # "category":Lcom/tvbusa/encore/tv/Category;
     add-int/lit8 v2, v2, 0x1
 
-    .line 266
+    .line 271
     goto :goto_0
 
-    .line 269
+    .line 274
     .end local v0    # "layoutObject":Lorg/json/JSONObject;
     .end local v1    # "categoryLayout":Lorg/json/JSONArray;
     .end local v2    # "count":I
     .end local v3    # "lastItem":I
-    :cond_1
-    goto :goto_1
+    :cond_2
+    goto :goto_2
 
-    .line 267
+    .line 272
     :catch_0
     move-exception v0
 
-    .line 268
+    .line 273
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 270
+    .line 275
     .end local v0    # "e":Lorg/json/JSONException;
-    :goto_1
+    :goto_2
     return-void
 .end method
 
 .method public parseWatchHistory()V
     .locals 4
 
-    .line 300
+    .line 305
     invoke-static {}, Lcom/google/firebase/firestore/FirebaseFirestore;->getInstance()Lcom/google/firebase/firestore/FirebaseFirestore;
 
     move-result-object v0
 
-    .line 301
+    .line 306
     .local v0, "firestore":Lcom/google/firebase/firestore/FirebaseFirestore;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2361,7 +2449,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
+    .line 308
     iget-object v1, p0, Lcom/tvbusa/encore/tv/MainFragment;->sss:Ljava/lang/String;
 
     if-nez v1, :cond_0
@@ -2370,7 +2458,7 @@
 
     return-void
 
-    .line 305
+    .line 310
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -2384,7 +2472,7 @@
 
     return-void
 
-    .line 307
+    .line 312
     :cond_1
     const-string v1, "user"
 
@@ -2418,7 +2506,7 @@
 
     move-result-object v1
 
-    .line 308
+    .line 313
     invoke-virtual {v1}, Lcom/google/firebase/firestore/Query;->get()Lcom/google/android/gms/tasks/Task;
 
     move-result-object v1
@@ -2429,6 +2517,6 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
-    .line 340
+    .line 345
     return-void
 .end method

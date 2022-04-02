@@ -34,22 +34,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 48
+    .line 50
     invoke-direct {p0}, Landroidx/leanback/app/VerticalGridSupportFragment;-><init>()V
 
-    .line 50
+    .line 52
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/HistoryFragment;->name:Ljava/lang/String;
 
-    .line 51
+    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/HistoryFragment;->historyList:Ljava/util/List;
 
-    .line 52
+    .line 54
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Lcom/tvbusa/encore/tv/HistoryActivityPresenter;
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/HistoryFragment;->mAdapter:Landroidx/leanback/widget/ArrayObjectAdapter;
 
-    .line 54
+    .line 56
     new-instance v0, Lokhttp3/OkHttpClient;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient;-><init>()V
@@ -74,7 +74,7 @@
     .locals 0
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/HistoryFragment;
 
-    .line 48
+    .line 50
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/HistoryFragment;->setupFragment()V
 
     return-void
@@ -83,7 +83,7 @@
 .method private setupFragment()V
     .locals 3
 
-    .line 133
+    .line 135
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Lcom/tvbusa/encore/tv/HistoryActivityPresenter;
@@ -92,7 +92,7 @@
 
     invoke-direct {v0, v1}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 134
+    .line 136
     .local v0, "mAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v1, 0x0
 
@@ -106,7 +106,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 135
+    .line 137
     iget-object v2, p0, Lcom/tvbusa/encore/tv/HistoryFragment;->historyList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -115,17 +115,17 @@
 
     invoke-virtual {v0, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 134
+    .line 136
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 137
+    .line 139
     .end local v1    # "i":I
     :cond_0
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 138
+    .line 140
     return-void
 .end method
 
@@ -143,10 +143,10 @@
         }
     .end annotation
 
-    .line 58
+    .line 60
     invoke-super {p0, p1}, Landroidx/leanback/app/VerticalGridSupportFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 59
+    .line 61
     new-instance v0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewSelectedListener;
 
     const/4 v1, 0x0
@@ -155,14 +155,14 @@
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryFragment;->setOnItemViewSelectedListener(Landroidx/leanback/widget/OnItemViewSelectedListener;)V
 
-    .line 60
+    .line 62
     new-instance v0, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;
 
     invoke-direct {v0, p0, v1}, Lcom/tvbusa/encore/tv/HistoryFragment$ItemViewClickedListener;-><init>(Lcom/tvbusa/encore/tv/HistoryFragment;Lcom/tvbusa/encore/tv/HistoryFragment$1;)V
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryFragment;->setOnItemViewClickedListener(Landroidx/leanback/widget/OnItemViewClickedListener;)V
 
-    .line 62
+    .line 64
     return-void
 .end method
 
@@ -178,26 +178,26 @@
         }
     .end annotation
 
-    .line 71
+    .line 73
     invoke-super {p0, p1}, Landroidx/leanback/app/VerticalGridSupportFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 72
+    .line 74
     const-string v0, "Exclusive"
 
     const-string v1, "Parse DB"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
+    .line 76
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 75
+    .line 77
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 78
     const-string v1, "name"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -206,42 +206,42 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/HistoryFragment;->name:Ljava/lang/String;
 
-    .line 79
+    .line 81
     :cond_0
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryFragment;->parseHistory()V
 
-    .line 81
+    .line 83
     new-instance v1, Landroidx/leanback/widget/VerticalGridPresenter;
 
     invoke-direct {v1}, Landroidx/leanback/widget/VerticalGridPresenter;-><init>()V
 
-    .line 82
+    .line 84
     .local v1, "gridPresenter":Landroidx/leanback/widget/VerticalGridPresenter;
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Landroidx/leanback/widget/VerticalGridPresenter;->setNumberOfColumns(I)V
 
-    .line 83
+    .line 85
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/HistoryFragment;->setGridPresenter(Landroidx/leanback/widget/VerticalGridPresenter;)V
 
-    .line 84
+    .line 86
     return-void
 .end method
 
 .method public onPause()V
     .locals 0
 
-    .line 66
+    .line 68
     invoke-super {p0}, Landroidx/leanback/app/VerticalGridSupportFragment;->onPause()V
 
-    .line 67
+    .line 69
     return-void
 .end method
 
 .method public parseHistory()V
     .locals 10
 
-    .line 87
+    .line 89
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -254,7 +254,7 @@
 
     move-result-object v0
 
-    .line 88
+    .line 90
     .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string v1, "token"
 
@@ -264,7 +264,7 @@
 
     move-result-object v1
 
-    .line 90
+    .line 92
     .local v1, "token":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -274,7 +274,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120062
+    const v4, 0x7f12005d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -290,7 +290,7 @@
 
     move-result-object v2
 
-    .line 91
+    .line 93
     .local v2, "url":Ljava/lang/String;
     const-string v3, "application/json"
 
@@ -298,7 +298,7 @@
 
     move-result-object v4
 
-    .line 92
+    .line 94
     .local v4, "JSON":Lokhttp3/MediaType;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -318,13 +318,13 @@
 
     move-result-object v5
 
-    .line 93
+    .line 95
     .local v5, "params":Ljava/lang/String;
     invoke-static {v4, v5}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v6
 
-    .line 94
+    .line 96
     .local v6, "body":Lokhttp3/RequestBody;
     new-instance v7, Lokhttp3/Request$Builder;
 
@@ -350,13 +350,13 @@
 
     move-result-object v3
 
-    .line 96
+    .line 98
     .local v3, "request":Lokhttp3/Request;
     new-instance v7, Lokhttp3/OkHttpClient;
 
     invoke-direct {v7}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 97
+    .line 99
     .local v7, "client":Lokhttp3/OkHttpClient;
     invoke-virtual {v7, v3}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -368,6 +368,6 @@
 
     invoke-interface {v8, v9}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 
-    .line 130
+    .line 132
     return-void
 .end method

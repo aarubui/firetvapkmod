@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 669
+    .line 671
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 673
+    .line 675
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$500(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)Ljava/lang/String;
@@ -79,13 +79,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
+    .line 676
     packed-switch p1, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 676
+    .line 678
     :pswitch_1
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
@@ -93,10 +93,10 @@
 
     invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$902(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 677
+    .line 679
     goto :goto_0
 
-    .line 680
+    .line 682
     :pswitch_2
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
@@ -104,10 +104,10 @@
 
     invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$902(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 681
+    .line 683
     goto :goto_0
 
-    .line 683
+    .line 685
     :pswitch_3
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$13;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
@@ -115,10 +115,10 @@
 
     invoke-static {v0, v1}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$902(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;)Lcom/tvbusa/encore/tv/BCOVPlayerActivity$AudioFocusState;
 
-    .line 684
+    .line 686
     nop
 
-    .line 687
+    .line 689
     :goto_0
     return-void
 

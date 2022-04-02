@@ -11,7 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 14
     invoke-direct {p0}, Landroidx/leanback/widget/Presenter;-><init>()V
 
     return-void
@@ -34,18 +34,18 @@
         }
     .end annotation
 
-    .line 26
+    .line 25
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Series;
 
-    .line 27
+    .line 26
     .local v0, "series":Lcom/tvbusa/encore/tv/Series;
     iget-object v1, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v1, Lcom/tvbusa/encore/tv/CategorySeriesCardView;
 
-    .line 29
+    .line 28
     .local v1, "cardView":Lcom/tvbusa/encore/tv/CategorySeriesCardView;
     const-string v2, "CategorySeriesPresenter"
 
@@ -53,21 +53,21 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
+    .line 29
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Series;->getId()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 31
+    .line 30
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Series;->getThumb()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/CategorySeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 33
+    .line 32
     :cond_0
     return-void
 .end method
@@ -84,14 +84,14 @@
         }
     .end annotation
 
-    .line 20
+    .line 19
     const-string v0, "CategorySeriesPresenter"
 
     const-string v1, "onCreateViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
+    .line 20
     new-instance v0, Landroidx/leanback/widget/Presenter$ViewHolder;
 
     new-instance v1, Lcom/tvbusa/encore/tv/CategorySeriesCardView;
@@ -119,24 +119,24 @@
         }
     .end annotation
 
-    .line 37
+    .line 36
     const-string v0, "CategorySeriesPresenter"
 
     const-string v1, "onUnbindViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
+    .line 37
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v0, Lcom/tvbusa/encore/tv/CategorySeriesCardView;
 
-    .line 39
+    .line 38
     .local v0, "cardView":Lcom/tvbusa/encore/tv/CategorySeriesCardView;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/CategorySeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 40
+    .line 39
     return-void
 .end method

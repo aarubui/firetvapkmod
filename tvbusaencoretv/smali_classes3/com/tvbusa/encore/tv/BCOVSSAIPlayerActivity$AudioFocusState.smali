@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 112
+    .line 117
     new-instance v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
     const-string v1, "Focused"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->Focused:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
-    .line 113
+    .line 118
     new-instance v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
     const-string v3, "NoFocusNoDuck"
@@ -58,7 +58,7 @@
 
     sput-object v1, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->NoFocusNoDuck:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
-    .line 114
+    .line 119
     new-instance v3, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
     const-string v5, "NoFocusCanDuck"
@@ -69,7 +69,7 @@
 
     sput-object v3, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->NoFocusCanDuck:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
-    .line 111
+    .line 116
     const/4 v5, 0x3
 
     new-array v5, v5, [Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
@@ -104,7 +104,7 @@
         }
     .end annotation
 
-    .line 111
+    .line 116
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -122,7 +122,7 @@
         }
     .end annotation
 
-    .line 111
+    .line 116
     const-class v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -137,7 +137,7 @@
 .method public static values()[Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
     .locals 1
 
-    .line 111
+    .line 116
     sget-object v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->$VALUES:[Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;
 
     invoke-virtual {v0}, [Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$AudioFocusState;->clone()Ljava/lang/Object;

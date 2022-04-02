@@ -11,7 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 17
     invoke-direct {p0}, Landroidx/leanback/widget/Presenter;-><init>()V
 
     return-void
@@ -34,23 +34,23 @@
         }
     .end annotation
 
-    .line 27
+    .line 29
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
     if-eqz v0, :cond_1
 
-    .line 28
+    .line 30
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Series;
 
-    .line 29
+    .line 31
     .local v0, "series":Lcom/tvbusa/encore/tv/Series;
     iget-object v1, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v1, Lcom/tvbusa/encore/tv/SeriesCardView;
 
-    .line 31
+    .line 33
     .local v1, "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/Series;->getId()Ljava/lang/String;
 
@@ -64,7 +64,7 @@
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/SeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 32
+    .line 34
     :cond_0
     const/4 v2, 0x0
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/SeriesCardView;->setTxtVisibility(Ljava/lang/Boolean;)V
 
-    .line 35
+    .line 37
     .end local v0    # "series":Lcom/tvbusa/encore/tv/Series;
     .end local v1    # "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     :cond_1
@@ -82,18 +82,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 36
+    .line 38
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v0, Lcom/tvbusa/encore/tv/SeriesCardView;
 
-    .line 37
+    .line 39
     .local v0, "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     const-string v1, "\u986f\u793a\u66f4\u591a"
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesCardView;->setTxt(Ljava/lang/String;)V
 
-    .line 38
+    .line 40
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesCardView;->setTxtVisibility(Ljava/lang/Boolean;)V
 
-    .line 41
+    .line 43
     .end local v0    # "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     :cond_2
     return-void
@@ -120,14 +120,14 @@
         }
     .end annotation
 
-    .line 20
+    .line 22
     const-string v0, "SeriesPresenter"
 
     const-string v1, "onCreateViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
+    .line 23
     new-instance v0, Landroidx/leanback/widget/Presenter$ViewHolder;
 
     new-instance v1, Lcom/tvbusa/encore/tv/SeriesCardView;
@@ -155,25 +155,25 @@
         }
     .end annotation
 
-    .line 45
+    .line 47
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     instance-of v0, v0, Lcom/tvbusa/encore/tv/SeriesCardView;
 
     if-eqz v0, :cond_0
 
-    .line 46
+    .line 48
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v0, Lcom/tvbusa/encore/tv/SeriesCardView;
 
-    .line 47
+    .line 49
     .local v0, "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 49
+    .line 51
     .end local v0    # "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     :cond_0
     return-void

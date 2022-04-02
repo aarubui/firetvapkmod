@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 65
+    .line 67
     iput-object p1, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 68
+    .line 70
     iget-object v0, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     const v1, 0x7f0b00f9
@@ -67,7 +67,7 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    .line 69
+    .line 71
     .local v0, "email":Landroid/widget/EditText;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
@@ -79,7 +79,7 @@
 
     check-cast v1, Landroid/widget/EditText;
 
-    .line 70
+    .line 72
     .local v1, "password":Landroid/widget/EditText;
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -99,7 +99,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 71
+    .line 73
     iget-object v2, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/LoginActivity;->getApplicationContext()Landroid/content/Context;
@@ -116,7 +116,7 @@
 
     goto :goto_0
 
-    .line 72
+    .line 74
     :cond_0
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -132,7 +132,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 73
+    .line 75
     iget-object v2, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/LoginActivity;->getApplicationContext()Landroid/content/Context;
@@ -149,7 +149,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 77
     :cond_1
     iget-object v2, p0, Lcom/tvbusa/encore/tv/LoginActivity$2;->this$0:Lcom/tvbusa/encore/tv/LoginActivity;
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/tvbusa/encore/tv/LoginActivity;->signIn(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
+    .line 79
     :goto_0
     return-void
 .end method

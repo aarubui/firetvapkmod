@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 127
     iput-object p1, p0, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/CategoryFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p1, "x0"    # Lcom/tvbusa/encore/tv/CategoryFragment;
     .param p2, "x1"    # Lcom/tvbusa/encore/tv/CategoryFragment$1;
 
-    .line 122
+    .line 127
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;-><init>(Lcom/tvbusa/encore/tv/CategoryFragment;)V
 
     return-void
@@ -75,21 +75,21 @@
         }
     .end annotation
 
-    .line 125
+    .line 130
     if-eqz p2, :cond_0
 
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 131
     const-string v0, "CategoryFragment"
 
     const-string v1, "Is Not Null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 132
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Series;
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    .line 128
+    .line 133
     .local v0, "url":Ljava/lang/String;
     move-object v1, p2
 
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    .line 129
+    .line 134
     .local v1, "title":Ljava/lang/String;
     move-object v2, p2
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    .line 130
+    .line 135
     .local v2, "info":Ljava/lang/String;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/CategoryFragment;
 
@@ -134,7 +134,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 131
+    .line 136
     .local v3, "titleView":Landroid/widget/TextView;
     iget-object v4, p0, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/CategoryFragment;
 
@@ -150,7 +150,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 132
+    .line 137
     .local v4, "infoView":Landroid/widget/TextView;
     iget-object v5, p0, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/CategoryFragment;
 
@@ -166,11 +166,11 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    .line 134
+    .line 139
     .local v5, "imageView":Landroid/widget/ImageView;
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 135
+    .line 140
     iget-object v6, p0, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/CategoryFragment;
 
     invoke-virtual {v6}, Lcom/tvbusa/encore/tv/CategoryFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -181,22 +181,22 @@
 
     move-result-object v6
 
-    .line 136
+    .line 141
     invoke-virtual {v6, v0}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object v6
 
-    .line 137
+    .line 142
     invoke-virtual {v6}, Lcom/bumptech/glide/RequestBuilder;->fitCenter()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v6
 
     check-cast v6, Lcom/bumptech/glide/RequestBuilder;
 
-    .line 139
+    .line 144
     invoke-virtual {v6, v5}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
-    .line 141
+    .line 146
     .end local v0    # "url":Ljava/lang/String;
     .end local v1    # "title":Ljava/lang/String;
     .end local v2    # "info":Ljava/lang/String;
@@ -224,7 +224,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 127
     check-cast p4, Landroidx/leanback/widget/Row;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tvbusa/encore/tv/CategoryFragment$ItemViewSelectedListener;->onItemSelected(Landroidx/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroidx/leanback/widget/RowPresenter$ViewHolder;Landroidx/leanback/widget/Row;)V

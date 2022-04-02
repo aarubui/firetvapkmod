@@ -59,32 +59,32 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 36
+    .line 37
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->name:Ljava/lang/String;
 
-    .line 37
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->key:Ljava/lang/String;
-
     .line 38
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->seriesList:Ljava/util/List;
+    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->key:Ljava/lang/String;
 
     .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultList:Ljava/util/List;
+    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->seriesList:Ljava/util/List;
 
     .line 40
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultList:Ljava/util/List;
+
+    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -98,7 +98,7 @@
     .locals 0
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/SearchActivity;
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/SearchActivity;->searchContent()V
 
     return-void
@@ -109,7 +109,7 @@
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/SearchActivity;
     .param p1, "x1"    # Ljava/lang/String;
 
-    .line 34
+    .line 35
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/SearchActivity;->parseSearchJson(Ljava/lang/String;)V
 
     return-void
@@ -127,7 +127,7 @@
         }
     .end annotation
 
-    .line 126
+    .line 127
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -135,12 +135,12 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->contentObject:Lorg/json/JSONObject;
 
-    .line 127
+    .line 128
     invoke-virtual {v0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 128
+    .line 129
     .local v0, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -149,7 +149,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 129
+    .line 130
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->contentObject:Lorg/json/JSONObject;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -164,10 +164,10 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->contentArray:Lorg/json/JSONArray;
 
-    .line 130
+    .line 131
     const/4 v2, 0x0
 
-    .line 131
+    .line 132
     .local v2, "category":I
     const-string v3, "Search"
 
@@ -177,7 +177,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
+    .line 133
     :goto_1
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->contentArray:Lorg/json/JSONArray;
 
@@ -187,16 +187,16 @@
 
     if-ge v2, v1, :cond_0
 
-    .line 133
+    .line 134
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->contentArray:Lorg/json/JSONArray;
 
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    .line 134
+    .line 135
     .local v1, "cObject":Lorg/json/JSONObject;
-    const v3, 0x7f12005f
+    const v3, 0x7f12005a
 
     invoke-virtual {p0, v3}, Lcom/tvbusa/encore/tv/SearchActivity;->getString(I)Ljava/lang/String;
 
@@ -206,9 +206,9 @@
 
     move-result-object v3
 
-    .line 135
+    .line 136
     .local v3, "title":Ljava/lang/String;
-    const v4, 0x7f12016d
+    const v4, 0x7f120161
 
     invoke-virtual {p0, v4}, Lcom/tvbusa/encore/tv/SearchActivity;->getString(I)Ljava/lang/String;
 
@@ -218,7 +218,7 @@
 
     move-result-object v6
 
-    .line 136
+    .line 137
     .local v6, "eng":Ljava/lang/String;
     const-string v4, "thumb"
 
@@ -226,7 +226,7 @@
 
     move-result-object v8
 
-    .line 137
+    .line 138
     .local v8, "thumb":Ljava/lang/String;
     const-string v4, "pid"
 
@@ -234,7 +234,7 @@
 
     move-result-object v7
 
-    .line 138
+    .line 139
     .local v7, "id":Ljava/lang/String;
     const-string v4, "keyword"
 
@@ -242,7 +242,7 @@
 
     move-result-object v9
 
-    .line 139
+    .line 140
     .local v9, "keyword":Ljava/lang/String;
     new-instance v10, Lcom/tvbusa/encore/tv/SearchSeries;
 
@@ -254,20 +254,20 @@
 
     move-object v4, v10
 
-    .line 140
+    .line 141
     .local v4, "searchSeries":Lcom/tvbusa/encore/tv/SearchSeries;
     const-string v5, "Initial Search"
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
+    .line 142
     iget-object v5, p0, Lcom/tvbusa/encore/tv/SearchActivity;->seriesList:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 142
+    .line 143
     nop
 
     .end local v1    # "cObject":Lorg/json/JSONObject;
@@ -279,28 +279,28 @@
     .end local v9    # "keyword":Ljava/lang/String;
     add-int/lit8 v2, v2, 0x1
 
-    .line 143
+    .line 144
     goto :goto_1
 
-    .line 144
+    .line 145
     .end local v2    # "category":I
     :cond_0
     goto :goto_0
 
-    .line 147
+    .line 148
     .end local v0    # "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_1
     goto :goto_2
 
-    .line 145
+    .line 146
     :catch_0
     move-exception v0
 
-    .line 146
+    .line 147
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 148
+    .line 149
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_2
     return-void
@@ -309,20 +309,20 @@
 .method private searchContent()V
     .locals 6
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultIdList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 90
+    .line 91
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 92
+    .line 93
     const/4 v0, 0x0
 
-    .line 94
+    .line 95
     .local v0, "searchCount":I
     :goto_0
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->seriesList:Ljava/util/List;
@@ -333,7 +333,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 95
+    .line 96
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchActivity;->seriesList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -342,7 +342,7 @@
 
     check-cast v1, Lcom/tvbusa/encore/tv/SearchSeries;
 
-    .line 96
+    .line 97
     .local v1, "checkDrama":Lcom/tvbusa/encore/tv/SearchSeries;
     invoke-virtual {v1}, Lcom/tvbusa/encore/tv/SearchSeries;->getKeyword()Ljava/lang/String;
 
@@ -352,7 +352,7 @@
 
     move-result-object v2
 
-    .line 97
+    .line 98
     .local v2, "keyword":Ljava/lang/String;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchActivity;->searchInput:Landroid/widget/EditText;
 
@@ -368,7 +368,7 @@
 
     move-result-object v3
 
-    .line 98
+    .line 99
     .local v3, "q":Ljava/lang/String;
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -376,7 +376,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 99
+    .line 100
     iget-object v4, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultIdList:Ljava/util/List;
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -395,25 +395,25 @@
 
     if-eqz v4, :cond_0
 
-    .line 100
+    .line 101
     const-string v4, "Duplicate"
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 102
+    .line 103
     :cond_0
     const-string v4, "Should Add"
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 104
     iget-object v4, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultList:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 104
+    .line 105
     iget-object v4, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultIdList:Ljava/util/List;
 
     invoke-virtual {v1}, Lcom/tvbusa/encore/tv/SearchSeries;->getId()Ljava/lang/String;
@@ -422,7 +422,7 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 107
+    .line 108
     :cond_1
     :goto_1
     nop
@@ -432,22 +432,22 @@
     .end local v3    # "q":Ljava/lang/String;
     add-int/lit8 v0, v0, 0x1
 
-    .line 114
+    .line 115
     goto :goto_0
 
-    .line 117
+    .line 118
     :cond_2
     new-instance v1, Lcom/tvbusa/encore/tv/SearchFragment;
 
     invoke-direct {v1}, Lcom/tvbusa/encore/tv/SearchFragment;-><init>()V
 
-    .line 118
+    .line 119
     .local v1, "searchFragment":Lcom/tvbusa/encore/tv/SearchFragment;
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 119
+    .line 120
     .local v2, "arguments":Landroid/os/Bundle;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/SearchActivity;->resultList:Ljava/util/List;
 
@@ -457,10 +457,10 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 120
+    .line 121
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/SearchFragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 121
+    .line 122
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v3
@@ -479,7 +479,7 @@
 
     invoke-virtual {v3}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    .line 122
+    .line 123
     return-void
 .end method
 
@@ -497,15 +497,15 @@
         }
     .end annotation
 
-    .line 48
+    .line 49
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 49
+    .line 50
     const v0, 0x7f0e0025
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->setContentView(I)V
 
-    .line 50
+    .line 51
     new-instance v0, Lcom/tvbusa/encore/tv/SearchActivity$ContentTask;
 
     invoke-direct {v0, p0}, Lcom/tvbusa/encore/tv/SearchActivity$ContentTask;-><init>(Lcom/tvbusa/encore/tv/SearchActivity;)V
@@ -516,7 +516,7 @@
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SearchActivity$ContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 52
+    .line 53
     const v0, 0x7f0b026b
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -527,7 +527,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->searchInput:Landroid/widget/EditText;
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -536,7 +536,7 @@
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchActivity;->mApp:Lcom/tvbusa/encore/tv/MainApplication;
 
-    .line 56
+    .line 57
     const v0, 0x7f0b026a
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -545,7 +545,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 57
+    .line 58
     .local v0, "searchBtn":Landroid/widget/Button;
     new-instance v1, Lcom/tvbusa/encore/tv/SearchActivity$1;
 
@@ -553,6 +553,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 64
+    .line 65
     return-void
 .end method

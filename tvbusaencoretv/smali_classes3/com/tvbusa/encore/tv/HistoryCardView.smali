@@ -20,13 +20,13 @@
         }
     .end annotation
 
-    .line 17
+    .line 18
     invoke-direct {p0, p1}, Landroidx/leanback/widget/BaseCardView;-><init>(Landroid/content/Context;)V
 
-    .line 18
+    .line 19
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryCardView;->buildCardView()V
 
-    .line 19
+    .line 20
     return-void
 .end method
 
@@ -35,18 +35,18 @@
 .method protected buildCardView()V
     .locals 2
 
-    .line 22
+    .line 23
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryCardView;->setClickable(Z)V
 
-    .line 23
+    .line 24
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryCardView;->setFocusable(Z)V
 
-    .line 24
+    .line 25
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/HistoryCardView;->setFocusableInTouchMode(Z)V
 
-    .line 25
+    .line 26
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryCardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -55,13 +55,13 @@
 
     move-result-object v0
 
-    .line 26
+    .line 27
     .local v0, "inflater":Landroid/view/LayoutInflater;
     const v1, 0x7f0e0068
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 27
+    .line 28
     const v1, 0x7f0b017a
 
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/HistoryCardView;->findViewById(I)Landroid/view/View;
@@ -72,7 +72,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/HistoryCardView;->_imageView:Landroid/widget/ImageView;
 
-    .line 28
+    .line 29
     return-void
 .end method
 
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 31
+    .line 32
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/HistoryCardView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -97,12 +97,12 @@
 
     move-result-object v0
 
-    .line 32
+    .line 33
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object v0
 
-    .line 33
+    .line 34
     invoke-virtual {v0}, Lcom/bumptech/glide/RequestBuilder;->centerCrop()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v0
@@ -111,9 +111,9 @@
 
     iget-object v1, p0, Lcom/tvbusa/encore/tv/HistoryCardView;->_imageView:Landroid/widget/ImageView;
 
-    .line 34
+    .line 35
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
-    .line 35
+    .line 36
     return-void
 .end method

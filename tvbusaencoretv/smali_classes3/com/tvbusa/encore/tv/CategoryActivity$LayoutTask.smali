@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 56
+    .line 57
     iput-object p1, p0, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/CategoryActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    .line 56
+    .line 57
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
@@ -84,13 +84,13 @@
         }
     .end annotation
 
-    .line 61
+    .line 62
     :try_start_0
     new-instance v0, Lokhttp3/OkHttpClient;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient;-><init>()V
 
-    .line 62
+    .line 63
     .local v0, "client":Lokhttp3/OkHttpClient;
     new-instance v1, Lokhttp3/Request$Builder;
 
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    .line 63
+    .line 64
     .local v1, "request":Lokhttp3/Request;
     invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    .line 64
+    .line 65
     .local v2, "response":Lokhttp3/Response;
     invoke-virtual {v2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -130,11 +130,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
+    .line 66
     .local v3, "res":Ljava/lang/String;
     return-object v3
 
-    .line 66
+    .line 67
     .end local v0    # "client":Lokhttp3/OkHttpClient;
     .end local v1    # "request":Lokhttp3/Request;
     .end local v2    # "response":Lokhttp3/Response;
@@ -142,7 +142,7 @@
     :catch_0
     move-exception v0
 
-    .line 67
+    .line 68
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -160,7 +160,7 @@
         }
     .end annotation
 
-    .line 56
+    .line 57
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->onPostExecute(Ljava/lang/String;)V
@@ -180,27 +180,27 @@
         }
     .end annotation
 
-    .line 72
+    .line 73
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 75
+    .line 76
     new-instance v0, Lcom/tvbusa/encore/tv/CategoryFragment;
 
     invoke-direct {v0}, Lcom/tvbusa/encore/tv/CategoryFragment;-><init>()V
 
-    .line 76
+    .line 77
     .local v0, "mainFragment":Lcom/tvbusa/encore/tv/CategoryFragment;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 77
+    .line 78
     .local v1, "arguments":Landroid/os/Bundle;
     const-string v2, "json"
 
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
+    .line 79
     iget-object v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/CategoryActivity;
 
     iget-object v2, v2, Lcom/tvbusa/encore/tv/CategoryActivity;->key:Ljava/lang/String;
@@ -209,7 +209,7 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
+    .line 80
     iget-object v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/CategoryActivity;
 
     iget-object v2, v2, Lcom/tvbusa/encore/tv/CategoryActivity;->userRegion:Ljava/lang/String;
@@ -218,10 +218,10 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 81
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/CategoryFragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 81
+    .line 82
     iget-object v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->this$0:Lcom/tvbusa/encore/tv/CategoryActivity;
 
     invoke-virtual {v2}, Lcom/tvbusa/encore/tv/CategoryActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -242,6 +242,6 @@
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    .line 83
+    .line 84
     return-void
 .end method

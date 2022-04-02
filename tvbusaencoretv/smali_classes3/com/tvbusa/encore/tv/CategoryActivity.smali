@@ -27,26 +27,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 17
+    .line 18
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    .line 19
+    .line 20
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->name:Ljava/lang/String;
 
-    .line 20
+    .line 21
     iput-object v0, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->key:Ljava/lang/String;
 
-    .line 21
+    .line 22
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->type:I
 
-    .line 22
+    .line 23
     iput-object v0, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->url:Ljava/lang/String;
 
-    .line 23
+    .line 24
     iput-object v0, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->userRegion:Ljava/lang/String;
 
     return-void
@@ -66,30 +66,30 @@
         }
     .end annotation
 
-    .line 27
+    .line 28
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 28
+    .line 29
     const v0, 0x7f0e001e
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/CategoryActivity;->setContentView(I)V
 
-    .line 30
+    .line 31
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/CategoryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 31
+    .line 32
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 32
+    .line 33
     .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 33
+    .line 34
     const-string v2, "name"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -98,7 +98,7 @@
 
     iput-object v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->name:Ljava/lang/String;
 
-    .line 34
+    .line 35
     const-string v2, "key"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -107,7 +107,7 @@
 
     iput-object v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->key:Ljava/lang/String;
 
-    .line 35
+    .line 36
     const-string v2, "type"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -116,7 +116,7 @@
 
     iput v2, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->type:I
 
-    .line 38
+    .line 39
     :cond_0
     const v2, 0x7f0b02da
 
@@ -126,13 +126,13 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 39
+    .line 40
     .local v2, "nameView":Landroid/widget/TextView;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->name:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 41
+    .line 42
     const-string v3, "generalInfo"
 
     const/4 v4, 0x0
@@ -141,7 +141,7 @@
 
     move-result-object v3
 
-    .line 42
+    .line 43
     .local v3, "generalInfo":Landroid/content/SharedPreferences;
     const-string v5, "userRegion"
 
@@ -153,20 +153,20 @@
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->userRegion:Ljava/lang/String;
 
-    .line 44
+    .line 45
     iget v5, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->type:I
 
     packed-switch v5, :pswitch_data_0
 
     goto :goto_0
 
-    .line 46
+    .line 47
     :pswitch_0
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/CategoryActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f120081
+    const v6, 0x7f12007b
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -176,13 +176,13 @@
 
     goto :goto_0
 
-    .line 45
+    .line 46
     :pswitch_1
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/CategoryActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f1200e2
+    const v6, 0x7f1200da
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -190,7 +190,7 @@
 
     iput-object v5, p0, Lcom/tvbusa/encore/tv/CategoryActivity;->url:Ljava/lang/String;
 
-    .line 48
+    .line 49
     :goto_0
     new-instance v5, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v5, v4}, Lcom/tvbusa/encore/tv/CategoryActivity$LayoutTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 49
+    .line 50
     return-void
 
     :pswitch_data_0
@@ -213,9 +213,9 @@
 .method public onPause()V
     .locals 0
 
-    .line 53
+    .line 54
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    .line 54
+    .line 55
     return-void
 .end method

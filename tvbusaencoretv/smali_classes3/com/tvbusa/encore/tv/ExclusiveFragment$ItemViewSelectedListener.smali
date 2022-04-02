@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 216
+    .line 218
     iput-object p1, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p1, "x0"    # Lcom/tvbusa/encore/tv/ExclusiveFragment;
     .param p2, "x1"    # Lcom/tvbusa/encore/tv/ExclusiveFragment$1;
 
-    .line 216
+    .line 218
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;-><init>(Lcom/tvbusa/encore/tv/ExclusiveFragment;)V
 
     return-void
@@ -75,14 +75,14 @@
         }
     .end annotation
 
-    .line 219
+    .line 221
     if-eqz p2, :cond_0
 
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
     if-eqz v0, :cond_0
 
-    .line 220
+    .line 222
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Series;
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    .line 221
+    .line 223
     .local v0, "url":Ljava/lang/String;
     move-object v1, p2
 
@@ -101,7 +101,7 @@
 
     move-result-object v1
 
-    .line 222
+    .line 224
     .local v1, "title":Ljava/lang/String;
     iget-object v2, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
@@ -117,7 +117,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 223
+    .line 225
     .local v2, "infoView":Landroid/widget/TextView;
     iget-object v3, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
@@ -133,11 +133,11 @@
 
     check-cast v3, Landroid/widget/ImageView;
 
-    .line 224
+    .line 226
     .local v3, "imageView":Landroid/widget/ImageView;
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 225
+    .line 227
     iget-object v4, p0, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/ExclusiveFragment;
 
     invoke-virtual {v4}, Lcom/tvbusa/encore/tv/ExclusiveFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -160,7 +160,7 @@
 
     invoke-virtual {v4, v3}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
-    .line 227
+    .line 229
     .end local v0    # "url":Ljava/lang/String;
     .end local v1    # "title":Ljava/lang/String;
     .end local v2    # "infoView":Landroid/widget/TextView;
@@ -186,7 +186,7 @@
         }
     .end annotation
 
-    .line 216
+    .line 218
     check-cast p4, Landroidx/leanback/widget/Row;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tvbusa/encore/tv/ExclusiveFragment$ItemViewSelectedListener;->onItemSelected(Landroidx/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroidx/leanback/widget/RowPresenter$ViewHolder;Landroidx/leanback/widget/Row;)V

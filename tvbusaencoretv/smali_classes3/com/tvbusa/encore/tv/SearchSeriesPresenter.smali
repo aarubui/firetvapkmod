@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 17
     invoke-direct {p0}, Landroidx/leanback/widget/Presenter;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 26
+    .line 28
     if-eqz p1, :cond_0
 
     sget v0, Lcom/tvbusa/encore/tv/SearchSeriesPresenter;->sSelectedBackgroundColor:I
@@ -54,7 +54,7 @@
     :cond_0
     sget v0, Lcom/tvbusa/encore/tv/SearchSeriesPresenter;->sDefaultBackgroundColor:I
 
-    .line 27
+    .line 29
     .local v0, "color":I
     :goto_0
     if-eqz p1, :cond_1
@@ -66,12 +66,12 @@
     :cond_1
     sget v1, Lcom/tvbusa/encore/tv/SearchSeriesPresenter;->sDefaultTextColor:I
 
-    .line 30
+    .line 32
     .local v1, "textColor":I
     :goto_1
     invoke-virtual {p0, v0}, Landroidx/leanback/widget/ImageCardView;->setBackgroundColor(I)V
 
-    .line 31
+    .line 33
     const v2, 0x7f0b018f
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
@@ -80,7 +80,7 @@
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 32
+    .line 34
     const v2, 0x7f0b02de
 
     invoke-virtual {p0, v2}, Landroidx/leanback/widget/ImageCardView;->findViewById(I)Landroid/view/View;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 34
+    .line 36
     return-void
 .end method
 
@@ -112,18 +112,18 @@
         }
     .end annotation
 
-    .line 45
+    .line 47
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/SearchSeries;
 
-    .line 46
+    .line 48
     .local v0, "series":Lcom/tvbusa/encore/tv/SearchSeries;
     iget-object v1, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v1, Lcom/tvbusa/encore/tv/SeriesCardView;
 
-    .line 48
+    .line 50
     .local v1, "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     const-string v2, "SeriesPresenter"
 
@@ -131,21 +131,21 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
+    .line 51
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/SearchSeries;->getId()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 50
+    .line 52
     invoke-virtual {v0}, Lcom/tvbusa/encore/tv/SearchSeries;->getThumb()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/tvbusa/encore/tv/SeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 52
+    .line 54
     :cond_0
     return-void
 .end method
@@ -162,14 +162,14 @@
         }
     .end annotation
 
-    .line 39
+    .line 41
     const-string v0, "SeriesPresenter"
 
     const-string v1, "onCreateViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
+    .line 42
     new-instance v0, Landroidx/leanback/widget/Presenter$ViewHolder;
 
     new-instance v1, Lcom/tvbusa/encore/tv/SeriesCardView;
@@ -197,24 +197,24 @@
         }
     .end annotation
 
-    .line 56
+    .line 58
     const-string v0, "SeriesPresenter"
 
     const-string v1, "onUnbindViewHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
+    .line 59
     iget-object v0, p1, Landroidx/leanback/widget/Presenter$ViewHolder;->view:Landroid/view/View;
 
     check-cast v0, Lcom/tvbusa/encore/tv/SeriesCardView;
 
-    .line 58
+    .line 60
     .local v0, "cardView":Lcom/tvbusa/encore/tv/SeriesCardView;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tvbusa/encore/tv/SeriesCardView;->setImage(Ljava/lang/String;)V
 
-    .line 59
+    .line 61
     return-void
 .end method

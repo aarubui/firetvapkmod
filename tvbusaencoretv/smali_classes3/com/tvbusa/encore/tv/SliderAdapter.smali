@@ -46,20 +46,20 @@
         }
     .end annotation
 
-    .line 25
+    .line 27
     invoke-direct {p0}, Lcom/smarteist/autoimageslider/SliderViewAdapter;-><init>()V
 
-    .line 23
+    .line 25
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
-    .line 26
+    .line 28
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->context:Landroid/content/Context;
 
-    .line 27
+    .line 29
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .locals 1
     .param p0, "x0"    # Lcom/tvbusa/encore/tv/SliderAdapter;
 
-    .line 19
+    .line 21
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->context:Landroid/content/Context;
 
     return-object v0
@@ -87,15 +87,15 @@
         }
     .end annotation
 
-    .line 40
+    .line 42
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 41
+    .line 43
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SliderAdapter;->notifyDataSetChanged()V
 
-    .line 42
+    .line 44
     return-void
 .end method
 
@@ -111,22 +111,22 @@
         }
     .end annotation
 
-    .line 35
+    .line 37
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 36
+    .line 38
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SliderAdapter;->notifyDataSetChanged()V
 
-    .line 37
+    .line 39
     return-void
 .end method
 
 .method public getCount()I
     .locals 1
 
-    .line 74
+    .line 76
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -149,7 +149,7 @@
         }
     .end annotation
 
-    .line 19
+    .line 21
     check-cast p1, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;
 
     invoke-virtual {p0, p1, p2}, Lcom/tvbusa/encore/tv/SliderAdapter;->onBindViewHolder(Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;I)V
@@ -172,7 +172,7 @@
         }
     .end annotation
 
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -181,7 +181,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 58
+    .line 60
     .local v0, "sliderItem":Ljava/lang/String;
     iget-object v1, p1, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->itemView:Landroid/view/View;
 
@@ -189,12 +189,12 @@
 
     move-result-object v1
 
-    .line 59
+    .line 61
     invoke-virtual {v1, v0}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object v1
 
-    .line 60
+    .line 62
     invoke-virtual {v1}, Lcom/bumptech/glide/RequestBuilder;->centerCrop()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object v1
@@ -203,10 +203,10 @@
 
     iget-object v2, p1, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->imageViewBackground:Landroid/widget/ImageView;
 
-    .line 61
+    .line 63
     invoke-virtual {v1, v2}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
-    .line 63
+    .line 65
     iget-object v1, p1, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;->itemView:Landroid/view/View;
 
     new-instance v2, Lcom/tvbusa/encore/tv/SliderAdapter$1;
@@ -215,7 +215,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 69
+    .line 71
     return-void
 .end method
 
@@ -230,7 +230,7 @@
         }
     .end annotation
 
-    .line 19
+    .line 21
     invoke-virtual {p0, p1}, Lcom/tvbusa/encore/tv/SliderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;)Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;
 
     move-result-object p1
@@ -250,7 +250,7 @@
         }
     .end annotation
 
-    .line 46
+    .line 48
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -267,7 +267,7 @@
 
     move-result-object v0
 
-    .line 47
+    .line 49
     .local v0, "inflate":Landroid/view/View;
     new-instance v1, Lcom/tvbusa/encore/tv/SliderAdapter$SliderAdapterVH;
 
@@ -296,13 +296,13 @@
         }
     .end annotation
 
-    .line 30
+    .line 32
     .local p1, "sliderItems":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SliderAdapter;->mSliderItems:Ljava/util/List;
 
-    .line 31
+    .line 33
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SliderAdapter;->notifyDataSetChanged()V
 
-    .line 32
+    .line 34
     return-void
 .end method

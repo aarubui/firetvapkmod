@@ -30,17 +30,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 39
+    .line 41
     invoke-direct {p0}, Landroidx/leanback/app/VerticalGridSupportFragment;-><init>()V
 
-    .line 41
+    .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchResultFragment;->searchList:Ljava/util/List;
 
-    .line 43
+    .line 45
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvbusa/encore/tv/SearchResultFragment;->userRegion:Ljava/lang/String;
@@ -51,7 +51,7 @@
 .method private setupFragment()V
     .locals 3
 
-    .line 77
+    .line 79
     new-instance v0, Landroidx/leanback/widget/ArrayObjectAdapter;
 
     new-instance v1, Lcom/tvbusa/encore/tv/CategorySeriesPresenter;
@@ -60,7 +60,7 @@
 
     invoke-direct {v0, v1}, Landroidx/leanback/widget/ArrayObjectAdapter;-><init>(Landroidx/leanback/widget/Presenter;)V
 
-    .line 78
+    .line 80
     .local v0, "mAdapter":Landroidx/leanback/widget/ArrayObjectAdapter;
     const/4 v1, 0x0
 
@@ -74,7 +74,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 79
+    .line 81
     iget-object v2, p0, Lcom/tvbusa/encore/tv/SearchResultFragment;->searchList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -83,17 +83,17 @@
 
     invoke-virtual {v0, v2}, Landroidx/leanback/widget/ArrayObjectAdapter;->add(Ljava/lang/Object;)V
 
-    .line 78
+    .line 80
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 81
+    .line 83
     .end local v1    # "i":I
     :cond_0
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->setAdapter(Landroidx/leanback/widget/ObjectAdapter;)V
 
-    .line 82
+    .line 84
     return-void
 .end method
 
@@ -111,10 +111,10 @@
         }
     .end annotation
 
-    .line 47
+    .line 49
     invoke-super {p0, p1}, Landroidx/leanback/app/VerticalGridSupportFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 48
+    .line 50
     new-instance v0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewClickedListener;
 
     const/4 v1, 0x0
@@ -123,14 +123,14 @@
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->setOnItemViewClickedListener(Landroidx/leanback/widget/OnItemViewClickedListener;)V
 
-    .line 49
+    .line 51
     new-instance v0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;
 
     invoke-direct {v0, p0, v1}, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;-><init>(Lcom/tvbusa/encore/tv/SearchResultFragment;Lcom/tvbusa/encore/tv/SearchResultFragment$1;)V
 
     invoke-virtual {p0, v0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->setOnItemViewSelectedListener(Landroidx/leanback/widget/OnItemViewSelectedListener;)V
 
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -146,19 +146,19 @@
         }
     .end annotation
 
-    .line 59
+    .line 61
     invoke-super {p0, p1}, Landroidx/leanback/app/VerticalGridSupportFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 61
+    .line 63
     invoke-virtual {p0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 62
+    .line 64
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 63
+    .line 65
     const-string v1, "result"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -169,7 +169,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment;->searchList:Ljava/util/List;
 
-    .line 64
+    .line 66
     const-string v1, "userRegion"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -178,7 +178,7 @@
 
     iput-object v1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment;->userRegion:Ljava/lang/String;
 
-    .line 65
+    .line 67
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,34 +199,34 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
+    .line 68
     invoke-direct {p0}, Lcom/tvbusa/encore/tv/SearchResultFragment;->setupFragment()V
 
-    .line 69
+    .line 71
     :cond_0
     new-instance v1, Landroidx/leanback/widget/VerticalGridPresenter;
 
     invoke-direct {v1}, Landroidx/leanback/widget/VerticalGridPresenter;-><init>()V
 
-    .line 70
+    .line 72
     .local v1, "gridPresenter":Landroidx/leanback/widget/VerticalGridPresenter;
     const/4 v2, 0x5
 
     invoke-virtual {v1, v2}, Landroidx/leanback/widget/VerticalGridPresenter;->setNumberOfColumns(I)V
 
-    .line 71
+    .line 73
     invoke-virtual {p0, v1}, Lcom/tvbusa/encore/tv/SearchResultFragment;->setGridPresenter(Landroidx/leanback/widget/VerticalGridPresenter;)V
 
-    .line 72
+    .line 74
     return-void
 .end method
 
 .method public onPause()V
     .locals 0
 
-    .line 54
+    .line 56
     invoke-super {p0}, Landroidx/leanback/app/VerticalGridSupportFragment;->onPause()V
 
-    .line 55
+    .line 57
     return-void
 .end method

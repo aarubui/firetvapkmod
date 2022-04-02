@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 98
+    .line 100
     iput-object p1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p1, "x0"    # Lcom/tvbusa/encore/tv/SearchResultFragment;
     .param p2, "x1"    # Lcom/tvbusa/encore/tv/SearchResultFragment$1;
 
-    .line 98
+    .line 100
     invoke-direct {p0, p1}, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;-><init>(Lcom/tvbusa/encore/tv/SearchResultFragment;)V
 
     return-void
@@ -75,21 +75,21 @@
         }
     .end annotation
 
-    .line 101
+    .line 103
     if-eqz p2, :cond_0
 
     instance-of v0, p2, Lcom/tvbusa/encore/tv/Series;
 
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 104
     const-string v0, "CategoryFragment"
 
     const-string v1, "Is Not Null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 105
     move-object v0, p2
 
     check-cast v0, Lcom/tvbusa/encore/tv/Series;
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 106
     .local v0, "title":Ljava/lang/String;
     iget-object v1, p0, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;->this$0:Lcom/tvbusa/encore/tv/SearchResultFragment;
 
@@ -114,11 +114,11 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 105
+    .line 107
     .local v1, "titleView":Landroid/widget/TextView;
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 107
+    .line 109
     .end local v0    # "title":Ljava/lang/String;
     .end local v1    # "titleView":Landroid/widget/TextView;
     :cond_0
@@ -142,7 +142,7 @@
         }
     .end annotation
 
-    .line 98
+    .line 100
     check-cast p4, Landroidx/leanback/widget/Row;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tvbusa/encore/tv/SearchResultFragment$ItemViewSelectedListener;->onItemSelected(Landroidx/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroidx/leanback/widget/RowPresenter$ViewHolder;Landroidx/leanback/widget/Row;)V

@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 242
+    .line 244
     iput-object p1, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,18 +56,18 @@
         }
     .end annotation
 
-    .line 245
+    .line 247
     const-string v0, "TestIMA"
 
     const-string v1, "Did Set Video"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
+    .line 248
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVPlayerActivity$4;->this$0:Lcom/tvbusa/encore/tv/BCOVPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVPlayerActivity;->access$300(Lcom/tvbusa/encore/tv/BCOVPlayerActivity;)V
 
-    .line 252
+    .line 254
     return-void
 .end method
