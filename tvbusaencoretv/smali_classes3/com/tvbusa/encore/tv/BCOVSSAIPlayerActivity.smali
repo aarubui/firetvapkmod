@@ -1404,7 +1404,7 @@
 
     invoke-direct {v7, p0, v4}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;-><init>(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;Lcom/brightcove/ssai/SSAIComponent;)V
 
-    invoke-virtual {v3, v6, v5, v7}, Lcom/brightcove/player/edge/Catalog;->findVideoByID(Ljava/lang/String;Lcom/brightcove/player/network/HttpRequestConfig;Lcom/brightcove/player/edge/VideoListener;)V
+    invoke-virtual {v3, v6, v7}, Lcom/brightcove/player/edge/Catalog;->findVideoByID(Ljava/lang/String;Lcom/brightcove/player/edge/VideoListener;)V
 
     .line 223
     new-instance v6, Landroid/os/Bundle;

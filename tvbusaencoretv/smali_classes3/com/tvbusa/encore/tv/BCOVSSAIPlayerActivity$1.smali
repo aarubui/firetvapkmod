@@ -68,17 +68,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
-    iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->val$plugin:Lcom/brightcove/ssai/SSAIComponent;
-
-    invoke-virtual {v0, p1}, Lcom/brightcove/ssai/SSAIComponent;->processVideo(Lcom/brightcove/player/model/Video;)V
-
     .line 211
     iget-object v0, p0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity$1;->this$0:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     invoke-static {v0}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->access$000(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
 
     move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/brightcove/player/view/BaseVideoView;->add(Lcom/brightcove/player/model/Video;)V
 
     invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->start()V
 
