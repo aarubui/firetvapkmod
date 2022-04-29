@@ -2,9 +2,13 @@
 /assets/
 /original/
 /res/
+/unknown/
+/kotlin/
 /smali/android/
 /smali/androidx/
+/smali/com/android/
 /smali/com/google/
-/smali/org/
 /smali_classes2/
-/unknown/
+/smali_classes3/com/
+/smali_classes3/kotlin/
+/smali_classes3/org/
