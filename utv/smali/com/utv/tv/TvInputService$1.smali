@@ -106,6 +106,8 @@
 
     iget v1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
 
+    invoke-virtual {v0, v1, v1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setVolume(FF)V
+
     iput-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
 
     return-object v0
@@ -157,6 +159,8 @@
     iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
 
     if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setVolume(FF)V
 
     :cond_0
     iput p1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
