@@ -1906,6 +1906,7 @@
     <public type="drawable" name="$avd_show_password__0" id="0x7f080003" />
     <public type="drawable" name="$avd_show_password__1" id="0x7f080004" />
     <public type="drawable" name="$avd_show_password__2" id="0x7f080005" />
+    <public type="drawable" name="ic_mtrl_chip_checked_circle" id="0x7f08001f" />
     <public type="drawable" name="abc_btn_borderless_material" id="0x7f08002b" />
     <public type="drawable" name="abc_btn_check_material" id="0x7f08002c" />
     <public type="drawable" name="abc_btn_check_material_anim" id="0x7f08002d" />
@@ -1980,6 +1981,32 @@
     <public type="drawable" name="abc_action_bar_item_background_material" id="0x7f08002a" />
     <public type="drawable" name="notification_action_background" id="0x7f080281" />
     <public type="drawable" name="abc_control_background_material" id="0x7f08003b" />
+    <public type="drawable" name="abc_btn_check_to_on_mtrl_000" id="0x7f080006" />
+    <public type="drawable" name="abc_btn_check_to_on_mtrl_015" id="0x7f080007" />
+    <public type="drawable" name="abc_btn_radio_to_on_mtrl_000" id="0x7f080008" />
+    <public type="drawable" name="abc_btn_radio_to_on_mtrl_015" id="0x7f080009" />
+    <public type="drawable" name="abc_ic_commit_search_api_mtrl_alpha" id="0x7f08000a" />
+    <public type="drawable" name="abc_ic_menu_copy_mtrl_am_alpha" id="0x7f08000b" />
+    <public type="drawable" name="abc_ic_menu_cut_mtrl_alpha" id="0x7f08000c" />
+    <public type="drawable" name="abc_ic_menu_paste_mtrl_am_alpha" id="0x7f08000d" />
+    <public type="drawable" name="abc_ic_menu_selectall_mtrl_alpha" id="0x7f08000e" />
+    <public type="drawable" name="abc_ic_menu_share_mtrl_alpha" id="0x7f08000f" />
+    <public type="drawable" name="abc_ic_star_black_16dp" id="0x7f080010" />
+    <public type="drawable" name="abc_ic_star_black_36dp" id="0x7f080011" />
+    <public type="drawable" name="abc_ic_star_black_48dp" id="0x7f080012" />
+    <public type="drawable" name="abc_ic_star_half_black_16dp" id="0x7f080013" />
+    <public type="drawable" name="abc_ic_star_half_black_36dp" id="0x7f080014" />
+    <public type="drawable" name="abc_ic_star_half_black_48dp" id="0x7f080015" />
+    <public type="drawable" name="abc_scrubber_control_off_mtrl_alpha" id="0x7f080016" />
+    <public type="drawable" name="abc_scrubber_control_to_pressed_mtrl_000" id="0x7f080017" />
+    <public type="drawable" name="abc_scrubber_control_to_pressed_mtrl_005" id="0x7f080018" />
+    <public type="drawable" name="abc_text_select_handle_left_mtrl_dark" id="0x7f080019" />
+    <public type="drawable" name="abc_text_select_handle_left_mtrl_light" id="0x7f08001a" />
+    <public type="drawable" name="abc_text_select_handle_middle_mtrl_dark" id="0x7f08001b" />
+    <public type="drawable" name="abc_text_select_handle_middle_mtrl_light" id="0x7f08001c" />
+    <public type="drawable" name="abc_text_select_handle_right_mtrl_dark" id="0x7f08001d" />
+    <public type="drawable" name="abc_text_select_handle_right_mtrl_light" id="0x7f08001e" />
+    <public type="drawable" name="notify_panel_notification_icon_bg" id="0x7f080022" />
     <public type="drawable" name="abc_ab_share_pack_mtrl_alpha" id="0x7f080029" />
     <public type="drawable" name="abc_btn_switch_to_on_mtrl_00001" id="0x7f080036" />
     <public type="drawable" name="abc_btn_switch_to_on_mtrl_00012" id="0x7f080037" />
@@ -2718,6 +2745,8 @@
     <public type="style" name="Widget.Compat.NotificationActionContainer" id="0x7f120295" />
     <public type="style" name="Widget.Compat.NotificationActionText" id="0x7f120296" />
     <public type="style" name="Widget.Support.CoordinatorLayout" id="0x7f120302" />
+    <public type="style" name="ThemeOverlayColorAccentRed" id="0x7f120002" />
+    <public type="style" name="actionActivity" id="0x7f120003" />
     <public type="style" name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" id="0x7f120024" />
     <public type="style" name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" id="0x7f120025" />
     <public type="style" name="Base.V21.Theme.AppCompat" id="0x7f120085" />

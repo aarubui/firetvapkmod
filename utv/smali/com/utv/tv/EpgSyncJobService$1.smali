@@ -55,6 +55,8 @@
     return-void
 .end method
 
+
+# virtual methods
 .method public requestError(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 

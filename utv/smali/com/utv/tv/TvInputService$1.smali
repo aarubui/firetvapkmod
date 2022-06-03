@@ -3,6 +3,7 @@
 .source "TvInputService.java"
 
 # interfaces
+.implements Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnErrorListener;
 .implements Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnPreparedListener;
 .implements Lcom/utv/http/RequestListener;
 
@@ -12,9 +13,9 @@
 
 .field private mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
 
-.field private mVolume:F
-
 .field private mSurface:Landroid/view/Surface;
+
+.field private mVolume:F
 
 
 # direct methods
@@ -32,8 +33,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method static synthetic access$000(Lcom/utv/tv/TvInputService$1;)V
     .locals 0
 
@@ -52,12 +51,115 @@
     return-void
 .end method
 
+.method private initPlayer()Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/utv/tv/TvInputService$1;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "/MV3Plugin.ini"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v0, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+
+    invoke-direct {v0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;-><init>()V
+
+    invoke-virtual {v0, p0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setOnPreparedListener(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnPreparedListener;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setConfigFile(Landroid/content/Context;Ljava/lang/String;)V
+
+    sget-object v2, Lcom/utv/util/Constant;->accessKey:Ljava/lang/String;
+
+    sget-object v3, Lcom/utv/util/Constant;->secretKey:Ljava/lang/String;
+
+    sget-object v4, Lcom/utv/util/Constant;->appKey:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->validate(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lcom/utv/tv/TvInputService$2;
+
+    invoke-direct {v1, p0}, Lcom/utv/tv/TvInputService$2;-><init>(Lcom/utv/tv/TvInputService$1;)V
+
+    invoke-virtual {v0, v1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setOnInfoListener(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnInfoListener;)V
+
+    iget-object v1, p0, Lcom/utv/tv/TvInputService$1;->mSurface:Landroid/view/Surface;
+
+    invoke-virtual {v0, v1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setSurface(Landroid/view/Surface;)V
+
+    iget v1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
+
+    iput-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public onError(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;II)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/utv/tv/TvInputService$1;->notifyVideoUnavailable(I)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public onPrepared(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+
+    invoke-virtual {v0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->start()V
+
+    return-void
+.end method
+
 .method public onRelease()V
     .locals 1
 
     iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
 
     invoke-virtual {v0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->release()V
+
+    return-void
+.end method
+
+.method public onSetCaptionEnabled(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onSetStreamVolume(F)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    :cond_0
+    iput p1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
 
     return-void
 .end method
@@ -77,19 +179,6 @@
     const/4 v0, 0x1
 
     return v0
-.end method
-
-.method public onSetStreamVolume(F)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
-
-    if-eqz v0, :cond_0
-
-    :cond_0
-    iput p1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
-
-    return-void
 .end method
 
 .method public onTune(Landroid/net/Uri;)Z
@@ -165,87 +254,17 @@
 
     const/4 v1, 0x1
 
+    invoke-virtual {p0}, Landroid/media/tv/TvInputService$Session;->notifyContentAllowed()V
+
     return v1
 .end method
 
-.method public onSetCaptionEnabled(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onPrepared(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;)V
+.method public requestError(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
+    const/16 v0, 0x0
 
-    invoke-virtual {v0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->start()V
-
-    return-void
-.end method
-
-.method private initPlayer()Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lcom/utv/tv/TvInputService$1;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "/MV3Plugin.ini"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v0, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
-
-    invoke-direct {v0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;-><init>()V
-
-    invoke-virtual {v0, p0}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setOnPreparedListener(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnPreparedListener;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setConfigFile(Landroid/content/Context;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/utv/util/Constant;->accessKey:Ljava/lang/String;
-
-    sget-object v3, Lcom/utv/util/Constant;->secretKey:Ljava/lang/String;
-
-    sget-object v4, Lcom/utv/util/Constant;->appKey:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->validate(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Lcom/utv/tv/TvInputService$2;
-
-    invoke-direct {v1, p0}, Lcom/utv/tv/TvInputService$2;-><init>(Lcom/utv/tv/TvInputService$1;)V
-
-    invoke-virtual {v0, v1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setOnInfoListener(Lcom/arcvideo/MediaPlayer/ArcMediaPlayer$OnInfoListener;)V
-
-    iget-object v1, p0, Lcom/utv/tv/TvInputService$1;->mSurface:Landroid/view/Surface;
-
-    invoke-virtual {v0, v1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setSurface(Landroid/view/Surface;)V
-
-    iget v1, p0, Lcom/utv/tv/TvInputService$1;->mVolume:F
-
-    iput-object v0, p0, Lcom/utv/tv/TvInputService$1;->mPlayer:Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;
-
-    return-object v0
-.end method
-
-.method public requestError(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    invoke-virtual {p0, v0}, Lcom/utv/tv/TvInputService$1;->notifyVideoUnavailable(I)V
 
     return-void
 .end method
@@ -367,8 +386,6 @@
     invoke-virtual {p1, v1, v2}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->setConfig(II)V
 
     invoke-virtual {p1}, Lcom/arcvideo/MediaPlayer/ArcMediaPlayer;->prepareAsync()V
-
-    invoke-virtual {p0}, Landroid/media/tv/TvInputService$Session;->notifyContentAllowed()V
 
     :cond_0
     return-void

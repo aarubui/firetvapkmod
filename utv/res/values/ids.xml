@@ -83,8 +83,8 @@
     <item type="id" name="textSpacerNoTitle" />
     <item type="id" name="time" />
     <item type="id" name="title" />
-    <item type="id" name="title_template" />
     <item type="id" name="titleDividerNoCustom" />
+    <item type="id" name="title_template" />
     <item type="id" name="topPanel" />
     <item type="id" name="unchecked" />
     <item type="id" name="video_surface_frame" />

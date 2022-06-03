@@ -4,13 +4,6 @@ compressionType: false
 doNotCompress:
 - resources.arsc
 - png
-- webp
-- lib/arm64-v8a/libtbs.so
-- lib/armeabi-v7a/libtbs.so
-- jpg
-- gif
-- wav
-- mp3
 isFrameworkApk: false
 packageInfo:
   forcedPackageId: '127'
@@ -230,7 +223,7 @@ usesFramework:
   ids:
   - 1
   tag: null
-version: 2.6.0
+version: 2.6.1
 versionInfo:
   versionCode: '263'
   versionName: 15.1.9

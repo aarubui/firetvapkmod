@@ -21,9 +21,9 @@
 # instance fields
 .field private playEndTime:Ljava/lang/String;
 
-.field private playStartTime:Ljava/lang/String;
-
 .field private playEndTimestamp:Ljava/lang/String;
+
+.field private playStartTime:Ljava/lang/String;
 
 .field private playStartTimestamp:Ljava/lang/String;
 
@@ -186,40 +186,6 @@
     return-void
 .end method
 
-.method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    .line 55
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->programName:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 56
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->programId:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 57
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playStartTime:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 58
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playEndTime:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playStartTimestamp:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playEndTimestamp:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method public toContentValues(Landroid/net/Uri;)Landroid/content/ContentValues;
     .locals 6
 
@@ -280,9 +246,42 @@
     goto :goto_0
 
     :cond_0
-
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
+.end method
+
+.method public writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    .line 55
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->programName:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 56
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->programId:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 57
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playStartTime:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 58
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playEndTime:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playStartTimestamp:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/utv/bean/PlayingBean;->playEndTimestamp:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method
