@@ -198,6 +198,24 @@
     return-void
 .end method
 
+.method private insertLogo(Landroid/net/Uri;Lcom/utv/bean/ChannelsBean;)V
+    .locals 2
+
+    iget-object v1, p0, Lcom/utv/tv/EpgSyncJobService$1;->mContext:Lcom/utv/tv/EpgSyncJobService;
+
+    new-instance v0, Lcom/utv/tv/EpgSyncJobService$2;
+
+    invoke-direct {v0, v1, p1, p2}, Lcom/utv/tv/EpgSyncJobService$2;-><init>(Landroid/content/Context;Landroid/net/Uri;Lcom/utv/bean/ChannelsBean;)V
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {v0, v1}, Lcom/utv/tv/EpgSyncJobService$2;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public requestError(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
@@ -343,19 +361,8 @@
     invoke-virtual {v0, v7, v6, v8, v8}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     :goto_2
-    invoke-virtual {v5}, Lcom/utv/bean/ChannelsBean;->getPlaying()Lcom/utv/bean/PlayingBean;
 
-    move-result-object v6
-
-    invoke-virtual {v6, v7}, Lcom/utv/bean/PlayingBean;->toContentValues(Landroid/net/Uri;)Landroid/content/ContentValues;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_3
-
-    sget-object v8, Landroid/media/tv/TvContract$Programs;->CONTENT_URI:Landroid/net/Uri;
-
-    invoke-virtual {v0, v8, v6}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+    invoke-direct {p0, v7, v5}, Lcom/utv/tv/EpgSyncJobService$1;->insertLogo(Landroid/net/Uri;Lcom/utv/bean/ChannelsBean;)V
 
     :cond_3
     add-int/lit8 v3, v3, 0x1
