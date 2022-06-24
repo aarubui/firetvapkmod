@@ -365,6 +365,8 @@
 /smali_classes3/com/utv/R$array.smali
 /smali_classes3/com/utv/R.smali
 /smali_classes3/com/utv/bean/ComingBean.smali
+/smali_classes3/com/utv/bean/GroupsBean$1.smali
+/smali_classes3/com/utv/bean/GroupsBean.smali
 /smali_classes3/com/utv/bean/H5UrlsBean.smali
 /smali_classes3/com/utv/bean/LivePlayurlsBean.smali
 /smali_classes3/com/utv/bean/MLiveChannelBean.smali
