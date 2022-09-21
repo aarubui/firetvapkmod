@@ -349,14 +349,6 @@
 
     move-result-object v1
 
-    const-string v2, "X-Forwarded-For"
-
-    const-string v3, "203.83.115.132"
-
-    invoke-virtual {v1, v2, v3}, Lcom/squareup/okhttp/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/squareup/okhttp/Request$Builder;
-
-    move-result-object v1
-
     .line 40
     invoke-virtual {v1, v0}, Lcom/squareup/okhttp/Request$Builder;->post(Lcom/squareup/okhttp/RequestBody;)Lcom/squareup/okhttp/Request$Builder;
 
