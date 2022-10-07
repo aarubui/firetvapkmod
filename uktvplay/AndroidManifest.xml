@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="uk.co.uktv.dave.androidtv" platformBuildVersionCode="31" platformBuildVersionName="12">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="uk.co.uktv.dave.androidtv" platformBuildVersionCode="32" platformBuildVersionName="12">
     <permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>

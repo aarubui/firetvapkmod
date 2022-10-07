@@ -39,19 +39,19 @@
         }
     .end annotation
 
-    .line 134
+    .line 131
     invoke-static {}, Luk/co/uktv/dave/UKTVPlayApp;->isFreeViewPlayFireTV()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 132
     const-class v0, Luk/co/uktv/dave/browser/hbbtv/HbbTvBrowser;
 
     return-object v0
 
-    .line 137
+    .line 134
     :cond_0
     const-class v0, Luk/co/uktv/dave/browser/web/WebBrowser;
 
@@ -61,19 +61,19 @@
 .method private initializeWebApp()V
     .locals 2
 
-    .line 142
+    .line 139
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 144
+    .line 141
     new-instance v1, Luk/co/uktv/dave/UKTVPlayActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p0, v0}, Luk/co/uktv/dave/UKTVPlayActivity$$ExternalSyntheticLambda1;-><init>(Luk/co/uktv/dave/UKTVPlayActivity;Ljava/util/concurrent/atomic/AtomicReference;)V
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 170
+    .line 167
     invoke-static {}, Luk/co/uktv/dave/network/ConnectivityMonitor;->isConnected()Landroidx/lifecycle/LiveData;
 
     move-result-object v1
@@ -92,9 +92,9 @@
 
 # virtual methods
 .method protected getWebAppUrl()Ljava/lang/String;
-    .locals 13
+    .locals 12
 
-    const v0, 0x7f1000c9
+    const v0, 0x7f1100cc
 
     .line 121
     invoke-virtual {p0, v0}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I)Ljava/lang/String;
@@ -102,101 +102,70 @@
     move-result-object v0
 
     .line 124
-    invoke-static {}, Luk/co/uktv/dave/UKTVPlayApp;->isPortalTV()Z
-
-    move-result v1
-
-    const-string v2, "default"
-
-    const/4 v3, 0x4
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x5
-
-    const v9, 0x7f1000ca
-
-    const-string v10, "4.3.4"
-
-    if-eqz v1, :cond_0
-
-    new-array v1, v8, [Ljava/lang/Object;
-
-    aput-object v0, v1, v7
-
-    const-string v0, "facebook"
-
-    aput-object v0, v1, v6
-
-    const-string v0, "portaltv"
-
-    aput-object v0, v1, v5
-
-    aput-object v2, v1, v4
-
-    aput-object v10, v1, v3
-
-    .line 125
-    invoke-virtual {p0, v9, v1}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 127
-    :cond_0
     invoke-static {}, Luk/co/uktv/dave/UKTVPlayApp;->isFreeViewPlayFireTV()Z
 
     move-result v1
 
-    const-string v11, "firetv"
+    const/4 v2, 0x4
 
-    const-string v12, "amazon"
+    const/4 v3, 0x3
 
-    if-eqz v1, :cond_1
+    const-string v4, "firetv"
 
-    new-array v1, v8, [Ljava/lang/Object;
+    const/4 v5, 0x2
 
-    aput-object v0, v1, v7
+    const-string v6, "amazon"
 
-    aput-object v12, v1, v6
+    const/4 v7, 0x1
 
-    aput-object v11, v1, v5
+    const/4 v8, 0x0
 
-    const-string v0, "hbbtv"
+    const/4 v9, 0x5
 
-    aput-object v0, v1, v4
+    const v10, 0x7f1100cd
 
-    aput-object v10, v1, v3
+    const-string v11, "4.4.0"
 
-    .line 128
-    invoke-virtual {p0, v9, v1}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    if-eqz v1, :cond_0
+
+    new-array v1, v9, [Ljava/lang/Object;
+
+    aput-object v0, v1, v8
+
+    aput-object v6, v1, v7
+
+    aput-object v4, v1, v5
+
+    const-string v0, "fvp"
+
+    aput-object v0, v1, v3
+
+    aput-object v11, v1, v2
+
+    .line 125
+    invoke-virtual {p0, v10, v1}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    :cond_1
-    new-array v1, v8, [Ljava/lang/Object;
+    :cond_0
+    new-array v1, v9, [Ljava/lang/Object;
 
-    aput-object v0, v1, v7
+    aput-object v0, v1, v8
 
-    aput-object v12, v1, v6
+    aput-object v6, v1, v7
 
-    aput-object v11, v1, v5
+    aput-object v4, v1, v5
 
-    aput-object v2, v1, v4
+    const-string v0, "default"
 
-    aput-object v10, v1, v3
+    aput-object v0, v1, v3
 
-    .line 130
-    invoke-virtual {p0, v9, v1}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    aput-object v11, v1, v2
+
+    .line 127
+    invoke-virtual {p0, v10, v1}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -206,7 +175,7 @@
 .method public synthetic lambda$initializeWebApp$1$uk-co-uktv-dave-UKTVPlayActivity(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 145
+    .line 142
     invoke-static {}, Luk/co/uktv/dave/network/ConnectivityMonitor;->isConnected()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
@@ -219,33 +188,33 @@
 
     invoke-virtual {v0, p1}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
 
-    .line 147
+    .line 144
     invoke-virtual {p0}, Luk/co/uktv/dave/UKTVPlayActivity;->getWebAppUrl()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 149
+    .line 146
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 150
+    .line 147
     sget-object p1, Luk/co/uktv/dave/UKTVPlayActivity;->TAG:Ljava/lang/String;
 
     const-string p2, "Could not start UKTVPlay TAL app, lack of connectivity"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const p1, 0x7f10002a
+    const p1, 0x7f11002a
 
-    .line 151
+    .line 148
     invoke-static {p1}, Luk/co/uktv/dave/messaging/MessageBus$-CC;->postError(I)V
 
     return-void
 
-    .line 155
+    .line 152
     :cond_0
     invoke-static {p1}, Landroid/webkit/URLUtil;->isValidUrl(Ljava/lang/String;)Z
 
@@ -255,7 +224,7 @@
 
     if-nez p2, :cond_1
 
-    .line 156
+    .line 153
     sget-object p2, Luk/co/uktv/dave/UKTVPlayActivity;->TAG:Ljava/lang/String;
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -272,22 +241,22 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const p1, 0x7f100029
+    const p1, 0x7f110029
 
-    .line 157
+    .line 154
     invoke-static {p1}, Luk/co/uktv/dave/messaging/MessageBus$-CC;->postError(I)V
 
     return-void
 
-    .line 161
+    .line 158
     :cond_1
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    const p2, 0x7f10006a
+    const p2, 0x7f11006d
 
-    .line 162
+    .line 159
     invoke-virtual {p0, p2}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -298,7 +267,7 @@
 
     invoke-virtual {p1, p2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
+    .line 161
     invoke-virtual {p0}, Luk/co/uktv/dave/UKTVPlayActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p2
@@ -307,7 +276,7 @@
 
     move-result-object p2
 
-    .line 165
+    .line 162
     invoke-virtual {p2, v0}, Landroidx/fragment/app/FragmentTransaction;->setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p2
@@ -316,7 +285,7 @@
 
     iget-object v0, v0, Luk/co/uktv/dave/databinding/ActivityUktvplayBinding;->browserContainer:Landroidx/fragment/app/FragmentContainerView;
 
-    .line 166
+    .line 163
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainerView;->getId()I
 
     move-result v0
@@ -329,7 +298,7 @@
 
     move-result-object p1
 
-    .line 167
+    .line 164
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void
@@ -358,7 +327,7 @@
         }
     .end annotation
 
-    const v0, 0x7f1102c5
+    const v0, 0x7f1202c5
 
     .line 44
     invoke-virtual {p0, v0}, Luk/co/uktv/dave/UKTVPlayActivity;->setTheme(I)V
@@ -453,7 +422,7 @@
     .line 79
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    const v2, 0x7f100068
+    const v2, 0x7f11006b
 
     .line 81
     invoke-virtual {p0, v2}, Luk/co/uktv/dave/UKTVPlayActivity;->getString(I)Ljava/lang/String;
@@ -545,7 +514,7 @@
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f10002c
+    const v1, 0x7f11002c
 
     .line 104
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
