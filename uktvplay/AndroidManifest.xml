@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="uk.co.uktv.dave" platformBuildVersionCode="31" platformBuildVersionName="12">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="uk.co.uktv.dave" platformBuildVersionCode="32" platformBuildVersionName="12">
     <permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE"/>
     <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <meta-data android:name="com.amazon.alexa.vsk.clientlib.integrated_flag" android:value="true"/>
-        <meta-data android:name="com.amazon.alexa.vsk.clientlib.version" android:value="1.4.9"/>
+        <meta-data android:name="com.amazon.alexa.vsk.clientlib.version" android:value="1.5.0"/>
         <provider android:authorities="uk.co.uktv.dave.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
             <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
         </provider>

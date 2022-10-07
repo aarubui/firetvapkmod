@@ -41,7 +41,7 @@
 .method public static isFireTV()Z
     .locals 2
 
-    .line 27
+    .line 23
     sget-object v0, Luk/co/uktv/dave/UKTVPlayApp;->wrapperPlatform:Ljava/lang/String;
 
     const-string v1, "FireTV"
@@ -56,7 +56,7 @@
 .method public static isFreeViewPlayFireTV()Z
     .locals 1
 
-    .line 31
+    .line 27
     invoke-static {}, Luk/co/uktv/dave/UKTVPlayApp;->isFireTV()Z
 
     move-result v0
@@ -78,37 +78,22 @@
     return v0
 .end method
 
-.method public static isPortalTV()Z
-    .locals 2
-
-    .line 23
-    sget-object v0, Luk/co/uktv/dave/UKTVPlayApp;->wrapperPlatform:Ljava/lang/String;
-
-    const-string v1, "PortalTV"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 
 # virtual methods
 .method public onCreate()V
     .locals 2
 
-    .line 35
+    .line 31
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
-    .line 36
+    .line 32
     sget-object v0, Luk/co/uktv/dave/UKTVPlayApp;->TAG:Ljava/lang/String;
 
     const-string v1, "UKTVPlayApplication is created"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
+    .line 34
     invoke-virtual {p0}, Luk/co/uktv/dave/UKTVPlayApp;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -129,21 +114,21 @@
     :goto_0
     sput-boolean v0, Luk/co/uktv/dave/UKTVPlayApp;->debuggable:Z
 
-    const v0, 0x7f1000cc
+    const v0, 0x7f1100cf
 
-    .line 40
+    .line 36
     invoke-virtual {p0, v0}, Luk/co/uktv/dave/UKTVPlayApp;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Luk/co/uktv/dave/UKTVPlayApp;->wrapperPlatform:Ljava/lang/String;
 
-    .line 42
+    .line 38
     invoke-virtual {p0}, Luk/co/uktv/dave/UKTVPlayApp;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    const v1, 0x7f100064
+    const v1, 0x7f110067
 
     invoke-virtual {p0, v1}, Luk/co/uktv/dave/UKTVPlayApp;->getString(I)Ljava/lang/String;
 
@@ -155,10 +140,10 @@
 
     sput-boolean v0, Luk/co/uktv/dave/UKTVPlayApp;->freeViewFeatureEnabled:Z
 
-    .line 44
+    .line 40
     invoke-static {p0}, Luk/co/uktv/dave/network/ConnectivityMonitor;->registerConnectivityMonitor(Landroid/content/Context;)V
 
-    .line 45
+    .line 41
     invoke-static {p0}, Luk/co/uktv/dave/alexa/VideoSkillsKitUtils;->initializeVideoSkillsKit(Landroid/content/Context;)V
 
     return-void

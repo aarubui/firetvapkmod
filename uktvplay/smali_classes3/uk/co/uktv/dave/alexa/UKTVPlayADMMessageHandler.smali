@@ -38,14 +38,14 @@
         }
     .end annotation
 
-    const v0, 0x7f100068
+    const v0, 0x7f11006b
 
     .line 39
     invoke-virtual {p0, v0}, Luk/co/uktv/dave/alexa/UKTVPlayADMMessageHandler;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f100069
+    const v1, 0x7f11006c
 
     .line 40
     invoke-virtual {p0, v1}, Luk/co/uktv/dave/alexa/UKTVPlayADMMessageHandler;->getString(I)Ljava/lang/String;
