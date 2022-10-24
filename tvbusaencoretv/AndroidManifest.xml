@@ -10,28 +10,28 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner" android:debuggable="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.tvbusa.encore.tv.MainApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
-        <activity android:banner="@drawable/app_icon_your_company" android:icon="@drawable/app_icon_your_company" android:label="@string/app_name" android:logo="@drawable/app_icon_your_company" android:name="com.tvbusa.encore.tv.SplashActivity" android:screenOrientation="landscape">
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner" android:debuggable="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.tvbusa.encore.MainApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:banner="@drawable/banner" android:icon="@drawable/banner" android:label="TVBAnywhere North America" android:logo="@drawable/app_icon_your_company" android:name="com.tvbusa.encore.SplashActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.tvbusa.encore.tv.MainActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.SeriesActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.BCOVPlayerActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.DetailsActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.BCOVSSAIPlayerActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.CategoryActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.BCOVLivePlayerActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.SearchActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.InfoActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.LoginActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.HistoryActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.AccountActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.SerialNumberActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.SearchResultActivity"/>
-        <activity android:name="com.tvbusa.encore.tv.ExclusiveActivity"/>
+        <activity android:name="com.tvbusa.encore.MainActivity"/>
+        <activity android:name="com.tvbusa.encore.SeriesActivity"/>
+        <activity android:name="com.tvbusa.encore.BCOVPlayerActivity"/>
+        <activity android:name="com.tvbusa.encore.DetailsActivity"/>
+        <activity android:name="com.tvbusa.encore.BCOVSSAIPlayerActivity"/>
+        <activity android:name="com.tvbusa.encore.CategoryActivity"/>
+        <activity android:name="com.tvbusa.encore.BCOVLivePlayerActivity"/>
+        <activity android:name="com.tvbusa.encore.SearchActivity"/>
+        <activity android:name="com.tvbusa.encore.InfoActivity"/>
+        <activity android:name="com.tvbusa.encore.LoginActivity"/>
+        <activity android:name="com.tvbusa.encore.HistoryActivity"/>
+        <activity android:name="com.tvbusa.encore.AccountActivity"/>
+        <activity android:name="com.tvbusa.encore.SerialNumberActivity"/>
+        <activity android:name="com.tvbusa.encore.SearchResultActivity"/>
+        <activity android:name="com.tvbusa.encore.ExclusiveActivity"/>
         <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
         <service android:exported="false" android:name="com.brightcove.player.network.DownloadMonitorService"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>

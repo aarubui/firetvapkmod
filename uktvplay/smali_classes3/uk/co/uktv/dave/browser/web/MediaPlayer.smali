@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Luk/co/uktv/dave/browser/web/MediaPlayer$State;,
         Luk/co/uktv/dave/browser/web/MediaPlayer$Error;,
-        Luk/co/uktv/dave/browser/web/MediaPlayer$DrmType;,
-        Luk/co/uktv/dave/browser/web/MediaPlayer$State;
+        Luk/co/uktv/dave/browser/web/MediaPlayer$DrmType;
     }
 .end annotation
 
