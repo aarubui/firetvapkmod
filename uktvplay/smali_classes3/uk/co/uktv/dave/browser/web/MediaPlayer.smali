@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Luk/co/uktv/dave/browser/web/MediaPlayer$State;,
         Luk/co/uktv/dave/browser/web/MediaPlayer$Error;,
-        Luk/co/uktv/dave/browser/web/MediaPlayer$DrmType;,
-        Luk/co/uktv/dave/browser/web/MediaPlayer$State;
+        Luk/co/uktv/dave/browser/web/MediaPlayer$DrmType;
     }
 .end annotation
 
@@ -74,6 +74,14 @@
     iput-object p2, p0, Luk/co/uktv/dave/browser/web/MediaPlayer;->error:Luk/co/uktv/dave/browser/web/MediaPlayer$Error;
 
     const-string v0, "http://cdn.http.anno.channel4.com/"
+
+    invoke-virtual {p5, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "http://cdn.http.anno.test.channel4.com/"
 
     invoke-virtual {p5, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

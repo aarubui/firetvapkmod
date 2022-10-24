@@ -40,6 +40,8 @@
     <string name="app_name">TVBAnywhere</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bcov_account_id">5324042807001</string>
+    <string name="bcov_live_account_id">5324042807001</string>
+    <string name="bcov_live_policy_id">BCpkADawqM2ZMzmtkErgyb9g7omDn9jseI0nP3REZj4iSBA4mvenrw6CMvFT7_Oc9UGzqRQkgeZ6uRgBbNttntxFpQ3Ki7n6J3rkNjjaPa9KI9uKwZFwOWLQMITgpHC2RDw1R8aNeFttF9kxgxwTH5_dbIKXmMxDEExHVPUyjzotydNvAx0nqtO-wI4</string>
     <string name="bcov_policy_id">BCpkADawqM2ZMzmtkErgyb9g7omDn9jseI0nP3REZj4iSBA4mvenrw6CMvFT7_Oc9UGzqRQkgeZ6uRgBbNttntxFpQ3Ki7n6J3rkNjjaPa9KI9uKwZFwOWLQMITgpHC2RDw1R8aNeFttF9kxgxwTH5_dbIKXmMxDEExHVPUyjzotydNvAx0nqtO-wI4</string>
     <string name="bcov_title">title_chi</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
@@ -370,7 +372,7 @@
 %1$d minute"</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
-    <string name="version">版本V 1.98</string>
+    <string name="version">版本V 2.01</string>
     <string name="visitWording">請到</string>
     <string name="watchNowBtn">馬上觀看</string>
     <string name="year">年份</string>

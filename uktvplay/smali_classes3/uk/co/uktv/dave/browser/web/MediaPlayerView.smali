@@ -7,8 +7,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;,
-        Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;,
-        Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackStateChangeHandler;
+        Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackStateChangeHandler;,
+        Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;
     }
 .end annotation
 

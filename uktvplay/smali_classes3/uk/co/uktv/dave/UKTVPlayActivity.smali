@@ -124,7 +124,7 @@
 
     const v10, 0x7f1100cd
 
-    const-string v11, "4.4.0"
+    const-string v11, "4.4.1"
 
     if-eqz v1, :cond_0
 
