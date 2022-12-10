@@ -26,6 +26,11 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
+        <receiver android:exported="true" android:name="uk.co.uktv.dave.launcher.AudioChangeReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+            </intent-filter>
+        </receiver>
         <uses-library android:name="com.vewd.core.client.fvp" android:required="false"/>
         <uses-library android:name="com.vewd.core.shared" android:required="false"/>
         <meta-data android:name="com.vewd.core.browser_service_package" android:value="com.vewd.core.service"/>

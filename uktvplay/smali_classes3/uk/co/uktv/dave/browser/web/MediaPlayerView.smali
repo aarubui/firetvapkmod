@@ -196,7 +196,7 @@
         }
     .end annotation
 
-    .line 232
+    .line 233
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-eqz v0, :cond_0
@@ -233,7 +233,7 @@
         }
     .end annotation
 
-    .line 252
+    .line 253
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -242,7 +242,7 @@
 
     return v0
 
-    .line 254
+    .line 255
     :cond_0
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
@@ -254,11 +254,11 @@
 
     goto :goto_0
 
-    .line 260
+    .line 261
     :cond_1
     invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->updatePlaybackPosition()V
 
-    .line 261
+    .line 262
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     const-wide/16 v1, 0xfa
@@ -269,7 +269,7 @@
 
     return p1
 
-    .line 255
+    .line 256
     :cond_2
     :goto_0
     sget-object p1, Luk/co/uktv/dave/browser/web/MediaPlayerView;->TAG:Ljava/lang/String;
@@ -278,7 +278,7 @@
 
     invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
+    .line 257
     invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->stopSamplingPlaybackPosition()V
 
     return v0
@@ -287,20 +287,20 @@
 .method private startSamplingPlaybackPosition()V
     .locals 3
 
-    .line 236
+    .line 237
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 238
+    .line 239
     :cond_0
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 239
+    .line 240
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
@@ -319,7 +319,7 @@
 
     const/4 v1, 0x0
 
-    .line 240
+    .line 241
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_1
@@ -329,7 +329,7 @@
 .method private stopSamplingPlaybackPosition()V
     .locals 2
 
-    .line 245
+    .line 246
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
@@ -339,12 +339,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 247
+    .line 248
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     const/4 v0, 0x0
 
-    .line 248
+    .line 249
     iput-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     return-void
@@ -353,14 +353,14 @@
 .method private updatePlaybackPosition()V
     .locals 4
 
-    .line 266
+    .line 267
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 268
+    .line 269
     :cond_0
     invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->getCurrentPosition()J
 
@@ -368,7 +368,7 @@
 
     iput-wide v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPosition:J
 
-    .line 270
+    .line 271
     iget-object v2, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
     if-eqz v2, :cond_2
@@ -379,7 +379,7 @@
 
     goto :goto_0
 
-    .line 272
+    .line 273
     :cond_1
     invoke-interface {v3, v2, v0, v1}, Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;->onPlaybackPositionChange(Ljava/lang/String;J)V
 
@@ -393,12 +393,12 @@
 .method public destroy()V
     .locals 1
 
-    .line 227
+    .line 228
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->dismissPlayback(Ljava/lang/String;)V
 
-    .line 228
+    .line 229
     invoke-virtual {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->unregisterExoPlayer()V
 
     return-void
@@ -493,7 +493,7 @@
     .line 186
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 187
     invoke-virtual {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->getContext()Landroid/content/Context;
@@ -586,13 +586,13 @@
 
     iget-object v1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackMediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/ExoPlayer;->setMediaItem(Lcom/google/android/exoplayer2/MediaItem;)V
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     new-instance v1, Lcom/google/android/exoplayer2/source/SilenceMediaSource;
 
     const-wide/16 v2, 0x0
@@ -625,7 +625,17 @@
 
     invoke-interface {v0, v2, v3}, Lcom/google/android/exoplayer2/ExoPlayer;->seekTo(J)V
 
+    .line 211
     :cond_1
+    iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
+
+    iget-wide v1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPosition:J
+
+    iget-object v3, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackMediaItem:Lcom/google/android/exoplayer2/MediaItem;
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->resumePlayback(Ljava/lang/String;JLcom/google/android/exoplayer2/MediaItem;)V
+
+    :cond_2
     return-void
 .end method
 
@@ -825,44 +835,44 @@
 .method public unregisterExoPlayer()V
     .locals 2
 
-    .line 215
+    .line 216
     invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->stopSamplingPlaybackPosition()V
 
-    .line 216
+    .line 217
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x4
 
-    .line 217
-    invoke-virtual {p0, v0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->setVisibility(I)V
-
     .line 218
-    iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
-
-    invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->stop()V
+    invoke-virtual {p0, v0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->setVisibility(I)V
 
     .line 219
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
-    invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->clearMediaItems()V
+    invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->stop()V
 
     .line 220
+    iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
+
+    invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->clearMediaItems()V
+
+    .line 221
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     iget-object v1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayerListener:Lcom/google/android/exoplayer2/Player$Listener;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/ExoPlayer;->removeListener(Lcom/google/android/exoplayer2/Player$Listener;)V
 
-    .line 221
+    .line 222
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->release()V
 
     const/4 v0, 0x0
 
-    .line 222
+    .line 223
     iput-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     :cond_0
