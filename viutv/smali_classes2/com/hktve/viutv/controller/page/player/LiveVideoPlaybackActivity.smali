@@ -689,6 +689,8 @@
 
     move-result-object p2
 
+    invoke-static {p2}, Lcom/hktve/viutv/Utils;->fakeIp(Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;)V
+
     .line 625
     invoke-virtual {p2}, Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;->build()Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem;
 

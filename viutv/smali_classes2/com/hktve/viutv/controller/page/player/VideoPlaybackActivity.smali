@@ -1076,6 +1076,8 @@
 
     invoke-virtual {v3, v4}, Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;->mediaDrmCallback(Lcom/longtailvideo/jwplayer/media/drm/MediaDrmCallback;)Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;
 
+    invoke-static {v3}, Lcom/hktve/viutv/Utils;->fakeIp(Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;)V
+
     .line 530
     :cond_6
     invoke-virtual {v3}, Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem$Builder;->build()Lcom/longtailvideo/jwplayer/media/playlists/PlaylistItem;
