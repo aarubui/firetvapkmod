@@ -419,8 +419,6 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/hktve/viutv/Utils;->fakeIp(Lcom/squareup/okhttp/Request$Builder;)V
-
     .line 42
     invoke-virtual {v0}, Lcom/squareup/okhttp/Request$Builder;->build()Lcom/squareup/okhttp/Request;
 
