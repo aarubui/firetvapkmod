@@ -58,9 +58,9 @@
     .line 26
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    const v1, 0x7f110027
-
     .line 27
+    sget v1, Luk/co/uktv/dave/R$string;->deep_link_amazon_partner_id:I
+
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -69,9 +69,9 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const v1, 0x7f110028
-
     .line 28
+    sget v1, Luk/co/uktv/dave/R$string;->deep_link_intent_action:I
+
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -88,7 +88,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 30
-    const-class v1, Luk/co/uktv/dave/DeepLinkActivity;
+    const-class v1, Luk/co/uktv/dave/UKTVPlayActivity;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -98,12 +98,12 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const/high16 v1, 0x10000000
+    const-string v1, "amazon.intent.extra.PLAY_INTENT_FLAGS"
 
-    const-string v2, "amazon.intent.extra.PLAY_INTENT_FLAGS"
+    const/high16 v2, 0x10000000
 
     .line 31
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 33
     sget-object v1, Luk/co/uktv/dave/launcher/DeepLinkCapabilitiesUtils;->TAG:Ljava/lang/String;
@@ -126,12 +126,51 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 35
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     return-void
+.end method
+
+.method public static buildIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "houseNumber"
+        }
+    .end annotation
+
+    .line 46
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Luk/co/uktv/dave/UKTVPlayActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 47
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    .line 48
+    sget p1, Luk/co/uktv/dave/R$string;->deep_link_intent_action:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    return-object v0
 .end method
 
 .method public static buildPendingIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
@@ -150,7 +189,7 @@
     .line 39
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Luk/co/uktv/dave/DeepLinkActivity;
+    const-class v1, Luk/co/uktv/dave/UKTVPlayActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -161,9 +200,9 @@
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    const p1, 0x7f110028
-
     .line 41
+    sget p1, Luk/co/uktv/dave/R$string;->deep_link_intent_action:I
+
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
