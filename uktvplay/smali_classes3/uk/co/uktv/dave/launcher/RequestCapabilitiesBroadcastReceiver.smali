@@ -55,7 +55,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 17
     invoke-static {p1}, Luk/co/uktv/dave/launcher/DeepLinkCapabilitiesUtils;->broadcast(Landroid/content/Context;)V

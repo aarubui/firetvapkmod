@@ -39,16 +39,16 @@
 
     move-result-object v0
 
-    const v1, 0x7f11001b
-
     .line 44
+    sget v1, Luk/co/uktv/dave/R$string;->alexa_skill_id:I
+
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f11001c
-
     .line 46
+    sget v2, Luk/co/uktv/dave/R$string;->alexa_skill_stage:I
+
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -150,7 +150,7 @@
 
     const-string v1, "ADM is supported on this device"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -307,7 +307,7 @@
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

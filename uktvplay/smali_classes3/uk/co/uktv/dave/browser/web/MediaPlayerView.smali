@@ -134,7 +134,18 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Luk/co/uktv/dave/browser/web/MediaPlayerView;)V
+.method static synthetic access$400(Luk/co/uktv/dave/browser/web/MediaPlayerView;)J
+    .locals 2
+
+    .line 27
+    invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->getDurationSafely()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method static synthetic access$500(Luk/co/uktv/dave/browser/web/MediaPlayerView;)V
     .locals 0
 
     .line 27
@@ -143,13 +154,35 @@
     return-void
 .end method
 
-.method static synthetic access$500(Luk/co/uktv/dave/browser/web/MediaPlayerView;)Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;
+.method static synthetic access$600(Luk/co/uktv/dave/browser/web/MediaPlayerView;)Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;
     .locals 0
 
     .line 27
     iget-object p0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->onPlaybackErrorHandler:Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;
 
     return-object p0
+.end method
+
+.method private getDurationSafely()J
+    .locals 5
+
+    .line 237
+    iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
+
+    invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->getDuration()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_0
+
+    move-wide v0, v2
+
+    :cond_0
+    return-wide v0
 .end method
 
 .method private init()V
@@ -205,7 +238,7 @@
 
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lj$/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -233,7 +266,7 @@
         }
     .end annotation
 
-    .line 253
+    .line 258
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -242,7 +275,7 @@
 
     return v0
 
-    .line 255
+    .line 260
     :cond_0
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
@@ -254,11 +287,11 @@
 
     goto :goto_0
 
-    .line 261
+    .line 266
     :cond_1
     invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->updatePlaybackPosition()V
 
-    .line 262
+    .line 267
     iget-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     const-wide/16 v1, 0xfa
@@ -269,7 +302,7 @@
 
     return p1
 
-    .line 256
+    .line 261
     :cond_2
     :goto_0
     sget-object p1, Luk/co/uktv/dave/browser/web/MediaPlayerView;->TAG:Ljava/lang/String;
@@ -278,7 +311,7 @@
 
     invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
+    .line 262
     invoke-direct {p0}, Luk/co/uktv/dave/browser/web/MediaPlayerView;->stopSamplingPlaybackPosition()V
 
     return v0
@@ -287,20 +320,20 @@
 .method private startSamplingPlaybackPosition()V
     .locals 3
 
-    .line 237
+    .line 242
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 239
+    .line 244
     :cond_0
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 240
+    .line 245
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
@@ -319,7 +352,7 @@
 
     const/4 v1, 0x0
 
-    .line 241
+    .line 246
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_1
@@ -329,7 +362,7 @@
 .method private stopSamplingPlaybackPosition()V
     .locals 2
 
-    .line 246
+    .line 251
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
@@ -339,12 +372,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 248
+    .line 253
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     const/4 v0, 0x0
 
-    .line 249
+    .line 254
     iput-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPositionSampler:Landroid/os/Handler;
 
     return-void
@@ -353,14 +386,14 @@
 .method private updatePlaybackPosition()V
     .locals 4
 
-    .line 267
+    .line 272
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->exoPlayer:Lcom/google/android/exoplayer2/ExoPlayer;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 269
+    .line 274
     :cond_0
     invoke-interface {v0}, Lcom/google/android/exoplayer2/ExoPlayer;->getCurrentPosition()J
 
@@ -368,7 +401,7 @@
 
     iput-wide v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackPosition:J
 
-    .line 271
+    .line 276
     iget-object v2, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
     if-eqz v2, :cond_2
@@ -379,7 +412,7 @@
 
     goto :goto_0
 
-    .line 273
+    .line 278
     :cond_1
     invoke-interface {v3, v2, v0, v1}, Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;->onPlaybackPositionChange(Ljava/lang/String;J)V
 
@@ -418,7 +451,7 @@
     .line 174
     iget-object v0, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->playbackId:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lj$/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -509,9 +542,9 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f11001e
-
     .line 190
+    sget v1, Luk/co/uktv/dave/R$string;->app_name:I
+
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -549,7 +582,7 @@
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;-><init>(Lcom/google/android/exoplayer2/upstream/DataSource$Factory;)V
 
     .line 197
-    invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->setMediaSourceFactory(Lcom/google/android/exoplayer2/source/MediaSourceFactory;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
+    invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->setMediaSourceFactory(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
 
     move-result-object v0
 
@@ -673,7 +706,7 @@
     return-void
 .end method
 
-.method public setOnPlaybackErrorHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;)V
+.method public setOnErrorHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackErrorHandler;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -690,24 +723,7 @@
     return-void
 .end method
 
-.method public setOnPlaybackPositionChangeHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "onPlaybackPositionChangeHandler"
-        }
-    .end annotation
-
-    .line 127
-    iput-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->onPlaybackPositionChangeHandler:Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;
-
-    return-void
-.end method
-
-.method public setOnPlaybackStateChangeHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackStateChangeHandler;)V
+.method public setOnStateChangeHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackStateChangeHandler;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -720,6 +736,23 @@
 
     .line 123
     iput-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->onPlaybackStateChangeHandler:Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackStateChangeHandler;
+
+    return-void
+.end method
+
+.method public setOnTimeUpdateHandler(Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onPlaybackPositionChangeHandler"
+        }
+    .end annotation
+
+    .line 127
+    iput-object p1, p0, Luk/co/uktv/dave/browser/web/MediaPlayerView;->onPlaybackPositionChangeHandler:Luk/co/uktv/dave/browser/web/MediaPlayerView$OnPlaybackPositionChangeHandler;
 
     return-void
 .end method

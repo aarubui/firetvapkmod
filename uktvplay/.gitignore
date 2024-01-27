@@ -1,3 +1,4 @@
+/META-INF/
 /apktool.yml
 /assets/
 /kotlin/
@@ -10,6 +11,7 @@
 /smali_classes2/
 /smali_classes3/com/
 /smali_classes3/kotlin/
+/smali_classes3/kotlinx/
 /smali_classes3/org/
 /smali_classes3/uk/co/uktv/dave/
 /unknown/
