@@ -37,17 +37,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 49
+    .line 51
     invoke-direct {p0}, Lcom/amazon/android/activity/AmazonActivity;-><init>()V
 
-    .line 57
+    .line 59
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mExtraDataMap:Landroidx/collection/SimpleArrayMap;
 
-    .line 64
+    .line 66
     new-instance v0, Landroidx/lifecycle/LifecycleRegistry;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
@@ -62,14 +62,14 @@
 
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_5
+    if-eqz p0, :cond_7
 
-    .line 171
+    .line 174
     array-length v1, p0
 
-    if-lez v1, :cond_5
+    if-lez v1, :cond_7
 
-    .line 173
+    .line 176
     aget-object p0, p0, v0
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -98,7 +98,7 @@
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x2
+    const/4 v3, 0x4
 
     goto :goto_0
 
@@ -114,12 +114,12 @@
     goto :goto_0
 
     :cond_1
-    const/4 v3, 0x1
+    const/4 v3, 0x3
 
     goto :goto_0
 
     :sswitch_2
-    const-string v1, "--translation"
+    const-string v1, "--list-dumpables"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -130,6 +130,38 @@
     goto :goto_0
 
     :cond_2
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v1, "--dump-dumpable"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x1
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "--translation"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
     const/4 v3, 0x0
 
     :goto_0
@@ -137,57 +169,64 @@
 
     goto :goto_1
 
-    .line 175
     :pswitch_0
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
-
-    if-lt p0, v1, :cond_3
-
-    const/4 v0, 0x1
-
-    :cond_3
-    return v0
-
-    .line 177
-    :pswitch_1
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt p0, v1, :cond_4
-
-    const/4 v0, 0x1
-
-    :cond_4
-    return v0
-
-    .line 179
-    :pswitch_2
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1f
 
     if-lt p0, v1, :cond_5
 
     const/4 v0, 0x1
 
     :cond_5
+    return v0
+
+    :pswitch_1
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt p0, v1, :cond_6
+
+    const/4 v0, 0x1
+
+    :cond_6
+    return v0
+
+    .line 185
+    :pswitch_2
+    invoke-static {}, Landroidx/core/os/BuildCompat;->isAtLeastT()Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_3
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt p0, v1, :cond_7
+
+    const/4 v0, 0x1
+
+    :cond_7
     :goto_1
     return v0
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
-        -0x2673d6ef -> :sswitch_2
+        -0x2673d6ef -> :sswitch_4
+        0x5fd0f67 -> :sswitch_3
+        0x1c2b8816 -> :sswitch_2
         0x4519f64d -> :sswitch_1
         0x56b9c952 -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
         :pswitch_2
         :pswitch_1
         :pswitch_0
@@ -199,7 +238,7 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 2
 
-    .line 138
+    .line 140
     invoke-virtual {p0}, Landroidx/core/app/ComponentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -210,7 +249,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
+    .line 141
     invoke-static {v0, p1}, Landroidx/core/view/KeyEventDispatcher;->dispatchBeforeHierarchy(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v1
@@ -221,7 +260,7 @@
 
     return p1
 
-    .line 142
+    .line 144
     :cond_0
     invoke-static {p0, v0, p0, p1}, Landroidx/core/view/KeyEventDispatcher;->dispatchKeyEvent(Landroidx/core/view/KeyEventDispatcher$Component;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
 
@@ -233,7 +272,7 @@
 .method public dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 129
+    .line 131
     invoke-virtual {p0}, Landroidx/core/app/ComponentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -244,7 +283,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
+    .line 132
     invoke-static {v0, p1}, Landroidx/core/view/KeyEventDispatcher;->dispatchBeforeHierarchy(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -255,7 +294,7 @@
 
     return p1
 
-    .line 133
+    .line 135
     :cond_0
     invoke-super {p0, p1}, Landroid/app/Activity;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
 
@@ -279,9 +318,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 108
     iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mExtraDataMap:Landroidx/collection/SimpleArrayMap;
 
+    .line 110
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -294,7 +333,6 @@
 .method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
 
-    .line 114
     iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     return-object v0
@@ -307,10 +345,10 @@
 
     invoke-static {p0, v0}, Lcom/amazon/android/Kiwi;->onCreate(Landroid/app/Activity;Z)V
 
-    .line 86
+    .line 88
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 87
+    .line 89
     invoke-static {p0}, Landroidx/lifecycle/ReportFragment;->injectIfNeededIn(Landroid/app/Activity;)V
 
     return-void
@@ -319,14 +357,14 @@
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 93
     iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
+    .line 95
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->markState(Landroidx/lifecycle/Lifecycle$State;)V
 
-    .line 94
+    .line 96
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     return-void
@@ -337,9 +375,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 80
     iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mExtraDataMap:Landroidx/collection/SimpleArrayMap;
 
+    .line 82
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -352,7 +390,7 @@
 .method protected final shouldDumpInternalState([Ljava/lang/String;)Z
     .locals 0
 
-    .line 167
+    .line 169
     invoke-static {p1}, Landroidx/core/app/ComponentActivity;->shouldSkipDump([Ljava/lang/String;)Z
 
     move-result p1
@@ -365,7 +403,7 @@
 .method public superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 124
+    .line 126
     invoke-super {p0, p1}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
