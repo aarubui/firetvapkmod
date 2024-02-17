@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="uk.co.uktv.dave.androidtv" platformBuildVersionCode="33" platformBuildVersionName="13">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="uk.co.uktv.dave.androidtv" platformBuildVersionCode="34" platformBuildVersionName="14">
     <permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="uk.co.uktv.dave.permission.RECEIVE_ADM_MESSAGE"/>
     <uses-permission android:name="com.vewd.core.service.CLIENT_ACCESS"/>
@@ -13,7 +13,10 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner_image" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="uk.co.uktv.dave.UKTVPlayApp" android:networkSecurityConfig="@xml/network_security_config_with_cleartexttraffic" android:theme="@style/UKTVPlayTheme.Base" android:usesCleartextTraffic="true">
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+    <permission android:name="uk.co.uktv.dave.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="uk.co.uktv.dave.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner_image" android:extractNativeLibs="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="uk.co.uktv.dave.UKTVPlayApp" android:networkSecurityConfig="@xml/network_security_config_with_cleartexttraffic" android:theme="@style/UKTVPlayTheme.Base" android:usesCleartextTraffic="true">
         <receiver android:exported="true" android:name="uk.co.uktv.dave.recommendations.launcher.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -38,12 +41,32 @@
         <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleInstance" android:name="uk.co.uktv.dave.UKTVPlayActivity" android:theme="@style/UKTVPlayTheme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="uk.co.uktv.dave.VIDEO_ONLY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
             </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="ctv-primary.ppdevuktv.co.uk"/>
+                <data android:host="ctv-secondary.ppdevuktv.co.uk"/>
+                <data android:host="ctv-tertiary.ppdevuktv.co.uk"/>
+                <data android:host="ctv-uktv.ppuktv.co.uk"/>
+                <data android:host="ctv-partners.ppuktv.co.uk"/>
+                <data android:host="ctv-amazonfire.uktv.co.uk"/>
+                <data android:host="ctv-android.uktv.co.uk"/>
+                <data android:host="ctv-amazonfire.uktv.co.uk"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="uk.co.uktv.dave.DeepLinkActivity" android:noHistory="true" android:theme="@style/UKTVPlayTheme.SplashScreen">
             <intent-filter>
                 <action android:name="uk.co.uktv.dave.VIDEO_ONLY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -53,6 +76,7 @@
             <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
             <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
             <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
         </provider>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
@@ -99,5 +123,19 @@
             </intent-filter>
         </receiver>
         <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
