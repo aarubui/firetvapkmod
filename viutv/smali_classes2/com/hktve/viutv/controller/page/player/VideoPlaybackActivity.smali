@@ -295,14 +295,14 @@
     .line 205
     iput-boolean v3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isVideoPlayed:Z
 
-    .line 1678
+    .line 1684
     new-instance v0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$5;
 
     invoke-direct {v0, p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$5;-><init>(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)V
 
     iput-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekRunnable:Ljava/lang/Runnable;
 
-    .line 1938
+    .line 1944
     iput-boolean v3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isShowingNextFragment:Z
 
     return-void
@@ -492,52 +492,7 @@
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
-    .locals 0
-
-    .line 120
-    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerCurrentAudioIndex:I
-
-    return p0
-.end method
-
-.method static synthetic access$2402(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;I)I
-    .locals 0
-
-    .line 120
-    iput p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerCurrentAudioIndex:I
-
-    return p1
-.end method
-
-.method static synthetic access$2500(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
-    .locals 0
-
-    .line 120
-    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->currentCaption:I
-
-    return p0
-.end method
-
-.method static synthetic access$2502(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;I)I
-    .locals 0
-
-    .line 120
-    iput p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->currentCaption:I
-
-    return p1
-.end method
-
-.method static synthetic access$2600(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)V
-    .locals 0
-
-    .line 120
-    invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->updateYbOptions()V
-
-    return-void
-.end method
-
-.method static synthetic access$2702(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;Z)Z
+.method static synthetic access$2402(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;Z)Z
     .locals 0
 
     .line 120
@@ -546,7 +501,7 @@
     return p1
 .end method
 
-.method static synthetic access$2800(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Landroid/os/Handler;
+.method static synthetic access$2500(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Landroid/os/Handler;
     .locals 0
 
     .line 120
@@ -555,11 +510,51 @@
     return-object p0
 .end method
 
-.method static synthetic access$2900(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Ljava/lang/Runnable;
+.method static synthetic access$2600(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Ljava/lang/Runnable;
     .locals 0
 
     .line 120
     iget-object p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->heartbeatRunnable:Ljava/lang/Runnable;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2700(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
+    .locals 0
+
+    .line 120
+    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
+
+    return p0
+.end method
+
+.method static synthetic access$2708(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
+    .locals 2
+
+    .line 120
+    iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
+
+    return v0
+.end method
+
+.method static synthetic access$2800(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;J)V
+    .locals 0
+
+    .line 120
+    invoke-direct {p0, p1, p2}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->upsertWatchPositionWithTime(J)V
+
+    return-void
+.end method
+
+.method static synthetic access$2900(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Landroid/support/v4/media/session/MediaSessionCompat;
+    .locals 0
+
+    .line 120
+    iget-object p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mSession:Landroid/support/v4/media/session/MediaSessionCompat;
 
     return-object p0
 .end method
@@ -577,22 +572,18 @@
     .locals 0
 
     .line 120
-    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
+    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerCurrentAudioIndex:I
 
     return p0
 .end method
 
-.method static synthetic access$3008(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
-    .locals 2
+.method static synthetic access$3002(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;I)I
+    .locals 0
 
     .line 120
-    iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
+    iput p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerCurrentAudioIndex:I
 
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
-
-    return v0
+    return p1
 .end method
 
 .method static synthetic access$302(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;Lcom/hktve/viutv/model/viutv/episode/Episode;)Lcom/hktve/viutv/model/viutv/episode/Episode;
@@ -604,22 +595,31 @@
     return-object p1
 .end method
 
-.method static synthetic access$3100(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;J)V
+.method static synthetic access$3100(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)I
     .locals 0
 
     .line 120
-    invoke-direct {p0, p1, p2}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->upsertWatchPositionWithTime(J)V
+    iget p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->currentCaption:I
 
-    return-void
+    return p0
 .end method
 
-.method static synthetic access$3200(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)Landroid/support/v4/media/session/MediaSessionCompat;
+.method static synthetic access$3102(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;I)I
     .locals 0
 
     .line 120
-    iget-object p0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mSession:Landroid/support/v4/media/session/MediaSessionCompat;
+    iput p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->currentCaption:I
 
-    return-object p0
+    return p1
+.end method
+
+.method static synthetic access$3200(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)V
+    .locals 0
+
+    .line 120
+    invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->updateYbOptions()V
+
+    return-void
 .end method
 
 .method static synthetic access$3302(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;Z)Z
@@ -1018,14 +1018,14 @@
 .method private createHeartbeatRunnable()Ljava/lang/Runnable;
     .locals 1
 
-    .line 1982
+    .line 1988
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->heartbeatRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 1985
+    .line 1991
     :cond_0
     new-instance v0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$10;
 
@@ -1939,7 +1939,7 @@
     .line 664
     invoke-virtual {v2, v0}, Lcom/npaw/youbora/lib6/plugin/Options;->setAppName(Ljava/lang/String;)V
 
-    const-string v0, "2.3.2"
+    const-string v0, "2.3.3"
 
     .line 665
     invoke-virtual {v2, v0}, Lcom/npaw/youbora/lib6/plugin/Options;->setAppReleaseVersion(Ljava/lang/String;)V
@@ -2612,7 +2612,7 @@
 
     const/4 v0, 0x0
 
-    .line 1853
+    .line 1859
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -2620,7 +2620,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1854
+    .line 1860
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2657,7 +2657,7 @@
 .method private getGA4CommonParams()Landroid/os/Bundle;
     .locals 3
 
-    .line 2097
+    .line 2103
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -2666,14 +2666,14 @@
 
     const-string v2, "vod_player"
 
-    .line 2098
+    .line 2104
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "container_pos"
 
     const-string v2, "FS"
 
-    .line 2099
+    .line 2105
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
@@ -2682,26 +2682,26 @@
 .method private getGA4VideoInfoParams()Landroid/os/Bundle;
     .locals 4
 
-    .line 2104
+    .line 2110
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4CommonParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 2106
+    .line 2112
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisode:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     invoke-static {v1}, Lcom/hktve/viutv/util/GA4Helper;->parseToItemInfo(Lcom/hktve/viutv/model/viutv/episode/Episode;)Lcom/hktve/viutv/util/GA4Helper$GA4ItemInfo;
 
     move-result-object v1
 
-    .line 2107
+    .line 2113
     iget-object v2, v1, Lcom/hktve/viutv/util/GA4Helper$GA4ItemInfo;->itemInfo:Ljava/lang/String;
 
     const-string v3, "video_info"
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2108
+    .line 2114
     iget-object v1, v1, Lcom/hktve/viutv/util/GA4Helper$GA4ItemInfo;->itemInfoEn:Ljava/lang/String;
 
     const-string v2, "video_info_en"
@@ -2714,7 +2714,7 @@
 .method private getNextVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
     .locals 3
 
-    .line 1888
+    .line 1894
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isPlayingTrailer()Z
 
     move-result v0
@@ -2725,7 +2725,7 @@
 
     return-object v1
 
-    .line 1890
+    .line 1896
     :cond_0
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
@@ -2749,7 +2749,7 @@
     :goto_0
     add-int/2addr v0, v2
 
-    .line 1891
+    .line 1897
     iget-object v2, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     if-eqz v2, :cond_2
@@ -2762,7 +2762,7 @@
 
     if-ltz v0, :cond_2
 
-    .line 1892
+    .line 1898
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2773,7 +2773,7 @@
 
     return-object v0
 
-    .line 1893
+    .line 1899
     :cond_2
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mTrailer:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
@@ -2788,7 +2788,7 @@
 .method private getPrevVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
     .locals 4
 
-    .line 1909
+    .line 1915
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -2803,7 +2803,7 @@
 
     goto :goto_1
 
-    .line 1912
+    .line 1918
     :cond_0
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isPlayingTrailer()Z
 
@@ -2813,7 +2813,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1913
+    .line 1919
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     iget-boolean v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->consecutive:Z
@@ -2840,7 +2840,7 @@
 
     return-object v0
 
-    .line 1915
+    .line 1921
     :cond_2
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
@@ -2859,7 +2859,7 @@
     :cond_3
     add-int/2addr v0, v2
 
-    .line 1916
+    .line 1922
     iget-object v2, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -2870,7 +2870,7 @@
 
     if-ltz v0, :cond_4
 
-    .line 1917
+    .line 1923
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2930,7 +2930,7 @@
 .method private isNextVideoAvailable()Z
     .locals 2
 
-    .line 1879
+    .line 1885
     iget-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isClipOnly:Z
 
     const/4 v1, 0x0
@@ -2939,7 +2939,7 @@
 
     return v1
 
-    .line 1882
+    .line 1888
     :cond_0
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getNextVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
 
@@ -2956,7 +2956,7 @@
 .method private isPlayingTrailer()Z
     .locals 2
 
-    .line 2004
+    .line 2010
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisode:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     if-eqz v0, :cond_0
@@ -2995,7 +2995,7 @@
 .method private isPrevVideoAvailable()Z
     .locals 3
 
-    .line 1901
+    .line 1907
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isPlayingTrailer()Z
 
     move-result v0
@@ -3006,7 +3006,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1902
+    .line 1908
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -3025,7 +3025,7 @@
     :goto_0
     return v1
 
-    .line 1904
+    .line 1910
     :cond_1
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getPrevVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
 
@@ -3116,14 +3116,14 @@
 .method private playEpisode(Lcom/hktve/viutv/model/viutv/episode/Episode;)V
     .locals 3
 
-    .line 1863
+    .line 1869
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1864
+    .line 1870
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3160,7 +3160,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1865
+    .line 1871
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->genreSlug:Ljava/lang/String;
 
     const-string v2, "GENRE_ID_KEY"
@@ -3169,17 +3169,17 @@
 
     const-string v1, "Episode"
 
-    .line 1866
+    .line 1872
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1867
+    .line 1873
     iget-boolean v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isRetryed:Z
 
     const-string v2, "IS_RETRYED"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1869
+    .line 1875
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mUser:Lcom/hktve/viutv/model/viutv/user/UserInfo;
 
     invoke-virtual {v1, p1}, Lcom/hktve/viutv/model/viutv/user/UserInfo;->getMatchHistory(Lcom/hktve/viutv/model/viutv/episode/Episode;)Lcom/hktve/viutv/model/viutv/user/History;
@@ -3188,18 +3188,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 1871
+    .line 1877
     iget-wide v1, p1, Lcom/hktve/viutv/model/viutv/user/History;->last_stop_at:J
 
     const-string p1, "LAST_WATCH_POSITION"
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 1874
+    .line 1880
     :cond_0
     invoke-virtual {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1875
+    .line 1881
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->finish()V
 
     return-void
@@ -3258,7 +3258,7 @@
 .method private seekClicked(Z)V
     .locals 9
 
-    .line 1639
+    .line 1645
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
     if-nez v0, :cond_0
@@ -3268,10 +3268,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 1643
+    .line 1649
     iput-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seeking:Z
 
-    .line 1644
+    .line 1650
     iget-wide v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
     const-wide/16 v2, 0x0
@@ -3280,7 +3280,7 @@
 
     if-nez v4, :cond_1
 
-    .line 1645
+    .line 1651
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     invoke-virtual {v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->getCurrentTime()J
@@ -3289,7 +3289,7 @@
 
     iput-wide v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
-    .line 1648
+    .line 1654
     :cond_1
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->eventHandler:Lcom/hktve/viutv/controller/page/player/JWPlayerEventHandler;
 
@@ -3307,7 +3307,7 @@
 
     move-result-wide v0
 
-    .line 1649
+    .line 1655
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v4
@@ -3320,7 +3320,7 @@
 
     long-to-float v0, v0
 
-    .line 1650
+    .line 1656
     invoke-static {v0}, Ljava/lang/Math;->signum(F)F
 
     move-result v0
@@ -3334,7 +3334,7 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 1654
+    .line 1660
     iget-wide v4, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
     add-long/2addr v4, v0
@@ -3343,7 +3343,7 @@
 
     goto :goto_0
 
-    .line 1656
+    .line 1662
     :cond_3
     iget-wide v4, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
@@ -3351,7 +3351,7 @@
 
     iput-wide v4, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
-    .line 1659
+    .line 1665
     :goto_0
     iget-wide v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
@@ -3369,7 +3369,7 @@
 
     if-lez v8, :cond_4
 
-    .line 1660
+    .line 1666
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->eventHandler:Lcom/hktve/viutv/controller/page/player/JWPlayerEventHandler;
 
     invoke-virtual {v0}, Lcom/hktve/viutv/controller/page/player/JWPlayerEventHandler;->getDuration()J
@@ -3380,7 +3380,7 @@
 
     iput-wide v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
-    .line 1662
+    .line 1668
     :cond_4
     iget-wide v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
@@ -3388,10 +3388,10 @@
 
     if-gez v4, :cond_5
 
-    .line 1663
+    .line 1669
     iput-wide v2, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
-    .line 1666
+    .line 1672
     :cond_5
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
@@ -3399,12 +3399,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->setCurrentTime(J)V
 
-    .line 1668
+    .line 1674
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4VideoInfoParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1669
+    .line 1675
     iget-wide v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekTarget:J
 
     invoke-direct {p0, v1, v2}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->toTimeString(J)Ljava/lang/String;
@@ -3415,7 +3415,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1670
+    .line 1676
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
     move-result-object v1
@@ -3432,14 +3432,14 @@
     :goto_1
     invoke-virtual {v1, p1, v0}, Lcom/hktve/viutv/util/ViuTVTracker;->sendCustomEventTracker(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1674
+    .line 1680
     iget-object p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1675
+    .line 1681
     iget-object p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekRunnable:Ljava/lang/Runnable;
@@ -3454,12 +3454,12 @@
 .method private sendHeartbeatEvent()V
     .locals 5
 
-    .line 2020
+    .line 2026
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
     if-eqz v0, :cond_0
 
-    .line 2021
+    .line 2027
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
 
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->eventHandler:Lcom/hktve/viutv/controller/page/player/JWPlayerEventHandler;
@@ -3476,7 +3476,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/hktve/viutv/model/tracker/VideoTracker;->setVideo_duration(D)V
 
-    .line 2022
+    .line 2028
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
 
     iget v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->video_seconds_viewed:I
@@ -3485,7 +3485,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/hktve/viutv/model/tracker/VideoTracker;->setVideo_seconds_viewed(D)V
 
-    .line 2023
+    .line 2029
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
 
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->eventHandler:Lcom/hktve/viutv/controller/page/player/JWPlayerEventHandler;
@@ -3506,7 +3506,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/hktve/viutv/model/tracker/VideoTracker;->setOffset(D)V
 
-    .line 2024
+    .line 2030
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
 
     iget v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
@@ -3515,7 +3515,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/hktve/viutv/model/tracker/VideoTracker;->setInterval(D)V
 
-    .line 2025
+    .line 2031
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
 
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
@@ -3526,7 +3526,7 @@
 
     invoke-virtual {v0, v1}, Lcom/hktve/viutv/model/tracker/VideoTracker;->setStatus(Lcom/jwplayer/pub/api/PlayerState;)V
 
-    .line 2026
+    .line 2032
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->awsVideoTrackingHelper:Lcom/hktve/viutv/controller/page/player/AwsVideoTrackingHelper;
 
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoTracker:Lcom/hktve/viutv/model/tracker/VideoTracker;
@@ -3537,13 +3537,13 @@
 
     const/4 v0, 0x0
 
-    .line 2027
+    .line 2033
     iput v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->video_seconds_viewed:I
 
-    .line 2028
+    .line 2034
     iput v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
 
-    .line 2029
+    .line 2035
     iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->numOfSendTracking:I
 
     add-int/lit8 v0, v0, 0x1
@@ -3690,21 +3690,21 @@
 .method private shouldSendEvent()Ljava/lang/Boolean;
     .locals 4
 
-    .line 2008
+    .line 2014
     iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->video_seconds_viewed:I
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 2009
+    .line 2015
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     return-object v0
 
-    .line 2012
+    .line 2018
     :cond_0
     iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->numOfSendTracking:I
 
@@ -3714,7 +3714,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 2013
+    .line 2019
     iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
 
     const/16 v2, 0xa
@@ -3730,7 +3730,7 @@
 
     return-object v0
 
-    .line 2015
+    .line 2021
     :cond_2
     iget v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->interval:I
 
@@ -3751,7 +3751,7 @@
 .method private showPlayNextFragmentIfNeeded()Z
     .locals 5
 
-    .line 1941
+    .line 1947
     iget-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isShowingNextFragment:Z
 
     const/4 v1, 0x1
@@ -3760,7 +3760,7 @@
 
     return v1
 
-    .line 1944
+    .line 1950
     :cond_0
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isNextVideoAvailable()Z
 
@@ -3772,7 +3772,7 @@
 
     return v2
 
-    .line 1949
+    .line 1955
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -3781,7 +3781,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1952
+    .line 1958
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getNextVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     move-result-object v3
@@ -3796,15 +3796,15 @@
 
     const v4, 0x7f1400ef
 
-    .line 1966
+    .line 1972
     invoke-virtual {v3, v2, v4}, Lcom/hktve/viutv/controller/page/player/PlayNextDialogFragment;->setStyle(II)V
 
     const-string v4, "PlayNextDialogFragment"
 
-    .line 1967
+    .line 1973
     invoke-virtual {v3, v0, v4}, Lcom/hktve/viutv/controller/page/player/PlayNextDialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 1969
+    .line 1975
     iput-boolean v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isShowingNextFragment:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3815,10 +3815,10 @@
     :catch_0
     move-exception v0
 
-    .line 1974
+    .line 1980
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1975
+    .line 1981
     invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
 
     move-result-object v1
@@ -3918,7 +3918,7 @@
 .method private showRetryError(Ljava/lang/String;)V
     .locals 2
 
-    .line 1925
+    .line 1931
     new-instance v0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackErrorFragment;
 
     invoke-direct {v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackErrorFragment;-><init>()V
@@ -3927,42 +3927,42 @@
 
     goto :goto_0
 
-    .line 1926
+    .line 1932
     :cond_0
     iget-object p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerErrorMsg:Ljava/lang/String;
 
     :goto_0
     iput-object p1, v0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackErrorFragment;->errorMsg:Ljava/lang/String;
 
-    .line 1927
+    .line 1933
     iget-object p1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerErrorRetryText:Ljava/lang/String;
 
     iput-object p1, v0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackErrorFragment;->retryButtonMsg:Ljava/lang/String;
 
-    .line 1928
+    .line 1934
     invoke-virtual {v0, p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackErrorFragment;->setVideoPlaybackActivity(Landroid/app/Activity;)V
 
-    .line 1930
+    .line 1936
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 1931
+    .line 1937
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
     const/16 v1, 0x1001
 
-    .line 1932
+    .line 1938
     invoke-virtual {p1, v1}, Landroidx/fragment/app/FragmentTransaction;->setTransition(I)Landroidx/fragment/app/FragmentTransaction;
 
     const v1, 0x7f0b01b5
 
-    .line 1933
+    .line 1939
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 1934
+    .line 1940
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void
@@ -3973,22 +3973,22 @@
 
     const-wide/16 v0, 0x3e8
 
-    .line 2089
+    .line 2095
     div-long/2addr p1, v0
 
     const-wide/16 v0, 0xe10
 
-    .line 2090
+    .line 2096
     div-long v2, p1, v0
 
-    .line 2091
+    .line 2097
     rem-long v0, p1, v0
 
     const-wide/16 v4, 0x3c
 
     div-long/2addr v0, v4
 
-    .line 2092
+    .line 2098
     rem-long/2addr p1, v4
 
     const/4 v4, 0x1
@@ -4007,7 +4007,7 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    .line 2093
+    .line 2099
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -4418,12 +4418,12 @@
 .method public adjustVolume(I)V
     .locals 3
 
-    .line 1814
+    .line 1820
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4VideoInfoParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1815
+    .line 1821
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     invoke-virtual {v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->getCurrentTime()J
@@ -4450,10 +4450,10 @@
     :goto_0
     const-string v1, "volume_status"
 
-    .line 1816
+    .line 1822
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1817
+    .line 1823
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
     move-result-object p1
@@ -4468,7 +4468,7 @@
 .method public isPlaying()Z
     .locals 2
 
-    .line 2085
+    .line 2091
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
     if-eqz v0, :cond_0
@@ -4566,7 +4566,7 @@
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
-    .line 2059
+    .line 2065
     invoke-super {p0, p1, p2, p3}, Lcom/hktve/viutv/controller/abs/AbsSpiceFragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     const/16 p3, 0x2711
@@ -4577,12 +4577,12 @@
 
     if-ne p2, p3, :cond_0
 
-    .line 2061
+    .line 2067
     iget-object p3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mRequiredLoginFragment:Lcom/hktve/viutv/controller/page/player/RequiredLoginFragment;
 
     if-eqz p3, :cond_0
 
-    .line 2062
+    .line 2068
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p3
@@ -4593,37 +4593,37 @@
 
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mRequiredLoginFragment:Lcom/hktve/viutv/controller/page/player/RequiredLoginFragment;
 
-    .line 2063
+    .line 2069
     invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p3
 
     const/16 v0, 0x2002
 
-    .line 2064
+    .line 2070
     invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentTransaction;->setTransition(I)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p3
 
-    .line 2065
+    .line 2071
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     const/4 p3, 0x0
 
-    .line 2066
+    .line 2072
     iput-object p3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mRequiredLoginFragment:Lcom/hktve/viutv/controller/page/player/RequiredLoginFragment;
 
     const/4 p3, 0x0
 
-    .line 2067
+    .line 2073
     iput-boolean p3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isShowingRequiredLoginFragment:Z
 
-    .line 2068
+    .line 2074
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->recreate()V
 
     goto :goto_0
 
-    .line 2070
+    .line 2076
     :cond_0
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->finish()V
 
@@ -4637,12 +4637,12 @@
 
     if-ne p2, p1, :cond_2
 
-    .line 2075
+    .line 2081
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->recreate()V
 
     goto :goto_1
 
-    .line 2077
+    .line 2083
     :cond_2
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->finish()V
 
@@ -5896,7 +5896,7 @@
 .method public playNextVideo()V
     .locals 3
 
-    .line 1798
+    .line 1804
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5931,12 +5931,12 @@
 
     iput-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->source:Ljava/lang/String;
 
-    .line 1800
+    .line 1806
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4VideoInfoParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1801
+    .line 1807
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     invoke-virtual {v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->getCurrentTime()J
@@ -5951,7 +5951,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1802
+    .line 1808
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
     move-result-object v1
@@ -5960,19 +5960,19 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/hktve/viutv/util/ViuTVTracker;->sendCustomEventTracker(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1804
+    .line 1810
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getNextVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1806
+    .line 1812
     invoke-direct {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playEpisode(Lcom/hktve/viutv/model/viutv/episode/Episode;)V
 
     goto :goto_0
 
-    .line 1808
+    .line 1814
     :cond_0
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getResources()Landroid/content/res/Resources;
 
@@ -5999,15 +5999,15 @@
 .method public playPause()V
     .locals 3
 
-    .line 1603
+    .line 1609
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->ybPlugin:Lcom/npaw/youbora/lib6/plugin/Plugin;
 
     if-eqz v0, :cond_0
 
-    .line 1604
+    .line 1610
     invoke-virtual {v0}, Lcom/npaw/youbora/lib6/plugin/Plugin;->fireInit()V
 
-    .line 1607
+    .line 1613
     :cond_0
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
@@ -6015,13 +6015,13 @@
 
     return-void
 
-    .line 1611
+    .line 1617
     :cond_1
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4VideoInfoParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1612
+    .line 1618
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     invoke-virtual {v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->getCurrentTime()J
@@ -6036,7 +6036,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1614
+    .line 1620
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     invoke-interface {v1}, Lcom/jwplayer/pub/api/JWPlayer;->getState()Lcom/jwplayer/pub/api/PlayerState;
@@ -6047,7 +6047,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1615
+    .line 1621
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
     move-result-object v1
@@ -6056,14 +6056,14 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/hktve/viutv/util/ViuTVTracker;->sendCustomEventTracker(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1616
+    .line 1622
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     invoke-interface {v0}, Lcom/jwplayer/pub/api/JWPlayer;->pause()V
 
     goto :goto_0
 
-    .line 1618
+    .line 1624
     :cond_2
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
@@ -6073,7 +6073,7 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/hktve/viutv/util/ViuTVTracker;->sendCustomEventTracker(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1619
+    .line 1625
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     invoke-interface {v0}, Lcom/jwplayer/pub/api/JWPlayer;->play()V
@@ -6085,12 +6085,12 @@
 .method public playPreviousVideo()V
     .locals 3
 
-    .line 1839
+    .line 1845
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getGA4VideoInfoParams()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1840
+    .line 1846
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     invoke-virtual {v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->getCurrentTime()J
@@ -6105,7 +6105,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1841
+    .line 1847
     invoke-static {p0}, Lcom/hktve/viutv/util/ViuTVTracker;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/ViuTVTracker;
 
     move-result-object v1
@@ -6114,19 +6114,19 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/hktve/viutv/util/ViuTVTracker;->sendCustomEventTracker(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1843
+    .line 1849
     invoke-direct {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getPrevVideo()Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1845
+    .line 1851
     invoke-direct {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playEpisode(Lcom/hktve/viutv/model/viutv/episode/Episode;)V
 
     goto :goto_0
 
-    .line 1847
+    .line 1853
     :cond_0
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getResources()Landroid/content/res/Resources;
 
@@ -6153,32 +6153,32 @@
 .method public reInitCurrentVideo()V
     .locals 2
 
-    .line 1821
+    .line 1827
     iget-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isRetryed:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 1824
+    .line 1830
     :cond_0
     iget-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isAlreadyPlaying:Z
 
     if-nez v0, :cond_2
 
-    .line 1826
+    .line 1832
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 1827
+    .line 1833
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisode:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
     invoke-direct {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playEpisode(Lcom/hktve/viutv/model/viutv/episode/Episode;)V
 
     goto :goto_0
 
-    .line 1829
+    .line 1835
     :cond_1
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisode:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
@@ -6186,7 +6186,7 @@
 
     move-result v0
 
-    .line 1830
+    .line 1836
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisodeList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -6200,7 +6200,7 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 1832
+    .line 1838
     iput-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isRetryed:Z
 
     goto :goto_1
@@ -6208,7 +6208,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 1834
+    .line 1840
     iput-boolean v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isRetryed:Z
 
     :goto_1
@@ -6218,26 +6218,26 @@
 .method public replay()V
     .locals 3
 
-    .line 1691
+    .line 1697
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerEvent:Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$PlayerEvent;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$PlayerEvent;->access$4902(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$PlayerEvent;Z)Z
 
-    .line 1692
+    .line 1698
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->videoPlaybackControlFragment:Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackControlFragment;->setFadingEnabled(Z)V
 
-    .line 1693
+    .line 1699
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
     if-eqz v0, :cond_0
 
-    .line 1694
+    .line 1700
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     const-wide/16 v1, 0x0
@@ -6253,7 +6253,7 @@
 
     const/4 v0, 0x0
 
-    .line 1635
+    .line 1641
     invoke-direct {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekClicked(Z)V
 
     return-void
@@ -6264,7 +6264,7 @@
 
     const/4 v0, 0x1
 
-    .line 1627
+    .line 1633
     invoke-direct {p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->seekClicked(Z)V
 
     return-void
@@ -6273,12 +6273,12 @@
 .method public showAudioChannelMenu()V
     .locals 8
 
-    .line 1707
+    .line 1713
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1708
+    .line 1714
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     invoke-interface {v1}, Lcom/jwplayer/pub/api/JWPlayer;->getAudioTracks()Ljava/util/List;
@@ -6291,7 +6291,7 @@
 
     const/4 v1, 0x0
 
-    .line 1709
+    .line 1715
     :goto_0
     iget-object v3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
@@ -6313,7 +6313,7 @@
 
     add-int/lit8 v3, v1, 0x1
 
-    .line 1712
+    .line 1718
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -6366,7 +6366,7 @@
 
     goto :goto_1
 
-    .line 1714
+    .line 1720
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -6391,13 +6391,13 @@
 
     goto :goto_0
 
-    .line 1719
+    .line 1725
     :cond_1
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1720
+    .line 1726
     iget v3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerCurrentAudioIndex:I
 
     invoke-static {v0, v3}, Lcom/hktve/viutv/controller/page/player/AudioMenuDialogFragment;->newInstance(Ljava/util/ArrayList;I)Lcom/hktve/viutv/controller/page/player/AudioMenuDialogFragment;
@@ -6406,10 +6406,10 @@
 
     const v4, 0x7f1400ef
 
-    .line 1721
+    .line 1727
     invoke-virtual {v3, v2, v4}, Lcom/hktve/viutv/controller/page/player/AudioMenuDialogFragment;->setStyle(II)V
 
-    .line 1722
+    .line 1728
     new-instance v2, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$6;
 
     invoke-direct {v2, p0, v0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$6;-><init>(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;Ljava/util/ArrayList;)V
@@ -6418,7 +6418,7 @@
 
     const-string v0, "AudioMenuDialogFragment"
 
-    .line 1735
+    .line 1741
     invoke-virtual {v3, v1, v0}, Lcom/hktve/viutv/controller/page/player/AudioMenuDialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
@@ -6427,17 +6427,17 @@
 .method public showCaptionMenu()V
     .locals 5
 
-    .line 1740
+    .line 1746
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 1742
+    .line 1748
     iget-boolean v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->isDrmEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 1743
+    .line 1749
     sget-object v1, Lcom/hktve/viutv/controller/page/player/WebVTTCaptionMenuDialogFragment;->Companion:Lcom/hktve/viutv/controller/page/player/WebVTTCaptionMenuDialogFragment$Companion;
 
     iget-object v2, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
@@ -6460,7 +6460,7 @@
 
     goto :goto_0
 
-    .line 1745
+    .line 1751
     :cond_0
     iget-object v1, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->mEpisode:Lcom/hktve/viutv/model/viutv/episode/Episode;
 
@@ -6483,10 +6483,10 @@
 
     const v3, 0x7f1400ef
 
-    .line 1747
+    .line 1753
     invoke-virtual {v1, v2, v3}, Lcom/hktve/viutv/controller/page/player/AbstractPlayerMenuDialogFragment;->setStyle(II)V
 
-    .line 1748
+    .line 1754
     new-instance v2, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$7;
 
     invoke-direct {v2, p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$7;-><init>(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)V
@@ -6495,7 +6495,7 @@
 
     const-string v2, "CaptionMenuDialogFragment"
 
-    .line 1768
+    .line 1774
     invoke-virtual {v1, v0, v2}, Lcom/hktve/viutv/controller/page/player/AbstractPlayerMenuDialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
@@ -6504,14 +6504,14 @@
 .method public showQualityMenu()V
     .locals 5
 
-    .line 1773
+    .line 1779
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->playerView:Lcom/jwplayer/pub/view/JWPlayerView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1777
+    .line 1783
     :cond_0
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
@@ -6519,7 +6519,7 @@
 
     move-result-object v0
 
-    .line 1779
+    .line 1785
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -6528,7 +6528,7 @@
 
     const/4 v3, 0x0
 
-    .line 1780
+    .line 1786
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -6536,7 +6536,7 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 1781
+    .line 1787
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -6553,13 +6553,13 @@
 
     goto :goto_0
 
-    .line 1784
+    .line 1790
     :cond_1
     invoke-virtual {p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 1785
+    .line 1791
     iget-object v3, p0, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;->player:Lcom/jwplayer/pub/api/JWPlayer;
 
     invoke-interface {v3}, Lcom/jwplayer/pub/api/JWPlayer;->getCurrentQuality()I
@@ -6572,10 +6572,10 @@
 
     const v3, 0x7f1400ef
 
-    .line 1786
+    .line 1792
     invoke-virtual {v1, v2, v3}, Lcom/hktve/viutv/controller/page/player/QualityMenuDialogFragment;->setStyle(II)V
 
-    .line 1787
+    .line 1793
     new-instance v2, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$8;
 
     invoke-direct {v2, p0}, Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity$8;-><init>(Lcom/hktve/viutv/controller/page/player/VideoPlaybackActivity;)V
@@ -6584,7 +6584,7 @@
 
     const-string v2, "QualityMenuDialogFragment"
 
-    .line 1793
+    .line 1799
     invoke-virtual {v1, v0, v2}, Lcom/hktve/viutv/controller/page/player/QualityMenuDialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
