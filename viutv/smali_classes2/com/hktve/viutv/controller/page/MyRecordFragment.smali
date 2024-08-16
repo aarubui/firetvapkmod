@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f130241
+    const v1, 0x7f130242
 
     invoke-virtual {p0, v1}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
@@ -688,7 +688,7 @@
     .line 403
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/MyRecordFragment;->mTextOverlayFragment:Lcom/hktve/viutv/controller/page/TextOverlayFragment;
 
-    const v1, 0x7f130262
+    const v1, 0x7f130263
 
     invoke-virtual {p0, v1}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
