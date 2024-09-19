@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="isCaptionEnabled">false</bool>
+    <bool name="isPlayVietAudio">false</bool>
+    <bool name="liveChannelEnabled">false</bool>
+    <bool name="memberEnabled">true</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="otherLanguage">false</bool>
+</resources>
