@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f130242
+    const v1, 0x7f1201de
 
     invoke-virtual {p0, v1}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
@@ -226,7 +226,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0250
+    const v1, 0x7f0b023e
 
     iget-object v2, p0, Lcom/hktve/viutv/controller/page/MyRecordFragment;->mSpinnerFragment:Lcom/hktve/viutv/controller/page/SpinnerFragment;
 
@@ -430,7 +430,7 @@
     .line 372
     new-instance v2, Landroidx/leanback/widget/HeaderItem;
 
-    const v3, 0x7f13001d
+    const v3, 0x7f12001d
 
     invoke-virtual {p0, v3}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
@@ -527,7 +527,7 @@
     .line 347
     new-instance v2, Landroidx/leanback/widget/HeaderItem;
 
-    const v3, 0x7f130023
+    const v3, 0x7f120023
 
     invoke-virtual {p0, v3}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
@@ -675,7 +675,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0250
+    const v1, 0x7f0b023e
 
     iget-object v2, p0, Lcom/hktve/viutv/controller/page/MyRecordFragment;->mTextOverlayFragment:Lcom/hktve/viutv/controller/page/TextOverlayFragment;
 
@@ -688,7 +688,7 @@
     .line 403
     iget-object v0, p0, Lcom/hktve/viutv/controller/page/MyRecordFragment;->mTextOverlayFragment:Lcom/hktve/viutv/controller/page/TextOverlayFragment;
 
-    const v1, 0x7f130263
+    const v1, 0x7f1201ff
 
     invoke-virtual {p0, v1}, Lcom/hktve/viutv/controller/page/MyRecordFragment;->getString(I)Ljava/lang/String;
 
@@ -878,7 +878,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f060057
+    const v0, 0x7f060047
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getColor(I)I
 
