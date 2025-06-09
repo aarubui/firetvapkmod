@@ -1349,7 +1349,7 @@
     .line 951
     invoke-virtual {v0, v2}, Lcom/npaw/youbora/lib6/plugin/Options;->setAppName(Ljava/lang/String;)V
 
-    const-string v2, "2.7.1"
+    const-string v2, "2.7.3"
 
     .line 952
     invoke-virtual {v0, v2}, Lcom/npaw/youbora/lib6/plugin/Options;->setAppReleaseVersion(Ljava/lang/String;)V
