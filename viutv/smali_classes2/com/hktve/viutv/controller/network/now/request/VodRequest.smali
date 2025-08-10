@@ -85,67 +85,74 @@
 .end method
 
 .method private static final request$lambda$0(Lcom/hktve/viutv/controller/network/now/request/VodRequest;Lcom/squareup/okhttp/Request;Lrx/SingleSubscriber;)V
-    .locals 2
+    .locals 3
 
     const-string v0, "this$0"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 45
-    iget-object p0, p0, Lcom/hktve/viutv/controller/network/now/request/VodRequest;->client:Lcom/squareup/okhttp/OkHttpClient;
+    iget-object v0, p0, Lcom/hktve/viutv/controller/network/now/request/VodRequest;->client:Lcom/squareup/okhttp/OkHttpClient;
 
-    invoke-virtual {p0, p1}, Lcom/squareup/okhttp/OkHttpClient;->newCall(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Call;
+    invoke-virtual {v0, p1}, Lcom/squareup/okhttp/OkHttpClient;->newCall(Lcom/squareup/okhttp/Request;)Lcom/squareup/okhttp/Call;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lcom/squareup/okhttp/Call;->execute()Lcom/squareup/okhttp/Response;
+    invoke-virtual {p1}, Lcom/squareup/okhttp/Call;->execute()Lcom/squareup/okhttp/Response;
 
-    move-result-object p0
+    move-result-object p1
 
     .line 46
-    invoke-virtual {p0}, Lcom/squareup/okhttp/Response;->code()I
+    invoke-virtual {p1}, Lcom/squareup/okhttp/Response;->code()I
 
-    move-result p1
+    move-result v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/16 v1, 0xc8
+    const/16 v2, 0xc8
 
-    if-ne p1, v1, :cond_4
+    if-ne v0, v2, :cond_3
 
     .line 47
-    new-instance p1, Lcom/google/gson/Gson;
+    new-instance v0, Lcom/google/gson/Gson;
 
-    invoke-direct {p1}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+
+    if-eqz p1, :cond_0
 
     .line 49
-    sget-object v1, Lcom/hktve/viutv/util/NowCheckoutConfig;->instance:Lcom/hktve/viutv/util/NowCheckoutConfig;
+    invoke-virtual {p1}, Lcom/squareup/okhttp/Response;->body()Lcom/squareup/okhttp/ResponseBody;
 
-    invoke-virtual {v1}, Lcom/hktve/viutv/util/NowCheckoutConfig;->getEnableDrm()Z
+    move-result-object p1
 
-    move-result v1
+    if-eqz p1, :cond_0
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p1}, Lcom/squareup/okhttp/ResponseBody;->string()Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    move-result-object v1
 
     .line 50
-    invoke-virtual {p0}, Lcom/squareup/okhttp/Response;->body()Lcom/squareup/okhttp/ResponseBody;
+    :cond_0
+    sget-object p1, Lcom/hktve/viutv/util/NowCheckoutConfig;->Companion:Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;
+
+    iget-object p0, p0, Lcom/hktve/viutv/controller/network/now/request/VodRequest;->context:Landroid/content/Context;
+
+    invoke-virtual {p1, p0}, Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/NowCheckoutConfig;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p0}, Lcom/hktve/viutv/util/NowCheckoutConfig;->getEnableDrm()Z
 
-    invoke-virtual {p0}, Lcom/squareup/okhttp/ResponseBody;->string()Ljava/lang/String;
+    move-result p0
 
-    move-result-object v0
+    if-eqz p0, :cond_1
 
-    :cond_0
+    .line 51
     const-class p0, Lcom/hktve/viutv/model/now/network/DRMVideoResp;
 
     check-cast p0, Ljava/lang/reflect/Type;
 
-    invoke-virtual {p1, v0, p0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -153,32 +160,19 @@
 
     goto :goto_0
 
+    .line 54
     :cond_1
-    if-eqz p0, :cond_2
-
-    .line 53
-    invoke-virtual {p0}, Lcom/squareup/okhttp/Response;->body()Lcom/squareup/okhttp/ResponseBody;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lcom/squareup/okhttp/ResponseBody;->string()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_2
     const-class p0, Lcom/hktve/viutv/model/now/network/NormalVideoResp;
 
     check-cast p0, Ljava/lang/reflect/Type;
 
-    invoke-virtual {p1, v0, p0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/hktve/viutv/model/now/network/VideoResp;
 
-    .line 56
+    .line 57
     :goto_0
     invoke-interface {p0}, Lcom/hktve/viutv/model/now/network/VideoResp;->streamUrl()Ljava/lang/String;
 
@@ -190,9 +184,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    .line 57
+    .line 58
     new-instance p0, Ljava/lang/Throwable;
 
     const-string p1, "Request Video Fail"
@@ -203,30 +197,30 @@
 
     goto :goto_1
 
-    .line 60
-    :cond_3
+    .line 61
+    :cond_2
     invoke-virtual {p2, p0}, Lrx/SingleSubscriber;->onSuccess(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 64
+    .line 65
+    :cond_3
+    new-instance p0, Ljava/lang/Throwable;
+
+    invoke-virtual {p1}, Lcom/squareup/okhttp/Response;->body()Lcom/squareup/okhttp/ResponseBody;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lcom/squareup/okhttp/ResponseBody;->string()Ljava/lang/String;
+
+    move-result-object v1
+
     :cond_4
-    new-instance p1, Ljava/lang/Throwable;
+    invoke-direct {p0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/squareup/okhttp/Response;->body()Lcom/squareup/okhttp/ResponseBody;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    invoke-virtual {p0}, Lcom/squareup/okhttp/ResponseBody;->string()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_5
-    invoke-direct {p1, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Lrx/SingleSubscriber;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p0}, Lrx/SingleSubscriber;->onError(Ljava/lang/Throwable;)V
 
     :goto_1
     return-void
@@ -262,7 +256,7 @@
 .end method
 
 .method public final request()Lrx/Single;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -329,7 +323,13 @@
     move-result-object v1
 
     .line 27
-    sget-object v4, Lcom/hktve/viutv/util/NowCheckoutConfig;->instance:Lcom/hktve/viutv/util/NowCheckoutConfig;
+    sget-object v4, Lcom/hktve/viutv/util/NowCheckoutConfig;->Companion:Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;
+
+    iget-object v5, p0, Lcom/hktve/viutv/controller/network/now/request/VodRequest;->context:Landroid/content/Context;
+
+    invoke-virtual {v4, v5}, Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/NowCheckoutConfig;
+
+    move-result-object v4
 
     invoke-virtual {v4}, Lcom/hktve/viutv/util/NowCheckoutConfig;->getEnableDrm()Z
 
@@ -404,7 +404,13 @@
     invoke-direct {v1}, Lcom/squareup/okhttp/Request$Builder;-><init>()V
 
     .line 40
-    sget-object v2, Lcom/hktve/viutv/util/NowCheckoutConfig;->instance:Lcom/hktve/viutv/util/NowCheckoutConfig;
+    sget-object v2, Lcom/hktve/viutv/util/NowCheckoutConfig;->Companion:Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;
+
+    iget-object v3, p0, Lcom/hktve/viutv/controller/network/now/request/VodRequest;->context:Landroid/content/Context;
+
+    invoke-virtual {v2, v3}, Lcom/hktve/viutv/util/NowCheckoutConfig$Companion;->getInstance(Landroid/content/Context;)Lcom/hktve/viutv/util/NowCheckoutConfig;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Lcom/hktve/viutv/util/NowCheckoutConfig;->getVodUrl()Ljava/lang/String;
 
