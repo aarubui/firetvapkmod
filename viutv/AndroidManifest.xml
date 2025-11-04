@@ -32,13 +32,15 @@
             </intent-filter>
         </receiver>
         <provider android:authorities="com.hktve.viutv.provider" android:exported="true" android:name="com.hktve.viutv.model.contentprovider.ViuTvProvider" android:syncable="false"/>
-        <activity android:exported="true" android:label="@string/app_name" android:name="com.hktve.viutv.controller.page.MainActivity" android:theme="@style/NewSeachTheme">
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.hktve.viutv.controller.page.SplashActivity" android:theme="@style/NewSeachTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
                 <category android:name="android.intent.category.MONKEY"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.hktve.viutv.controller.page.MainActivity" android:theme="@style/NewSeachTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
