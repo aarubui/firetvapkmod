@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<manifest android:versionCode="220"
-          android:versionName="2.20"
+<manifest android:versionCode="223"
+          android:versionName="2.23"
           android:compileSdkVersion="34"
           android:compileSdkVersionCodename="14"
           package="com.tvbusa.encore.tv"
@@ -51,9 +51,6 @@
               android:screenOrientation="landscape" />
     <activity android:name="com.tvbusa.encore.tv.SeriesActivity"
               android:screenOrientation="landscape" />
-    <activity android:name="com.tvbusa.encore.tv.BCOVPlayerActivity"
-              android:screenOrientation="landscape"
-              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
     <activity android:name="com.tvbusa.encore.tv.DetailsActivity"
               android:screenOrientation="landscape" />
     <activity android:name="com.tvbusa.encore.tv.BCOVSSAIPlayerActivity"
