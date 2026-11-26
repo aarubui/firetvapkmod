@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<manifest android:versionCode="223"
-          android:versionName="2.23"
+<manifest android:versionCode="225"
+          android:versionName="2.25"
           android:compileSdkVersion="34"
           android:compileSdkVersionCodename="14"
           package="com.tvbusa.encore.tv.noads"

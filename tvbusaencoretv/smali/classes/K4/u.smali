@@ -62,40 +62,58 @@
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 18
-    sget-object v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->f1:[F
+    sget-object v0, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->i1:[F
 
     .line 21
-    iget-object v0, p0, LK4/u;->c:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    const-string v0, "AdCatalogError"
 
     .line 23
-    const-string v1, "AdCatalogError"
+    iget-object v1, p0, LK4/u;->c:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
     .line 25
-    invoke-virtual {v0, v1, p1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->O(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, p1}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->S(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
-    return-void
+    new-instance p1, LF3/q;
+
     .line 30
+    const/4 v0, 0x4
+
+    .line 32
+    invoke-direct {p1, p0, v0}, LF3/q;-><init>(Ljava/lang/Object;I)V
+
+    .line 33
+    invoke-virtual {v1, p1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    .line 36
+    return-void
+    .line 39
 .end method
 
 .method public final onVideo(Lcom/brightcove/player/model/Video;)V
-    .locals 10
+    .locals 19
 
-    .line 4
-    iget-object v2, p0, LK4/u;->c:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
+    .line 1
+    move-object/from16 v1, p0
 
-    .line 133
-    invoke-static {v2}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->q(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
+    .line 2
+    move-object/from16 v2, p1
 
-    .line 136
-    move-result-object v1
+    .line 14
+    iget-object v7, v1, LK4/u;->c:Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;
 
-    invoke-virtual {v1, p1}, Lcom/brightcove/player/view/BaseVideoView;->add(Lcom/brightcove/player/model/Video;)V
+    .line 273
+    invoke-static {v7}, Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;->q(Lcom/tvbusa/encore/tv/BCOVSSAIPlayerActivity;)Lcom/brightcove/player/view/BaseVideoView;
 
-    .line 139
-    invoke-virtual {v1}, Lcom/brightcove/player/view/BaseVideoView;->start()V
+    .line 276
+    move-result-object v0
 
-    .line 209
+    invoke-virtual {v0, v2}, Lcom/brightcove/player/view/BaseVideoView;->add(Lcom/brightcove/player/model/Video;)V
+
+    .line 348
+    invoke-virtual {v0}, Lcom/brightcove/player/view/BaseVideoView;->start()V
+
+    .line 349
     return-void
-    .line 212
+    .line 352
 .end method
